@@ -1,0 +1,3 @@
+<Project Sdk="Microsoft.Build.CentralPackageVersions">
+  <Import Project="Directory.Build/MinVer.targets" />
+</Project>

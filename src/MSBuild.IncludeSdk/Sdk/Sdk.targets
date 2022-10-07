@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.Build.NoTargets">
+  <UsingTask TaskName="RegexReplaceInFileTask" AssemblyFile="$(TasksAssembly)" />
+  <Target Name="PrepareOutputFile" AfterTargets="MinVer">
+    <MakeDir Directories="./build" />
+    <RegexReplaceInFileTask
+          InputFile="$(MSBuildProjectFullPath)"
+          OutputFile="$(OutputFilePath)"
+          Pattern="Sdk\=%22.*%22\>"
+          Replacement=">" />
+  </Target>
+   <ItemGroup>
+    <PackageFile Include="$(OutputFilePath)" PackagePath="$(OutputFilePackagePath)" />
+   </ItemGroup>
+</Project>

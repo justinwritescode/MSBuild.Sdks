@@ -1,0 +1,40 @@
+<Project>
+  <PropertyGroup>
+    <TargetFramework Condition="'$(TargetFramework)' == ''">netstandard2.0</TargetFramework>
+    <Title><!-- TODO: Add this before you release the code! --></Title>
+    <Description><!-- TODO: Add this before you release the code! --></Description>
+    <PackageTags><!-- TODO: Add these before you release the code! --></PackageTags>
+    <Summary><!-- TODO: Add this before you release the code! --></Summary>
+    <RootNamespace>justinwritescode.$(MSBuildProjectName)</RootNamespace>
+    <PackageId>$(MSBuildProjectName)</PackageId>
+    <Authors>Justin Chase</Authors>
+    <Owners>Justin Chase</Owners>
+    <Company>Justin Chase</Company>
+    <Product>Justin Chase</Product>
+    <Copyright>© $([System.DateTime]::Now.Year) Justin Chase, All Rights Reserved</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageOutputPath>artifacts</PackageOutputPath>
+    <LangVersion>preview</LangVersion>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <UserSecretsId>f46585c5-564a-6584-1234-eba29ed0cfc7</UserSecretsId>
+    <PreserveCompilationContext>true</PreserveCompilationContext>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+    <DebugType>portable</DebugType>
+    <PackageIcon Condition="Exists('Icon.png')">Icon.png</PackageIcon>
+    <PackageIcon Condition="Exists('Icon.jpg')">Icon.jpg</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/justinwritescode/$(MSBuildProjectName)</PackageProjectUrl>
+  </PropertyGroup>
+
+  <Import Project="Directory.Build/NuGetOutputs.props" />
+  <Import Project="Directory.Build/CentralPackageVersions.props" />
+  <Import Project="Directory.Build/NuGetizer.props" />
+  <Import Project="Directory.Build/CodeGeneration.props" />
+  <Import Project="Directory.Build/MinVer.props" />
+
+  <ItemGroup>
+    <PackageFile Include="$(PackageIcon)" PackagePath="" />
+  </ItemGroup>
+
+</Project>
