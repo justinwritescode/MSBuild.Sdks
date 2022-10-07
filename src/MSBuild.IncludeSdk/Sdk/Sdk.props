@@ -1,0 +1,10 @@
+<Project>
+  <PropertyGroup>
+    <OutputFileExtension Condition="'$(MSBuildProjectExtension)' == '.targets'">.targets</OutputFileExtension>
+    <OutputFileExtension Condition="'$(MSBuildProjectExtension)' == '.props'">.props</OutputFileExtension>
+    <OutputFileExtension Condition="'$(OutputFileExtension)' == ''">.props</OutputFileExtension>
+    <OutputFilePackagePath>build/$(MSBuildProjectName)$(OutputFileExtension)</OutputFilePackagePath>
+    <OutputFilePath>obj/$(MSBuildProjectName)$(OutputFileExtension)</OutputFilePath>
+    <TasksAssembly>$(MSBuildThisFileDirectory)../lib/netstandard2.0/MSBuild.IncludeSdk.dll</TasksAssembly>
+  </PropertyGroup>
+</Project>
