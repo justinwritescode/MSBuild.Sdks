@@ -1,0 +1,8 @@
+site_name: JustinWritesCode Common Documentation
+site_description: JustinWritesCode Documentation
+site_url: https://justinwritescode.com
+site_author: "Justin Chase"
+repo_url: https://github.com/justinwritescode/MSBuild.IncludeSdk
+repo_name: justinwritescode/MSBuild.IncludeSdk
+edit_uri: "tree/main/docs"
+docs_dir: docs
