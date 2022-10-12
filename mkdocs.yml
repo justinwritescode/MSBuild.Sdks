@@ -7,4 +7,4 @@ repo_name: justinwritescode/MSBuild.IncludeSdk
 edit_uri: "tree/main/docs"
 docs_dir: docs
 nav:
-  - README.md
+  - MSBuild.IncludeSdk: index.md
