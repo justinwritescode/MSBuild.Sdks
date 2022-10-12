@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.Build.NoTargets">
+ <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>JustinWritesCode.Common</PackageId>
+    <Title>JustinWritesCode Common Files</Title>
+    <Description>This repository contains files that are common to all of my projects. To restore the files, run the following command:
+
+```dotnet file sync```
+
+If you don't have the ```dotnet file``` tool installed, you can install it with the following command:
+
+```dotnet tool install -g dotnet-file```</Description>
+ </PropertyGroup>
+
+ <ItemGroup>
+  <PackageFile Include="Directory.Build.*" PackagePath="Directory.Build%(Extension)" />
+  <PackageFile Include="Directory.Build/*.*" PackagePath="Directory.Build/%(Filename)%(Extension)" />
+  <PackageFile Include="Packages.props" PackagePath="Packages.props" />
+  <PackageFile Include="Packages/*.pkgs" PackagePath="Packages/%(Filename)%(Extension)" />
+  <PackageFile Include="NuGet.config" PackagePath="NuGet.config" />
+  <PackageFile Include="docs/*.*" PackagePath="docs/%(Filename)%(Extension)" />
+  <PackageFile Include="global.json" PackagePath="global.json" />
+  <PackageFile Include=".gitignore" PackagePath=".gitignore" />
+ </ItemGroup>
+
+<ItemGroup>
+    <PackageTag Include="common" />
+    <PackageTag Include="justinwritescode" />
+</ItemGroup>
+</Project>

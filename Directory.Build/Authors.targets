@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+     <Authors Condition="'$(Authors)' == ''">@(Author->Distinct(), ', ')</Authors> 
+     <Owners Condition="'$(Owners)' == ''">@(Owner->Distinct(), ', ')</Owners> 
+  </PropertyGroup>
+</Project>

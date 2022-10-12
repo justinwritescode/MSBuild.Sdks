@@ -1,5 +1,6 @@
 <Project>
   <PropertyGroup>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <EmbedAllSources>true</EmbedAllSources>
     <RepositoryType>git</RepositoryType>
     <IncludeSymbols>true</IncludeSymbols>

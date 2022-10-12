@@ -1,0 +1,20 @@
+<Project>
+ <PropertyGroup>  
+    <CustomBeforeNoTargetsProps Condition="Exists($([MSBuild]::GetPathOfFileAbove('Directory.CustomBeforeNoTargets.props')))">
+      $(CustomBeforeNoTargetsProps);
+      $([MSBuild]::GetPathOfFileAbove("Directory.CustomBeforeNoTargets.props"))
+    </CustomBeforeNoTargetsProps>
+    <CustomAfterNoTargetsProps Condition="Exists($([MSBuild]::GetPathOfFileAbove('Directory.CustomAfterNoTargets.props')))">
+      $(CustomAfterNoTargetsProps);
+      $([MSBuild]::GetPathOfFileAbove("Directory.CustomAfterNoTargets.props"))
+    </CustomAfterNoTargetsProps>
+    <CustomBeforeNoTargets Condition="Exists($([MSBuild]::GetPathOfFileAbove('Directory.CustomBeforeNoTargets.targets')))">
+      $(CustomAfterNoTargets);
+      $([MSBuild]::GetPathOfFileAbove("Directory.CustomBeforeNoTargets.targets"))
+    </CustomBeforeNoTargets>
+    <CustomAfterNoTargets Condition="Exists($([MSBuild]::GetPathOfFileAbove('Directory.CustomAfterNoTargets.targets')))">
+      $(CustomAfterNoTargets);
+      $([MSBuild]::GetPathOfFileAbove("Directory.CustomAfterNoTargets.targets"))
+    </CustomAfterNoTargets>
+ </PropertyGroup>
+</Project>
