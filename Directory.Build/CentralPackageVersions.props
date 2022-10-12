@@ -3,5 +3,21 @@
     <EnableCentralPackageVersions>true</EnableCentralPackageVersions>
     <EnableGlobalPackageReferences>true</EnableGlobalPackageReferences>
     <EnablePackageVersionOverride>true</EnablePackageVersionOverride>
+    <CustomBeforeCentralPackageVersionsProps Condition="Exists($([MSBuild]::GetPathOfFileAbove('Directory.CustomBeforeCentralPackageVersions.props')))">
+      $(CustomBeforeCentralPackageVersionsProps);
+      $([MSBuild]::GetPathOfFileAbove("Directory.CustomBeforeCentralPackageVersions.props"))
+    </CustomBeforeCentralPackageVersionsProps>
+    <CustomAfterCentralPackageVersionsProps Condition="Exists($([MSBuild]::GetPathOfFileAbove('Directory.CustomAfterCentralPackageVersions.props')))">
+      $(CustomAfterCentralPackageVersionsProps);
+      $([MSBuild]::GetPathOfFileAbove("Directory.CustomAfterCentralPackageVersions.props"))
+    </CustomAfterCentralPackageVersionsProps>
+    <CustomBeforeCentralPackageVersionsTargets Condition="Exists($([MSBuild]::GetPathOfFileAbove('Directory.CustomBeforeCentralPackageVersions.targets')))">
+      $(CustomBeforeCentralPackageVersionsTargets);
+      $([MSBuild]::GetPathOfFileAbove("Directory.CustomBeforeCentralPackageVersions.targets"))
+    </CustomBeforeCentralPackageVersionsTargets>
+    <CustomAfterCentralPackageVersionsTargets Condition="Exists($([MSBuild]::GetPathOfFileAbove('Directory.CustomAfterCentralPackageVersions.targets')))">
+      $(CustomAfterCentralPackageVersionsTargets);
+      $([MSBuild]::GetPathOfFileAbove("Directory.CustomAfterCentralPackageVersions.targets"))
+    </CustomAfterCentralPackageVersionsTargets>
   </PropertyGroup>
 </Project>

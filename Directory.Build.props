@@ -1,17 +1,14 @@
 <Project>
   <PropertyGroup>
-    <TargetFramework Condition="'$(TargetFramework)' == ''">netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <Title><!-- TODO: Add this before you release the code! --></Title>
     <Description><!-- TODO: Add this before you release the code! --></Description>
     <PackageTags><!-- TODO: Add these before you release the code! --></PackageTags>
     <Summary><!-- TODO: Add this before you release the code! --></Summary>
-    <RootNamespace>justinwritescode.$(MSBuildProjectName)</RootNamespace>
-    <PackageId>$(MSBuildProjectName)</PackageId>
-    <Authors>Justin Chase</Authors>
-    <Owners>Justin Chase</Owners>
-    <Company>Justin Chase</Company>
-    <Product>Justin Chase</Product>
-    <Copyright>© $([System.DateTime]::Now.Year) Justin Chase, All Rights Reserved</Copyright>
+    <RootNamespace Condition="'$(RootNamespace)' == ''">JustinWritesCode.$(MSBuildProjectName)</RootNamespace>
+    <PackageId Condition="'$(PackageId)' == ''">$(MSBuildProjectName)</PackageId>
+    <Company Condition="'$(Company)' == ''">JustinWritesCode</Company>
+    <Product Condition="'$(Product)' == ''">JustinWritesCode</Product>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageOutputPath>artifacts</PackageOutputPath>
@@ -21,17 +18,20 @@
     <PreserveCompilationContext>true</PreserveCompilationContext>
     <ServerGarbageCollection>true</ServerGarbageCollection>
     <DebugType>portable</DebugType>
-    <PackageIcon Condition="Exists('Icon.png')">Icon.png</PackageIcon>
-    <PackageIcon Condition="Exists('Icon.jpg')">Icon.jpg</PackageIcon>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageProjectUrl>https://github.com/justinwritescode/$(MSBuildProjectName)</PackageProjectUrl>
+    <PackageIcon Condition="Exists('Icon.png') And '$(PackageIcon)' == ''">Icon.png</PackageIcon>
+    <PackageIcon Condition="Exists('Icon.jpg') And '$(PackageIcon)' == ''">Icon.jpg</PackageIcon>
+    <PackageReadmeFile Condition="Exists('README.md') And '$(PackageReadmeFile)' == ''">README.md</PackageReadmeFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <Import Project="Directory.Build/NuGetOutputs.props" />
-  <Import Project="Directory.Build/CentralPackageVersions.props" />
-  <Import Project="Directory.Build/NuGetizer.props" />
-  <Import Project="Directory.Build/CodeGeneration.props" />
-  <Import Project="Directory.Build/MinVer.props" />
+  <PropertyGroup>
+    <CopyDocumentationFilesFromPackages>true</CopyDocumentationFilesFromPackages>
+    <CopyDebugSymbolFilesFromPackages>true</CopyDebugSymbolFilesFromPackages>
+  </PropertyGroup>
+
+  <Import Project="Directory.Build/*.props" />
 
   <ItemGroup>
     <PackageFile Include="$(PackageIcon)" PackagePath="" />

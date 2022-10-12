@@ -1,0 +1,5 @@
+<Project>
+  <PropertyGroup>
+    <Copyright Condition="'$(Copyright)' == ''">© $([System.DateTime]::Now.Year) $(Owners), All Rights Reserved</Copyright>
+  </PropertyGroup>
+</Project>
