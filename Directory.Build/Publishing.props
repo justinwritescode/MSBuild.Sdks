@@ -1,0 +1,10 @@
+<Project>
+  <PropertyGroup>
+    <PublishReferencesDocumentationFiles>true</PublishReferencesDocumentationFiles>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    <PreserveCompilationReferences>true</PreserveCompilationReferences>
+    <FullReferenceAssemblyNames>true</FullReferenceAssemblyNames>
+    <PackProjectReferences>true</PackProjectReferences>
+    <CopyBuildOutputToPublishDirectory>true</CopyBuildOutputToPublishDirectory>
+   </PropertyGroup>
+</Project>

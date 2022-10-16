@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.Build.NoTargets">
+    <PropertyGroup>
+      <EnableCentralPackageVersions>false</EnableCentralPackageVersions>
+      <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+      <TargetFramework>netstandard1.0</TargetFramework>
+    </PropertyGroup>
+    <ItemGroup>
+     <PackageReference Include="JustinWritesCode.Common.RestoreCommonFiles" Version="0.0.1-Local" />
+    </ItemGroup>
+</Project>

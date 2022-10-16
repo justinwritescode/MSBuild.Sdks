@@ -1,5 +1,8 @@
 <Project>
-  <PropertyGroup>
-    <PackageTags>@(PackageTag->Distinct(), ' ')</PackageTags>
-  </PropertyGroup>
+  <Target Name="SetPackageTags" BeforeTargets="GetPackageMetadata">
+    <PropertyGroup>
+      <PackageTags>@(PackageTag->Distinct())</PackageTags>
+      <PackageTags>$([System.String]::Copy($(PackageTags)).Replace(";", " "))</PackageTags>
+    </PropertyGroup>
+  </Target>
 </Project>

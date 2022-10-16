@@ -1,0 +1,19 @@
+<Project>
+   <Target Name="GetPackageVersion" BeforeTargets="GetPackageMetadata" AfterTargets="MinVer" Returns="$(PackageVersion)">
+    <ItemGroup>
+      <PackageVersion Update="$(PackageId)" Version="0.0.1-Local" />
+    </ItemGroup>
+    <PropertyGroup>
+      <PackageVersion>0.0.1-Local</PackageVersion>
+      <Version>0.0.1-Local</Version>
+      <AssemblyVersion>0.0.1</AssemblyVersion>
+      <VersionSuffix>-Local</VersionSuffix>
+      <InformationalVersion>0.0.1-Local</InformationalVersion>
+    </PropertyGroup>
+   </Target>
+
+    <Target Name="PushNuGetPackageToLocal" AfterTargets="Pack" Condition="'$(Configuration)' == 'Local'">
+        <Exec Command="dotnet nuget delete $(PackageId) $(PackageVersion) -s Local --non-interactive" ContinueOnError="true" />
+        <Exec Command="dotnet nuget push $(PackageTargetPath) -s Local" />
+    </Target>
+</Project>

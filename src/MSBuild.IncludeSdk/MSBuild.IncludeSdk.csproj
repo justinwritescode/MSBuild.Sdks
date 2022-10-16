@@ -1,9 +1,26 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Title>MSBuild Include SDK</Title>
-
+    <PackageType>MSBuildSdk</PackageType>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Build.Utilities.Core" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageFile Include="./Sdk/*.*" PackagePath="Sdk/%(Filename)%(Extension)" /> 
+    <PackageFile Include="./Icon.png" PackagePath="Icon.png" /> 
+  </ItemGroup>
+  <ItemGroup Label="Global Usings">
+    <Using Include="Microsoft.Build.Framework" />
+    <Using Include="Microsoft.Build.Utilities.Task" Alias="MSBTask" />
+    <Using Include="System.Text.RegularExpressions" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageTag Include="msbuild" />
+    <PackageTag Include="msbuild-sdk" />
+  </ItemGroup>
+  <Target Name="PushNuGetPackage" AfterTargets="Pack">
+    <Exec Command="dotnet nuget delete '$(PackageId)' $(PackageVersion) --source Local --non-interactive;" ContinueOnError="true" />
+    <Exec Command="dotnet nuget push '$(PackageTargetPath)' --source Local;" />
+  </Target>
 </Project>

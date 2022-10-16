@@ -1,11 +1,13 @@
-<Project Sdk="Microsoft.Build.NoTargets">
-  <UsingTask TaskName="RegexReplaceInFileTask" AssemblyFile="$(TasksAssembly)" />
-  <Target Name="PrepareOutputFile" AfterTargets="MinVer">
-    <MakeDir Directories="./build" />
-    <RegexReplaceInFileTask
+<Project>
+ <PropertyGroup>
+    <AssemblyFile>../lib/netstandard2.0/MSBuild.IncludeSdk.dll</AssemblyFile>
+ </PropertyGroup>
+  <UsingTask TaskName="JustinWritesCode.MSBuild.IncludeSdk.RegexReplaceInFile" AssemblyFile="$(AssemblyFile)" />
+  <Target Name="PrepareOutputFile" BeforeTargets="GetPackageContents">
+    <JustinWritesCode.MSBuild.IncludeSdk.RegexReplaceInFile
           InputFile="$(MSBuildProjectFullPath)"
           OutputFile="$(OutputFilePath)"
-          Pattern="Sdk\=%22.*%22\>"
+          Pattern="[ ]+?Sdk\=%22.*%22\>"
           Replacement=">" />
   </Target>
    <ItemGroup>

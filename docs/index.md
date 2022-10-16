@@ -1,1 +1,1 @@
-{{ gitsnippet('git@github.com:justinwritescode/MSBuild.IncludeSdk.git', 'README.md', '') }}
+{{ gitsnippet('git@github.com:justinwritescode/common.git', 'README.md', '') }}

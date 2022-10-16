@@ -1,5 +1,5 @@
 <Project>
- <PropertyGroup Label="CentralPackageVersions Properties">
+ <PropertyGroup>
     <EnableCentralPackageVersions>true</EnableCentralPackageVersions>
     <EnableGlobalPackageReferences>true</EnableGlobalPackageReferences>
     <EnablePackageVersionOverride>true</EnablePackageVersionOverride>

@@ -1,10 +1,13 @@
-<Project>
+<Project Sdk="Microsoft.Build.NoTargets">
   <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <IsPackagingProject>true</IsPackagingProject>
+    <IntermediateOutputPath Condition="'$(IntermediateOutputPath)' == ''">obj/</IntermediateOutputPath>
     <OutputFileExtension Condition="'$(MSBuildProjectExtension)' == '.targets'">.targets</OutputFileExtension>
     <OutputFileExtension Condition="'$(MSBuildProjectExtension)' == '.props'">.props</OutputFileExtension>
     <OutputFileExtension Condition="'$(OutputFileExtension)' == ''">.props</OutputFileExtension>
     <OutputFilePackagePath>build/$(MSBuildProjectName)$(OutputFileExtension)</OutputFilePackagePath>
-    <OutputFilePath>obj/$(MSBuildProjectName)$(OutputFileExtension)</OutputFilePath>
+    <OutputFilePath>$(IntermediateOutputPath)$(MSBuildProjectName)$(OutputFileExtension)</OutputFilePath>
     <TasksAssembly>$(MSBuildThisFileDirectory)../lib/netstandard2.0/MSBuild.IncludeSdk.dll</TasksAssembly>
   </PropertyGroup>
 </Project>

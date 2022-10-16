@@ -1,0 +1,30 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSBuild.UsingsSdk", "MSBuild.UsingsSdk.csproj", "{8F28E390-F098-4BA2-854D-FFCBD6046706}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Testing|Any CPU = Testing|Any CPU
+		Local|Any CPU = Local|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Staging|Any CPU = Staging|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F28E390-F098-4BA2-854D-FFCBD6046706}.Testing|Any CPU.ActiveCfg = Testing|Any CPU
+		{8F28E390-F098-4BA2-854D-FFCBD6046706}.Testing|Any CPU.Build.0 = Testing|Any CPU
+		{8F28E390-F098-4BA2-854D-FFCBD6046706}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{8F28E390-F098-4BA2-854D-FFCBD6046706}.Local|Any CPU.Build.0 = Local|Any CPU
+		{8F28E390-F098-4BA2-854D-FFCBD6046706}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F28E390-F098-4BA2-854D-FFCBD6046706}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F28E390-F098-4BA2-854D-FFCBD6046706}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{8F28E390-F098-4BA2-854D-FFCBD6046706}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{8F28E390-F098-4BA2-854D-FFCBD6046706}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F28E390-F098-4BA2-854D-FFCBD6046706}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0F01F53E-48D1-42DD-9686-E643295883FC}
+	EndGlobalSection
+EndGlobal
