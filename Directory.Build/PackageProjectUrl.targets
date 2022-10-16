@@ -1,5 +1,5 @@
 <Project>
-  <Target Name="GetPackageProjectUrl" AfterTargets="GitInfo">
+  <Target Name="SetPackageProjectUrl" BeforeTargets="GetPackageMetadata">
     <PropertyGroup>
       <PackageProjectUrl>https://justinwritescode.com/$([System.IO.Path]::GetFileNameWithoutExtension('$(GitRepositoryUrl)'))</PackageProjectUrl>
     </PropertyGroup>

@@ -1,0 +1,6 @@
+<Project Sdk="MSBuild.IncludeSdk">
+  <ItemGroup>
+    <Using Include="Microsoft.Build.Framework" />
+    <!-- <PackageReference Include="Microsoft.Build.Utilities.Core" /> -->
+  </ItemGroup>
+</Project>

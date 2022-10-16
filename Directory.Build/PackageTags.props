@@ -1,0 +1,11 @@
+<Project>
+ <PropertyGroup>
+    <GetPackageMetadataDependsOn>
+      $(GetPackageMetadataDependsOn);
+      SetPackageTags
+    </GetPackageMetadataDependsOn>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageTag Include="justinwritescode" />
+  </ItemGroup>
+</Project>

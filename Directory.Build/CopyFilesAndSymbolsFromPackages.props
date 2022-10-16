@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+    <CopyDocumentationFilesFromPackages>true</CopyDocumentationFilesFromPackages>
+    <CopyDebugSymbolFilesFromPackages>true</CopyDebugSymbolFilesFromPackages>
+  </PropertyGroup>
+</Project>

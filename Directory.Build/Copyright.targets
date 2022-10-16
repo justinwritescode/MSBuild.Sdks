@@ -1,5 +1,13 @@
-<Project>
-  <PropertyGroup>
-    <Copyright Condition="'$(Copyright)' == ''">© $([System.DateTime]::Now.Year) $(Owners), All Rights Reserved</Copyright>
+<Project> 
+ <PropertyGroup>
+    <GetPackageMetadataDependsOn>
+      $(GetPackageMetadataDependsOn);
+      SetPackageCopyright
+    </GetPackageMetadataDependsOn>
   </PropertyGroup>
+  <Target Name="SetPackageCopyright" BeforeTargets="GetPackageMetadata" AfterTargets="SetPackageOwners">
+    <PropertyGroup>
+      <Copyright Condition="'$(Copyright)' == ''">© $([System.DateTime]::Now.Year) $(Owners), All Rights Reserved</Copyright>
+    </PropertyGroup>
+  </Target>
 </Project>

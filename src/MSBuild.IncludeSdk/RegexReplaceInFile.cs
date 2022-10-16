@@ -1,27 +1,26 @@
 namespace JustinWritesCode.MSBuild.IncludeSdk;
-using System.IO;
 
-class RegexReplaceInFile : Microsoft.Build.Utilities.Task
+public class RegexReplaceInFile : MSBTask
 {
-    [Microsoft.Build.Framework.Required]
-    public string File { get; set; }
-    [Microsoft.Build.Framework.Required]
-    public string OutputFile { get; set; }
+    [Required]
+    public string InputFile { get; set; } = string.Empty;
+    [Required]
+    public string OutputFile { get; set; } = string.Empty;
 
-    [Microsoft.Build.Framework.Required]
-    public string Pattern { get; set; }
+    [Required]
+    public string Pattern { get; set; } = string.Empty;
 
-    [Microsoft.Build.Framework.Required]
-    public string Replacement { get; set; }
+    [Required]
+    public string Replacement { get; set; } = string.Empty;
 
     public override bool Execute()
     {
-        var file = new FileInfo(File);
+        var file = new FileInfo(InputFile);
         var outputFile = new FileInfo(OutputFile);
-        var text = System.IO.File.ReadAllText(file.FullName);
-        var regex = new System.Text.RegularExpressions.Regex(Pattern);
+        var text = File.ReadAllText(file.FullName);
+        var regex = new Regex(Pattern);
         var newText = regex.Replace(text, Replacement);
-        System.IO.File.WriteAllText(outputFile.FullName, newText);
+        File.WriteAllText(outputFile.FullName, newText);
         return true;
     }
 }

@@ -3,4 +3,12 @@
     <Author Include="Justin Chase" Email="justin@justinwritescode.com" />
     <Owner Include="Justin Chase" Email="justin@justinwritescode.com" />
   </ItemGroup>
+
+  <PropertyGroup>
+    <GetPackageMetadataDependsOn>
+      $(GetPackageMetadataDependsOn);
+      SetPackageAuthors;
+      SetPackageOwners
+    </GetPackageMetadataDependsOn>
+  </PropertyGroup>
 </Project>

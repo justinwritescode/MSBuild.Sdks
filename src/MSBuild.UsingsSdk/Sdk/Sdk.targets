@@ -1,0 +1,14 @@
+<Project>
+ <PropertyGroup>
+    <AssemblyFile>../lib/MSBuild.UsingsSdk.dll</AssemblyFile>
+ </PropertyGroup>
+  <UsingTask TaskName="JustinWritesCode.MSBuild.UsingsSdk.CreateUsingsProject" AssemblyFile="$(AssemblyFile)" />
+  <Target Name="PrepareOutputFile" BeforeTargets="GetPackageContents">
+    <JustinWritesCode.MSBuild.UsingsSdk.CreateUsingsProject
+          InputFile="$(MSBuildProjectFullPath)"
+          OutputFile="$(OutputFilePath)" />
+  </Target>
+   <ItemGroup>
+    <PackageFile Include="$(OutputFilePath)" PackagePath="$(OutputFilePackagePath)" />
+   </ItemGroup>
+</Project>

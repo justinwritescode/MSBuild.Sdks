@@ -1,0 +1,9 @@
+<Project Sdk="MSBuild.SolutionSdk.SlnGen">
+  <PropertyGroup>
+    <IncludeInSolutionFile>false</IncludeInSolutionFile>
+  </PropertyGroup>
+  <ItemGroup>
+     <ProjectReference Include="./src/MSBuild.IncludeSdk/MSBuild.IncludeSdk.csproj" />
+     <ProjectReference Include="./src/MSBuild.UsingsSdk/MSBuild.UsingsSdk.csproj" />
+  </ItemGroup>
+</Project>

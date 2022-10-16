@@ -1,0 +1,9 @@
+<Project>
+  <PropertyGroup>
+    <PackageIcon Condition="Exists('Icon.png') And '$(PackageIcon)' == ''">Icon.png</PackageIcon>
+    <PackageIcon Condition="Exists('Icon.jpg') And '$(PackageIcon)' == ''">Icon.jpg</PackageIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageFile Include="$(PackageIcon)" PackagePath="%(Filename)%(Extension)" Condition="Exists('$(PackageIcon)')" />
+  </ItemGroup>
+</Project>

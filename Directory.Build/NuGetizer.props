@@ -8,4 +8,12 @@
     <IsPackable>true</IsPackable>
     <IsNuGetized>true</IsNuGetized>
   </PropertyGroup>
+
+  <!-- Pack any files named after the package ID into the package's build folder -->
+  <!-- <ItemGroup>
+    <PackageFile Include="$(MSBuildProjectDirectory)$(PackageId).props" PackagePath="build/$(PackageId).props" />
+    <PackageFile Include="$(MSBuildProjectDirectory)$(PackageId).targets" PackagePath="build/$(PackageId).targets" />
+    <PackageFile Include="$(MSBuildProjectDirectory)build/$(PackageId).props" PackagePath="build/$(PackageId).props" />
+    <PackageFile Include="$(MSBuildProjectDirectory)build/$(PackageId).targets" PackagePath="build/$(PackageId).targets" />
+  </ItemGroup> -->
 </Project>

@@ -1,0 +1,77 @@
+
+<Project>
+  <PropertyGroup>
+    <DisableMostAnnoyingWarnings>true</DisableMostAnnoyingWarnings>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <NoWarn>
+      <Description>No descripion</Description>
+      <Category>None</Category>
+      <Off>false</Off>
+      <Reason>None</Reason>
+    </NoWarn>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <NoWarn Include="CA1305"
+            Description="Specify IFormatProvider"
+            Category="Globalization"
+            Reason="This app is only displaying numbers up to like 60" />
+    <NoWarn Include="CA1720"
+            Description="Identifiers should not contain type names"
+            Category="Naming" />
+    <NoWarn Include="CA1845"
+            Description="Use span-based 'string.Concat' instead of 'string.Format'"
+            Category="Performance" />
+    <NoWarn Include="CS1591"
+            Description="Missing XML comment for publicly visible type or member"
+            Category="Style" />
+    <NoWarn Include="CS8601"
+            Description="Possible null reference assignment"
+            Category="Design" />
+    <NoWarn Include="CS8602"
+            Description="Dereference of a possibly null reference"
+            Category="Design" />
+    <NoWarn Include="CS8604"
+            Description="Possible null reference argument."
+            Category="Design" />
+    <NoWarn Include="CS8632"
+            Description="The annotation for nullable referene types can only be used in code within a '#nullable' annotations context."
+            Category="???" />
+    <NoWarn Include="IDE0009"
+            Description="Member access should be qualified"
+            Category="Style" />
+    <NoWarn Include="IDE0055"
+            Description="Fix Formatting"
+            Category="Style" />
+    <NoWarn Include="IDE0060"
+            Description="Remove unused parameter."
+            Category="Style" />
+    <NoWarn Include="IDE0065"
+            Description="???"
+            Category="Style" />
+    <NoWarn Include="IDE0130"
+            Description="Namespace does not match folder structure."
+            Category="Style"
+            Reason="It doesn't have to--and the folder structure makes more sense to organize the code that way" />
+    <NoWarn Include="IE0009"
+            Description="???"
+            Category="Style" />
+    <NoWarn Include="MSB4011"
+            Description="X cannot be imported again.  It was already imported at Y."
+            Category="Build" />
+    <NoWarn Include="NU5128"
+            Description="Some target frameworks declared in the dependencies group of the nuspec and the lib/ref folder do not have exact matches in the other location"
+            Category="Usage" />
+    <NoWarn Include="RS1024" Description="Compare symbols correctly." />
+    <NoWarn Include="VSTHRD111"
+            Description="Use .ConfigureAwait(bool)"
+            Category="Reliability"
+            Reason="this is a function, not a UI app" />
+  </ItemGroup>
+  <PropertyGroup Condition="'$(DisableMostAnnoyingWarnings)' != 'false'">
+    <NoWarn>$(NoWarn);@(NoWarn->'%(Identity)');</NoWarn>
+  </PropertyGroup>
+  <Target Name="NoWarn">
+    <Telemetry EventName="NoWarn" EventData="NoWarn=$(NoWarn)" />
+  </Target> 
+</Project>

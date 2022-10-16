@@ -1,11 +1,11 @@
 <Project>
   <PropertyGroup>
     <IncludeBuiltProjectOutputGroup>true</IncludeBuiltProjectOutputGroup>
-    <IncludeBuiltProjectOutputGroup>true</IncludeBuiltProjectOutputGroup>
     <IncludeComFilesOutputGroup>true</IncludeComFilesOutputGroup>
     <IncludeContentFilesProjectOutputGroup>true</IncludeContentFilesProjectOutputGroup>
     <IncludeCopyLocalFilesOutputGroup>true</IncludeCopyLocalFilesOutputGroup>
     <IncludeCopyWinmdArtifactsOutputGroup>true</IncludeCopyWinmdArtifactsOutputGroup>
+    <IncludeCustomOutputGroupForPackaging>true</IncludeCustomOutputGroupForPackaging>
     <IncludeDebugSymbolsProjectOutputGroup>true</IncludeDebugSymbolsProjectOutputGroup>
     <IncludeDocumentationProjectOutputGroup>true</IncludeDocumentationProjectOutputGroup>
     <IncludeGetResolvedSDKReferences>true</IncludeGetResolvedSDKReferences>
