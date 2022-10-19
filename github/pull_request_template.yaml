@@ -1,0 +1,99 @@
+name: Pull Request Template
+description: A template to follow for pull requests
+title: "PR: "
+assignees: justinwritescode
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to contribute to the project and open a pull request! Please make sure to fill out the form below.
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      description: A short description of the pull request
+      placeholder: "Example: [FEAT]: Add a new feature"
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+        label: Contact Details
+        description: How can we get in touch with you if we need more info?
+        placeholder: e.g., email@example.com
+    validations:
+        required: true
+  - type: input
+    id: description
+    attributes:
+          label: Description
+          description: Describe your changes in detail
+          placeholder: Describe your changes in detail
+    validations:
+        required: true
+  - type: input
+    id: issue-number
+    attributes:
+          label: Issue Number
+          description: The issue number that this pull request is related to
+          placeholder: >
+            This project only accepts pull requests related to open issues.
+            If suggesting a new feature or change, please discuss it in an issue first.
+            If fixing a bug, there should be an issue describing it with steps to reproduce.
+            Please link to the issue here: e.g., #123
+    validations:
+          required: true
+  - type: input
+    id: motivation-and-context
+    attributes:
+          label: Motivation and Context
+          description: Why is this change required? What problem does it solve?
+          placeholder: Why is this change required? What problem does it solve?
+    validations:
+          required: true
+  - type: input
+    id: how-has-this-been-tested
+    attributes:
+        label: How Has This Been Tested?
+        description: Please describe in detail how you tested your changes.
+        placeholder: Please describe in detail how you tested your changes.
+    validations:
+        required: true
+  - type: input
+    id: screenshots
+    attributes:
+        label: Screenshots
+        description: If applicable, add screenshots to help explain your problem.
+        placeholder: If applicable, add screenshots to help explain your problem.
+    validations:
+      required: false
+  - type: checkboxes
+    id: types-of-changes
+    attributes:
+      label: "Types of Changes"
+      description: "What types of changes does your code introduce? Put an `x` in all the boxes that apply:"
+      options:
+        - label: Bug fix (non-breaking change which fixes an issue)
+          required: false
+        - label: New feature (non-breaking change which adds functionality)
+          required: false
+        - label: Breaking change (fix or feature that would cause existing functionality to change)
+          required: false
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: "What types of changes does your code introduce? Put an `x` in all the boxes that apply:"
+      options:
+          - label: My code follows the code style of this project.
+            required: true
+          - label: My change requires a change to the documentation.
+            required: false
+          - label: If applicable, I've made the required changes to the documentation.
+            required: true
+          - label: I have read the **CONTRIBUTING** document.
+            required: true
+          - label: I have added tests to cover my changes.
+            required: true
+          - label: All new and existing tests passed.
+            required: true
