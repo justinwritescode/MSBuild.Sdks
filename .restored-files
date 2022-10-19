@@ -807,33 +807,6 @@
       "status": "Overwritten",
       "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
       "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common",
-      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/Directory.Build.props",
-      "destination": "file:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/Directory.Build.props",
-      "fileHash": "afa8c66ab26d40a8a053cf83b1f5fd2cbae9c4f4",
-      "timestamp": "2022-10-16T09:29:38.718976Z"
-    },
-    {
-      "status": "Overwritten",
-      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
-      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common",
-      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/Packages.props",
-      "destination": "file:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/Packages.props",
-      "fileHash": "29b5b799b586b4d3426b04ebf1c24882354b5420",
-      "timestamp": "2022-10-16T09:29:38.719289Z"
-    },
-    {
-      "status": "Overwritten",
-      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
-      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common",
-      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/Directory.Build.targets",
-      "destination": "file:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/Directory.Build.targets",
-      "fileHash": "a3521910d5c430a737c3bee18ad79d34d6c0d6c4",
-      "timestamp": "2022-10-16T09:29:38.719552Z"
-    },
-    {
-      "status": "Overwritten",
-      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
-      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common",
       "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.gitignore",
       "destination": "file:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/.gitignore",
       "fileHash": "963e56880cb4954eef0727391092c7022d79d840",
@@ -1612,6 +1585,213 @@
       "destination": "file:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/.restored-files",
       "fileHash": "ed92ab9886da284b4fe98aac5b5c07895a4d0cce",
       "timestamp": "2022-10-16T09:29:38.747513Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/NuGet.config",
+      "destination": "file:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/uGet.config",
+      "fileHash": "831b91678af83c9b6994c1552a3c696244201f5e",
+      "timestamp": "2022-10-17T21:23:18.680693Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.gitignore",
+      "destination": "file:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/gitignore",
+      "fileHash": "098d51c37671cfa2df096e8b99b0d15c5e2415a7",
+      "timestamp": "2022-10-17T21:23:18.683019Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/global.json",
+      "destination": "file:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/lobal.json",
+      "fileHash": "a4ea4362f59345fe63d3d4b725da98619f001cb1",
+      "timestamp": "2022-10-17T21:23:18.685452Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/Versions/Versions.Local.json",
+      "destination": "file:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/ersions/Versions.Local.json",
+      "fileHash": "7540eaaf0d4a717b644a6a5cb9fd96ed442829bf",
+      "timestamp": "2022-10-17T21:23:18.689282Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/Versions/Versions.Debug.props",
+      "destination": "file:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/ersions/Versions.Debug.props",
+      "fileHash": "0a395a6e24981aac69154e22e367c21e0a55c061",
+      "timestamp": "2022-10-17T21:23:18.691997Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/Versions/Versions.Local.props",
+      "destination": "file:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/ersions/Versions.Local.props",
+      "fileHash": "77d931fa8e2cc980135e0c243408b8199322b989",
+      "timestamp": "2022-10-17T21:23:18.694431Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/Versions/Versions.Debug.json",
+      "destination": "file:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/ersions/Versions.Debug.json",
+      "fileHash": "71aebfaa84cc68eee31b5d6e15fbc151d0007daa",
+      "timestamp": "2022-10-17T21:23:18.701323Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/docs/CODE_OF_CONDUCT.md",
+      "destination": "file:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/ocs/CODE_OF_CONDUCT.md",
+      "fileHash": "0e3cb9f03ed2a4ce837779ff50fcb334cab16e49",
+      "timestamp": "2022-10-17T21:23:18.705516Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/docs/LICENSE.md",
+      "destination": "file:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/ocs/LICENSE.md",
+      "fileHash": "47e4d2d1a736382680c7a66c1ea3c8444ec2a683",
+      "timestamp": "2022-10-17T21:23:18.71203Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/docs/CODEOWNERS",
+      "destination": "file:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/ocs/CODEOWNERS",
+      "fileHash": "c883b50012ae86d0d52dfefb84c4446c140d94ea",
+      "timestamp": "2022-10-17T21:23:18.714854Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/docs/SUPPORT.md",
+      "destination": "file:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/ocs/SUPPORT.md",
+      "fileHash": "adb516463629d04d2a22e1eccafc552050569b9b",
+      "timestamp": "2022-10-17T21:23:18.718824Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/docs/index.md",
+      "destination": "file:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/ocs/index.md",
+      "fileHash": "a7354f8baa4315356a8634fce108ce54680b3f10",
+      "timestamp": "2022-10-17T21:23:18.722422Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/docs/CONTRIBUTING.md",
+      "destination": "file:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/ocs/CONTRIBUTING.md",
+      "fileHash": "aaad5e1720ceee95aaa74d03b849ec44a5dc31a0",
+      "timestamp": "2022-10-17T21:23:18.727068Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github/funding.yml",
+      "destination": "file:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/github/funding.yml",
+      "fileHash": "7bc2d31ec1c7cfde0a670f19c0822c0f8a7dd395",
+      "timestamp": "2022-10-17T21:23:18.731406Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github/PULL_REQUEST_TEMPLATE.md",
+      "destination": "file:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/github/PULL_REQUEST_TEMPLATE.md",
+      "fileHash": "f62f062ded733c9471d7c32fe351708cd19556b5",
+      "timestamp": "2022-10-17T21:23:18.73347Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github/pull_request_template.yaml",
+      "destination": "file:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/github/pull_request_template.yaml",
+      "fileHash": "1fa4c20bdbf538304b9fdac0eef2e15f40104db4",
+      "timestamp": "2022-10-17T21:23:18.737431Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github/SECURITY.md",
+      "destination": "file:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/github/SECURITY.md",
+      "fileHash": "58914098e784f0aa2bbc7de42cc745217491fa09",
+      "timestamp": "2022-10-17T21:23:18.74386Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.vscode/tasks.json",
+      "destination": "file:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/vscode/tasks.json",
+      "fileHash": "3168af0f2522d9316ea83d58fbf7d044e07df728",
+      "timestamp": "2022-10-17T21:23:18.74814Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github/workflows/docs-ci.yml",
+      "destination": "file:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/github/workflows/docs-ci.yml",
+      "fileHash": "d3fff150dd90a6163a2db881b7555d0671b269b1",
+      "timestamp": "2022-10-17T21:23:18.752784Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github/ISSUE_TEMPLATE/feature_request.yml",
+      "destination": "file:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/github/ISSUE_TEMPLATE/feature_request.yml",
+      "fileHash": "cc787ad93c440413866d8538bd03b0fbc807668a",
+      "timestamp": "2022-10-17T21:23:18.755385Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github/ISSUE_TEMPLATE/bug_report.yml",
+      "destination": "file:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/github/ISSUE_TEMPLATE/bug_report.yml",
+      "fileHash": "c002f561dbb1dc590df568632bef04dedd2c8426",
+      "timestamp": "2022-10-17T21:23:18.760988Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github/ISSUE_TEMPLATE/security_report.yml",
+      "destination": "file:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/github/ISSUE_TEMPLATE/security_report.yml",
+      "fileHash": "11128a7c79719786a15d1d6d70232924f33350aa",
+      "timestamp": "2022-10-17T21:23:18.763339Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github/ISSUE_TEMPLATE/config.yml",
+      "destination": "file:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/github/ISSUE_TEMPLATE/config.yml",
+      "fileHash": "39fdca8a77241a421ddc006f868c7943dd7d3aa2",
+      "timestamp": "2022-10-17T21:23:18.765797Z"
     }
   ],
   "directories": [
@@ -1686,6 +1866,60 @@
       "source": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github/workflows",
       "destination": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/.github/workflows",
       "fileHash": "d3fff150dd90a6163a2db881b7555d0671b269b1"
+    },
+    {
+      "timestamp": "2022-10-17T21:23:18.685685Z",
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/Versions",
+      "destination": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/ersions",
+      "fileHash": "71aebfaa84cc68eee31b5d6e15fbc151d0007daa-0a395a6e24981aac69154e22e367c21e0a55c061-7540eaaf0d4a717b644a6a5cb9fd96ed442829bf-77d931fa8e2cc980135e0c243408b8199322b989"
+    },
+    {
+      "timestamp": "2022-10-17T21:23:18.701546Z",
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/docs",
+      "destination": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/ocs",
+      "fileHash": "0e3cb9f03ed2a4ce837779ff50fcb334cab16e49-c883b50012ae86d0d52dfefb84c4446c140d94ea-aaad5e1720ceee95aaa74d03b849ec44a5dc31a0-a7354f8baa4315356a8634fce108ce54680b3f10-47e4d2d1a736382680c7a66c1ea3c8444ec2a683-adb516463629d04d2a22e1eccafc552050569b9b"
+    },
+    {
+      "timestamp": "2022-10-17T21:23:18.72722Z",
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github",
+      "destination": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/github",
+      "fileHash": "7bc2d31ec1c7cfde0a670f19c0822c0f8a7dd395-c002f561dbb1dc590df568632bef04dedd2c8426-39fdca8a77241a421ddc006f868c7943dd7d3aa2-cc787ad93c440413866d8538bd03b0fbc807668a-11128a7c79719786a15d1d6d70232924f33350aa-f62f062ded733c9471d7c32fe351708cd19556b5-1fa4c20bdbf538304b9fdac0eef2e15f40104db4-58914098e784f0aa2bbc7de42cc745217491fa09-d3fff150dd90a6163a2db881b7555d0671b269b1"
+    },
+    {
+      "timestamp": "2022-10-17T21:23:18.744088Z",
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.vscode",
+      "destination": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/vscode",
+      "fileHash": "3168af0f2522d9316ea83d58fbf7d044e07df728"
+    },
+    {
+      "timestamp": "2022-10-17T21:23:18.748292Z",
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github/workflows",
+      "destination": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/github/workflows",
+      "fileHash": "d3fff150dd90a6163a2db881b7555d0671b269b1"
+    },
+    {
+      "timestamp": "2022-10-17T21:23:18.752938Z",
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github/ISSUE_TEMPLATE",
+      "destination": "dir:///Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/github/ISSUE_TEMPLATE",
+      "fileHash": "c002f561dbb1dc590df568632bef04dedd2c8426-39fdca8a77241a421ddc006f868c7943dd7d3aa2-cc787ad93c440413866d8538bd03b0fbc807668a-11128a7c79719786a15d1d6d70232924f33350aa"
     }
   ]
 }
