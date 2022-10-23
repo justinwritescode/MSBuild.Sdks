@@ -1,0 +1,70 @@
+name: Feature Request
+description: Suggest an idea for this project
+title: "[FEAT]: "
+labels: ["enhancement", "triage"]
+assignees:
+  - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to suggest a new feature! Please make sure to fill out the form below.
+  - type: checkboxes
+    id: preflight-checklist
+    attributes:
+      label: Preflight Checklist
+      description: Please ensure you've completed all of the following.
+      options:
+        - label: "I could not find a solution in the existing issues, docs, or discussions."
+          required: true
+        - label: "I agree to follow this project's [Code of Conduct](https://justinwritescode.com/CODE_OF_CONDUCT/)."
+          required: true
+        - label: "I have read and am following this repository's [Contribution Guidelines](https://justinwritescode.com/CONTRIBUTING/)."
+          required: true
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: e.g., email@example.com
+    validations:
+      required: true
+  - type: textarea
+    id: is-it-a-problem
+    attributes:
+      label: Is your feature request related to a problem? If yes, please describe.
+      description: A clear and concise description of what the problem is. 
+      placeholder: "Example: I'm always frustrated when [...]"
+    validations:
+      required: false
+  - type: textarea
+    id: what-would-you-like
+    attributes:
+      label: Describe your ideal solution
+      description: A clear and concise description of what you'd like to happen.
+      placeholder: Tell us what you want!
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives-considered
+    attributes:
+      label: Describe alternatives you've considered
+      description: A clear and concise description of any alternative solutions or features you've considered.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Which version of the repo are you using?
+      description: Please provide the version number of the repo you're using or "latest" if you're using the latest version.
+      placeholder: latest
+      value: latest
+    validations:
+      required: true
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Add any other context or screenshots about the feature request here.
+    validations:
+      required: false

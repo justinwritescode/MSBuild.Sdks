@@ -1,0 +1,143 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true,
+        "panel": "dedicated",
+        "showReuseMessage": false,
+        "clear": false
+    },
+    "runOptions": {"reevaluateOnRerun": true},
+    "echoCommand": true,
+    "command": "dotnet",
+    "type": "shell",
+    "tasks": [
+        {
+            "label": "Generate Solution",
+            "command": "slngen",
+            "args": [
+                "${file}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }, 
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "Build",
+            "args": [
+                "build",
+                "--configuration",
+                "${input:Configuration}",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary",
+                "/nologo",
+                "${input:Project}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }, 
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "Restore Shared Files",
+            "command": "dotnet",
+            "type": "shell",
+            "args": [
+                "build",
+                "--configuration",
+                "${input:Configuration}",
+                "-t:RestoreSharedFiles",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary",
+                "${workspaceFolder}/*.sln"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "Clean",
+            "command": "dotnet",
+            "type": "shell",
+            "args": [
+                "clean",
+                "${input:Configuration}",
+                "local",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary",
+                "${file}"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "Insert Standard Header (C#)",
+            "command":"./insert-standard-header-csharp.sh",
+            "type": "process",
+            "args": ["${file}"],
+            "group": {
+                "kind": "none",
+                "isDefault": false
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/.vscode"
+            },
+        },
+        {
+            "label": "Insert Standard Header (XML)",
+            "command":"./insert-standard-header-xml.sh",
+            "type": "process",
+            "args": ["${file}"],
+            "group": {
+                "kind": "none",
+                "isDefault": false
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/.vscode"
+            },
+        }
+    ],
+    "inputs": [
+        {
+            "id": "Configuration",
+            "description": "The build configuration",
+            "default": "Local",
+            "options": ["Local", "Debug", "Staging", "Release"],
+            "type": "pickString"
+        },
+        {
+            "id":"Project",
+            "type":"command",
+            "command": "extension.commandvariable.file.pickFile",
+            "default": "${file}",
+            "Description":"Select a project",
+            "args": {
+                "include":"**/*.*proj",
+                "display":"fileName"
+            }
+        },
+        {
+            "id": "Target",
+            "description": "The build target",
+            "default": "Build",
+            "type": "pickString",
+            "command": "msbuild",
+            "args": [
+                "${file}",
+                "/nologo",
+                "-targets"
+            ]
+        }
+    ]
+}
