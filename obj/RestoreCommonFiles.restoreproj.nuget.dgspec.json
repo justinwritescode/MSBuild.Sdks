@@ -8,13 +8,12 @@
       "version": "0.0.1-Local",
       "restore": {
         "projectUniqueName": "/Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/RestoreCommonFiles.restoreproj",
-        "projectName": "JustinWritesCode.MSBuild.Sdks",
+        "projectName": "RestoreCommonFiles",
         "projectPath": "/Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/RestoreCommonFiles.restoreproj",
         "packagesPath": "/Users/david/.nuget/packages/",
         "outputPath": "/Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/NuGet.Config",
           "/Users/david/GitHub/justinwritescode/NuGet.Config",
           "/Users/david/.nuget/NuGet/NuGet.Config"
         ],
