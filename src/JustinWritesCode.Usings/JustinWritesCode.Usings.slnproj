@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.Build.Traversal">
   <PropertyGroup>
-   <IncludeInSolutionFile>false</IncludeInSolutionFile> 
+   <IncludeInSolutionFile>true</IncludeInSolutionFile> 
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="AnyOf.Usings.usings" />

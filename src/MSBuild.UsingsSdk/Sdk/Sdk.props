@@ -7,6 +7,6 @@
     <OutputFileExtension Condition="'$(OutputFileExtension)' == ''">.props</OutputFileExtension>
     <OutputFilePackagePath>build/$(MSBuildProjectName)$(OutputFileExtension)</OutputFilePackagePath>
     <OutputFilePath>$(IntermediateOutputPath)$(MSBuildProjectName)$(OutputFileExtension)</OutputFilePath>
-    <AssemblyFile>$(MSBuildThisFileDirectory)../lib/MSBuild.UsingsSdk.dll</AssemblyFile>
+    <UsingsSdkAssemblyFile>$(MSBuildThisFileDirectory)../lib/MSBuild.UsingsSdk.dll</UsingsSdkAssemblyFile>
   </PropertyGroup>
 </Project>

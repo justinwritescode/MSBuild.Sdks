@@ -1,8 +1,10 @@
 <Project Sdk="Microsoft.Build.NoTargets">
    <PropertyGroup>
-      <Description>A NuGet package containing implicit global usings for the $(MSBuildProjectName) namespace/domain.</Description>
+      <Description>A NuGet package containing implicit global usings for the ```$(MSBuildProjectName.Replace(".Usings", ""))``` namespace/domain.</Description>
+      <PackageIcon>Icon.png</PackageIcon>
+      <PackageId>$(MSBuildProjectName)</PackageId>
    </PropertyGroup>
-   <UsingTask TaskName="JustinWritesCode.MSBuild.UsingsSdk.CreateUsingsProject" AssemblyFile="$(AssemblyFile)" />
+   <UsingTask TaskName="JustinWritesCode.MSBuild.UsingsSdk.CreateUsingsProject" AssemblyFile="$(UsingsSdkAssemblyFile)" />
    <Target Name="PrepareOutputFile" BeforeTargets="GetPackageContents">
       <JustinWritesCode.MSBuild.UsingsSdk.CreateUsingsProject
             InputFile="$(MSBuildProjectFullPath)"
@@ -10,5 +12,6 @@
    </Target>
    <ItemGroup>
     <PackageFile Include="$(OutputFilePath)" PackagePath="$(OutputFilePackagePath)" />
+    <PackageFile Include="$(MSBuildThisFileDirectory)../Icon.png" PackagePath="Icon.png" />
    </ItemGroup>
 </Project>
