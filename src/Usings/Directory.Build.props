@@ -1,0 +1,27 @@
+<!--
+ Directory.Build.props
+ 
+   Created: 2022-10-27-01:32:54
+   Modified: 2022-10-30-04:32:15
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <PropertyGroup>
+    <InheritDirectoryBuildProps>$([MSBuild]::GetPathOfFileAbove("Directory.Build.props", "$(MSBUildThisFileDirectory)../"))</InheritDirectoryBuildProps>
+    <TargetFramework Condition="'$(TargetFramework)' == ''">netstandard2.0</TargetFramework>
+    <EnableGlobalCodeGenerators>false</EnableGlobalCodeGenerators>
+    <IsPackable>true</IsPackable>
+    <IsNuGetized>true</IsNuGetized>
+  </PropertyGroup>
+  
+  <Import Project="$(InheritDirectoryBuildProps)" />
+
+  <PropertyGroup>
+    <MinVerTagPrefix>uv</MinVerTagPrefix>
+  </PropertyGroup>
+</Project>

@@ -1,1 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8"?> <Project Sdk="MSBuild.UsingsSdk"> <ItemGroup> <Using Include="System.Linq" /> <Using Include="System.Linq.Expressions" /> <Using Include="System.Linq.Expressions.Expression" Static="true" /> </ItemGroup> </Project>

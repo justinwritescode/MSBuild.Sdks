@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<Project Sdk="MSBuild.UsingsSdk">
-  <ItemGroup>
-    <Using Include="System.Collections.Generic.Dictionary&lt;string, string&gt;" Alias="StringDictionary" />
-    <Using Include="System.Collections.Generic.IDictionary&lt;string, string&gt;" Alias="IStringDictionary" />
-    <Using Include="System.Collections.Generic.KeyValuePair&lt;string, string&gt;" Alias="StrKvp" />
-    <Using Include="System.Collections.Generic" />
-  </ItemGroup>
-</Project>

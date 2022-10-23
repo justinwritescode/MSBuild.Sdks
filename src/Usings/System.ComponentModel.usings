@@ -1,0 +1,25 @@
+﻿<!--
+ System.ComponentModel.usings
+ 
+   Created: 2022-10-22-10:58:48
+   Modified: 2022-10-30-04:33:27
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="UsingsSdk">
+  <ItemGroup>
+    <Using Include="System.ComponentModel" />
+    <Using Include="System.ComponentModel.DataAnnotations" />
+    <Using Include="System.ComponentModel.DataAnnotations.Schema" />
+    <Using Include="System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption" Alias="DbGenO" />
+    <Using Include="System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption" Static="true" />
+    <Using Include="System.ComponentModel.DataAnnotations.DisplayAttribute" Alias="ComponentModelDisplayAttribute" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Annotations" />
+  </ItemGroup>    
+</Project>

@@ -1,0 +1,23 @@
+<!--
+ * CsprojPackager.csproj
+ * 
+ *   Created: 2022-11-10-10:54:53
+ *   Modified: 2022-11-10-10:54:54
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MSBuild.Usings" />
+  </ItemGroup>
+  <UsingTask TaskName="CsprojPackager.Packager" AssemblyFile="$(OutputPath)$(AssemblyName).dll" />
+  <Target Name="PackageCsproj" AfterTargets="Pack">
+    <CsprojPackager.Packager ProjectFile="$(MSBuildProjectFullPath)" />
+  </Target>
+</Project>

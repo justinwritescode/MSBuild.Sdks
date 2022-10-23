@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<Project Sdk="MSBuild.UsingsSdk">
-  <ItemGroup>
-    <ProjectReference Include="System.Collections.Generic.Usings.usings" />
-    <ProjectReference Include="System.Collections.ObjectModel.Usings.usings" />
-  </ItemGroup>
-</Project>

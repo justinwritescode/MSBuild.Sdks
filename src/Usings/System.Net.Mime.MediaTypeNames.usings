@@ -1,0 +1,24 @@
+<!--
+MimeMediaTypeNames.usings
+
+  Created: 2022-10-23-01:58:54
+  Modified: 2022-11-02-03:34:09
+
+  Author: Justin Chase <justin@justinwritescode.com>
+  
+  Copyright © 2022 Justin Chase, All Rights Reserved
+     License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="UsingsSdk">
+  <ItemGroup>
+    <Using Include="System.Net.Mime.MediaTypeNames.Application" Static="true" />
+    <Using Include="System.Net.Mime.MediaTypeNames.Image" Static="true" />
+    <Using Include="System.Net.Mime.MediaTypeNames.Text" Static="true" />
+    <Using Include="System.Net.Mime.MediaTypeNames" Static="true" />
+    <Using Include="System.Net.Mime" />
+  </ItemGroup>
+  <ItemGroup>
+   <!-- <PackageReference Include="System.Net.Mail"  /> -->
+  </ItemGroup>
+</Project>

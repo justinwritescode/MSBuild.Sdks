@@ -8,7 +8,7 @@
         "focus": true,
         "panel": "dedicated",
         "showReuseMessage": false,
-        "clear": false
+        "clear": false,
     },
     "runOptions": {"reevaluateOnRerun": true},
     "echoCommand": true,
@@ -24,7 +24,7 @@
             "group": {
                 "kind": "build",
                 "isDefault": true
-            }, 
+            },
             "problemMatcher": "$msCompile"
         },
         {
@@ -41,7 +41,7 @@
             "group": {
                 "kind": "build",
                 "isDefault": true
-            }, 
+            },
             "problemMatcher": "$msCompile"
         },
         {
@@ -55,12 +55,9 @@
                 "-t:RestoreSharedFiles",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary",
-                "${workspaceFolder}/*.sln"
+                "${input:Project}"
             ],
             "group": "build",
-            "presentation": {
-                "reveal": "silent"
-            },
             "problemMatcher": "$msCompile"
         },
         {
@@ -73,7 +70,7 @@
                 "local",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary",
-                "${file}"
+                "${input:Project}"
             ],
             "group": "build",
             "presentation": {
@@ -83,22 +80,26 @@
         },
         {
             "label": "Insert Standard Header (C#)",
-            "command":"./insert-standard-header-csharp.sh",
-            "type": "process",
-            "args": ["${file}"],
+            "command": "./insert-standard-header-csharp.sh",
+            "type": "shell",
+            "args": [
+                "${file}"
+            ],
             "group": {
                 "kind": "none",
                 "isDefault": false
             },
             "options": {
                 "cwd": "${workspaceFolder}/.vscode"
-            },
+            }
         },
         {
             "label": "Insert Standard Header (XML)",
-            "command":"./insert-standard-header-xml.sh",
-            "type": "process",
-            "args": ["${file}"],
+            "command": "ts-node",
+            "type": "shell",
+            "args": [
+                "./insert-standard-header.xml.ts", "${input:Project}"
+            ],
             "group": {
                 "kind": "none",
                 "isDefault": false
@@ -106,6 +107,49 @@
             "options": {
                 "cwd": "${workspaceFolder}/.vscode"
             },
+            "problemMatcher": []
+        },
+        {
+            "label": "Push a NuGet Package",
+            "command": "dotnet",
+            "type": "shell",
+            "args": [
+                "nuget",
+                "push",
+                "${input:NuGetPackageFile}",
+                "${input:NuGetApiKey}",
+                "--source",
+                "${input:NuGetSource}"
+            ],
+            "group": {
+                "kind": "none",
+                "isDefault": false
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/.vscode"
+            }
+        },
+        {
+            "label": "Delete a NuGet Package",
+            "command": "dotnet",
+            "type": "shell",
+            "args": [
+                "nuget",
+                "delete",
+                "${input:NuGetPackageId}",
+                "${input:NuGetPackageVersion}",
+                "--source",
+                "${input:NuGetSource}",
+                "{input:NuGetApiKey}",
+                "--non-interactive"
+            ],
+            "group": {
+                "kind": "none",
+                "isDefault": false
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/.vscode"
+            }
         }
     ],
     "inputs": [
@@ -123,7 +167,22 @@
             "default": "${file}",
             "Description":"Select a project",
             "args": {
-                "include":"**/*.*proj",
+                "include":["**/*.*proj", "**/*.props", "**/*.targets"],
+                "display":"fileName",
+                "prompt":"Select a project",
+                "keyRemember":"selectedProject",
+                "display": "fileName",
+                "addAsk":true
+            }
+        },
+        {
+            "id":"CSharpFile",
+            "type":"command",
+            "command": "extension.commandvariable.file.pickFile",
+            "default": "${file}",
+            "Description":"Select a file",
+            "args": {
+                "include":"**/*.cs",
                 "display":"fileName"
             }
         },
@@ -138,6 +197,41 @@
                 "/nologo",
                 "-targets"
             ]
+        },
+        {
+            "id": "NuGetPackageFile",
+            "description": "The package to push",
+            "type":"command",
+            "command": "extension.commandvariable.file.pickFile",
+            "default": "${file}",
+            "args": {
+                "include": "**/*.nupkg",
+                "display": "Package File"
+            }
+        },
+        {
+            "id": "NuGetSource",
+            "description": "The package to push",
+            "type": "pickString",
+            "default": "${file}",
+            "options":["Local", "NuGet", "Azure", "GitHub"]
+        },
+        {
+            "id": "NuGetPackageId",
+            "description": "The package ID to delete",
+            "type":"promptString"
+        },
+        {
+            "id": "NuGetPackageVersion",
+            "description": "The package version to delete",
+            "type":"promptString"
+        },
+        {
+            "id": "NuGetApiKey",
+            "description": "The NuGet API key to use in the format -k:API_KEY",
+            "type":"pickString",
+            "default": "",
+            "options": ["", "-k:AZ"]
         }
     ]
 }

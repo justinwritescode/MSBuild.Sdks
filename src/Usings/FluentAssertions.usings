@@ -1,0 +1,6 @@
+<Project Sdk="UsingsSdk">
+	<ItemGroup>
+		<PackageReference Include="FluentAssertions" />
+		<Using Include="FluentAssertions" />
+	</ItemGroup>
+</Project>

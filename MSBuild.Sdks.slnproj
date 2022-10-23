@@ -1,3 +1,15 @@
+<!--
+ MSBuild.Sdks.slnproj
+ 
+   Created: 2022-10-15-12:06:33
+   Modified: 2022-10-30-04:14:19
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
 <Project Sdk="MSBuild.SolutionSdk.SlnGen">
   <PropertyGroup>
     <IncludeInSolutionFile>false</IncludeInSolutionFile>
@@ -5,5 +17,6 @@
   <ItemGroup>
      <ProjectReference Include="./src/MSBuild.IncludeSdk/MSBuild.IncludeSdk.csproj" />
      <ProjectReference Include="./src/MSBuild.UsingsSdk/MSBuild.UsingsSdk.csproj" />
+     <ProjectReference Include="./src/JustinWritesCode.Usings/JustinWritesCode.Usings.slnproj" />
   </ItemGroup>
 </Project>

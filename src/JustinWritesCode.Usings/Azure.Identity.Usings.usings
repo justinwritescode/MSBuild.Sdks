@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="MSBuild.UsingsSdk">
-  <ItemGroup Label="Azure Configuration Extensions">
-    <Using Include="Azure.Identity" />
-  </ItemGroup>
-</Project>
