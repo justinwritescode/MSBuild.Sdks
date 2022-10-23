@@ -1,13 +1,13 @@
-<Project>
- <PropertyGroup>
-    <AssemblyFile>../lib/MSBuild.UsingsSdk.dll</AssemblyFile>
- </PropertyGroup>
-  <UsingTask TaskName="JustinWritesCode.MSBuild.UsingsSdk.CreateUsingsProject" AssemblyFile="$(AssemblyFile)" />
-  <Target Name="PrepareOutputFile" BeforeTargets="GetPackageContents">
-    <JustinWritesCode.MSBuild.UsingsSdk.CreateUsingsProject
-          InputFile="$(MSBuildProjectFullPath)"
-          OutputFile="$(OutputFilePath)" />
-  </Target>
+<Project Sdk="Microsoft.Build.NoTargets">
+   <PropertyGroup>
+      <Description>A NuGet package containing implicit global usings for the $(MSBuildProjectName) namespace/domain.</Description>
+   </PropertyGroup>
+   <UsingTask TaskName="JustinWritesCode.MSBuild.UsingsSdk.CreateUsingsProject" AssemblyFile="$(AssemblyFile)" />
+   <Target Name="PrepareOutputFile" BeforeTargets="GetPackageContents">
+      <JustinWritesCode.MSBuild.UsingsSdk.CreateUsingsProject
+            InputFile="$(MSBuildProjectFullPath)"
+            OutputFile="$(OutputFilePath)" />
+   </Target>
    <ItemGroup>
     <PackageFile Include="$(OutputFilePath)" PackagePath="$(OutputFilePackagePath)" />
    </ItemGroup>

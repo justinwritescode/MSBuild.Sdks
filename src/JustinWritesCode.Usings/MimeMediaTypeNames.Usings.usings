@@ -1,0 +1,1 @@
+<Project Sdk="MSBuild.UsingsSdk"> <ItemGroup> <Using Include="System.Net.Mime.MediaTypeNames.Application" Static="true" /> <Using Include="System.Net.Mime.MediaTypeNames.Image" Static="true" /> <Using Include="System.Net.Mime.MediaTypeNames.Text" Static="true" /> <Using Include="System.Net.Mime.MediaTypeNames" Static="true" /> </ItemGroup> </Project>

@@ -1,8 +1,0 @@
-<Project>
-  <PropertyGroup>
-    <GetPackageMetadataDependsOn>
-      $(GetPackageMetadataDependsOn);
-      SetPackageProjectUrl
-    </GetPackageMetadataDependsOn>
-  </PropertyGroup>
-</Project>

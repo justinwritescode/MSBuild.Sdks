@@ -1,13 +1,12 @@
 <Project>
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <IsPackagingProject>true</IsPackagingProject>
+    <TargetFramework Condition="'$(TargetFramework)' == ''">netstandard2.0</TargetFramework>
     <IntermediateOutputPath Condition="'$(IntermediateOutputPath)' == ''">obj/</IntermediateOutputPath>
     <OutputFileExtension Condition="'$(MSBuildProjectExtension)' == '.targets'">.targets</OutputFileExtension>
     <OutputFileExtension Condition="'$(MSBuildProjectExtension)' == '.props'">.props</OutputFileExtension>
     <OutputFileExtension Condition="'$(OutputFileExtension)' == ''">.props</OutputFileExtension>
     <OutputFilePackagePath>build/$(MSBuildProjectName)$(OutputFileExtension)</OutputFilePackagePath>
     <OutputFilePath>$(IntermediateOutputPath)$(MSBuildProjectName)$(OutputFileExtension)</OutputFilePath>
-    <TasksAssembly>$(MSBuildThisFileDirectory)../lib/netstandard2.0/MSBuild.UsingsSdk.dll</TasksAssembly>
+    <AssemblyFile>$(MSBuildThisFileDirectory)../lib/MSBuild.UsingsSdk.dll</AssemblyFile>
   </PropertyGroup>
 </Project>

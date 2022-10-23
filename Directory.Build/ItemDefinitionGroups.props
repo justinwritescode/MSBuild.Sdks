@@ -1,9 +1,0 @@
-<Project>
-  <ItemDefinitionGroup>
-      <Using Visible="false" />
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup>
-    <!-- Generate "PKG_Package_Id" properties, which point to the package's restored location on disk -->
-    <PackageReference GeneratePathProperty="true" />
-  </ItemDefinitionGroup>
-</Project>

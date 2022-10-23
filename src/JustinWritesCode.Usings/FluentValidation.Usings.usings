@@ -1,0 +1,1 @@
+﻿<?xml version="1.0" encoding="UTF-8"?> <Project Sdk="Backroom.Include.Sdk"> <ItemGroup> <Using Include="FluentValidation" /> <Using Include="FluentValidation.Results.ValidationResult" Alias="FvResult" /> <Using Include="FluentValidation.Validators" /> </ItemGroup> </Project>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)thisassembly.prerequisites/1.0.9/buildTransitive/netstandard2.0/ThisAssembly.Prerequisites.targets" Condition="Exists('$(NuGetPackageRoot)thisassembly.prerequisites/1.0.9/buildTransitive/netstandard2.0/ThisAssembly.Prerequisites.targets')" />
+    <Import Project="$(NuGetPackageRoot)thisassembly.strings/1.0.9/buildTransitive/netstandard2.0/ThisAssembly.Strings.targets" Condition="Exists('$(NuGetPackageRoot)thisassembly.strings/1.0.9/buildTransitive/netstandard2.0/ThisAssembly.Strings.targets')" />
+    <Import Project="$(NuGetPackageRoot)thisassembly.project/1.0.9/buildTransitive/netstandard2.0/ThisAssembly.Project.targets" Condition="Exists('$(NuGetPackageRoot)thisassembly.project/1.0.9/buildTransitive/netstandard2.0/ThisAssembly.Project.targets')" />
+    <Import Project="$(NuGetPackageRoot)thisassembly.metadata/1.0.9/buildTransitive/netstandard2.0/ThisAssembly.Metadata.targets" Condition="Exists('$(NuGetPackageRoot)thisassembly.metadata/1.0.9/buildTransitive/netstandard2.0/ThisAssembly.Metadata.targets')" />
+    <Import Project="$(NuGetPackageRoot)thisassembly.constants/1.0.9/buildTransitive/netstandard2.0/ThisAssembly.Constants.targets" Condition="Exists('$(NuGetPackageRoot)thisassembly.constants/1.0.9/buildTransitive/netstandard2.0/ThisAssembly.Constants.targets')" />
+    <Import Project="$(NuGetPackageRoot)thisassembly.assemblyinfo/1.0.9/buildTransitive/netstandard2.0/ThisAssembly.AssemblyInfo.targets" Condition="Exists('$(NuGetPackageRoot)thisassembly.assemblyinfo/1.0.9/buildTransitive/netstandard2.0/ThisAssembly.AssemblyInfo.targets')" />
+    <Import Project="$(NuGetPackageRoot)system.text.json/6.0.5/build/System.Text.Json.targets" Condition="Exists('$(NuGetPackageRoot)system.text.json/6.0.5/build/System.Text.Json.targets')" />
+    <Import Project="$(NuGetPackageRoot)nugetizer/0.9.0/build/NuGetizer.targets" Condition="Exists('$(NuGetPackageRoot)nugetizer/0.9.0/build/NuGetizer.targets')" />
+    <Import Project="$(NuGetPackageRoot)netstandard.library/2.0.3/build/netstandard2.0/NETStandard.Library.targets" Condition="Exists('$(NuGetPackageRoot)netstandard.library/2.0.3/build/netstandard2.0/NETStandard.Library.targets')" />
+    <Import Project="$(NuGetPackageRoot)minver/4.1.0/build/MinVer.targets" Condition="Exists('$(NuGetPackageRoot)minver/4.1.0/build/MinVer.targets')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.visualstudio.slngen/8.5.17/build/Microsoft.VisualStudio.SlnGen.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.visualstudio.slngen/8.5.17/build/Microsoft.VisualStudio.SlnGen.targets')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.common/1.1.1/build/Microsoft.SourceLink.Common.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.common/1.1.1/build/Microsoft.SourceLink.Common.targets')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.build.tasks.git/1.1.1/build/Microsoft.Build.Tasks.Git.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.build.tasks.git/1.1.1/build/Microsoft.Build.Tasks.Git.targets')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.github/1.1.1/build/Microsoft.SourceLink.GitHub.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.github/1.1.1/build/Microsoft.SourceLink.GitHub.targets')" />
+    <Import Project="$(NuGetPackageRoot)justinwritescode.shared.sharedfiles/0.0.8/build/JustinWritesCode.Shared.SharedFiles.targets" Condition="Exists('$(NuGetPackageRoot)justinwritescode.shared.sharedfiles/0.0.8/build/JustinWritesCode.Shared.SharedFiles.targets')" />
+    <Import Project="$(NuGetPackageRoot)gitinfo/2.2.0/build/GitInfo.targets" Condition="Exists('$(NuGetPackageRoot)gitinfo/2.2.0/build/GitInfo.targets')" />
+  </ImportGroup>
+</Project>

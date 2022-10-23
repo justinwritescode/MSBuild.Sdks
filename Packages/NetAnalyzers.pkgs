@@ -1,0 +1,5 @@
+<Project>
+  <ItemGroup>
+    <PackageReference Update="Microsoft.CodeAnalysis.NetAnalyzers" Version="[6.0.0,)" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.Build.Traversal">
+  <PropertyGroup>
+   <IncludeInSolutionFile>false</IncludeInSolutionFile> 
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="AnyOf.Usings.usings" />
+    <ProjectReference Include="AzureFunctions.Usings.usings" />
+    <ProjectReference Include="AzureFunctions.Usings.usings" />
+    <ProjectReference Include="Microsoft.EntityFrameworkCore.Usings.usings" />
+    <ProjectReference Include="System.All.Usings.usings" />
+    <ProjectReference Include="System.Collections.Usings.usings" />
+    <ProjectReference Include="System.Security.Usings.usings" />
+    <ProjectReference Include="System.Usings.usings" />
+    <ProjectReference Include="System.Threading.Tasks.Usings.usings" />
+  </ItemGroup>
+</Project>

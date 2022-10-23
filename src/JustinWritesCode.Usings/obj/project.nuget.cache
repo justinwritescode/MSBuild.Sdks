@@ -1,0 +1,42 @@
+{
+  "version": 2,
+  "dgSpecHash": "bxFyq3smQTRelONemrUpJuhpE2fUy4KandYHUeVX97C3OyK209dP1brKh5MoyhsQngZPUo1C1ymrovwnP767Xg==",
+  "success": false,
+  "projectFilePath": "/Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/src/JustinWritesCode.Usings/AnyOf.Usings.usings",
+  "expectedPackageFiles": [
+    "/Users/david/.nuget/packages/anyof.sourcegenerator/0.3.0/anyof.sourcegenerator.0.3.0.nupkg.sha512",
+    "/Users/david/.nuget/packages/anyof.system.text.json/0.3.0/anyof.system.text.json.0.3.0.nupkg.sha512",
+    "/Users/david/.nuget/packages/fluentbuilder/0.7.1/fluentbuilder.0.7.1.nupkg.sha512",
+    "/Users/david/.nuget/packages/gitinfo/2.2.0/gitinfo.2.2.0.nupkg.sha512",
+    "/Users/david/.nuget/packages/justinwritescode.shared.sharedfiles/0.0.8/justinwritescode.shared.sharedfiles.0.0.8.nupkg.sha512",
+    "/Users/david/.nuget/packages/microsoft.bcl.hashcode/1.1.1/microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
+    "/Users/david/.nuget/packages/microsoft.build.tasks.git/1.1.1/microsoft.build.tasks.git.1.1.1.nupkg.sha512",
+    "/Users/david/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
+    "/Users/david/.nuget/packages/microsoft.sourcelink.common/1.1.1/microsoft.sourcelink.common.1.1.1.nupkg.sha512",
+    "/Users/david/.nuget/packages/microsoft.sourcelink.github/1.1.1/microsoft.sourcelink.github.1.1.1.nupkg.sha512",
+    "/Users/david/.nuget/packages/microsoft.visualstudio.slngen/8.5.17/microsoft.visualstudio.slngen.8.5.17.nupkg.sha512",
+    "/Users/david/.nuget/packages/minver/4.1.0/minver.4.1.0.nupkg.sha512",
+    "/Users/david/.nuget/packages/nugetizer/0.9.0/nugetizer.0.9.0.nupkg.sha512",
+    "/Users/david/.nuget/packages/stef.validation/0.1.0/stef.validation.0.1.0.nupkg.sha512",
+    "/Users/david/.nuget/packages/system.runtime.compilerservices.unsafe/4.5.3/system.runtime.compilerservices.unsafe.4.5.3.nupkg.sha512",
+    "/Users/david/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+    "/Users/david/.nuget/packages/thisassembly/1.0.9/thisassembly.1.0.9.nupkg.sha512",
+    "/Users/david/.nuget/packages/thisassembly.assemblyinfo/1.0.9/thisassembly.assemblyinfo.1.0.9.nupkg.sha512",
+    "/Users/david/.nuget/packages/thisassembly.constants/1.0.9/thisassembly.constants.1.0.9.nupkg.sha512",
+    "/Users/david/.nuget/packages/thisassembly.metadata/1.0.9/thisassembly.metadata.1.0.9.nupkg.sha512",
+    "/Users/david/.nuget/packages/thisassembly.prerequisites/1.0.9/thisassembly.prerequisites.1.0.9.nupkg.sha512",
+    "/Users/david/.nuget/packages/thisassembly.project/1.0.9/thisassembly.project.1.0.9.nupkg.sha512",
+    "/Users/david/.nuget/packages/thisassembly.strings/1.0.9/thisassembly.strings.1.0.9.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package AnyOf.System.Text.Json 0.3.0 is not compatible with netstandard2.0 (.NETStandard,Version=v2.0). Package AnyOf.System.Text.Json 0.3.0 supports: net6.0 (.NETCoreApp,Version=v6.0)",
+      "libraryId": "AnyOf.System.Text.Json",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    }
+  ]
+}
