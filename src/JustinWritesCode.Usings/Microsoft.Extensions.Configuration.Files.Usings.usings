@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="MSBuild.UsingsSdk">
+  <ItemGroup Label="Microsoft Configuration Extensions">
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json.Usings" />
+    <!-- <PackageReference Include="Backroom.Usings.Config.Xml" /> -->
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" />
+    <!-- <PackageReference Include="Backroom.Usings.Config.Ini" /> -->
+    <!-- <ProjectReference Include="Microsoft.Extensions.Configuration.Ini.usings" /> -->
+    <Using Include="Microsoft.Extensions.Configuration.Json" />
+    <!-- <Using Include="Microsoft.Extensions.Configuration.Ini" /> <Using Include="Microsoft.Extensions.Configuration.Xml" /> -->
+    <Using Include="Microsoft.Extensions.Configuration.FileExtensions" />
+  </ItemGroup>
+</Project>
