@@ -1,0 +1,8 @@
+<Project Sdk="MSBuild.UsingsSdk">
+  <ItemGroup>
+    <ProjectReference Include="Azure.Identity.Usings.usings" />
+    <ProjectReference Include="Azure.Config.Usings.usings" />
+    <Using Include="Azure.Extensions.AspNetCore.Configuration.Secrets" />
+    <Using Include="Microsoft.Extensions.Configuration.AzureAppConfiguration" />
+  </ItemGroup>
+</Project>

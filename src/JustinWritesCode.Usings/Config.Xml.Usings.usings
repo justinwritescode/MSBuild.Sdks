@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="MSBuild.UsingsSdk">
+  <ItemGroup Label="Microsoft Configuration Extensions">
+    <PackageReference Include="Microsoft.Extensions.Configuration.Xml" />
+    <Using Include="Microsoft.Extensions.Configuration.Xml" />
+  </ItemGroup>
+</Project>

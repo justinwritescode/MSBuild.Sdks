@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project Sdk="MSBuild.UsingsSdk">
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Usings" />
+    <PackageReference Include="Backroom.Usings.Config" />
+    <PackageReference Include="Backroom.Usings.Options" />
+  </ItemGroup>
+</Project>

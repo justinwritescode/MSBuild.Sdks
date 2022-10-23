@@ -1,0 +1,15 @@
+is_global = true
+build_property.DebugSourceGenerators = 
+build_property.DebugThisAssemblyStrings = 
+build_property.DebugThisAssemblyProject = 
+build_property.DebugThisAssemblyMetadata = 
+build_property.DebugThisAssemblyConstants = 
+build_property.DebugThisAssemblyAssemblyInfo = 
+build_property.RootNamespace = JustinWritesCode.MSBuild.Sdks.MSBuild.UsingsSdk
+build_property.RootNamespace = JustinWritesCode.MSBuild.Sdks.MSBuild.UsingsSdk
+build_property.ProjectDir = /Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/src/MSBuild.UsingsSdk/
+build_property.AssemblyName = MSBuild.UsingsSdk
+build_property.TargetFrameworkIdentifier = .NETStandard
+build_property.TargetFrameworkMoniker = .NETStandard,Version=v2.0
+build_property.TargetFrameworkVersion = v2.0
+build_property.ThisAssemblyProject = AssemblyName|RootNamespace|TargetFrameworkIdentifier|TargetFrameworkMoniker|TargetFrameworkVersion

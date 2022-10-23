@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project Sdk="MSBuild.UsingsSdk">
+  <PropertyGroup>
+    <Description>`Using`s for `System.Text.RegularExpressions`</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <Using Include="System.Text.RegularExpressions" />
+    <Using Include="System.Text.RegularExpressions.RegexOptions" Static="true" />
+    <Using Include="System.Text.RegularExpressions.Regex" Alias="Rex" />
+    <Using Include="System.Text.RegularExpressions.Regex" Alias="Rx" />
+    <Using Include="System.Text.RegularExpressions.Regex" Alias="RegX" />
+    <Using Include="System.Text.RegularExpressions.Regex" Alias="Regx" />
+    <Using Include="System.Text.RegularExpressions.Regex" Static="true" />
+    <Using Include="System.Text.RegularExpressions.RegexOptions" Alias="Rxo" />
+  </ItemGroup>
+</Project>

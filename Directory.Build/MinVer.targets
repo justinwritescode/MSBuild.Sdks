@@ -1,5 +1,0 @@
-<Project>
-  <PropertyGroup>
-    <MinVerTagPrefix Condition="'$(MinVerTagPrefix)' == ''">v</MinVerTagPrefix>
-  </PropertyGroup>
-</Project>

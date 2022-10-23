@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="MSBuild.UsingsSdk">
+  <ItemGroup Label="Microsoft Configuration Extensions">
+    <!-- <PackageReference Include="Backroom.Usings.Options" /> -->
+    <!-- <PackageReference Include="Backroom.Usings.Config.Json" /> -->
+    <ProjectReference Include="Backroom.Usings.Options.usings" />
+    <ProjectReference Include="Backroom.Usings.Config.Json.usings" />
+    <!-- <PackageReference Include="Backroom.Usings.Config" /> -->
+    <ProjectReference Include="Backroom.Usings.Options.usings" />
+    <ProjectReference Include="Backroom.Usings.Config.Json.usings" />
+    <ProjectReference Include="Backroom.Usings.Config.usings" />
+    <!-- <PackageReference Include="Backroom.Usings.Config.Xml" /> -->
+    <!-- <PackageReference Include="Backroom.Usings.Config.EnvironmentVariables" /> -->
+    <!-- <PackageReference Include="Backroom.Usings.Config.UserSecrets" /> -->
+    <ProjectReference Include="Backroom.Usings.Config.EnvironmentVariables.usings" />
+    <ProjectReference Include="Backroom.Usings.Config.UserSecrets.usings" />
+    <Using Include="Microsoft.Extensions.Options.ConfigurationExtensions" />
+    <Using Include="Microsoft.Extensions.Configuration.EnvironmentVariables" />
+    <Using Include="Microsoft.Extensions.Logging.Configuration" />
+    <Using Include="Microsoft.Extensions.Configuration.CommandLine" />
+    <Using Include="Microsoft.Extensions.Configuration.UserSecrets" />
+    <Using Include="Microsoft.Extensions.Configuration.Json" />
+    <Using Include="Microsoft.Extensions.Configuration" />
+    <!-- <Using Include="Microsoft.Extensions.Configuration.Ini" /> -->
+    <!-- <Using Include="Microsoft.Extensions.Configuration.Xml" /> -->
+  </ItemGroup>
+</Project>

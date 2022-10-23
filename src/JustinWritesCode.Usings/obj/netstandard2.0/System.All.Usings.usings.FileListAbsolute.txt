@@ -1,0 +1,2 @@
+/Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/src/JustinWritesCode.Usings/obj/netstandard2.0/System.All.Usings.usings.AssemblyReference.cache
+/Users/david/GitHub/justinwritescode/src/MSBuild.Sdks/src/JustinWritesCode.Usings/obj/netstandard2.0/GitInfo.cache

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
+    <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">/Users/david/.nuget/packages/</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">/Users/david/.nuget/packages/</NuGetPackageFolders>
+    <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.3.1</NuGetToolVersion>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <SourceRoot Include="/Users/david/.nuget/packages/" />
+  </ItemGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)thisassembly.prerequisites/1.0.9/buildTransitive/netstandard2.0/ThisAssembly.Prerequisites.props" Condition="Exists('$(NuGetPackageRoot)thisassembly.prerequisites/1.0.9/buildTransitive/netstandard2.0/ThisAssembly.Prerequisites.props')" />
+    <Import Project="$(NuGetPackageRoot)thisassembly.strings/1.0.9/buildTransitive/netstandard2.0/ThisAssembly.Strings.props" Condition="Exists('$(NuGetPackageRoot)thisassembly.strings/1.0.9/buildTransitive/netstandard2.0/ThisAssembly.Strings.props')" />
+    <Import Project="$(NuGetPackageRoot)thisassembly.project/1.0.9/buildTransitive/netstandard2.0/ThisAssembly.Project.props" Condition="Exists('$(NuGetPackageRoot)thisassembly.project/1.0.9/buildTransitive/netstandard2.0/ThisAssembly.Project.props')" />
+    <Import Project="$(NuGetPackageRoot)nugetizer/0.9.0/build/NuGetizer.props" Condition="Exists('$(NuGetPackageRoot)nugetizer/0.9.0/build/NuGetizer.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.common/1.1.1/build/Microsoft.SourceLink.Common.props" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.common/1.1.1/build/Microsoft.SourceLink.Common.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.build.tasks.git/1.1.1/build/Microsoft.Build.Tasks.Git.props" Condition="Exists('$(NuGetPackageRoot)microsoft.build.tasks.git/1.1.1/build/Microsoft.Build.Tasks.Git.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.sourcelink.github/1.1.1/build/Microsoft.SourceLink.GitHub.props" Condition="Exists('$(NuGetPackageRoot)microsoft.sourcelink.github/1.1.1/build/Microsoft.SourceLink.GitHub.props')" />
+    <Import Project="$(NuGetPackageRoot)justinwritescode.shared.sharedfiles/0.0.8/build/JustinWritesCode.Shared.SharedFiles.props" Condition="Exists('$(NuGetPackageRoot)justinwritescode.shared.sharedfiles/0.0.8/build/JustinWritesCode.Shared.SharedFiles.props')" />
+  </ImportGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgVsTools_Projects Condition=" '$(PkgVsTools_Projects)' == '' ">/Users/david/.nuget/packages/vstools.projects/1.2.0</PkgVsTools_Projects>
+    <PkgThisAssembly Condition=" '$(PkgThisAssembly)' == '' ">/Users/david/.nuget/packages/thisassembly/1.0.9</PkgThisAssembly>
+    <PkgSystem_Xml_XDocument Condition=" '$(PkgSystem_Xml_XDocument)' == '' ">/Users/david/.nuget/packages/system.xml.xdocument/4.3.0</PkgSystem_Xml_XDocument>
+    <PkgSystem_Text_Json Condition=" '$(PkgSystem_Text_Json)' == '' ">/Users/david/.nuget/packages/system.text.json/6.0.5</PkgSystem_Text_Json>
+    <PkgStef_Validation Condition=" '$(PkgStef_Validation)' == '' ">/Users/david/.nuget/packages/stef.validation/0.1.0</PkgStef_Validation>
+    <PkgNuGetizer Condition=" '$(PkgNuGetizer)' == '' ">/Users/david/.nuget/packages/nugetizer/0.9.0</PkgNuGetizer>
+    <PkgNETStandard_Library Condition=" '$(PkgNETStandard_Library)' == '' ">/Users/david/.nuget/packages/netstandard.library/2.0.3</PkgNETStandard_Library>
+    <PkgMinVer Condition=" '$(PkgMinVer)' == '' ">/Users/david/.nuget/packages/minver/4.1.0</PkgMinVer>
+    <PkgMicrosoft_VisualStudio_SlnGen Condition=" '$(PkgMicrosoft_VisualStudio_SlnGen)' == '' ">/Users/david/.nuget/packages/microsoft.visualstudio.slngen/8.5.17</PkgMicrosoft_VisualStudio_SlnGen>
+    <PkgMicrosoft_SourceLink_Common Condition=" '$(PkgMicrosoft_SourceLink_Common)' == '' ">/Users/david/.nuget/packages/microsoft.sourcelink.common/1.1.1</PkgMicrosoft_SourceLink_Common>
+    <PkgMicrosoft_Build_Tasks_Git Condition=" '$(PkgMicrosoft_Build_Tasks_Git)' == '' ">/Users/david/.nuget/packages/microsoft.build.tasks.git/1.1.1</PkgMicrosoft_Build_Tasks_Git>
+    <PkgMicrosoft_SourceLink_GitHub Condition=" '$(PkgMicrosoft_SourceLink_GitHub)' == '' ">/Users/david/.nuget/packages/microsoft.sourcelink.github/1.1.1</PkgMicrosoft_SourceLink_GitHub>
+    <PkgMicrosoft_Build_Utilities_Core Condition=" '$(PkgMicrosoft_Build_Utilities_Core)' == '' ">/Users/david/.nuget/packages/microsoft.build.utilities.core/17.3.1</PkgMicrosoft_Build_Utilities_Core>
+    <PkgMicrosoft_Build Condition=" '$(PkgMicrosoft_Build)' == '' ">/Users/david/.nuget/packages/microsoft.build/17.3.1</PkgMicrosoft_Build>
+    <PkgJustinWritesCode_Shared_SharedFiles Condition=" '$(PkgJustinWritesCode_Shared_SharedFiles)' == '' ">/Users/david/.nuget/packages/justinwritescode.shared.sharedfiles/0.0.8</PkgJustinWritesCode_Shared_SharedFiles>
+    <PkgGitInfo Condition=" '$(PkgGitInfo)' == '' ">/Users/david/.nuget/packages/gitinfo/2.2.0</PkgGitInfo>
+    <PkgFluentBuilder Condition=" '$(PkgFluentBuilder)' == '' ">/Users/david/.nuget/packages/fluentbuilder/0.7.1</PkgFluentBuilder>
+  </PropertyGroup>
+</Project>

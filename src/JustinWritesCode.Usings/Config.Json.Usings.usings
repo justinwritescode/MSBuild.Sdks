@@ -1,0 +1,1 @@
+﻿<?xml version="1.0" encoding="utf-8"?> <Project Sdk="MSBuild.UsingsSdk"> <ItemGroup Label="Json Configuration Extensions"> <PackageReference Include="Microsoft.Extensions.Configuration.Json" /> <Using Include="Microsoft.Extensions.Configuration.Json" /> </ItemGroup> </Project>

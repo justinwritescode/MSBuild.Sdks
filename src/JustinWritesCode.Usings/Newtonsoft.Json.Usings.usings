@@ -1,0 +1,1 @@
+﻿<?xml version="1.0" encoding="UTF-8"?> <Project Sdk="Backroom.Include.Sdk"> <ItemGroup> <Using Include="Newtonsoft.Json" /> <Using Include="Newtonsoft.Json.JsonConverter" Alias="NewtonsoftJsonConverter" /> <Using Include="Newtonsoft.Json.JsonConverterAttribute" Alias="NewtonsoftJsonConverterAttribute" /> </ItemGroup> </Project>
