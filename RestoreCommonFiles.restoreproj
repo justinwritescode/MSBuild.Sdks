@@ -5,6 +5,6 @@
       <TargetFramework>netstandard1.0</TargetFramework>
     </PropertyGroup>
     <ItemGroup>
-      <PackageReference Include="JustinWritesCode.Shared.SharedFiles" Version="0.0.8" />
+      <!-- <PackageReference Include="JustinWritesCode.Shared.SharedFiles" Version="0.0.8" /> -->
     </ItemGroup>
 </Project>

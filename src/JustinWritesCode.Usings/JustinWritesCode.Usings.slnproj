@@ -1,6 +1,8 @@
 <Project Sdk="Microsoft.Build.Traversal">
   <PropertyGroup>
-   <IncludeInSolutionFile>true</IncludeInSolutionFile> 
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <IncludeInSolutionFile>true</IncludeInSolutionFile> 
+    <AssemblyName>JustinWritesCode.Usings</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="AnyOf.Usings.usings" />

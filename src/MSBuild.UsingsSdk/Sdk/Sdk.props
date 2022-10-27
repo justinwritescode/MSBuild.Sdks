@@ -1,12 +1,16 @@
 <Project>
   <PropertyGroup>
+    <Description>A NuGet package containing implicit global usings for the ```$(MSBuildProjectName.Replace(".Usings", ""))``` namespace/domain.</Description>
+    <PackageIcon>Icon.png</PackageIcon>
+  </PropertyGroup>
+  <PropertyGroup>
     <TargetFramework Condition="'$(TargetFramework)' == ''">netstandard2.0</TargetFramework>
     <IntermediateOutputPath Condition="'$(IntermediateOutputPath)' == ''">obj/</IntermediateOutputPath>
     <OutputFileExtension Condition="'$(MSBuildProjectExtension)' == '.targets'">.targets</OutputFileExtension>
     <OutputFileExtension Condition="'$(MSBuildProjectExtension)' == '.props'">.props</OutputFileExtension>
     <OutputFileExtension Condition="'$(OutputFileExtension)' == ''">.props</OutputFileExtension>
-    <OutputFilePackagePath>build/$(MSBuildProjectName)$(OutputFileExtension)</OutputFilePackagePath>
-    <OutputFilePath>$(IntermediateOutputPath)$(MSBuildProjectName)$(OutputFileExtension)</OutputFilePath>
+    <OutputFilePackagePath>build/$(PackageId)$(OutputFileExtension)</OutputFilePackagePath>
+    <OutputFilePath>$(IntermediateOutputPath)$(MSBuildProjectName).Usings.$(OutputFileExtension)</OutputFilePath>
     <UsingsSdkAssemblyFile>$(MSBuildThisFileDirectory)../lib/MSBuild.UsingsSdk.dll</UsingsSdkAssemblyFile>
   </PropertyGroup>
 </Project>
