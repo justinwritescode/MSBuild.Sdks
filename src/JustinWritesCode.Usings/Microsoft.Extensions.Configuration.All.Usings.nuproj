@@ -1,0 +1,40 @@
+﻿<!--
+ Microsoft.Extensions.Configuration.All.usings
+ 
+   Created: 2022-10-22-10:58:48
+   Modified: 2022-10-30-04:41:10
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="Microsoft.Build.NoTargets">
+  <PropertyGroup>
+   <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup Label="Microsoft Configuration Extensions">
+    <!-- <PackageReference Include="JustinWritesCode.Usings.Options" /> -->
+    <!-- <PackageReference Include="JustinWritesCode.Usings.Config.Json" /> -->
+    <PackageReference Include="Microsoft.Extensions.Options.Usings" />
+    <!-- <PackageReference Include="JustinWritesCode.Usings.Config" /> -->
+    <PackageReference Include="Microsoft.Extensions.Options.Usings" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json.Usings" />
+    <!-- <PackageReference Include="JustinWritesCode.Usings.Config.usings" /> -->
+    <!-- <PackageReference Include="JustinWritesCode.Usings.Config.Xml" /> -->
+    <!-- <PackageReference Include="JustinWritesCode.Usings.Config.EnvironmentVariables" /> -->
+    <!-- <PackageReference Include="JustinWritesCode.Usings.Config.UserSecrets" /> -->
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables.Usings" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets.Usings" />
+    <Using Include="Microsoft.Extensions.Options.ConfigurationExtensions" />
+    <Using Include="Microsoft.Extensions.Configuration.EnvironmentVariables" />
+    <Using Include="Microsoft.Extensions.Logging.Configuration" />
+    <Using Include="Microsoft.Extensions.Configuration.CommandLine" />
+    <Using Include="Microsoft.Extensions.Configuration.UserSecrets" />
+    <Using Include="Microsoft.Extensions.Configuration.Json" />
+    <Using Include="Microsoft.Extensions.Configuration" />
+    <!-- <Using Include="Microsoft.Extensions.Configuration.Ini" /> -->
+    <!-- <Using Include="Microsoft.Extensions.Configuration.Xml" /> -->
+  </ItemGroup>
+</Project>

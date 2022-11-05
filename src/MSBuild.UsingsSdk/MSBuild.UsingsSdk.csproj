@@ -1,3 +1,15 @@
+<!--
+ MSBuild.UsingsSdk.csproj
+ 
+   Created: 2022-10-23-11:32:51
+   Modified: 2022-10-30-04:13:25
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Title>MSBuild Usings SDK</Title>
@@ -6,6 +18,9 @@
     <RootNamespace>MSBuild.UsingsSdk</RootNamespace>
     <AssemblyName>MSBuild.UsingsSdk</AssemblyName>
     <TargetFrameworks>netstandard2.0;net6.0</TargetFrameworks>
+    <IncludeInSolutionFile>true</IncludeInSolutionFile>
+    <EnableGlobalCodeGenerators>false</EnableGlobalCodeGenerators>
+    <EmitNuspec>true</EmitNuspec>
   </PropertyGroup>
   <ItemGroup>
       <PackageReference Include="Microsoft.Build.Utilities.Core" />

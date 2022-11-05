@@ -1,1 +1,6 @@
-{"JustinWritesCode.Common.RestoreCommonFiles":"0.0.1-Local","JustinWritesCode.Common.RestoreCommonFiles.Tests":"0.0.1-Local","JustinWritesCode.Versioning":"0.0.1-Local","MSBuild.UsingsSdk":"0.0.1-Local"}
+{
+    "JustinWritesCode.Common.RestoreCommonFiles": "0.0.1-Local",
+    "JustinWritesCode.Common.RestoreCommonFiles.Tests": "0.0.1-Local",
+    "JustinWritesCode.Versioning": "0.0.1-Local",
+    "MSBuild.UsingsSdk": "0.0.1-Local"
+}

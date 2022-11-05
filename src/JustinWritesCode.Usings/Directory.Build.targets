@@ -1,0 +1,23 @@
+<!--
+ Directory.Build.props
+ 
+   Created: 2022-10-27-01:32:54
+   Modified: 2022-10-30-04:32:15
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <PropertyGroup>
+    <InheritDirectoryBuildTargets>$([MSBuild]::GetPathOfFileAbove("Directory.Build.targets", "$(MSBUildThisFileDirectory)../"))</InheritDirectoryBuildTargets>
+    <TargetFrameworks Condition="'$(TargetFramework)' == ''">netstandard2.0;net6.0</TargetFrameworks>
+  </PropertyGroup>
+  
+  <Import Project="$(InheritDirectoryBuildTargets)" />
+  <Target Name="WritePackageId" BeforeTargets="GenerateNuspec">
+    <Message Importance="High" Text="PackageId: error : $(PackageId)" />
+  </Target>
+</Project>

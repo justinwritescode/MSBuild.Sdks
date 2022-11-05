@@ -1,0 +1,13 @@
+﻿<!--
+ System.Linq.usings
+ 
+   Created: 2022-10-22-10:58:54
+   Modified: 2022-10-30-04:33:41
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="MSBuild.UsingsSdk"> <ItemGroup> <Using Include="System.Linq" /> <Using Include="System.Linq.Expressions" /> <Using Include="System.Linq.Expressions.Expression" Static="true" /> </ItemGroup> </Project>

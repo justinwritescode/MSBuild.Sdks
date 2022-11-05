@@ -1,0 +1,6 @@
+#!/usr/bin/zsh
+
+
+newExeFilename=$(echo '$1'|sed 's/\.ts$//g');
+echo "#!/usr/bin/env ts-node\n\n" > $newExeFilename;
+cat $1 >> $newExeFilename;

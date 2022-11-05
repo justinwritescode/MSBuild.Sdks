@@ -1,18 +1,33 @@
+<!--
+ JustinWritesCode.Usings.slnproj
+ 
+   Created: 2022-10-23-11:46:20
+   Modified: 2022-10-30-04:16:21
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
 <Project Sdk="Microsoft.Build.Traversal">
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <!-- <TargetFramework>netstandard2.0;net6.0</TargetFramework> -->
     <IncludeInSolutionFile>true</IncludeInSolutionFile> 
     <AssemblyName>JustinWritesCode.Usings</AssemblyName>
+    <SlnGenSolutionFolder>usings</SlnGenSolutionFolder>
+    <MinVerTagPrefix>uv</MinVerTagPrefix>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="AnyOf.Usings.usings" />
-    <ProjectReference Include="AzureFunctions.Usings.usings" />
-    <ProjectReference Include="AzureFunctions.Usings.usings" />
-    <ProjectReference Include="Microsoft.EntityFrameworkCore.Usings.usings" />
-    <ProjectReference Include="System.All.Usings.usings" />
-    <ProjectReference Include="System.Collections.Usings.usings" />
-    <ProjectReference Include="System.Security.Usings.usings" />
-    <ProjectReference Include="System.Usings.usings" />
-    <ProjectReference Include="System.Threading.Tasks.Usings.usings" />
+    <!-- <ProjectReference Include="*.usings" /> -->
+    <ProjectReference Include="AnyOf.usings" />
+    <ProjectReference Include="AzureFunctions.usings" />
+    <ProjectReference Include="AzureFunctions.usings" />
+    <ProjectReference Include="Microsoft.EntityFrameworkCore.usings" />
+    <ProjectReference Include="System.All.usings" />
+    <ProjectReference Include="System.Collections.usings" />
+    <ProjectReference Include="System.Security.usings" />
+    <ProjectReference Include="System.usings" />
+    <ProjectReference Include="System.Threading.Tasks.usings" />
   </ItemGroup>
 </Project>

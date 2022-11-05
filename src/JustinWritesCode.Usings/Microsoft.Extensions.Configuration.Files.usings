@@ -1,0 +1,24 @@
+﻿<!--
+ Microsoft.Extensions.Configuration.Files.usings
+ 
+   Created: 2022-10-22-10:58:48
+   Modified: 2022-10-30-04:41:33
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="MSBuild.UsingsSdk">
+  <ItemGroup Label="Microsoft Configuration Extensions">
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" />
+    <!-- <PackageReference Include="JustinWritesCode.Usings.Config.Xml" /> -->
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" />
+    <!-- <PackageReference Include="JustinWritesCode.Usings.Config.Ini" /> -->
+    <!-- <ProjectReference Include="Microsoft.Extensions.Configuration.Ini.usings" /> -->
+    <Using Include="Microsoft.Extensions.Configuration.Json" />
+    <!-- <Using Include="Microsoft.Extensions.Configuration.Ini" /> <Using Include="Microsoft.Extensions.Configuration.Xml" /> -->
+    <Using Include="Microsoft.Extensions.Configuration.FileExtensions" />
+  </ItemGroup>
+</Project>

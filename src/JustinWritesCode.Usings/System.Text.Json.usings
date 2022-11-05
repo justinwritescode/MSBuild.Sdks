@@ -1,0 +1,26 @@
+﻿<!--
+ System.Text.Json.usings
+ 
+   Created: 2022-10-22-10:58:54
+   Modified: 2022-10-30-04:33:48
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="MSBuild.UsingsSdk">
+  <ItemGroup Label="System.Text.Json Usings">
+    <Using Include="System.Text.Json" />
+    <Using Include="System.Text.Json.Serialization" />
+    <Using Include="System.Text.RegularExpressions" />
+    <Using Include="System.Text.Json.JsonDocument" Alias="JDoc" />
+    <Using Include="System.Text.Json.JsonProperty" Alias="JProp" />
+    <Using Include="System.Text.Json.JsonElement" Alias="JElem" />
+    <Using Include="System.Text.Json.Serialization.JsonPropertyNameAttribute" Alias="JPropAttribute" />
+    <Using Include="System.Text.Json.JsonSerializer" Alias="JSer" />
+    <Using Include="System.Text.Json.JsonSerializer" Static="true" />
+    <Using Include="System.Text.Json.JsonSerializerOptions" Alias="Jso" />
+  </ItemGroup>
+</Project>

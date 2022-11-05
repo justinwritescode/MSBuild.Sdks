@@ -1,0 +1,13 @@
+﻿<!--
+ Web-Net.usings
+ 
+   Created: 2022-10-22-10:58:54
+   Modified: 2022-10-30-04:34:07
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+ <Project Sdk="MSBuild.UsingsSdk"> <ItemGroup> <Using Include="Microsoft.OpenApi" /> <Using Include="Microsoft.OpenApi.Any" /> <Using Include="Microsoft.OpenApi.Interfaces" /> <Using Include="Microsoft.OpenApi.Models" /> <Using Include="Microsoft.OpenApi.Writers" /> <Using Include="Microsoft.AspNetCore.Mvc" /> <Using Include="Microsoft.AspNetCore.Authorization" /> <Using Include="Microsoft.AspNetCore.Mvc.ApplicationModels" /> <Using Include="Microsoft.AspNetCore.Mvc.ApplicationParts" /> <Using Include="Microsoft.AspNetCore.Mvc.Authorization" /> <Using Include="Microsoft.AspNetCore.Mvc.Controllers" /> <Using Include="Microsoft.AspNetCore.Mvc.Formatters" /> <Using Include="Microsoft.AspNetCore.Mvc.Infrastructure" /> <Using Include="Microsoft.AspNetCore.Mvc.ModelBinding" /> <Using Include="Microsoft.AspNetCore.Mvc.Routing" /> <Using Include="Microsoft.AspNetCore.Builder" /> <Using Include="Microsoft.AspNetCore.Diagnostics" /> <Using Include="Microsoft.AspNetCore.Hosting" /> <Using Include="Microsoft.AspNetCore.Http" /> <Using Include="Microsoft.AspNetCore.Http.CookieSecurePolicy" Static="true" /> <Using Include="Microsoft.AspNetCore.Http.HttpMethods" Static="true" /> <Using Include="Microsoft.AspNetCore.Http.HttpProtocol" Static="true" /> <Using Include="Microsoft.AspNetCore.Http.StatusCodes" Static="true" /> <Using Include="System.Net.Mime.MediaTypeNames" Static="true" /> <Using Include="System.Net.Mime.MediaTypeNames.Application" Static="true" /> <Using Include="System.Net.Mime.MediaTypeNames.Image" Static="true" /> <Using Include="System.Net.Mime.MediaTypeNames.Text" Static="true" /> </ItemGroup> <ItemGroup> <PackageReference Include="Microsoft.AspNetCore.Http" /> </ItemGroup> </Project>

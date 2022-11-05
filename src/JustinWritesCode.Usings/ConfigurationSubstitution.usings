@@ -1,0 +1,18 @@
+﻿<!--
+ConfigurationSubstitution.usings
+
+  Created: 2022-10-23-01:58:48
+  Modified: 2022-11-02-03:23:42
+
+  Author: Justin Chase <justin@justinwritescode.com>
+  
+  Copyright © 2022 Justin Chase, All Rights Reserved
+     License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="MSBuild.UsingsSdk">
+  <ItemGroup Label="Microsoft Configuration Extensions">
+    <Using Include="ConfigurationSubstitution" />
+    <PackageReference Include="ConfigurationSubstitutor" />
+  </ItemGroup>
+</Project>

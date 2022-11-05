@@ -1,0 +1,18 @@
+﻿<!--
+ Microsoft.Extensions.DependencyInjection.usings
+ 
+   Created: 2022-10-23-11:46:20
+   Modified: 2022-10-30-04:49:19
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="MSBuild.UsingsSdk">
+  <ItemGroup Label="MXL Usings">
+    <Using Include="Microsoft.Extensions.DependencyInjection" />
+    <Using Include="Microsoft.Extensions.DependencyInjection.Extensions" />
+  </ItemGroup>
+</Project>

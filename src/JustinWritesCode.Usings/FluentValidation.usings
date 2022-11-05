@@ -1,0 +1,19 @@
+﻿<!--
+FluentValidation.usings
+
+  Created: 2022-10-23-01:58:54
+  Modified: 2022-11-02-03:24:09
+
+  Author: Justin Chase <justin@justinwritescode.com>
+  
+  Copyright © 2022 Justin Chase, All Rights Reserved
+     License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="JustinWritesCode.Include.Sdk">
+  <ItemGroup>
+    <Using Include="FluentValidation" />
+    <Using Include="FluentValidation.Results.ValidationResult" Alias="FvResult" />
+    <Using Include="FluentValidation.Validators" />
+  </ItemGroup>
+</Project>

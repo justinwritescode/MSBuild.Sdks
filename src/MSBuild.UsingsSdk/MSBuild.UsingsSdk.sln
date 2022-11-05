@@ -1,0 +1,35 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSBuild.UsingsSdk", "MSBuild.UsingsSdk.csproj", "{36F9FA82-1C2E-42D4-B75C-DFF34B1C22F6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A8B5DD4C-A197-4072-8828-E5AAEEB318C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Testing|Any CPU = Testing|Any CPU
+		Local|Any CPU = Local|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Staging|Any CPU = Staging|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36F9FA82-1C2E-42D4-B75C-DFF34B1C22F6}.Testing|Any CPU.ActiveCfg = Testing|Any CPU
+		{36F9FA82-1C2E-42D4-B75C-DFF34B1C22F6}.Testing|Any CPU.Build.0 = Testing|Any CPU
+		{36F9FA82-1C2E-42D4-B75C-DFF34B1C22F6}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{36F9FA82-1C2E-42D4-B75C-DFF34B1C22F6}.Local|Any CPU.Build.0 = Local|Any CPU
+		{36F9FA82-1C2E-42D4-B75C-DFF34B1C22F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36F9FA82-1C2E-42D4-B75C-DFF34B1C22F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36F9FA82-1C2E-42D4-B75C-DFF34B1C22F6}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{36F9FA82-1C2E-42D4-B75C-DFF34B1C22F6}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{36F9FA82-1C2E-42D4-B75C-DFF34B1C22F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36F9FA82-1C2E-42D4-B75C-DFF34B1C22F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{36F9FA82-1C2E-42D4-B75C-DFF34B1C22F6} = {A8B5DD4C-A197-4072-8828-E5AAEEB318C9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ADBB8B23-ED14-425C-A8DB-D1E781A09483}
+	EndGlobalSection
+EndGlobal

@@ -1,6 +1,16 @@
+<!--
+ Sdk.targets
+ 
+   Created: 2022-10-23-02:46:20
+   Modified: 2022-11-01-04:07:03
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
 <Project Sdk="Microsoft.Build.NoTargets">
-   <PropertyGroup>
-   </PropertyGroup>
    <UsingTask TaskName="JustinWritesCode.MSBuild.UsingsSdk.CreateUsingsProject" AssemblyFile="$(UsingsSdkAssemblyFile)" />
    <Target Name="PrepareOutputFile" BeforeTargets="GetPackageContents">
       <JustinWritesCode.MSBuild.UsingsSdk.CreateUsingsProject
@@ -9,6 +19,17 @@
    </Target>
    <ItemGroup>
     <PackageFile Include="$(OutputFilePath)" PackagePath="$(OutputFilePackagePath)" />
-    <PackageFile Include="$(MSBuildThisFileDirectory)../Icon.png" PackagePath="Icon.png" />
+    <PackageFile Include="$(IconFile)" PackagePath="Icon.png" />
    </ItemGroup>
+   <Target Name="OutputProperties" AfterTargets="Build">
+      <Message Text="PackageIdOverride: $(PackageIdOverride)" Importance="High" />
+      <Message Text="AssemblyNameOverride: $(AssemblyNameOverride)" Importance="High" />
+      <Message Text="RootNamespaceOverride: $(RootNamespaceOverride)" Importance="High" />
+      <Message Text="PackageId: $(PackageId)" Importance="High" />
+      <Message Text="RootNamespace: $(RootNamespace)" Importance="High" />
+      <Message Text="AssemblyName: $(AssemblyName)" Importance="High" />
+      <Message Text="OutputFileExtension: $(OutputFileExtension)" Importance="High" />
+      <Message Text="OutputFilePackagePath: $(OutputFilePackagePath)" Importance="High" />
+      <Message Text="OutputFilePath: $(OutputFilePath)" Importance="High" />
+   </Target>
 </Project>

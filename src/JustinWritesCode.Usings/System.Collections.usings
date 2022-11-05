@@ -1,0 +1,18 @@
+﻿<!--
+ System.Collections.usings
+ 
+   Created: 2022-10-22-10:58:48
+   Modified: 2022-10-30-04:33:21
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="MSBuild.UsingsSdk">
+  <ItemGroup>
+    <ProjectReference Include="System.Collections.Generic.usings" />
+    <ProjectReference Include="System.Collections.ObjectModel.usings" />
+  </ItemGroup>
+</Project>
