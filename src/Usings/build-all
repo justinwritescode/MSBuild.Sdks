@@ -1,0 +1,17 @@
+# 
+# build-all
+# 
+#   Created: 2022-11-11-10:07:08
+#   Modified: 2022-11-12-03:21:48
+# 
+#   Author: Justin Chase <justin@justinwritescode.com>
+#   
+#   Copyright © 2022 Justin Chase, All Rights Reserved
+#      License: MIT (https://opensource.org/licenses/MIT)
+# 
+
+#!/bin/zsh
+for USING in ./*.usings;
+do
+    dotnet build $USING -c $1 $2;
+done;

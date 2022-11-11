@@ -1,0 +1,21 @@
+﻿<!--
+ Microsoft.Extensions.usings
+ 
+   Created: 2022-10-22-10:58:54
+   Modified: 2022-10-30-04:40:37
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="UsingsSdk">
+ <ItemGroup>
+    <ImportUsings Include="Microsoft.Extensions.DependencyInjection.usings" />
+    <ImportUsings Include="Microsoft.Extensions.Configuration.All.Usings.usings" />
+    <ImportUsings Include="Microsoft.Extensions.DependencyInjection.usings" />
+    <ImportUsings Include="Microsoft.Extensions.Options.usings" />
+    <ImportUsings Include="Microsoft.Extensions.Logging.usings" />
+ </ItemGroup>
+</Project>

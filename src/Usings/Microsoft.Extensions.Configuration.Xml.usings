@@ -1,0 +1,21 @@
+﻿<!--
+ Microsoft.Extensions.Configuration.Xml.usings
+ 
+   Created: 2022-10-22-10:58:54
+   Modified: 2022-10-30-04:49:22
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="UsingsSdk">
+  <PropertyGroup>
+    <PackageId>Microsoft.Extensions.Configuration.Xml.Usings</PackageId>
+  </PropertyGroup>
+  <ItemGroup Label="Microsoft Configuration Extensions">
+    <PackageReference Include="Microsoft.Extensions.Configuration.Xml" />
+    <Using Include="Microsoft.Extensions.Configuration.Xml" />
+  </ItemGroup>
+</Project>

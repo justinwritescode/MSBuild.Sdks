@@ -1,4 +1,4 @@
-<Project Sdk="MSBuild.UsingsSdk">
+<Project Sdk="UsingsSdk">
   <PropertyGroup>
   </PropertyGroup>
   <ItemGroup>

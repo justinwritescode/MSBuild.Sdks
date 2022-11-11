@@ -1,0 +1,25 @@
+<!--
+ JustinWritesCode.Usings.slnproj
+ 
+   Created: 2022-10-23-11:46:20
+   Modified: 2022-10-30-04:16:21
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="Microsoft.Build.Traversal">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net6.0</TargetFrameworks>
+    <IncludeInSolutionFile>true</IncludeInSolutionFile> 
+    <AssemblyName>JustinWritesCode.Usings</AssemblyName>
+    <SlnGenSolutionFolder>usings</SlnGenSolutionFolder>
+    <MinVerTagPrefix>uv</MinVerTagPrefix>
+  </PropertyGroup>
+    <ItemGroup>
+      <ProjectReference Include="AnyOf.usings" />
+      <ProjectReference Include="MSBuild.usings" />
+    </ItemGroup>
+</Project>

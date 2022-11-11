@@ -1,0 +1,16 @@
+<!--
+ * Aardvark.usings
+ * 
+ *   Created: 2022-11-07-02:43:42
+ *   Modified: 2022-11-07-02:43:42
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+<Project Sdk="UsingsSdk">
+ <ItemGroup>
+   <Using Include="Aardvark.Usings" />
+ </ItemGroup>
+</Project>
