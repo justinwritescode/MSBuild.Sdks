@@ -11,8 +11,8 @@
 -->
 
 <Project Sdk="MSBuild.UsingsSdk">
-  <ItemGroup>
-    <PackageReference Include="Azure.Identity.Usings" />
+ <ItemGroup>
+    <ImportUsings Include="Azure.Identity.usings" />
     <Using Include="Microsoft.Extensions.Azure" />
   </ItemGroup>
 </Project>

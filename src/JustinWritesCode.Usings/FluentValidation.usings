@@ -10,7 +10,7 @@ FluentValidation.usings
      License: MIT (https://opensource.org/licenses/MIT)
 -->
 
-<Project Sdk="JustinWritesCode.Include.Sdk">
+<Project Sdk="MSBuild.UsingsSdk">
   <ItemGroup>
     <Using Include="FluentValidation" />
     <Using Include="FluentValidation.Results.ValidationResult" Alias="FvResult" />

@@ -11,8 +11,14 @@ Xunit.usings
 -->
 
 <Project Sdk="MSBuild.UsingsSdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
   <ItemGroup>
     <Using Include="Xunit" />
     <Using Include="Xunit.Abstractions" />
+    <PackageReference Include="xunit" /> 
+		<PackageReference Update="xunit.runner.visualstudio" />
+		<PackageReference Update="coverlet.collector" />
   </ItemGroup>
 </Project>

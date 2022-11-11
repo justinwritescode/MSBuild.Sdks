@@ -12,7 +12,7 @@ System.Collections.ObjectModel.usings
 
 <Project Sdk="MSBuild.UsingsSdk">
   <ItemGroup>
-    <Using Include="System.Collections.ObjectModel" />
-    <PackageReference Include="System.ObjectModel" />
+    <!-- <Using Include="System.Collections.ObjectModel" />
+    <PackageReference Include="System.ObjectModel" /> -->
   </ItemGroup>
 </Project>

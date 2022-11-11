@@ -1,3 +1,15 @@
+// 
+// CreateUsingsProject.cs
+// 
+//   Created: 2022-10-23-02:34:24
+//   Modified: 2022-11-06-12:50:51
+// 
+//   Author: Justin Chase <justin@justinwritescode.com>
+//   
+//   Copyright © 2022 Justin Chase, All Rights Reserved
+//      License: MIT (https://opensource.org/licenses/MIT)
+// 
+
 using System.Text;
 using System.Xml;
 namespace MSBuild.UsingsSdk;
@@ -11,15 +23,22 @@ public class CreateUsingsProject : MSBTask
     [Required]
     public string OutputFile { get; set; } = string.Empty;
 
+    public virtual IEnumerable<XDocument> Load(string path)
+    {
+        var project = XDocument.Load(path);
+        return new [] { project }.Concat(project.Descendants("UsingsImport").SelectMany(x => Load(x.Attribute("Include").Value)));
+    }
+
     public override bool Execute()
     {
-        var project = XDocument.Load(InputFile);
+        var allProjects = Load(InputFile);
 
-        Console.WriteLine("Input file: " + InputFile);
-        var usings = project.Descendants("Using").OrderBy(x => x.Attribute("Include").Value).ToArray();
-        var projectReferences = project.Descendants("ProjectReference").OrderBy(x => x.Attribute("Include").Value).ToArray();
-        var packageReferences = project.Descendants("PackageReference").OrderBy(x => x.Attribute("Include").Value).ToArray();
-        var properties = project.Descendants("PropertyGroup").Descendants().ToArray();
+        Console.WriteLine("Found " + allProjects.Count() + " imported projects to process");
+
+        var usings = allProjects.SelectMany(project => project.Descendants("Using")).OrderBy(x => x.Attribute("Include").Value).ToArray();
+        var projectReferences = allProjects.SelectMany(project => project.Descendants("ProjectReference")).OrderBy(x => x.Attribute("Include").Value).ToArray();
+        var packageReferences = allProjects.SelectMany(project => project.Descendants("PackageReference")).OrderBy(x => x.Attribute("Include").Value).ToArray();
+        var properties = allProjects.SelectMany(project => project.Descendants("PropertyGroup").Descendants()).OrderBy(x => x.Value).ToArray();
 
         Console.WriteLine("Usings: " + usings.Length);
         Console.WriteLine("ProjectReferences: " + projectReferences.Length);

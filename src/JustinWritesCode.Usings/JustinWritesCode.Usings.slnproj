@@ -12,22 +12,26 @@
 
 <Project Sdk="Microsoft.Build.Traversal">
   <PropertyGroup>
-    <!-- <TargetFramework>netstandard2.0;net6.0</TargetFramework> -->
+    <TargetFramework>netstandard2.0</TargetFramework>
     <IncludeInSolutionFile>true</IncludeInSolutionFile> 
     <AssemblyName>JustinWritesCode.Usings</AssemblyName>
     <SlnGenSolutionFolder>usings</SlnGenSolutionFolder>
     <MinVerTagPrefix>uv</MinVerTagPrefix>
   </PropertyGroup>
   <ItemGroup>
-    <!-- <ProjectReference Include="*.usings" /> -->
-    <ProjectReference Include="AnyOf.usings" />
-    <ProjectReference Include="AzureFunctions.usings" />
-    <ProjectReference Include="AzureFunctions.usings" />
-    <ProjectReference Include="Microsoft.EntityFrameworkCore.usings" />
-    <ProjectReference Include="System.All.usings" />
-    <ProjectReference Include="System.Collections.usings" />
-    <ProjectReference Include="System.Security.usings" />
-    <ProjectReference Include="System.usings" />
-    <ProjectReference Include="System.Threading.Tasks.usings" />
+      <ProjectReference Include="./*.usings" />
+      <ProjectReference Remove="MediatR.usings" />
+      <ProjectReference Remove="AnyOf.Net6.0.usings" />
+      <ProjectReference Remove="XUnit.usings" />
+      <!-- <ProjectReference Include="*.usings" /> -->
+      <!-- <ProjectReference Include="AnyOf.usings" />
+      <ProjectReference Include="AzureFunctions.usings" />
+      <ProjectReference Include="AzureFunctions.usings" />
+      <ProjectReference Include="Microsoft.EntityFrameworkCore.usings" />
+      <ProjectReference Include="System.All.usings" />
+      <ProjectReference Include="System.Collections.usings" />
+      <ProjectReference Include="System.Security.usings" />
+      <ProjectReference Include="System.usings" />
+      <ProjectReference Include="System.Threading.Tasks.usings" /> -->
   </ItemGroup>
 </Project>

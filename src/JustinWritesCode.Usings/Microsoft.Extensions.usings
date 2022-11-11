@@ -11,7 +11,11 @@
 -->
 
 <Project Sdk="MSBuild.UsingsSdk">
-  <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Usings" />
-  </ItemGroup>
+ <ItemGroup>
+    <ImportUsings Include="Microsoft.Extensions.DependencyInjection.usings" />
+    <ImportUsings Include="Microsoft.Extensions.Configuration.All.Usings.usings" />
+    <ImportUsings Include="Microsoft.Extensions.DependencyInjection.usings" />
+    <ImportUsings Include="Microsoft.Extensions.Options.usings" />
+    <ImportUsings Include="Microsoft.Extensions.Logging.usings" />
+ </ItemGroup>
 </Project>

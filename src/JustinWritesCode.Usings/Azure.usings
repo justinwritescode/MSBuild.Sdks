@@ -12,8 +12,8 @@
 
 <Project Sdk="MSBuild.UsingsSdk">
   <ItemGroup>
-    <ProjectReference Include="Azure.Identity.usings" />
-    <ProjectReference Include="Azure.Config.usings" />
+    <ImportUsings Include="Azure.Identity.usings" />
+    <ImportUsings Include="Azure.Config.usings" />
     <Using Include="Azure.Extensions.AspNetCore.Configuration.Secrets" />
     <Using Include="Microsoft.Extensions.Configuration.AzureAppConfiguration" />
   </ItemGroup>

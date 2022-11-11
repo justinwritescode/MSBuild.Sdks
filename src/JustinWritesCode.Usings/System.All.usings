@@ -11,13 +11,13 @@
 -->
 
 <Project Sdk="MSBuild.UsingsSdk">
-  <ItemGroup>
-    <PackageReference Include="System.ComponentModel.Usings" />
-    <PackageReference Include="System.Security.Usings" />
-    <PackageReference Include="System.Text.Json.Usings" />
-    <PackageReference Include="System.Text.RegularExpressions.Usings" />
-    <PackageReference Include="System.Text.Usings" />
-    <PackageReference Include="System.Usings" />
-    <PackageReference Include="System.Collections.Usings" />
-  </ItemGroup>
+ <ItemGroup>
+    <UsingsImport Include="System.ComponentModel.usings" />
+    <UsingsImport Include="System.Security.usings" />
+    <UsingsImport Include="System.Text.Json.usings" />
+    <UsingsImport Include="System.Text.RegularExpressions.usings" />
+    <UsingsImport Include="System.Text.usings" />
+    <UsingsImport Include="System.usings" />
+    <UsingsImport Include="System.Collections.usings" />
+ </ItemGroup>
 </Project>

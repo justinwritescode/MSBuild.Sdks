@@ -11,17 +11,13 @@
 -->
 
 <Project Sdk="MSBuild.UsingsSdk">
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <TargetFrameworks>net6.0</TargetFrameworks>
-  </PropertyGroup>
   <ItemGroup>
-    <!-- <PackageReference Include="AnyOf" /> -->
+    <PackageReference Include="AnyOf" />
     <PackageReference Include="AnyOf.SourceGenerator" />
-    <PackageReference Include="AnyOf.System.Text.Json" />
+    <PackageReference Include="AnyOf.System.Text.Json" Condition="'$(TargetFramework)' == 'net6.0'" />
   </ItemGroup>
   <ItemGroup>
     <Using Include="AnyOfTypes" />
-    <Using Include="AnyOfTypes.System.Text.Json" />
+    <Using Include="AnyOfTypes.System.Text.Json" Condition="'$(TargetFramework)' == 'net6.0'" />
   </ItemGroup>
 </Project>

@@ -11,8 +11,8 @@
 -->
 
 <Project Sdk="MSBuild.UsingsSdk">
-  <ItemGroup>
-    <ProjectReference Include="System.Collections.Generic.usings" />
-    <ProjectReference Include="System.Collections.ObjectModel.usings" />
-  </ItemGroup>
+ <ItemGroup>
+    <UsingsImport Include="System.Collections.Generic.usings" />
+    <UsingsImport Include="System.Collections.ObjectModel.usings" />
+ </ItemGroup>
 </Project>
