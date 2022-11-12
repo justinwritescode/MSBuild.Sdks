@@ -53,8 +53,4 @@
 	<ItemGroup>
 		<PackageFile Include="./README.md" PackagePath="" />
 	</ItemGroup>
-  <!-- <UsingTask TaskName="CreateIcon" AssemblyFile="./lib/UsingsSdk.dll" />
-  <Target Name="CreateIcon" AfterTargets="Pack">
-    <CreateIcon OutputPath="./icon-usingssdk.png" PackageName="UsingsSdk" />
-  </Target> -->
 </Project>

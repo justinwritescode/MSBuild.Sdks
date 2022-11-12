@@ -12,7 +12,7 @@
 
 <Project Sdk="Microsoft.Build.NoTargets">
    <UsingTask TaskName="JustinWritesCode.MSBuild.UsingsSdk.CreateUsingsProject" AssemblyFile="$(UsingsSdkAssemblyFile)" />
-   <Target Name="PrepareOutputFile" BeforeTargets="GetPackageContents">
+   <Target Name="PrepareOutputFile" BeforeTargets="GetPackageContents;Build">
       <JustinWritesCode.MSBuild.UsingsSdk.CreateUsingsProject
             InputFile="$(MSBuildProjectFullPath)"
             OutputFile="$(OutputFilePath)" />

@@ -19,7 +19,11 @@
     <MinVerTagPrefix>uv</MinVerTagPrefix>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
-  <ItemGroup>
-    <ProjectReference Include="*.usings" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="GetCommandLineArgs" />
+	</ItemGroup>
+	<Target Name="BuildUsingsProjects" BeforeTargets="Build">
+		<CallTarget Targets="GetCommandLineArgs" />
+		<Exec Command="./build-all $(CommandLineArgs)" />
+	</Target>
 </Project>

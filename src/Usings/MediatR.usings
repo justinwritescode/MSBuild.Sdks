@@ -1,14 +1,16 @@
 ﻿<!--
-MediatR.usings
-
-  Created: 2022-10-23-01:58:54
-  Modified: 2022-11-02-03:36:20
-
-  Author: Justin Chase <justin@justinwritescode.com>
-  
-  Copyright © 2022 Justin Chase, All Rights Reserved
-     License: MIT (https://opensource.org/licenses/MIT)
+ * MediatR.usings
+ * 
+ *   Created: 2022-11-12-08:52:03
+ *   Modified: 2022-11-12-04:04:41
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
 -->
+
+
 
 <Project Sdk="UsingsSdk">
   <ItemGroup Label="MediatR Usings">

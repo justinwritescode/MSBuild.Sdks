@@ -13,5 +13,5 @@
 #!/bin/zsh
 for USING in ./*.usings;
 do
-    dotnet build $USING -c $1 $2;
+    dotnet build $USING $1 $2 $3 $3 $5 $6 $7 $8 $9
 done;
