@@ -5,8 +5,10 @@
   },
   "compilationOptions": {
     "defines": [
+      "RELEASE",
+      "PRODUCTION",
       "TRACE",
-      "LOCAL",
+      "RELEASE",
       "NETSTANDARD",
       "NETSTANDARD2_0",
       "NETSTANDARD1_0_OR_GREATER",
@@ -22,6 +24,7 @@
     "platform": "",
     "allowUnsafe": false,
     "warningsAsErrors": false,
+    "optimize": true,
     "keyFile": "/Users/david/GitHub/justinwritescode/Directory.Build/../assets/JustinWritesCode.snk",
     "emitEntryPoint": false,
     "xmlDoc": true,
@@ -29,7 +32,7 @@
   },
   "targets": {
     ".NETStandard,Version=v2.0": {
-      "UsingsSdk/0.0.1-Local": {
+      "UsingsSdk/0.0.2": {
         "dependencies": {
           "GitInfo": "2.2.0",
           "Microsoft.Build": "15.9.20",
@@ -1338,7 +1341,7 @@
       }
     },
     ".NETStandard,Version=v2.0/": {
-      "UsingsSdk/0.0.1-Local": {
+      "UsingsSdk/0.0.2": {
         "dependencies": {
           "GitInfo": "2.2.0",
           "Microsoft.Build": "15.9.20",
@@ -2227,7 +2230,7 @@
     }
   },
   "libraries": {
-    "UsingsSdk/0.0.1-Local": {
+    "UsingsSdk/0.0.2": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

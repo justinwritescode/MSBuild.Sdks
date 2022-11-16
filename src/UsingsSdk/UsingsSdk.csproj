@@ -22,6 +22,8 @@
     <EnableGlobalCodeGenerators>false</EnableGlobalCodeGenerators>
     <OutputPath>lib/</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<Summary>This SDK provides a way to add reusable `using` statements to your project files, packaged as a NuGet package.  This is useful if you want to declare a set of `using` statements that are used in multiple projects, but you don't want to have to add them to every project file.</Summary>
+		<Description>This SDK provides a way to add reusable `using` statements to your project files, packaged as a NuGet package.  This is useful if you want to declare a set of `using` statements that are used in multiple projects, but you don't want to have to add them to every project file.</Description>
   </PropertyGroup>
   <ItemGroup>
       <PackageReference Include="Microsoft.Build.Utilities.Core" />
@@ -43,6 +45,9 @@
   <ItemGroup>
     <PackageTag Include="msbuild" />
     <PackageTag Include="msbuild-sdk" />
+		<PackageTag Include="usings" />
+		<PackageTag Include="using" />
+		<PackageTag Include="implicit-usings" />
   </ItemGroup>
   <ItemGroup>
     <PackageFile Include="./Sdk/*.*" PackagePath="Sdk/%(Filename)%(Extension)" />
@@ -50,7 +55,4 @@
     <PackageFile Include="$(OutputPath)*.*" PackagePath="lib/%(Filename)%(Extension)" />
     <EmbeddedResource Include="./IconWithSpace.png" />
   </ItemGroup>
-	<ItemGroup>
-		<PackageFile Include="./README.md" PackagePath="" />
-	</ItemGroup>
 </Project>

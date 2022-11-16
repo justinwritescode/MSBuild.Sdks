@@ -13,7 +13,7 @@
 
 
 <Project Sdk="UsingsSdk">
-  <ItemGroup Label="MediatR Usings">
+  <!-- <ItemGroup Label="MediatR Usings">
     <Using Include="MediatR" />
     <Using Include="MediatR.IRequest" Alias="IRequest" />
     <Using Include="MediatR.INotification" Alias="INotification" />
@@ -22,5 +22,5 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MediatR" />
-  </ItemGroup>
+  </ItemGroup> -->
 </Project>

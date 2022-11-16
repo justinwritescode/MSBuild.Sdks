@@ -18,12 +18,14 @@
     <SlnGenSolutionFolder>usings</SlnGenSolutionFolder>
     <MinVerTagPrefix>uv</MinVerTagPrefix>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+		<BuildProjectReferences>false</BuildProjectReferences>
   </PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="GetCommandLineArgs" />
+		<ProjectReference Include="*.usings" />
 	</ItemGroup>
 	<Target Name="BuildUsingsProjects" BeforeTargets="Build">
 		<CallTarget Targets="GetCommandLineArgs" />
-		<Exec Command="./build-all $(CommandLineArgs)" />
+		<Exec Command="dotnet build %(ProjectReference.Identity) $(CommandLineArgs)" />
 	</Target>
 </Project>
