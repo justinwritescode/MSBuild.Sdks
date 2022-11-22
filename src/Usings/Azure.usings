@@ -12,9 +12,9 @@
 
 <Project Sdk="UsingsSdk">
   <ItemGroup>
-    <ImportUsings Include="Azure.Identity.usings" />
-    <ImportUsings Include="Azure.Config.usings" />
-    <ImportUsings Include="AzureFunctions.usings" />
+    <Import Include="Azure.Identity.usings" />
+    <Import Include="Azure.Config.usings" />
+    <Import Include="AzureFunctions.usings" />
     <Using Include="Azure.Extensions.AspNetCore.Configuration.Secrets" />
     <Using Include="Microsoft.Extensions.Configuration.AzureAppConfiguration" />
   </ItemGroup>

@@ -12,14 +12,15 @@ Xunit.usings
 
 <Project Sdk="UsingsSdk">
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
+    <TargetFrameworks>net7.0</TargetFrameworks>
   </PropertyGroup>
   <ItemGroup>
     <Using Include="Xunit" />
     <Using Include="Xunit.Abstractions" />
-    <PackageReference Include="xunit" PackageVersionOverride="[2.4.1,)" /> 
-		<PackageReference Include="xunit.runner.visualstudio" PackageVersionOverride="[2.4.3,)" />
-		<PackageReference Include="coverlet.collector" PackageVersionOverride="[3.1.2,)" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" PackageVersionOverride="[17.1.0,)" />
+    <PackageReference Include="xunit" /> 
+		<PackageReference Include="xunit.runner.visualstudio" />
+		<PackageReference Include="coverlet.collector"  />
+    <!-- <PackageReference Include="Microsoft.NET.Test.Sdk" /> -->
   </ItemGroup>
 </Project>

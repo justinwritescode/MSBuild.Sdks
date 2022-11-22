@@ -12,15 +12,17 @@
 
 <Project>
   <PropertyGroup>
-    <Description>A NuGet package containing implicit global usings for the ```$(MSBuildProjectName.Replace(".Usings", ""))``` namespace/domain.</Description>
-    <PackageIcon>Icon.png</PackageIcon>
-    <PackageIdOverride>$(MSBuildProjectName).Usings</PackageIdOverride>
+    <!-- <Description>A NuGet package containing implicit global usings for the ```$(MSBuildProjectName.Replace(".Usings", ""))``` namespace/domain.</Description> -->
+    <!-- <PackageIcon>Icon.png</PackageIcon> -->
+    <PackageIdOverride Condition="'$(PackageIdOverride)' == ''">$(MSBuildProjectName).Usings</PackageIdOverride>
     <AssemblyNameOverride>$(PackageIdOverride)</AssemblyNameOverride>
     <RootNamespaceOverride>$(PackageIdOverride)</RootNamespaceOverride>
     <PackageId>$(PackageIdOverride)</PackageId>
     <AssemblyName>$(PackageIdOverride)</AssemblyName>
     <RootNamespace>$(PackageIdOverride)</RootNamespace>
     <UsingUsingsSdk>true</UsingUsingsSdk>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<!-- <TargetFrameworks>netstandard2.0;net6.0;net7.0</TargetFrameworks> -->
   </PropertyGroup>
   <PropertyGroup>
     <!-- <TargetFramework Condition="'$(TargetFramework)' == ''">netstandard2.0</TargetFramework> -->
@@ -28,8 +30,8 @@
     <OutputFileExtension Condition="'$(MSBuildProjectExtension)' == '.targets'">.targets</OutputFileExtension>
     <OutputFileExtension Condition="'$(MSBuildProjectExtension)' == '.props'">.props</OutputFileExtension>
     <OutputFileExtension Condition="'$(OutputFileExtension)' == ''">.props</OutputFileExtension>
-    <OutputFilePackagePath>build/$(PackageIdOverride)$(OutputFileExtension)</OutputFilePackagePath>
-    <OutputFilePath>$(IntermediateOutputPath)$(PackageIdOverride)$(OutputFileExtension)</OutputFilePath>
+    <OutputFilePackagePath>build/$(PackageId)$(OutputFileExtension)</OutputFilePackagePath>
+    <OutputFilePath>$(IntermediateOutputPath)$(PackageId)/$(PackageId)$(OutputFileExtension)</OutputFilePath>
     <!-- <OutputFilePath>$(OutputFilePath.Replace("..", "."))</OutputFilePath> -->
     <IconFile>$(MSBuildThisFileDirectory)../Icon.png</IconFile>
     <UsingsSdkAssemblyFile>$(MSBuildThisFileDirectory)../lib/UsingsSdk.dll</UsingsSdkAssemblyFile>

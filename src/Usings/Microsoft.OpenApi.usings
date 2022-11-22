@@ -1,0 +1,21 @@
+<!--
+ * Microsoft.OpenApi.usings
+ * 
+ *   Created: 2022-11-18-06:17:22
+ *   Modified: 2022-11-18-06:17:23
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="UsingsSdk">
+	<ItemGroup>
+    <Using Include="Microsoft.OpenApi" />
+    <Using Include="Microsoft.OpenApi.Any" />
+    <Using Include="Microsoft.OpenApi.Interfaces" />
+    <Using Include="Microsoft.OpenApi.Models" />
+    <Using Include="Microsoft.OpenApi.Writers" />
+	</ItemGroup>
+</Project>

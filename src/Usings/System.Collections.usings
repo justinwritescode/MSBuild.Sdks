@@ -12,7 +12,7 @@
 
 <Project Sdk="UsingsSdk">
  <ItemGroup>
-    <UsingsImport Include="System.Collections.Generic.usings" />
-    <UsingsImport Include="System.Collections.ObjectModel.usings" />
+    <Import Include="System.Collections.Generic.usings" />
+    <Import Include="System.Collections.ObjectModel.usings" />
  </ItemGroup>
 </Project>

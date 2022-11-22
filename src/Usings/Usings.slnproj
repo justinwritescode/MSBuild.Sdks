@@ -1,31 +1,43 @@
-<!--
- JustinWritesCode.Usings.slnproj
- 
-   Created: 2022-10-23-11:46:20
-   Modified: 2022-10-30-04:16:21
- 
-   Author: Justin Chase <justin@justinwritescode.com>
-   
-   Copyright © 2022 Justin Chase, All Rights Reserved
-      License: MIT (https://opensource.org/licenses/MIT)
+	<!--
+ * Usings.slnproj
+ * 
+ *   Created: 2022-11-16-04:27:09
+ *   Modified: 2022-11-19-04:05:05
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
 -->
 
-<Project Sdk="Microsoft.Build.Traversal">
+<Project InitialTargets="BuildUsingsProjects">
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <IncludeInSolutionFile>true</IncludeInSolutionFile> 
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<IncludeInSolutionFile>true</IncludeInSolutionFile> 
     <AssemblyName>JustinWritesCode.Usings</AssemblyName>
+    <PackageId>$(AssemblyName)</PackageId>
     <SlnGenSolutionFolder>usings</SlnGenSolutionFolder>
     <MinVerTagPrefix>uv</MinVerTagPrefix>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-		<BuildProjectReferences>false</BuildProjectReferences>
+		<Title>All Usings Projects</Title>
   </PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="GetCommandLineArgs" />
-		<ProjectReference Include="*.usings" />
+		<!-- <PackageReference Include="GetCommandLineArgs" /> -->
+		<ProjectReference Include="*.usings" SetConfiguration="Configuration=$(Configuration)" SetTargetFramework="TargetFramework=$(TargetFramework)" />
 	</ItemGroup>
+	<Import Project="./src/GetCommandLineArgs/GetCommandLineArgs.targets" />
 	<Target Name="BuildUsingsProjects" BeforeTargets="Build">
-		<CallTarget Targets="GetCommandLineArgs" />
-		<Exec Command="dotnet build %(ProjectReference.Identity) $(CommandLineArgs)" />
+		<MSbuild Projects="./src/GetCommandLineArgs/GetCommandLineArgs.csproj" />
+		<GetCommandLineArgs>
+			<Output TaskParameter="CommandLineArgs" ItemName="CommandLineArgs" />
+		</GetCommandLineArgs>
+		<ItemGroup>
+			<CommandLineArgs Remove="$(MSBuildThisFileName)$(MSBuildThisFileExtension)" />
+			<CommandLineArgs Remove="build" />
+			<CommandLineArgs Remove="pack" />
+		</ItemGroup>
+		<Message Importance="High" Text="CommandLineArgs: @(CommandLineArgs, ' ')" />
+		<Exec Command="echo 'dotnet pack %(ProjectReference.Identity) @(CommandLineArgs, ' ')'" />
+		<Exec Command="dotnet pack %(ProjectReference.Identity) @(CommandLineArgs, ' ')" />
 	</Target>
 </Project>

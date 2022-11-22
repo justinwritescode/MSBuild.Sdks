@@ -23,4 +23,7 @@
     <Using Include="System.Text.Json.JsonSerializer" Static="true" />
     <Using Include="System.Text.Json.JsonSerializerOptions" Alias="Jso" />
   </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="System.Text.Json" />
+	</ItemGroup>
 </Project>

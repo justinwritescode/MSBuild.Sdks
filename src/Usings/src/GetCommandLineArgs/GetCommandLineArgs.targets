@@ -1,0 +1,29 @@
+<!--
+ * GetCommandLineArgs.targets
+ * 
+ *   Created: 2022-11-12-04:16:18
+ *   Modified: 2022-11-12-04:16:19
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+<!-- taken from https://stackoverflow.com/questions/3260913/how-to-access-the-msbuild-command-line-parameters-from-within-the-project-file-b -->
+<Project>
+	<PropertyGroup>
+		<GetCommandLineArgsAssemblyFile>$(MSBuildThisFileDirectory)./lib/GetCommandLineArgs.dll</GetCommandLineArgsAssemblyFile>
+		<!-- <GetCommandLineArgsAssemblyFile Condition="'$(MSBuildProjectName)' != 'GetCommandLineArgs'">$(MSBuildThisFileDirectory)../lib/GetCommandLineArgs.dll</GetCommandLineArgsAssemblyFile> -->
+	</PropertyGroup>
+	<UsingTask TaskName="MSBuild.Utils.GetCommandLineArgs" AssemblyFile="$(GetCommandLineArgsAssemblyFile)" />
+	<Target Name="GetCommandLineArgs" Outputs="@(CommandLineArgs);$(CommandLineArgs)">
+		<GetCommandLineArgs>
+			<Output TaskParameter="CommandLineArgs" ItemName="CommandLineArg" />
+			<Output TaskParameter="CommandLine" PropertyName="CommandLine" />
+		</GetCommandLineArgs>
+
+		<PropertyGroup>
+			<CommandLineArgs>@(CommandLineArg, ' ')</CommandLineArgs>
+		</PropertyGroup>
+	</Target>
+</Project>

@@ -1,0 +1,33 @@
+<!--
+ * Usings.slnproj
+ * 
+ *   Created: 2022-11-16-04:27:09
+ *   Modified: 2022-11-19-04:05:05
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="Microsoft.Build.Traversal">
+  <PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<IncludeInSolutionFile>true</IncludeInSolutionFile> 
+    <AssemblyName>JustinWritesCode.Usings</AssemblyName>
+    <SlnGenSolutionFolder>usings</SlnGenSolutionFolder>
+    <MinVerTagPrefix>uv</MinVerTagPrefix>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+		<Title>All Usings Projects</Title>
+		<!-- <BuildProjectReferences>false</BuildProjectReferences> -->
+  </PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="GetCommandLineArgs" />
+		<ProjectReference Include="*.usings" SetConfiguration="Configuration=$(Configuration)" SetTargetFramework="TargetFramework=$(TargetFramework)" />
+	</ItemGroup>
+	<!-- <Target Name="BuildUsingsProjects" BeforeTargets="Build">
+		<CallTarget Targets="GetCommandLineArgs" />
+		<Message Importance="High" Text="CommandLineArgs: $(CommandLineArgs)" />
+		<Exec Command="dotnet build %(ProjectReference.Identity) $(CommandLineArgs)" />
+	</Target> -->
+</Project>

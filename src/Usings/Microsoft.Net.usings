@@ -1,0 +1,20 @@
+<!--
+ * Microsoft.Net.usings
+ * 
+ *   Created: 2022-11-18-12:35:46
+ *   Modified: 2022-11-18-12:35:46
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="UsingsSdk">
+	<ItemGroup>
+		<Using Include="Microsoft.Net.Http.Headers" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Net.Http.Headers" />
+	</ItemGroup>
+</Project>

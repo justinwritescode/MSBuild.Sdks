@@ -12,7 +12,7 @@
 
 <Project Sdk="UsingsSdk">
  <ItemGroup>
-    <ImportUsings Include="Azure.Identity.usings" />
+    <Import Include="Azure.Identity.usings" />
     <Using Include="Microsoft.Extensions.Azure" />
   </ItemGroup>
 </Project>

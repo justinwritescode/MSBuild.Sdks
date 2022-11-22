@@ -45,7 +45,7 @@
     <Using Include="Microsoft.OpenApi.Models.ParameterLocation" Static="true" />
     <Using Include="Microsoft.OpenApi.Models.SecuritySchemeType" Static="true" />
     <Using Include="System.Net.HttpStatusCode" Static="true" />
-    <UsingsImport Include="./System.Net.Mime.MediaTypeNames.usings" />
+    <Import Include="./System.Net.Mime.MediaTypeNames.usings" />
   </ItemGroup>
   <PropertyGroup>
     <Foo>Bar</Foo>

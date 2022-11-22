@@ -20,8 +20,8 @@
     <Using Include="System.Reflection" />
     <Using Include="System.Threading" />
     <Using Include="System.Threading.Tasks" />
-    <Using Include="System.Uri" Alias="uri" />
-    <Using Include="System.Type" Alias="type" />
+    <Using Include="System.Uri" Alias="@uri" />
+    <Using Include="System.Type" Alias="@type" />
     <Using Include="System.BitConverter" Static="true" />
     <Using Include="System.Console" Static="true" />
     <Using Include="System.Convert" Static="true" />

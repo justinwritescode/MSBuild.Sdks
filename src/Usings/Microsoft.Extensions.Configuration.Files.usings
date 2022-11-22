@@ -1,24 +1,23 @@
 ﻿<!--
- Microsoft.Extensions.Configuration.Files.usings
- 
-   Created: 2022-10-22-10:58:48
-   Modified: 2022-10-30-04:41:33
- 
-   Author: Justin Chase <justin@justinwritescode.com>
-   
-   Copyright © 2022 Justin Chase, All Rights Reserved
-      License: MIT (https://opensource.org/licenses/MIT)
+ * Microsoft.Extensions.Configuration.Files.usings
+ * 
+ *   Created: 2022-11-16-04:27:09
+ *   Modified: 2022-11-19-04:05:52
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
 -->
 
 <Project Sdk="UsingsSdk">
   <ItemGroup Label="Microsoft Configuration Extensions">
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" />
-    <!-- <PackageReference Include="JustinWritesCode.Usings.Config.Xml" /> -->
-    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" />
-    <!-- <PackageReference Include="JustinWritesCode.Usings.Config.Ini" /> -->
-    <!-- <ProjectReference Include="Microsoft.Extensions.Configuration.Ini.usings" /> -->
-    <Using Include="Microsoft.Extensions.Configuration.Json" />
-    <!-- <Using Include="Microsoft.Extensions.Configuration.Ini" /> <Using Include="Microsoft.Extensions.Configuration.Xml" /> -->
-    <Using Include="Microsoft.Extensions.Configuration.FileExtensions" />
+		<Import Include="./Microsoft.Extensions.Configuration.Ini.usings" />
+		<Import Include="./Microsoft.Extensions.Configuration.Json.usings" />
+		<Import Include="./Microsoft.Extensions.Configuration.Xml.usings" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.KeyPerFile" />
+		<Using Include="Microsoft.Extensions.Configuration.KeyPerFile" />
+		<Using Include="Microsoft.Extensions.Configuration" />
   </ItemGroup>
 </Project>

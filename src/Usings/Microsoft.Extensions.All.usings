@@ -1,0 +1,20 @@
+﻿<!--
+ * Microsoft.Extensions.Configuration.All.usings
+ * 
+ *   Created: 2022-11-16-04:27:09
+ *   Modified: 2022-11-19-04:06:02
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="UsingsSdk">
+	<ItemGroup>
+		<Import Include="Microsoft.Extensions.Configuration.All.usings" />
+		<Import Include="Microsoft.Extensions.DependencyInjection.usings" />
+		<Import Include="Microsoft.Extensions.Logging.usings" />
+		<Import Include="Microsoft.Extensions.Options.usings" />
+	</ItemGroup>
+</Project>

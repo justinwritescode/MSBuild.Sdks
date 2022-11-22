@@ -13,7 +13,7 @@
 
 <Project Sdk="UsingsSdk">
   <ItemGroup Label="Microsoft Configuration Extensions">
-    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" />
-    <Using Include="Microsoft.Extensions.Configuration.EnvironmentVariables" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" />
+    <Using Include="Microsoft.Extensions.Configuration.CommandLine" />
   </ItemGroup>
 </Project>

@@ -12,24 +12,32 @@
 
 <Project Sdk="Microsoft.Build.NoTargets">
    <UsingTask TaskName="JustinWritesCode.MSBuild.UsingsSdk.CreateUsingsProject" AssemblyFile="$(UsingsSdkAssemblyFile)" />
-   <Target Name="PrepareOutputFile" BeforeTargets="GetPackageContents;Build">
+   <Target Name="PrepareOutputFile" BeforeTargets="GetPackageContents;Build" DependsOnTargets="GetPackageVersion">
       <JustinWritesCode.MSBuild.UsingsSdk.CreateUsingsProject
             InputFile="$(MSBuildProjectFullPath)"
-            OutputFile="$(OutputFilePath)" />
+            OutputFile="$(OutputFilePath)"
+						PackageId="$(PackageId)"
+            Version="$(PackageVersion)">
+				<Output TaskParameter="UsingsProjectFile" PropertyName="UsingsProjectFile" />
+			</JustinWritesCode.MSBuild.UsingsSdk.CreateUsingsProject>
    </Target>
+	 <Target Name="PackUsingsProject" AfterTargets="Pack">
+	 		<!-- <Message Text="dotnet pack $(UsingsProjectFile)" Importance="High" /> -->
+			<Exec Command="dotnet pack $(UsingsProjectFile)" />
+	 </Target>
    <ItemGroup>
-    <Content Include="$(OutputFilePath)" PackagePath="$(OutputFilePackagePath)" />
-    <Content Include="$(IconFile)" PackagePath="" />
+    <!-- <Content Include="$(OutputFilePath)" PackagePath="$(OutputFilePackagePath)" />
+    <Content Include="$(IconFile)" PackagePath="" /> -->
    </ItemGroup>
    <Target Name="OutputProperties" AfterTargets="Build">
-      <Message Text="PackageIdOverride: $(PackageIdOverride)" Importance="High" />
-      <Message Text="AssemblyNameOverride: $(AssemblyNameOverride)" Importance="High" />
-      <Message Text="RootNamespaceOverride: $(RootNamespaceOverride)" Importance="High" />
-      <Message Text="PackageId: $(PackageId)" Importance="High" />
-      <Message Text="RootNamespace: $(RootNamespace)" Importance="High" />
-      <Message Text="AssemblyName: $(AssemblyName)" Importance="High" />
-      <Message Text="OutputFileExtension: $(OutputFileExtension)" Importance="High" />
-      <Message Text="OutputFilePackagePath: $(OutputFilePackagePath)" Importance="High" />
-      <Message Text="OutputFilePath: $(OutputFilePath)" Importance="High" />
+      <Message Text="PackageIdOverride: $(PackageIdOverride)" />
+      <Message Text="AssemblyNameOverride: $(AssemblyNameOverride)" />
+      <Message Text="RootNamespaceOverride: $(RootNamespaceOverride)" />
+      <Message Text="PackageId: $(PackageId)" />
+      <Message Text="RootNamespace: $(RootNamespace)" />
+      <Message Text="AssemblyName: $(AssemblyName)" />
+      <Message Text="OutputFileExtension: $(OutputFileExtension)" />
+      <Message Text="OutputFilePackagePath: $(OutputFilePackagePath)" />
+      <Message Text="OutputFilePath: $(OutputFilePath)" />
    </Target>
 </Project>

@@ -1,40 +1,27 @@
 ﻿<!--
- Microsoft.Extensions.Configuration.All.usings
- 
-   Created: 2022-10-22-10:58:48
-   Modified: 2022-10-30-04:41:10
- 
-   Author: Justin Chase <justin@justinwritescode.com>
-   
-   Copyright © 2022 Justin Chase, All Rights Reserved
-      License: MIT (https://opensource.org/licenses/MIT)
+ * Microsoft.Extensions.Configuration.All.usings
+ * 
+ *   Created: 2022-11-16-04:27:09
+ *   Modified: 2022-11-19-04:06:02
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
 -->
 
 <Project Sdk="UsingsSdk">
-  <PropertyGroup>
-   <TargetFramework>netstandard2.0</TargetFramework>
-  </PropertyGroup>
+	<PropertyGroup>
+
+	</PropertyGroup>
   <ItemGroup Label="Microsoft Configuration Extensions">
-    <ImportUsings Include="Microsoft.Extensions.Configuration.EnvironmentVariables.Usings" />
-    <ImportUsings Include="Microsoft.Extensions.Configuration.UserSecrets.Usings" />
-    <ImportUsings Include="Microsoft.Extensions.Options.Usings" />
-    <ImportUsings Include="Microsoft.Extensions.Configuration.Json.Usings" />
-    <ImportUsings Include="Microsoft.Extensions.Options.Usings" />
-    <Using Include="Microsoft.Extensions.Options.ConfigurationExtensions" />
-    <Using Include="Microsoft.Extensions.Configuration.EnvironmentVariables" />
-    <Using Include="Microsoft.Extensions.Logging.Configuration" />
-    <Using Include="Microsoft.Extensions.Configuration.CommandLine" />
-    <Using Include="Microsoft.Extensions.Configuration.UserSecrets" />
-    <Using Include="Microsoft.Extensions.Configuration.Json" />
-    <Using Include="Microsoft.Extensions.Configuration" />
-    <!-- <Using Include="Microsoft.Extensions.Configuration.Ini" /> -->
-    <!-- <Using Include="Microsoft.Extensions.Configuration.Xml" /> -->
-    <!-- <PackageReference Include="JustinWritesCode.Usings.Options" /> -->
-    <!-- <PackageReference Include="JustinWritesCode.Usings.Config.Json" /> -->
-    <!-- <PackageReference Include="JustinWritesCode.Usings.Config" /> -->
-    <!-- <PackageReference Include="JustinWritesCode.Usings.Config.usings" /> -->
-    <!-- <PackageReference Include="JustinWritesCode.Usings.Config.Xml" /> -->
-    <!-- <PackageReference Include="JustinWritesCode.Usings.Config.EnvironmentVariables" /> -->
-    <!-- <PackageReference Include="JustinWritesCode.Usings.Config.UserSecrets" /> -->
+    <Import Include="Microsoft.Extensions.Configuration.CommandLine.Usings" />
+    <Import Include="Microsoft.Extensions.Configuration.EnvironmentVariables.Usings" />
+    <Import Include="Microsoft.Extensions.Configuration.Files.Usings" />
+    <Import Include="Microsoft.Extensions.Configuration.Ini.Usings" />
+    <Import Include="Microsoft.Extensions.Configuration.Json.Usings" />
+    <Import Include="Microsoft.Extensions.Configuration.UserSecrets.Usings" />
+    <Import Include="Microsoft.Extensions.Configuration.Xml.Usings" />
+    <Import Include="Microsoft.Extensions.Options.Usings" />
   </ItemGroup>
 </Project>

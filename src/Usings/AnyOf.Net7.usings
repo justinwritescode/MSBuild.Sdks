@@ -12,10 +12,10 @@
 
 <Project Sdk="UsingsSdk">
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.0;net6.0;net7.0</TargetFrameworks>
+		<TargetFramework>net7.0</TargetFramework>
 	</PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="AnyOf" />
+    <!-- <PackageReference Include="AnyOf" /> -->
     <PackageReference Include="AnyOf.SourceGenerator" />
     <PackageReference Include="AnyOf.System.Text.Json" Condition="'$(TargetFramework)' == 'net6.0' Or '$(TargetFramework)' == 'net7.0'" />
   </ItemGroup>

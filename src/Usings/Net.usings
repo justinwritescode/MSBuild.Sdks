@@ -1,0 +1,18 @@
+<!--
+ * Net.usings
+ * 
+ *   Created: 2022-11-21-09:06:33
+ *   Modified: 2022-11-21-09:06:34
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="UsingsSdk">
+	<ItemGroup>
+		<Import Include="Microsoft.Net.usings" />
+		<Import Include="System.Net.Mime.MediaTypeNames.usings" />
+	</ItemGroup>
+</Project>
