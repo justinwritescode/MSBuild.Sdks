@@ -26,7 +26,7 @@ public sealed class GetCommandLineArgs : MSBTask
 
 	public override bool Execute()
 	{
-		CommandLineArgs = Environment.GetCommandLineArgs().Select(a => new TaskItem(a)).Skip(1).ToArray();
+		CommandLineArgs = Environment.GetCommandLineArgs().Skip(1).Select(a => new TaskItem(a)).ToArray();
 		CommandLine = Environment.CommandLine;
 		return true;
 	}

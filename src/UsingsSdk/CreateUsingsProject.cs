@@ -12,13 +12,13 @@
 namespace MSBuild.UsingsSdk;
 
 
+using System.IO;
+using System.Linq;
+using System.Net;
 using System.Text;
 using System.Xml;
-using System.Net;
-using System.Xml.Schema;
-using System.IO;
 using System.Xml.Linq;
-using System.Linq;
+using System.Xml.Schema;
 using Microsoft.Build.Execution;
 using MSBC = Microsoft.Build.Construction;
 using MSBEx = Microsoft.Build.Execution;
@@ -41,14 +41,14 @@ public partial class CreateUsingsProject : MSBTask
 	private string PackageReadmeFile => Path.Combine(OutputDirectory, "README.md");
 	[Output]
 	public string UsingsProjectFile => Path.Combine(OutputDirectory, $"{PackageId}.proj");
-	private string OutputDirectory => Path.GetDirectoryName(OutputFile);
-	private string PackageLibDirectory => Path.GetDirectoryName(typeof(CreateUsingsProject).Assembly.Location);
+	private string? OutputDirectory => Path.GetDirectoryName(OutputFile);
+	private string? PackageLibDirectory => Path.GetDirectoryName(typeof(CreateUsingsProject).Assembly.Location);
 	private IEnumerable<(ProjectInstance?, XDocument?)?>? _allProjects;
 	protected IEnumerable<(ProjectInstance? ProjectInstance, XDocument? XDocument)?> AllProjects => _allProjects ??= Load(InputFile)!;
 	private IEnumerable<ProjectPropertyInstance>? _allProperties;
 	protected IEnumerable<ProjectPropertyInstance> AllProperties => _allProperties ??= AllProjects.SelectMany(p => p?.ProjectInstance?.Properties ?? Enumerable.Empty<ProjectPropertyInstance>());
-	protected string IconFile => AllProjects.SelectMany(project => project?.XDocument.Descendants().Where(x => x.GetAttributeValue("Include")?.EndsWith("icon.png", StringComparison.CurrentCultureIgnoreCase) ?? false)).FirstOrDefault()?.GetAttributeValue("Include") ??
-			AllProjects.SelectMany(project => project?.XDocument.Descendants().Where(x => x.GetAttributeValue("Include")?.EndsWith("icon.jpg", StringComparison.CurrentCultureIgnoreCase) ?? false)).FirstOrDefault()?.GetAttributeValue("Include") ??
+	protected string? IconFile => AllProjects.SelectMany(project => project?.XDocument.Descendants().Where(x => x.GetAttributeValue("Include")?.EndsWith("icon.png", StringComparison.CurrentCultureIgnoreCase) ?? false)!).FirstOrDefault()?.GetAttributeValue("Include") ??
+			AllProjects.SelectMany(project => project?.XDocument.Descendants().Where(x => x.GetAttributeValue("Include")?.EndsWith("icon.jpg", StringComparison.CurrentCultureIgnoreCase) ?? false)!).FirstOrDefault()?.GetAttributeValue("Include") ??
 			Path.Combine(PackageLibDirectory, "../ContentFiles/Icon.png");
 	protected string Description => $"This project contains a set of `using` statements and package and project imports for the `{Path.GetFileNameWithoutExtension(InputFile)}` namespace for reuse in other projects";
 	protected string Authors => AllProperties.GetPropertyValue("Authors", "No Author Specified");
@@ -68,7 +68,7 @@ public partial class CreateUsingsProject : MSBTask
 		if(path is null) return new[] { null as (ProjectInstance?, XDocument?)? };
         var project = new ProjectInstance(path);
 		var xDocumentProject = XDocument.Load(path);
-        return new [] { (project, xDocumentProject) as (ProjectInstance?, XDocument?)? }.Concat(xDocumentProject.Descendants("Import").SelectMany(x => Load(GetIncludeValue(x))))
+        return new [] { (project, xDocumentProject) as (ProjectInstance?, XDocument?)? }.Concat(xDocumentProject.Descendants("Import").SelectMany(x => Load(GetIncludeValue(x)).Where(p => p is not null)))
 		.Where(x => x is not null);
     }
 
@@ -83,30 +83,40 @@ public partial class CreateUsingsProject : MSBTask
 
         Log.LogMessage("Found " + AllProjects.Count() + " imported projects to process");
 
-        var usings = AllProjects.GetXItems("Using").Distinct(Comparers).ToArray();
+        var xUsings = AllProjects.GetXItems("Using").Distinct(Comparers).ToArray();
+		var usings = AllProjects.GetItems("Using").Distinct(Comparers).ToArray();
 		var xProjectReferences = AllProjects.GetXItems("ProjectReference").Distinct(Comparers).ToArray();
 		var xPackageReferences = AllProjects.GetXItems("PackageReference").Distinct(Comparers).ToArray();
 		var projectReferences = AllProjects.GetItems("ProjectReference").Distinct(Comparers).ToArray();
 		var packageReferences = AllProjects.GetItems("PackageReference").Distinct(Comparers).ToArray();
         var properties = MakeProperties(AllProperties); //.OrderBy(x => x.Name)).ToArray();
+		var projectReferemceTuples = from XPRojectReference in xProjectReferences
+		join ProjectReference in projectReferences on XPRojectReference.GetAttributeValue("Include") equals ProjectReference.EvaluatedInclude
+		select (XPRojectReference, ProjectReference);
+		var packageReferenceTuples = from XPackageReference in xPackageReferences
+		join PackageReference in packageReferences on XPackageReference.GetAttributeValue("Include") equals PackageReference.EvaluatedInclude
+		select (XPackageReference, PackageReference);
+		var usingsTuples = from XUsing in xUsings
+		join Using in usings on XUsing.GetAttributeValue("Include") equals Using.EvaluatedInclude
+		select (XUsing, Using);
 
         var usingsFile = new XDocument(
             new XComment("<auto-generated />"),
             new XComment("This code was generated by a tool.  Do not modify it."),
             new XElement("Project",
-				new XComment("Usings: " + usings.Length),
+				new XComment("Usings: " + xUsings.Length),
                 new XElement("ItemGroup",
                     new XAttribute("Label", "Usings"),
                     new XComment("⬇️ Usings ⬇️"),
-                    usings.Select(FormatUsing)),
+                    usingsTuples.Select(FormatReference)),
                 new XElement("ItemGroup",
                     new XAttribute("Label", "Package References"),
                     new XComment("⬇️ Package References ⬇️"),
-                    xPackageReferences.Select(FormatPackageReference)),
+                    packageReferenceTuples.Select(FormatReference)),
                 new XElement("ItemGroup",
                     new XAttribute("Label", "Project References"),
                     new XComment("⬇️ Project References ⬇️"),
-                    xProjectReferences.Select(FormatProjectReference))));
+					projectReferemceTuples.Select(FormatReference))));
 
 
         var usingsProjectFile = new XDocument(
@@ -126,14 +136,14 @@ public partial class CreateUsingsProject : MSBTask
 					new XElement("PackageFile", new XAttribute("Include", IconFile), new XAttribute("Pack", "true"), new XAttribute("PackagePath", Path.GetFileName(IconFile))))));
 
         Log.LogMessage("Properties: " + properties.Length);
-        Log.LogMessage("Usings: " + usings.Length);
+        Log.LogMessage("Usings: " + xUsings.Length);
         Log.LogMessage("ProjectReferences: " + xProjectReferences.Length);
         Log.LogMessage("PackageReference: " + xPackageReferences.Length);
 
 		markdownReadme.AppendLine();
 		markdownReadme.AppendLine("### Usings");
 		markdownReadme.AppendLine();
-		markdownReadme.AppendLine(string.Join(Environment.NewLine, usings.Select(x => $"- {GetIncludeValue(x)}{FormatIsStatic(x)}{FormatAlias(x)}")));
+		markdownReadme.AppendLine(string.Join(Environment.NewLine, xUsings.Select(x => $"- {GetIncludeValue(x)}{FormatIsStatic(x)}{FormatAlias(x)}")));
 
 		markdownReadme.AppendLine();
 		markdownReadme.AppendLine("### Package References");
@@ -233,6 +243,8 @@ public partial class CreateUsingsProject : MSBTask
 	private static XElement FormatPackageReference(ProjectItemInstance @ref) => new XElement("PackageReference", GetReferenceAttributes(@ref));
 	private static XElement FormatPackageReference(XElement @ref) => new XElement("PackageReference", GetReferenceAttributes(@ref));
 	private static XElement FormatProjectReference(ProjectItemInstance @ref) => new XElement("ProjectReference", GetReferenceAttributes(@ref));
+	private static XElement FormatReference((XElement XItem, ProjectItemInstance Item) @ref) =>
+		new XElement("ProjectReference", GetReferenceAttributes(@ref.XItem).Concat(GetReferenceAttributes(@ref.Item)).Distinct(Comparers).ToArray());
 	private static XElement FormatProjectReference(XElement @ref) => new XElement("ProjectReference", GetReferenceAttributes(@ref));
 
 	private static XElement FormatProperty(MSBEx.ProjectPropertyInstance property)

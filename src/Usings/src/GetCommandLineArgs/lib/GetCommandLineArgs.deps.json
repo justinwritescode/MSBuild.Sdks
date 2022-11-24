@@ -6,6 +6,12 @@
   "compilationOptions": {
     "defines": [
       "TRACE",
+      "DEBUG",
+      "LOCAL",
+      "TRACE",
+      "DEBUG",
+      "LOCAL",
+      "TRACE",
       "LOCAL",
       "NETSTANDARD",
       "NETSTANDARD2_0",
@@ -22,7 +28,8 @@
     "platform": "",
     "allowUnsafe": false,
     "warningsAsErrors": false,
-    "keyFile": "/Users/david/GitHub/justinwritescode/Directory.Build/../assets/JustinWritesCode.snk",
+    "optimize": false,
+    "keyFile": "/Users/david/GitHub/justinwritescode/libs/Directory.Build/../../assets/JustinWritesCode.snk",
     "emitEntryPoint": false,
     "xmlDoc": true,
     "debugType": "portable"

@@ -22,8 +22,11 @@
 			</JustinWritesCode.MSBuild.UsingsSdk.CreateUsingsProject>
    </Target>
 	 <Target Name="PackUsingsProject" AfterTargets="Pack">
+	 		<GetCommandLineArgs>
+				<Output TaskParameter="CommandLineArgs" ItemName="CommandLineArgs" />
+			</GetCommandLineArgs>
 	 		<!-- <Message Text="dotnet pack $(UsingsProjectFile)" Importance="High" /> -->
-			<Exec Command="dotnet pack $(UsingsProjectFile)" />
+			<Exec Command="dotnet pack $(UsingsProjectFile) @(CommandLineArgs, ' ')" />
 	 </Target>
    <ItemGroup>
     <!-- <Content Include="$(OutputFilePath)" PackagePath="$(OutputFilePackagePath)" />

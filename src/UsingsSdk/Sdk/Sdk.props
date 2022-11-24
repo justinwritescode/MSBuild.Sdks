@@ -22,10 +22,10 @@
     <RootNamespace>$(PackageIdOverride)</RootNamespace>
     <UsingUsingsSdk>true</UsingUsingsSdk>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<!-- <TargetFrameworks>netstandard2.0;net6.0;net7.0</TargetFrameworks> -->
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<TargetFrameworks>netstandard2.0</TargetFrameworks>
   </PropertyGroup>
   <PropertyGroup>
-    <!-- <TargetFramework Condition="'$(TargetFramework)' == ''">netstandard2.0</TargetFramework> -->
     <IntermediateOutputPath Condition="'$(IntermediateOutputPath)' == ''">obj/</IntermediateOutputPath>
     <OutputFileExtension Condition="'$(MSBuildProjectExtension)' == '.targets'">.targets</OutputFileExtension>
     <OutputFileExtension Condition="'$(MSBuildProjectExtension)' == '.props'">.props</OutputFileExtension>
@@ -36,4 +36,7 @@
     <IconFile>$(MSBuildThisFileDirectory)../Icon.png</IconFile>
     <UsingsSdkAssemblyFile>$(MSBuildThisFileDirectory)../lib/UsingsSdk.dll</UsingsSdkAssemblyFile>
   </PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="GetCommandLineArgs" />
+	</ItemGroup>
 </Project>

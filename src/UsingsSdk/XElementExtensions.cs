@@ -11,13 +11,13 @@
 //
 namespace MSBuild.UsingsSdk;
 using System.Linq;
+using System.Xml.Linq;
 using MSBC = Microsoft.Build.Construction;
 using MSBEx = Microsoft.Build.Execution;
-using System.Xml.Linq;
 
 public static class XElementExtensions
 {
-	public static XAttribute GetAttribute(this XElement element, string name)
+	public static XAttribute? GetAttribute(this XElement element, string name)
 	{
 		return element.Attributes().FirstOrDefault(x => x.Name.LocalName == name);
 	}
@@ -35,12 +35,12 @@ public static class XElementExtensions
 	}
 	public static XElement[] GetXItems(this IEnumerable<(ProjectInstance? ProjectInstance, XDocument? XDocument)?> projects, string name)
 	{
-		return projects.SelectMany(x => x?.XDocument.Descendants(name)).Distinct(CreateUsingsProject.Comparers).OrderBy(x => x.GetAttributeValue("Include")).ToArray();
+		return projects.SelectMany(x => x?.XDocument.Descendants(name)!).Distinct(CreateUsingsProject.Comparers).OrderBy(x => x?.GetAttributeValue("Include")).ToArray();
 	}
 
-	public static ProjectItemInstance[] GetItems(this IEnumerable<(ProjectInstance? ProjectInstance, XDocument? XDocument)?> projects, string name)
+	public static ProjectItemInstance[]? GetItems(this IEnumerable<(ProjectInstance? ProjectInstance, XDocument? XDocument)?> projects, string name)
 	{
-		return projects.SelectMany(x => x?.ProjectInstance.GetItems(name)).Distinct(CreateUsingsProject.Comparers).OrderBy(x => x.GetMetadataValue("Include")).ToArray();
+		return projects.SelectMany(x => x?.ProjectInstance.GetItems(name)!).Distinct(CreateUsingsProject.Comparers).OrderBy(x => x.GetMetadataValue("Include")).ToArray();
 	}
 
 	public static string? GetMetadataValue(this MSBC.ProjectItemElement @element, string name) => @element.Metadata.FirstOrDefault(x => x.Name?.Equals(name, StringComparison.OrdinalIgnoreCase) ?? false)?.Value;

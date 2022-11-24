@@ -17,8 +17,8 @@
     <PackageId>UsingsSdk</PackageId>
     <RootNamespace>UsingsSdk</RootNamespace>
     <AssemblyName>UsingsSdk</AssemblyName>
-		<TargetFramework>netstandard2.0</TargetFramework>
-		<TargetFrameworks>netstandard2.0</TargetFrameworks>
+		<TargetFramework>net7.0</TargetFramework>
+		<TargetFrameworks>net7.0</TargetFrameworks>
     <IncludeInSolutionFile>true</IncludeInSolutionFile>
     <EnableGlobalCodeGenerators>false</EnableGlobalCodeGenerators>
     <OutputPath>lib/</OutputPath>
@@ -35,6 +35,7 @@
       <PackageReference Include="System.Drawing.Common" />
       <PackageReference Include="Microsoft.Maui.Graphics" />
       <PackageReference Include="AnyOf" />
+			<PackageReference Include="Microsoft.Extensions.DependencyModel" 	/>
       <!-- TODO: #1 Revisit: VsTools.Projects -->
       <!-- <PackageReference Include="VsTools.Projects" /> -->
   </ItemGroup>
