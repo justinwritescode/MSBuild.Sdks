@@ -41,11 +41,11 @@
         </PropertyGroup>
         <Exec Command="echo '$(DeleteGitHubPackageVersionScript)' " />
         <Exec Command="$(DeleteGitHubPackageVersionScript)"  ContinueOnError="true" />
-        <Exec Command="dotnet nuget push $(PackageTargetPath) -s GitHub -k $(GitHubAuthToken)" Condition="Exists('$(PackageTargetPath)')" />
+        <Exec Command="dotnet nuget push $(PackageTargetPath) -s GitHub -k $(GitHubAuthToken) --skip-duplicate" Condition="Exists('$(PackageTargetPath)')" />
     </Target>
 
     <Target Name="PushLocal" AfterTargets="Pack" Condition="'$(GeneratePackageOnBuild)' == 'true' And '$(DesignTimeBuild)' != 'true'">
         <Exec Command="dotnet nuget delete $(PackageId) $(PackageVersion) -s Local --non-interactive" ContinueOnError="true" />
-        <Exec Command="dotnet nuget push $(PackageTargetPath) -s Local" Condition="Exists('$(PackageTargetPath)')" />
+        <Exec Command="dotnet nuget push $(PackageTargetPath) -s Local --skip-duplicate" Condition="Exists('$(PackageTargetPath)')" />
     </Target>
 </Project>

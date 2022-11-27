@@ -14,6 +14,7 @@
 	<PropertyGroup>
 			<TargetFramework>netstandard1.0</TargetFramework>
 			<TargetFrameworks>netstandard1.0</TargetFrameworks>
+			<Description>This is a simple MSBuild task that allows you to push a NuGet package to a NuGet server.</Description>
 	</PropertyGroup>
 	<ItemGroup>
 		<Content Include="./Sdk/*" PackagePath="Sdk/%(Filename)%(Extension)" />
