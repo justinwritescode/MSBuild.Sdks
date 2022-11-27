@@ -12,6 +12,7 @@
 
 <Project Sdk="Microsoft.Build.NoTargets">
    <UsingTask TaskName="JustinWritesCode.MSBuild.UsingsSdk.CreateUsingsProject" AssemblyFile="$(UsingsSdkAssemblyFile)" />
+   <UsingTask TaskName="JustinWritesCode.MSBuild.Utils.GetCommandLineArgs" AssemblyFile="$(UsingsSdkAssemblyFile)" />
    <Target Name="PrepareOutputFile" BeforeTargets="GetPackageContents;Build" DependsOnTargets="GetPackageVersion">
       <JustinWritesCode.MSBuild.UsingsSdk.CreateUsingsProject
             InputFile="$(MSBuildProjectFullPath)"
@@ -22,10 +23,9 @@
 			</JustinWritesCode.MSBuild.UsingsSdk.CreateUsingsProject>
    </Target>
 	 <Target Name="PackUsingsProject" AfterTargets="Pack">
-	 		<GetCommandLineArgs>
+	 		<!-- <JustinWritesCode.MSBuild.UsingsSdk.CreateUsingsProject>
 				<Output TaskParameter="CommandLineArgs" ItemName="CommandLineArgs" />
-			</GetCommandLineArgs>
-	 		<!-- <Message Text="dotnet pack $(UsingsProjectFile)" Importance="High" /> -->
+			</JustinWritesCode.MSBuild.UsingsSdk.CreateUsingsProject> -->
 			<Exec Command="dotnet pack $(UsingsProjectFile) @(CommandLineArgs, ' ')" />
 	 </Target>
    <ItemGroup>

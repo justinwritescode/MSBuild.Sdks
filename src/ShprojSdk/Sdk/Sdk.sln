@@ -1,0 +1,41 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{156A83F1-ABEF-4E73-ABFF-C6A1AA437922}") = "Sdk", "Sdk.props", "{E95F0C9D-E6DB-4E6E-8841-0F242A7FF632}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{05FFEFFF-BD36-40EF-944E-3480D4DAC7AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Local|Any CPU = Local|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Staging|Any CPU = Staging|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Testing|Any CPU = Testing|Any CPU
+		Dev|Any CPU = Dev|Any CPU
+		Stage|Any CPU = Stage|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E95F0C9D-E6DB-4E6E-8841-0F242A7FF632}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{E95F0C9D-E6DB-4E6E-8841-0F242A7FF632}.Local|Any CPU.Build.0 = Local|Any CPU
+		{E95F0C9D-E6DB-4E6E-8841-0F242A7FF632}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E95F0C9D-E6DB-4E6E-8841-0F242A7FF632}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E95F0C9D-E6DB-4E6E-8841-0F242A7FF632}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{E95F0C9D-E6DB-4E6E-8841-0F242A7FF632}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{E95F0C9D-E6DB-4E6E-8841-0F242A7FF632}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E95F0C9D-E6DB-4E6E-8841-0F242A7FF632}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E95F0C9D-E6DB-4E6E-8841-0F242A7FF632}.Testing|Any CPU.ActiveCfg = Testing|Any CPU
+		{E95F0C9D-E6DB-4E6E-8841-0F242A7FF632}.Testing|Any CPU.Build.0 = Testing|Any CPU
+		{E95F0C9D-E6DB-4E6E-8841-0F242A7FF632}.Dev|Any CPU.ActiveCfg = Dev|Any CPU
+		{E95F0C9D-E6DB-4E6E-8841-0F242A7FF632}.Dev|Any CPU.Build.0 = Dev|Any CPU
+		{E95F0C9D-E6DB-4E6E-8841-0F242A7FF632}.Stage|Any CPU.ActiveCfg = Stage|Any CPU
+		{E95F0C9D-E6DB-4E6E-8841-0F242A7FF632}.Stage|Any CPU.Build.0 = Stage|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E95F0C9D-E6DB-4E6E-8841-0F242A7FF632} = {05FFEFFF-BD36-40EF-944E-3480D4DAC7AF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {33A49D15-7330-4F0E-81AD-ABEEA9D51EE3}
+	EndGlobalSection
+EndGlobal

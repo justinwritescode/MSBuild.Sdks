@@ -20,6 +20,6 @@
     <Using Include="System.ComponentModel.DataAnnotations.DisplayAttribute" Alias="ComponentModelDisplayAttribute" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="System.ComponentModel.Annotations" Condition="'@(PackageReference->AnyHaveMetadataValue('Identity', %(Identity)))' != 'true'"  />
+    <PackageReference Include="System.ComponentModel.Annotations" />
   </ItemGroup>    
 </Project>

@@ -1,0 +1,1877 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <TargetFrameworks>net7.0</TargetFrameworks>
+    <Foo Condition="'$(TargetFramework)' == 'net7.0'">BAR!</Foo>
+    <Bar Label="Foo!" />
+  </PropertyGroup>
+  <ItemGroup>
+    <CompilerVisibleProperty Include="Authors" />
+    <CompilerVisibleProperty Include="Copyright" />
+    <CompilerVisibleProperty Include="EnforceExtendedAnalyzerRules" />
+    <CompilerVisibleProperty Include="InvariantGlobalization" />
+    <CompilerVisibleProperty Include="Owners" />
+    <CompilerVisibleProperty Include="PackageLicenseExpression" />
+    <CompilerVisibleProperty Include="PackageProjectUrl" />
+    <CompilerVisibleProperty Include="PlatformNeutralAssembly" />
+    <CompilerVisibleProperty Include="ProjectDir" />
+    <CompilerVisibleProperty Include="ProjectTypeGuids" />
+    <CompilerVisibleProperty Include="RootNamespace" />
+    <CompilerVisibleProperty Include="TargetFramework" />
+    <CompilerVisibleProperty Include="TargetPlatformMinVersion" />
+    <CompilerVisibleProperty Include="UsingMicrosoftNETSdkWeb" />
+    <CompilerVisibleProperty Include="_SupportedPlatformList" />
+  </ItemGroup>
+  <ItemGroup>
+    <CompilerVisibleItemMetadata Include="Author">
+      <MetadataName>Email</MetadataName>
+    </CompilerVisibleItemMetadata>
+    <CompilerVisibleItemMetadata Include="Author">
+      <MetadataName>Identity</MetadataName>
+    </CompilerVisibleItemMetadata>
+  </ItemGroup>
+  <ItemGroup>
+    <NoWarn Include="CA1305">
+      <Category>Globalization</Category>
+      <Off>false</Off>
+      <Description>Specify IFormatProvider</Description>
+      <Reason>This app is only displaying numbers up to like 60</Reason>
+    </NoWarn>
+    <NoWarn Include="CA1720">
+      <Category>Naming</Category>
+      <Off>false</Off>
+      <Description>Identifiers should not contain type names</Description>
+    </NoWarn>
+    <NoWarn Include="CA1845">
+      <Category>Performance</Category>
+      <Off>false</Off>
+      <Description>Use span-based 'string.Concat' instead of 'string.Format'</Description>
+    </NoWarn>
+    <NoWarn Include="CS1591">
+      <Category>Style</Category>
+      <Off>false</Off>
+      <Description>Missing XML comment for publicly visible type or member</Description>
+    </NoWarn>
+    <NoWarn Include="CS8601">
+      <Category>Design</Category>
+      <Off>false</Off>
+      <Description>Possible null reference assignment</Description>
+    </NoWarn>
+    <NoWarn Include="CS8602">
+      <Category>Design</Category>
+      <Off>false</Off>
+      <Description>Dereference of a possibly null reference</Description>
+    </NoWarn>
+    <NoWarn Include="CS8604">
+      <Category>Design</Category>
+      <Off>false</Off>
+      <Description>Possible null reference argument.</Description>
+    </NoWarn>
+    <NoWarn Include="CS8632">
+      <Category>???</Category>
+      <Off>false</Off>
+      <Description>The annotation for nullable referene types can only be used in code within a '#nullable' annotations context.</Description>
+    </NoWarn>
+    <NoWarn Include="IDE0009">
+      <Category>Style</Category>
+      <Off>false</Off>
+      <Description>Member access should be qualified</Description>
+    </NoWarn>
+    <NoWarn Include="IDE0055">
+      <Category>Style</Category>
+      <Off>false</Off>
+      <Description>Fix Formatting</Description>
+    </NoWarn>
+    <NoWarn Include="IDE0060">
+      <Category>Style</Category>
+      <Off>false</Off>
+      <Description>Remove unused parameter.</Description>
+    </NoWarn>
+    <NoWarn Include="IDE0065">
+      <Category>Style</Category>
+      <Off>false</Off>
+      <Description>???</Description>
+    </NoWarn>
+    <NoWarn Include="IDE0130">
+      <Category>Style</Category>
+      <Off>false</Off>
+      <Description>Namespace does not match folder structure.</Description>
+      <Reason>It doesn't have to--and the folder structure makes more sense to organize the code that way</Reason>
+    </NoWarn>
+    <NoWarn Include="IE0009">
+      <Category>Style</Category>
+      <Off>false</Off>
+      <Description>???</Description>
+    </NoWarn>
+    <NoWarn Include="MSB4011">
+      <Category>Build</Category>
+      <Off>false</Off>
+      <Description>X cannot be imported again.  It was already imported at Y.</Description>
+    </NoWarn>
+    <NoWarn Include="NU5128">
+      <Category>Usage</Category>
+      <Off>false</Off>
+      <Description>Some target frameworks declared in the dependencies group of the nuspec and the lib/ref folder do not have exact matches in the other location</Description>
+    </NoWarn>
+    <NoWarn Include="RS1024">
+      <Category>None</Category>
+      <Off>false</Off>
+      <Description>Compare symbols correctly.</Description>
+    </NoWarn>
+    <NoWarn Include="VSTHRD111">
+      <Category>Reliability</Category>
+      <Off>false</Off>
+      <Description>Use .ConfigureAwait(bool)</Description>
+      <Reason>this is a function, not a UI app</Reason>
+    </NoWarn>
+  </ItemGroup>
+  <ItemGroup>
+    <SlnGenCustomProjectTypeGuid Include=".aproj">
+      <ProjectTypeGuid>4cd4fd5b-0f23-4623-ba3f-b31cc4ab93ef</ProjectTypeGuid>
+    </SlnGenCustomProjectTypeGuid>
+    <SlnGenCustomProjectTypeGuid Include=".cblproj">
+      <ProjectTypeGuid>06141aaa-2f82-4232-a3ef-dcb2027764fd</ProjectTypeGuid>
+    </SlnGenCustomProjectTypeGuid>
+    <SlnGenCustomProjectTypeGuid Include=".cstestproj">
+      <ProjectTypeGuid>FAE04EC0-301F-11D3-BF4B-00C04F79EFBC</ProjectTypeGuid>
+    </SlnGenCustomProjectTypeGuid>
+    <SlnGenCustomProjectTypeGuid Include=".dbproj">
+      <ProjectTypeGuid>ac2f40b5-b3bd-4227-938a-6ecfb8c6e06c</ProjectTypeGuid>
+    </SlnGenCustomProjectTypeGuid>
+    <SlnGenCustomProjectTypeGuid Include=".dtproj">
+      <ProjectTypeGuid>64c8a15c-207e-459d-951d-ad7e7dac7bcf</ProjectTypeGuid>
+    </SlnGenCustomProjectTypeGuid>
+    <SlnGenCustomProjectTypeGuid Include=".dwproj">
+      <ProjectTypeGuid>013f468b-6b9a-4cbf-a1a7-ae98fe3e05c3</ProjectTypeGuid>
+    </SlnGenCustomProjectTypeGuid>
+    <SlnGenCustomProjectTypeGuid Include=".dxjsproj">
+      <ProjectTypeGuid>a9d77286-c18d-461d-83b7-b2fbe1677888</ProjectTypeGuid>
+    </SlnGenCustomProjectTypeGuid>
+    <SlnGenCustomProjectTypeGuid Include=".dynamicsproj">
+      <ProjectTypeGuid>390dbc7b-b3dd-43d4-a958-806d5ce2dd10</ProjectTypeGuid>
+    </SlnGenCustomProjectTypeGuid>
+    <SlnGenCustomProjectTypeGuid Include=".isproj">
+      <ProjectTypeGuid>f7c9b907-e976-47d6-8ade-5d8c208a472d</ProjectTypeGuid>
+    </SlnGenCustomProjectTypeGuid>
+    <SlnGenCustomProjectTypeGuid Include=".mkdocsproj">
+      <ProjectTypeGuid>6ed95d8c-b464-479b-83ff-4e1a3cefd207</ProjectTypeGuid>
+    </SlnGenCustomProjectTypeGuid>
+    <SlnGenCustomProjectTypeGuid Include=".mkdocsproj">
+      <ProjectTypeGuid>0728b154-4ff9-43e1-9619-5e7c5296484f</ProjectTypeGuid>
+    </SlnGenCustomProjectTypeGuid>
+    <SlnGenCustomProjectTypeGuid Include=".modelproj">
+      <ProjectTypeGuid>cc0c3c51-6a1b-4414-8cd6-9a45a02aec87</ProjectTypeGuid>
+    </SlnGenCustomProjectTypeGuid>
+    <SlnGenCustomProjectTypeGuid Include=".pkgs">
+      <ProjectTypeGuid>20d1492d-f7b2-41f2-a4e9-74a420cc8cd1</ProjectTypeGuid>
+    </SlnGenCustomProjectTypeGuid>
+    <SlnGenCustomProjectTypeGuid Include=".proj">
+      <ProjectTypeGuid>2ce5b178-8c95-4bdc-a5aa-c9eb6280a366</ProjectTypeGuid>
+    </SlnGenCustomProjectTypeGuid>
+    <SlnGenCustomProjectTypeGuid Include=".props">
+      <ProjectTypeGuid>156a83f1-abef-4e73-abff-c6a1aa437922</ProjectTypeGuid>
+    </SlnGenCustomProjectTypeGuid>
+    <SlnGenCustomProjectTypeGuid Include=".publishproj">
+      <ProjectTypeGuid>35d4bb16-3398-4e2c-8355-2c9c9680e5bd</ProjectTypeGuid>
+    </SlnGenCustomProjectTypeGuid>
+    <SlnGenCustomProjectTypeGuid Include=".restoreproj">
+      <ProjectTypeGuid>76eaafad-9fda-4299-b582-8e3c4ced5a18</ProjectTypeGuid>
+    </SlnGenCustomProjectTypeGuid>
+    <SlnGenCustomProjectTypeGuid Include=".slnproj">
+      <ProjectTypeGuid>34eac930-e0ca-420b-bd8c-86042dd9e676</ProjectTypeGuid>
+    </SlnGenCustomProjectTypeGuid>
+    <SlnGenCustomProjectTypeGuid Include=".smdlproj">
+      <ProjectTypeGuid>ac8c3b70-cd74-4c8e-9ceb-b8d00702bf3e</ProjectTypeGuid>
+    </SlnGenCustomProjectTypeGuid>
+    <SlnGenCustomProjectTypeGuid Include=".targets">
+      <ProjectTypeGuid>ebca1dae-54cb-40fe-b05b-b52a498fe919</ProjectTypeGuid>
+    </SlnGenCustomProjectTypeGuid>
+    <SlnGenCustomProjectTypeGuid Include=".usings">
+      <ProjectTypeGuid>dcda4a0a-0a5e-4522-b6c4-80513d0753cd</ProjectTypeGuid>
+    </SlnGenCustomProjectTypeGuid>
+    <SlnGenCustomProjectTypeGuid Include=".vfproj">
+      <ProjectTypeGuid>aab86bce-e4cc-4bb0-bbc5-83b1a081b6bb</ProjectTypeGuid>
+    </SlnGenCustomProjectTypeGuid>
+    <SlnGenCustomProjectTypeGuid Include=".xsproj">
+      <ProjectTypeGuid>60ca03d9-d475-4da7-85b4-dbe70d7f5ae1</ProjectTypeGuid>
+    </SlnGenCustomProjectTypeGuid>
+  </ItemGroup>
+  <ItemGroup>
+    <Author Include="Justin Chase">
+      <Email>justin@justinwritescode.com</Email>
+    </Author>
+  </ItemGroup>
+  <ItemGroup>
+    <Owner Include="Justin Chase">
+      <Email>justin@justinwritescode.com</Email>
+    </Owner>
+  </ItemGroup>
+  <ItemGroup>
+    <NuGetSource Include="Azure">
+      <ApiKey>az</ApiKey>
+      <Value>Value</Value>
+      <PushOnBuild>false</PushOnBuild>
+    </NuGetSource>
+    <NuGetSource Include="GitHub">
+      <ApiKey>
+      </ApiKey>
+      <Value>Value</Value>
+      <PushOnBuild>false</PushOnBuild>
+    </NuGetSource>
+    <NuGetSource Include="Local">
+      <ApiKey>
+      </ApiKey>
+      <Value>Value</Value>
+      <PushOnBuild>true</PushOnBuild>
+    </NuGetSource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageTag Include="justinwritescode" />
+  </ItemGroup>
+  <ItemGroup>
+    <SourceRoot Include="/Users/david/.nuget/packages/" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImplicitPackageReferenceVersion Include="Microsoft.AspNetCore.All">
+      <LatestVersion>2.1.30</LatestVersion>
+      <DefaultVersion>2.1.1</DefaultVersion>
+      <TargetFrameworkVersion>2.1</TargetFrameworkVersion>
+    </ImplicitPackageReferenceVersion>
+    <ImplicitPackageReferenceVersion Include="Microsoft.AspNetCore.All">
+      <LatestVersion>2.2.8</LatestVersion>
+      <DefaultVersion>2.2.0</DefaultVersion>
+      <TargetFrameworkVersion>2.2</TargetFrameworkVersion>
+    </ImplicitPackageReferenceVersion>
+    <ImplicitPackageReferenceVersion Include="Microsoft.AspNetCore.App">
+      <LatestVersion>2.1.30</LatestVersion>
+      <DefaultVersion>2.1.1</DefaultVersion>
+      <TargetFrameworkVersion>2.1</TargetFrameworkVersion>
+    </ImplicitPackageReferenceVersion>
+    <ImplicitPackageReferenceVersion Include="Microsoft.AspNetCore.App">
+      <LatestVersion>2.2.8</LatestVersion>
+      <DefaultVersion>2.2.0</DefaultVersion>
+      <TargetFrameworkVersion>2.2</TargetFrameworkVersion>
+    </ImplicitPackageReferenceVersion>
+    <ImplicitPackageReferenceVersion Include="Microsoft.NETCore.App">
+      <LatestVersion>1.0.16</LatestVersion>
+      <DefaultVersion>1.0.5</DefaultVersion>
+      <TargetFrameworkVersion>1.0</TargetFrameworkVersion>
+    </ImplicitPackageReferenceVersion>
+    <ImplicitPackageReferenceVersion Include="Microsoft.NETCore.App">
+      <LatestVersion>1.1.13</LatestVersion>
+      <DefaultVersion>1.1.2</DefaultVersion>
+      <TargetFrameworkVersion>1.1</TargetFrameworkVersion>
+    </ImplicitPackageReferenceVersion>
+    <ImplicitPackageReferenceVersion Include="Microsoft.NETCore.App">
+      <LatestVersion>2.0.9</LatestVersion>
+      <DefaultVersion>2.0.0</DefaultVersion>
+      <TargetFrameworkVersion>2.0</TargetFrameworkVersion>
+    </ImplicitPackageReferenceVersion>
+    <ImplicitPackageReferenceVersion Include="Microsoft.NETCore.App">
+      <LatestVersion>2.1.30</LatestVersion>
+      <DefaultVersion>2.1.0</DefaultVersion>
+      <TargetFrameworkVersion>2.1</TargetFrameworkVersion>
+    </ImplicitPackageReferenceVersion>
+    <ImplicitPackageReferenceVersion Include="Microsoft.NETCore.App">
+      <LatestVersion>2.2.8</LatestVersion>
+      <DefaultVersion>2.2.0</DefaultVersion>
+      <TargetFrameworkVersion>2.2</TargetFrameworkVersion>
+    </ImplicitPackageReferenceVersion>
+  </ItemGroup>
+  <ItemGroup>
+    <KnownFrameworkReference Include="Microsoft.AspNetCore.App">
+      <TargetFramework>net7.0</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>7.0.0</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.AspNetCore.App.Ref</TargetingPackName>
+      <LatestRuntimeFrameworkVersion>7.0.0</LatestRuntimeFrameworkVersion>
+      <RuntimePackExcludedRuntimeIdentifiers>android</RuntimePackExcludedRuntimeIdentifiers>
+      <RuntimePackRuntimeIdentifiers>win-x64;win-x86;win-arm;osx-x64;linux-musl-x64;linux-musl-arm64;linux-x64;linux-arm;linux-arm64;linux-musl-arm;win-arm64;osx-arm64;linux-s390x;linux-ppc64le</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.AspNetCore.App.Runtime.**RID**</RuntimePackNamePatterns>
+      <TargetingPackVersion>7.0.0</TargetingPackVersion>
+      <RuntimeFrameworkName>Microsoft.AspNetCore.App</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.AspNetCore.App">
+      <TargetFramework>net6.0</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>6.0.0</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.AspNetCore.App.Ref</TargetingPackName>
+      <LatestRuntimeFrameworkVersion>6.0.11</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>win-x64;win-x86;win-arm;osx-x64;linux-musl-x64;linux-musl-arm64;linux-x64;linux-arm;linux-arm64;linux-musl-arm;win-arm64;osx-arm64;linux-s390x</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.AspNetCore.App.Runtime.**RID**</RuntimePackNamePatterns>
+      <TargetingPackVersion>6.0.11</TargetingPackVersion>
+      <RuntimeFrameworkName>Microsoft.AspNetCore.App</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.AspNetCore.App">
+      <TargetFramework>net5.0</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>5.0.0</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.AspNetCore.App.Ref</TargetingPackName>
+      <LatestRuntimeFrameworkVersion>5.0.17</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>win-x64;win-x86;win-arm;osx-x64;linux-musl-x64;linux-musl-arm64;linux-x64;linux-arm;linux-arm64;linux-musl-arm;win-arm64</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.AspNetCore.App.Runtime.**RID**</RuntimePackNamePatterns>
+      <TargetingPackVersion>5.0.0</TargetingPackVersion>
+      <RuntimeFrameworkName>Microsoft.AspNetCore.App</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.AspNetCore.App">
+      <TargetFramework>netcoreapp3.1</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>3.1.0</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.AspNetCore.App.Ref</TargetingPackName>
+      <LatestRuntimeFrameworkVersion>3.1.31</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>win-x64;win-x86;win-arm;osx-x64;linux-musl-x64;linux-musl-arm64;linux-x64;linux-arm;linux-arm64</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.AspNetCore.App.Runtime.**RID**</RuntimePackNamePatterns>
+      <TargetingPackVersion>3.1.10</TargetingPackVersion>
+      <RuntimeFrameworkName>Microsoft.AspNetCore.App</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.AspNetCore.App">
+      <TargetFramework>netcoreapp3.0</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>3.0.0</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.AspNetCore.App.Ref</TargetingPackName>
+      <LatestRuntimeFrameworkVersion>3.0.3</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>win-x64;win-x86;win-arm;osx-x64;linux-musl-x64;linux-musl-arm64;linux-x64;linux-arm;linux-arm64</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.AspNetCore.App.Runtime.**RID**</RuntimePackNamePatterns>
+      <TargetingPackVersion>3.0.1</TargetingPackVersion>
+      <RuntimeFrameworkName>Microsoft.AspNetCore.App</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.NETCore.App">
+      <TargetFramework>net7.0</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>7.0.0</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.NETCore.App.Ref</TargetingPackName>
+      <LatestRuntimeFrameworkVersion>7.0.0</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>linux-arm;linux-arm64;linux-musl-arm64;linux-musl-x64;linux-x64;osx-x64;rhel.6-x64;tizen.4.0.0-armel;tizen.5.0.0-armel;win-arm;win-arm64;win-x64;win-x86;linux-musl-arm;osx-arm64;maccatalyst-x64;maccatalyst-arm64;linux-s390x;linux-bionic-arm;linux-bionic-arm64;linux-bionic-x64;linux-bionic-x86;linux-ppc64le</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.NETCore.App.Runtime.**RID**</RuntimePackNamePatterns>
+      <TargetingPackVersion>7.0.0</TargetingPackVersion>
+      <RuntimeFrameworkName>Microsoft.NETCore.App</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.NETCore.App">
+      <TargetFramework>net6.0</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>6.0.0</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.NETCore.App.Ref</TargetingPackName>
+      <LatestRuntimeFrameworkVersion>6.0.11</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>linux-arm;linux-arm64;linux-musl-arm64;linux-musl-x64;linux-x64;osx-x64;rhel.6-x64;tizen.4.0.0-armel;tizen.5.0.0-armel;win-arm;win-arm64;win-x64;win-x86;linux-musl-arm;osx-arm64;maccatalyst-x64;maccatalyst-arm64;linux-s390x;linux-bionic-arm;linux-bionic-arm64;linux-bionic-x64;linux-bionic-x86;linux-ppc64le</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.NETCore.App.Runtime.**RID**</RuntimePackNamePatterns>
+      <TargetingPackVersion>6.0.11</TargetingPackVersion>
+      <RuntimeFrameworkName>Microsoft.NETCore.App</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.NETCore.App">
+      <TargetFramework>net5.0</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>5.0.0</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.NETCore.App.Ref</TargetingPackName>
+      <LatestRuntimeFrameworkVersion>5.0.17</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>linux-arm;linux-arm64;linux-musl-arm64;linux-musl-x64;linux-x64;osx-x64;rhel.6-x64;tizen.4.0.0-armel;tizen.5.0.0-armel;win-arm;win-arm64;win-x64;win-x86;linux-musl-arm;browser-wasm</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.NETCore.App.Runtime.**RID**</RuntimePackNamePatterns>
+      <TargetingPackVersion>5.0.0</TargetingPackVersion>
+      <IsTrimmable>true</IsTrimmable>
+      <RuntimeFrameworkName>Microsoft.NETCore.App</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.NETCore.App">
+      <TargetFramework>netcoreapp3.1</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>3.1.0</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.NETCore.App.Ref</TargetingPackName>
+      <LatestRuntimeFrameworkVersion>3.1.31</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>linux-arm;linux-arm64;linux-musl-arm64;linux-musl-x64;linux-x64;osx-x64;rhel.6-x64;tizen.4.0.0-armel;tizen.5.0.0-armel;win-arm;win-arm64;win-x64;win-x86</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.NETCore.App.Runtime.**RID**</RuntimePackNamePatterns>
+      <TargetingPackVersion>3.1.0</TargetingPackVersion>
+      <IsTrimmable>true</IsTrimmable>
+      <RuntimeFrameworkName>Microsoft.NETCore.App</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.NETCore.App">
+      <TargetFramework>netcoreapp3.0</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>3.0.0</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.NETCore.App.Ref</TargetingPackName>
+      <LatestRuntimeFrameworkVersion>3.0.3</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>linux-arm;linux-arm64;linux-musl-arm64;linux-musl-x64;linux-x64;osx-x64;rhel.6-x64;tizen.4.0.0-armel;tizen.5.0.0-armel;win-arm;win-arm64;win-x64;win-x86</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.NETCore.App.Runtime.**RID**</RuntimePackNamePatterns>
+      <TargetingPackVersion>3.0.0</TargetingPackVersion>
+      <IsTrimmable>true</IsTrimmable>
+      <RuntimeFrameworkName>Microsoft.NETCore.App</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.Windows.SDK.NET.Ref">
+      <RuntimePackAlwaysCopyLocal>true</RuntimePackAlwaysCopyLocal>
+      <TargetFramework>net7.0-windows10.0.17763.0</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>10.0.17763.27</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.Windows.SDK.NET.Ref</TargetingPackName>
+      <IsWindowsOnly>true</IsWindowsOnly>
+      <LatestRuntimeFrameworkVersion>10.0.17763.27</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>any</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.Windows.SDK.NET.Ref</RuntimePackNamePatterns>
+      <TargetingPackVersion>10.0.17763.27</TargetingPackVersion>
+      <RuntimeFrameworkName>Microsoft.Windows.SDK.NET.Ref</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.Windows.SDK.NET.Ref">
+      <RuntimePackAlwaysCopyLocal>true</RuntimePackAlwaysCopyLocal>
+      <TargetFramework>net7.0-windows10.0.18362.0</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>10.0.18362.27</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.Windows.SDK.NET.Ref</TargetingPackName>
+      <IsWindowsOnly>true</IsWindowsOnly>
+      <LatestRuntimeFrameworkVersion>10.0.18362.27</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>any</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.Windows.SDK.NET.Ref</RuntimePackNamePatterns>
+      <TargetingPackVersion>10.0.18362.27</TargetingPackVersion>
+      <RuntimeFrameworkName>Microsoft.Windows.SDK.NET.Ref</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.Windows.SDK.NET.Ref">
+      <RuntimePackAlwaysCopyLocal>true</RuntimePackAlwaysCopyLocal>
+      <TargetFramework>net7.0-windows10.0.19041.0</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>10.0.19041.27</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.Windows.SDK.NET.Ref</TargetingPackName>
+      <IsWindowsOnly>true</IsWindowsOnly>
+      <LatestRuntimeFrameworkVersion>10.0.19041.27</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>any</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.Windows.SDK.NET.Ref</RuntimePackNamePatterns>
+      <TargetingPackVersion>10.0.19041.27</TargetingPackVersion>
+      <RuntimeFrameworkName>Microsoft.Windows.SDK.NET.Ref</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.Windows.SDK.NET.Ref">
+      <RuntimePackAlwaysCopyLocal>true</RuntimePackAlwaysCopyLocal>
+      <TargetFramework>net6.0-windows10.0.17763.0</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>10.0.17763.27</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.Windows.SDK.NET.Ref</TargetingPackName>
+      <IsWindowsOnly>true</IsWindowsOnly>
+      <LatestRuntimeFrameworkVersion>10.0.17763.27</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>any</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.Windows.SDK.NET.Ref</RuntimePackNamePatterns>
+      <TargetingPackVersion>10.0.17763.27</TargetingPackVersion>
+      <RuntimeFrameworkName>Microsoft.Windows.SDK.NET.Ref</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.Windows.SDK.NET.Ref">
+      <RuntimePackAlwaysCopyLocal>true</RuntimePackAlwaysCopyLocal>
+      <TargetFramework>net6.0-windows10.0.18362.0</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>10.0.18362.27</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.Windows.SDK.NET.Ref</TargetingPackName>
+      <IsWindowsOnly>true</IsWindowsOnly>
+      <LatestRuntimeFrameworkVersion>10.0.18362.27</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>any</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.Windows.SDK.NET.Ref</RuntimePackNamePatterns>
+      <TargetingPackVersion>10.0.18362.27</TargetingPackVersion>
+      <RuntimeFrameworkName>Microsoft.Windows.SDK.NET.Ref</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.Windows.SDK.NET.Ref">
+      <RuntimePackAlwaysCopyLocal>true</RuntimePackAlwaysCopyLocal>
+      <TargetFramework>net6.0-windows10.0.19041.0</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>10.0.19041.27</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.Windows.SDK.NET.Ref</TargetingPackName>
+      <IsWindowsOnly>true</IsWindowsOnly>
+      <LatestRuntimeFrameworkVersion>10.0.19041.27</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>any</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.Windows.SDK.NET.Ref</RuntimePackNamePatterns>
+      <TargetingPackVersion>10.0.19041.27</TargetingPackVersion>
+      <RuntimeFrameworkName>Microsoft.Windows.SDK.NET.Ref</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.Windows.SDK.NET.Ref">
+      <RuntimePackAlwaysCopyLocal>true</RuntimePackAlwaysCopyLocal>
+      <TargetFramework>net5.0-windows10.0.17763.0</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>10.0.17763.27</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.Windows.SDK.NET.Ref</TargetingPackName>
+      <IsWindowsOnly>true</IsWindowsOnly>
+      <LatestRuntimeFrameworkVersion>10.0.17763.27</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>any</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.Windows.SDK.NET.Ref</RuntimePackNamePatterns>
+      <TargetingPackVersion>10.0.17763.27</TargetingPackVersion>
+      <RuntimeFrameworkName>Microsoft.Windows.SDK.NET.Ref</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.Windows.SDK.NET.Ref">
+      <RuntimePackAlwaysCopyLocal>true</RuntimePackAlwaysCopyLocal>
+      <TargetFramework>net5.0-windows10.0.18362.0</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>10.0.18362.27</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.Windows.SDK.NET.Ref</TargetingPackName>
+      <IsWindowsOnly>true</IsWindowsOnly>
+      <LatestRuntimeFrameworkVersion>10.0.18362.27</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>any</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.Windows.SDK.NET.Ref</RuntimePackNamePatterns>
+      <TargetingPackVersion>10.0.18362.27</TargetingPackVersion>
+      <RuntimeFrameworkName>Microsoft.Windows.SDK.NET.Ref</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.Windows.SDK.NET.Ref">
+      <RuntimePackAlwaysCopyLocal>true</RuntimePackAlwaysCopyLocal>
+      <TargetFramework>net5.0-windows10.0.19041.0</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>10.0.19041.27</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.Windows.SDK.NET.Ref</TargetingPackName>
+      <IsWindowsOnly>true</IsWindowsOnly>
+      <LatestRuntimeFrameworkVersion>10.0.19041.27</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>any</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.Windows.SDK.NET.Ref</RuntimePackNamePatterns>
+      <TargetingPackVersion>10.0.19041.27</TargetingPackVersion>
+      <RuntimeFrameworkName>Microsoft.Windows.SDK.NET.Ref</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.WindowsDesktop.App">
+      <TargetFramework>net7.0</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>7.0.0</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.WindowsDesktop.App.Ref</TargetingPackName>
+      <IsWindowsOnly>true</IsWindowsOnly>
+      <LatestRuntimeFrameworkVersion>7.0.0</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>win-x64;win-x86;win-arm64</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.WindowsDesktop.App.Runtime.**RID**</RuntimePackNamePatterns>
+      <TargetingPackVersion>7.0.0</TargetingPackVersion>
+      <RuntimeFrameworkName>Microsoft.WindowsDesktop.App</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.WindowsDesktop.App">
+      <TargetFramework>net6.0</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>6.0.0</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.WindowsDesktop.App.Ref</TargetingPackName>
+      <IsWindowsOnly>true</IsWindowsOnly>
+      <LatestRuntimeFrameworkVersion>6.0.11</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>win-x64;win-x86;win-arm64</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.WindowsDesktop.App.Runtime.**RID**</RuntimePackNamePatterns>
+      <TargetingPackVersion>6.0.11</TargetingPackVersion>
+      <RuntimeFrameworkName>Microsoft.WindowsDesktop.App</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.WindowsDesktop.App">
+      <TargetFramework>net5.0</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>5.0.0</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.WindowsDesktop.App.Ref</TargetingPackName>
+      <IsWindowsOnly>true</IsWindowsOnly>
+      <LatestRuntimeFrameworkVersion>5.0.17</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>win-x64;win-x86;win-arm64</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.WindowsDesktop.App.Runtime.**RID**</RuntimePackNamePatterns>
+      <TargetingPackVersion>5.0.0</TargetingPackVersion>
+      <RuntimeFrameworkName>Microsoft.WindowsDesktop.App</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.WindowsDesktop.App">
+      <TargetFramework>netcoreapp3.1</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>3.1.0</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.WindowsDesktop.App.Ref</TargetingPackName>
+      <IsWindowsOnly>true</IsWindowsOnly>
+      <LatestRuntimeFrameworkVersion>3.1.31</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>win-x64;win-x86</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.WindowsDesktop.App.Runtime.**RID**</RuntimePackNamePatterns>
+      <TargetingPackVersion>3.1.0</TargetingPackVersion>
+      <RuntimeFrameworkName>Microsoft.WindowsDesktop.App</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.WindowsDesktop.App">
+      <TargetFramework>netcoreapp3.0</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>3.0.0</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.WindowsDesktop.App.Ref</TargetingPackName>
+      <IsWindowsOnly>true</IsWindowsOnly>
+      <LatestRuntimeFrameworkVersion>3.0.3</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>win-x64;win-x86</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.WindowsDesktop.App.Runtime.**RID**</RuntimePackNamePatterns>
+      <TargetingPackVersion>3.0.0</TargetingPackVersion>
+      <RuntimeFrameworkName>Microsoft.WindowsDesktop.App</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.WindowsDesktop.App.WindowsForms">
+      <TargetFramework>net7.0</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>7.0.0</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.WindowsDesktop.App.Ref</TargetingPackName>
+      <IsWindowsOnly>true</IsWindowsOnly>
+      <LatestRuntimeFrameworkVersion>7.0.0</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>win-x64;win-x86;win-arm64</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.WindowsDesktop.App.Runtime.**RID**</RuntimePackNamePatterns>
+      <TargetingPackVersion>7.0.0</TargetingPackVersion>
+      <Profile>WindowsForms</Profile>
+      <RuntimeFrameworkName>Microsoft.WindowsDesktop.App</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.WindowsDesktop.App.WindowsForms">
+      <TargetFramework>net6.0</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>6.0.0</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.WindowsDesktop.App.Ref</TargetingPackName>
+      <IsWindowsOnly>true</IsWindowsOnly>
+      <LatestRuntimeFrameworkVersion>6.0.11</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>win-x64;win-x86;win-arm64</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.WindowsDesktop.App.Runtime.**RID**</RuntimePackNamePatterns>
+      <TargetingPackVersion>6.0.11</TargetingPackVersion>
+      <Profile>WindowsForms</Profile>
+      <RuntimeFrameworkName>Microsoft.WindowsDesktop.App</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.WindowsDesktop.App.WindowsForms">
+      <TargetFramework>net5.0</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>5.0.0</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.WindowsDesktop.App.Ref</TargetingPackName>
+      <IsWindowsOnly>true</IsWindowsOnly>
+      <LatestRuntimeFrameworkVersion>5.0.17</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>win-x64;win-x86;win-arm64</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.WindowsDesktop.App.Runtime.**RID**</RuntimePackNamePatterns>
+      <TargetingPackVersion>5.0.0</TargetingPackVersion>
+      <Profile>WindowsForms</Profile>
+      <RuntimeFrameworkName>Microsoft.WindowsDesktop.App</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.WindowsDesktop.App.WindowsForms">
+      <TargetFramework>netcoreapp3.1</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>3.1.0</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.WindowsDesktop.App.Ref</TargetingPackName>
+      <IsWindowsOnly>true</IsWindowsOnly>
+      <LatestRuntimeFrameworkVersion>3.1.31</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>win-x64;win-x86</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.WindowsDesktop.App.Runtime.**RID**</RuntimePackNamePatterns>
+      <TargetingPackVersion>3.1.0</TargetingPackVersion>
+      <Profile>WindowsForms</Profile>
+      <RuntimeFrameworkName>Microsoft.WindowsDesktop.App</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.WindowsDesktop.App.WindowsForms">
+      <TargetFramework>netcoreapp3.0</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>3.0.0</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.WindowsDesktop.App.Ref</TargetingPackName>
+      <IsWindowsOnly>true</IsWindowsOnly>
+      <LatestRuntimeFrameworkVersion>3.0.3</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>win-x64;win-x86</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.WindowsDesktop.App.Runtime.**RID**</RuntimePackNamePatterns>
+      <TargetingPackVersion>3.0.0</TargetingPackVersion>
+      <Profile>WindowsForms</Profile>
+      <RuntimeFrameworkName>Microsoft.WindowsDesktop.App</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.WindowsDesktop.App.WPF">
+      <TargetFramework>net7.0</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>7.0.0</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.WindowsDesktop.App.Ref</TargetingPackName>
+      <IsWindowsOnly>true</IsWindowsOnly>
+      <LatestRuntimeFrameworkVersion>7.0.0</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>win-x64;win-x86;win-arm64</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.WindowsDesktop.App.Runtime.**RID**</RuntimePackNamePatterns>
+      <TargetingPackVersion>7.0.0</TargetingPackVersion>
+      <Profile>WPF</Profile>
+      <RuntimeFrameworkName>Microsoft.WindowsDesktop.App</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.WindowsDesktop.App.WPF">
+      <TargetFramework>net6.0</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>6.0.0</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.WindowsDesktop.App.Ref</TargetingPackName>
+      <IsWindowsOnly>true</IsWindowsOnly>
+      <LatestRuntimeFrameworkVersion>6.0.11</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>win-x64;win-x86;win-arm64</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.WindowsDesktop.App.Runtime.**RID**</RuntimePackNamePatterns>
+      <TargetingPackVersion>6.0.11</TargetingPackVersion>
+      <Profile>WPF</Profile>
+      <RuntimeFrameworkName>Microsoft.WindowsDesktop.App</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.WindowsDesktop.App.WPF">
+      <TargetFramework>net5.0</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>5.0.0</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.WindowsDesktop.App.Ref</TargetingPackName>
+      <IsWindowsOnly>true</IsWindowsOnly>
+      <LatestRuntimeFrameworkVersion>5.0.17</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>win-x64;win-x86;win-arm64</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.WindowsDesktop.App.Runtime.**RID**</RuntimePackNamePatterns>
+      <TargetingPackVersion>5.0.0</TargetingPackVersion>
+      <Profile>WPF</Profile>
+      <RuntimeFrameworkName>Microsoft.WindowsDesktop.App</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.WindowsDesktop.App.WPF">
+      <TargetFramework>netcoreapp3.1</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>3.1.0</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.WindowsDesktop.App.Ref</TargetingPackName>
+      <IsWindowsOnly>true</IsWindowsOnly>
+      <LatestRuntimeFrameworkVersion>3.1.31</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>win-x64;win-x86</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.WindowsDesktop.App.Runtime.**RID**</RuntimePackNamePatterns>
+      <TargetingPackVersion>3.1.0</TargetingPackVersion>
+      <Profile>WPF</Profile>
+      <RuntimeFrameworkName>Microsoft.WindowsDesktop.App</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="Microsoft.WindowsDesktop.App.WPF">
+      <TargetFramework>netcoreapp3.0</TargetFramework>
+      <DefaultRuntimeFrameworkVersion>3.0.0</DefaultRuntimeFrameworkVersion>
+      <TargetingPackName>Microsoft.WindowsDesktop.App.Ref</TargetingPackName>
+      <IsWindowsOnly>true</IsWindowsOnly>
+      <LatestRuntimeFrameworkVersion>3.0.3</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>win-x64;win-x86</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.WindowsDesktop.App.Runtime.**RID**</RuntimePackNamePatterns>
+      <TargetingPackVersion>3.0.0</TargetingPackVersion>
+      <Profile>WPF</Profile>
+      <RuntimeFrameworkName>Microsoft.WindowsDesktop.App</RuntimeFrameworkName>
+    </KnownFrameworkReference>
+    <KnownFrameworkReference Include="NETStandard.Library">
+      <TargetFramework>netstandard2.1</TargetFramework>
+      <TargetingPackName>NETStandard.Library.Ref</TargetingPackName>
+      <TargetingPackVersion>2.1.0</TargetingPackVersion>
+    </KnownFrameworkReference>
+  </ItemGroup>
+  <ItemGroup>
+    <KnownAppHostPack Include="Microsoft.NETCore.App">
+      <ExcludedRuntimeIdentifiers>android</ExcludedRuntimeIdentifiers>
+      <AppHostRuntimeIdentifiers>linux-arm;linux-arm64;linux-musl-arm64;linux-musl-x64;linux-x64;osx-x64;rhel.6-x64;tizen.4.0.0-armel;tizen.5.0.0-armel;win-arm;win-arm64;win-x64;win-x86;linux-musl-arm;osx-arm64;linux-s390x;linux-bionic-arm;linux-bionic-arm64;linux-bionic-x64;linux-bionic-x86;linux-ppc64le</AppHostRuntimeIdentifiers>
+      <TargetFramework>net7.0</TargetFramework>
+      <AppHostPackNamePattern>Microsoft.NETCore.App.Host.**RID**</AppHostPackNamePattern>
+      <AppHostPackVersion>7.0.0</AppHostPackVersion>
+    </KnownAppHostPack>
+    <KnownAppHostPack Include="Microsoft.NETCore.App">
+      <ExcludedRuntimeIdentifiers>android</ExcludedRuntimeIdentifiers>
+      <AppHostRuntimeIdentifiers>linux-arm;linux-arm64;linux-musl-arm64;linux-musl-x64;linux-x64;osx-x64;rhel.6-x64;tizen.4.0.0-armel;tizen.5.0.0-armel;win-arm;win-arm64;win-x64;win-x86;linux-musl-arm;osx-arm64;linux-s390x</AppHostRuntimeIdentifiers>
+      <TargetFramework>net6.0</TargetFramework>
+      <AppHostPackNamePattern>Microsoft.NETCore.App.Host.**RID**</AppHostPackNamePattern>
+      <AppHostPackVersion>6.0.11</AppHostPackVersion>
+    </KnownAppHostPack>
+    <KnownAppHostPack Include="Microsoft.NETCore.App">
+      <AppHostRuntimeIdentifiers>linux-arm;linux-arm64;linux-musl-arm64;linux-musl-x64;linux-x64;osx-x64;rhel.6-x64;tizen.4.0.0-armel;tizen.5.0.0-armel;win-arm;win-arm64;win-x64;win-x86;linux-musl-arm</AppHostRuntimeIdentifiers>
+      <TargetFramework>net5.0</TargetFramework>
+      <AppHostPackNamePattern>Microsoft.NETCore.App.Host.**RID**</AppHostPackNamePattern>
+      <AppHostPackVersion>5.0.17</AppHostPackVersion>
+    </KnownAppHostPack>
+    <KnownAppHostPack Include="Microsoft.NETCore.App">
+      <AppHostRuntimeIdentifiers>linux-arm;linux-arm64;linux-musl-arm64;linux-musl-x64;linux-x64;osx-x64;rhel.6-x64;tizen.4.0.0-armel;tizen.5.0.0-armel;win-arm;win-arm64;win-x64;win-x86</AppHostRuntimeIdentifiers>
+      <TargetFramework>netcoreapp3.1</TargetFramework>
+      <AppHostPackNamePattern>Microsoft.NETCore.App.Host.**RID**</AppHostPackNamePattern>
+      <AppHostPackVersion>3.1.31</AppHostPackVersion>
+    </KnownAppHostPack>
+    <KnownAppHostPack Include="Microsoft.NETCore.App">
+      <AppHostRuntimeIdentifiers>linux-arm;linux-arm64;linux-musl-arm64;linux-musl-x64;linux-x64;osx-x64;rhel.6-x64;tizen.4.0.0-armel;tizen.5.0.0-armel;win-arm;win-arm64;win-x64;win-x86</AppHostRuntimeIdentifiers>
+      <TargetFramework>netcoreapp3.0</TargetFramework>
+      <AppHostPackNamePattern>Microsoft.NETCore.App.Host.**RID**</AppHostPackNamePattern>
+      <AppHostPackVersion>3.0.3</AppHostPackVersion>
+    </KnownAppHostPack>
+  </ItemGroup>
+  <ItemGroup>
+    <KnownCrossgen2Pack Include="Microsoft.NETCore.App.Crossgen2">
+      <Crossgen2RuntimeIdentifiers>linux-musl-x64;linux-x64;win-x64;linux-arm;linux-arm64;linux-musl-arm;linux-musl-arm64;osx-arm64;osx-x64;win-arm;win-arm64;win-x86</Crossgen2RuntimeIdentifiers>
+      <TargetFramework>net7.0</TargetFramework>
+      <Crossgen2PackNamePattern>Microsoft.NETCore.App.Crossgen2.**RID**</Crossgen2PackNamePattern>
+      <Crossgen2PackVersion>7.0.0</Crossgen2PackVersion>
+    </KnownCrossgen2Pack>
+    <KnownCrossgen2Pack Include="Microsoft.NETCore.App.Crossgen2">
+      <Crossgen2RuntimeIdentifiers>linux-musl-x64;linux-x64;win-x64;linux-arm;linux-arm64;linux-musl-arm;linux-musl-arm64;osx-arm64;osx-x64;win-arm;win-arm64;win-x86</Crossgen2RuntimeIdentifiers>
+      <TargetFramework>net6.0</TargetFramework>
+      <Crossgen2PackNamePattern>Microsoft.NETCore.App.Crossgen2.**RID**</Crossgen2PackNamePattern>
+      <Crossgen2PackVersion>6.0.11</Crossgen2PackVersion>
+    </KnownCrossgen2Pack>
+    <KnownCrossgen2Pack Include="Microsoft.NETCore.App.Crossgen2">
+      <Crossgen2RuntimeIdentifiers>linux-musl-x64;linux-x64;win-x64</Crossgen2RuntimeIdentifiers>
+      <TargetFramework>net5.0</TargetFramework>
+      <Crossgen2PackNamePattern>Microsoft.NETCore.App.Crossgen2.**RID**</Crossgen2PackNamePattern>
+      <Crossgen2PackVersion>5.0.17</Crossgen2PackVersion>
+    </KnownCrossgen2Pack>
+  </ItemGroup>
+  <ItemGroup>
+    <KnownILCompilerPack Include="Microsoft.DotNet.ILCompiler">
+      <ILCompilerPackNamePattern>runtime.**RID**.Microsoft.DotNet.ILCompiler</ILCompilerPackNamePattern>
+      <TargetFramework>net7.0</TargetFramework>
+      <ILCompilerPackVersion>7.0.0</ILCompilerPackVersion>
+      <ILCompilerRuntimeIdentifiers>linux-musl-x64;linux-x64;win-x64;linux-arm;linux-arm64;linux-musl-arm;linux-musl-arm64;osx-arm64;osx-x64;win-arm;win-arm64;win-x86</ILCompilerRuntimeIdentifiers>
+    </KnownILCompilerPack>
+  </ItemGroup>
+  <ItemGroup>
+    <KnownRuntimePack Include="Microsoft.NETCore.App">
+      <TargetFramework>net7.0</TargetFramework>
+      <LatestRuntimeFrameworkVersion>7.0.0</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>linux-arm;linux-arm64;linux-musl-arm64;linux-musl-x64;linux-x64;osx-x64;rhel.6-x64;win-arm;win-arm64;win-x64;win-x86;linux-musl-arm;osx-arm64;maccatalyst-x64;maccatalyst-arm64;linux-s390x;linux-bionic-arm;linux-bionic-arm64;linux-bionic-x64;linux-bionic-x86;linux-ppc64le;browser-wasm;ios-arm64;ios-arm;iossimulator-arm64;iossimulator-x64;iossimulator-x86;tvos-arm64;tvossimulator-arm64;tvossimulator-x64;android-arm64;android-arm;android-x64;android-x86</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.NETCore.App.Runtime.Mono.**RID**</RuntimePackNamePatterns>
+      <RuntimePackLabels>Mono</RuntimePackLabels>
+      <RuntimeFrameworkName>Microsoft.NETCore.App</RuntimeFrameworkName>
+    </KnownRuntimePack>
+    <KnownRuntimePack Include="Microsoft.NETCore.App">
+      <TargetFramework>net6.0</TargetFramework>
+      <LatestRuntimeFrameworkVersion>6.0.11</LatestRuntimeFrameworkVersion>
+      <RuntimePackRuntimeIdentifiers>linux-arm;linux-arm64;linux-musl-arm64;linux-musl-x64;linux-x64;osx-x64;rhel.6-x64;win-arm;win-arm64;win-x64;win-x86;linux-musl-arm;osx-arm64;maccatalyst-x64;maccatalyst-arm64;linux-s390x;linux-bionic-arm;linux-bionic-arm64;linux-bionic-x64;linux-bionic-x86;linux-ppc64le;browser-wasm;ios-arm64;ios-arm;iossimulator-arm64;iossimulator-x64;iossimulator-x86;tvos-arm64;tvossimulator-arm64;tvossimulator-x64;android-arm64;android-arm;android-x64;android-x86</RuntimePackRuntimeIdentifiers>
+      <RuntimePackNamePatterns>Microsoft.NETCore.App.Runtime.Mono.**RID**</RuntimePackNamePatterns>
+      <RuntimePackLabels>Mono</RuntimePackLabels>
+      <RuntimeFrameworkName>Microsoft.NETCore.App</RuntimeFrameworkName>
+    </KnownRuntimePack>
+  </ItemGroup>
+  <ItemGroup>
+    <WindowsSdkSupportedTargetPlatformVersion Include="10.0.17763.0">
+      <WindowsSdkPackageVersion>10.0.17763.27</WindowsSdkPackageVersion>
+      <MinimumNETVersion>6.0</MinimumNETVersion>
+    </WindowsSdkSupportedTargetPlatformVersion>
+    <WindowsSdkSupportedTargetPlatformVersion Include="10.0.17763.0">
+      <WindowsSdkPackageVersion>10.0.17763.26</WindowsSdkPackageVersion>
+      <MinimumNETVersion>5.0</MinimumNETVersion>
+    </WindowsSdkSupportedTargetPlatformVersion>
+    <WindowsSdkSupportedTargetPlatformVersion Include="10.0.18362.0">
+      <WindowsSdkPackageVersion>10.0.18362.27</WindowsSdkPackageVersion>
+      <MinimumNETVersion>6.0</MinimumNETVersion>
+    </WindowsSdkSupportedTargetPlatformVersion>
+    <WindowsSdkSupportedTargetPlatformVersion Include="10.0.18362.0">
+      <WindowsSdkPackageVersion>10.0.18362.26</WindowsSdkPackageVersion>
+      <MinimumNETVersion>5.0</MinimumNETVersion>
+    </WindowsSdkSupportedTargetPlatformVersion>
+    <WindowsSdkSupportedTargetPlatformVersion Include="10.0.19041.0">
+      <WindowsSdkPackageVersion>10.0.19041.27</WindowsSdkPackageVersion>
+      <MinimumNETVersion>6.0</MinimumNETVersion>
+    </WindowsSdkSupportedTargetPlatformVersion>
+    <WindowsSdkSupportedTargetPlatformVersion Include="10.0.19041.0">
+      <WindowsSdkPackageVersion>10.0.19041.26</WindowsSdkPackageVersion>
+      <MinimumNETVersion>5.0</MinimumNETVersion>
+    </WindowsSdkSupportedTargetPlatformVersion>
+    <WindowsSdkSupportedTargetPlatformVersion Include="10.0.20348.0">
+      <WindowsSdkPackageVersion>10.0.20348.27</WindowsSdkPackageVersion>
+      <MinimumNETVersion>6.0</MinimumNETVersion>
+    </WindowsSdkSupportedTargetPlatformVersion>
+    <WindowsSdkSupportedTargetPlatformVersion Include="10.0.20348.0">
+      <WindowsSdkPackageVersion>10.0.20348.26</WindowsSdkPackageVersion>
+      <MinimumNETVersion>5.0</MinimumNETVersion>
+    </WindowsSdkSupportedTargetPlatformVersion>
+    <WindowsSdkSupportedTargetPlatformVersion Include="10.0.22000.0">
+      <WindowsSdkPackageVersion>10.0.22000.27</WindowsSdkPackageVersion>
+      <MinimumNETVersion>6.0</MinimumNETVersion>
+    </WindowsSdkSupportedTargetPlatformVersion>
+    <WindowsSdkSupportedTargetPlatformVersion Include="10.0.22000.0">
+      <WindowsSdkPackageVersion>10.0.22000.26</WindowsSdkPackageVersion>
+      <MinimumNETVersion>5.0</MinimumNETVersion>
+    </WindowsSdkSupportedTargetPlatformVersion>
+    <WindowsSdkSupportedTargetPlatformVersion Include="10.0.22621.0">
+      <WindowsSdkPackageVersion>10.0.22621.27</WindowsSdkPackageVersion>
+      <MinimumNETVersion>6.0</MinimumNETVersion>
+    </WindowsSdkSupportedTargetPlatformVersion>
+    <WindowsSdkSupportedTargetPlatformVersion Include="7.0" />
+    <WindowsSdkSupportedTargetPlatformVersion Include="8.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CsprojPackager.cs">
+      <BuildAction>Compile</BuildAction>
+      <DefaultPackFolder>content</DefaultPackFolder>
+      <Pack>true</Pack>
+      <CodeLanguage>cs</CodeLanguage>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CsprojPackager.xml">
+      <BuildAction>None</BuildAction>
+      <DefaultPackFolder>none</DefaultPackFolder>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.NETCore.App">
+      <IsImplicitlyDefined>true</IsImplicitlyDefined>
+      <PrivateAssets>All</PrivateAssets>
+      <Pack>false</Pack>
+    </FrameworkReference>
+  </ItemGroup>
+  <ItemGroup>
+    <SupportedNETCoreAppTargetFramework Include=".NETCoreApp,Version=v1.0">
+      <DisplayName>.NET Core 1.0</DisplayName>
+      <Alias>netcoreapp1.0</Alias>
+    </SupportedNETCoreAppTargetFramework>
+    <SupportedNETCoreAppTargetFramework Include=".NETCoreApp,Version=v1.1">
+      <DisplayName>.NET Core 1.1</DisplayName>
+      <Alias>netcoreapp1.1</Alias>
+    </SupportedNETCoreAppTargetFramework>
+    <SupportedNETCoreAppTargetFramework Include=".NETCoreApp,Version=v2.0">
+      <DisplayName>.NET Core 2.0</DisplayName>
+      <Alias>netcoreapp2.0</Alias>
+    </SupportedNETCoreAppTargetFramework>
+    <SupportedNETCoreAppTargetFramework Include=".NETCoreApp,Version=v2.1">
+      <DisplayName>.NET Core 2.1</DisplayName>
+      <Alias>netcoreapp2.1</Alias>
+    </SupportedNETCoreAppTargetFramework>
+    <SupportedNETCoreAppTargetFramework Include=".NETCoreApp,Version=v2.2">
+      <DisplayName>.NET Core 2.2</DisplayName>
+      <Alias>netcoreapp2.2</Alias>
+    </SupportedNETCoreAppTargetFramework>
+    <SupportedNETCoreAppTargetFramework Include=".NETCoreApp,Version=v3.0">
+      <DisplayName>.NET Core 3.0</DisplayName>
+      <Alias>netcoreapp3.0</Alias>
+    </SupportedNETCoreAppTargetFramework>
+    <SupportedNETCoreAppTargetFramework Include=".NETCoreApp,Version=v3.1">
+      <DisplayName>.NET Core 3.1</DisplayName>
+      <Alias>netcoreapp3.1</Alias>
+    </SupportedNETCoreAppTargetFramework>
+    <SupportedNETCoreAppTargetFramework Include=".NETCoreApp,Version=v5.0">
+      <DisplayName>.NET 5.0</DisplayName>
+      <Alias>net5.0</Alias>
+    </SupportedNETCoreAppTargetFramework>
+    <SupportedNETCoreAppTargetFramework Include=".NETCoreApp,Version=v6.0">
+      <DisplayName>.NET 6.0</DisplayName>
+      <Alias>net6.0</Alias>
+    </SupportedNETCoreAppTargetFramework>
+    <SupportedNETCoreAppTargetFramework Include=".NETCoreApp,Version=v7.0">
+      <DisplayName>.NET 7.0</DisplayName>
+      <Alias>net7.0</Alias>
+    </SupportedNETCoreAppTargetFramework>
+  </ItemGroup>
+  <ItemGroup>
+    <SupportedNETStandardTargetFramework Include=".NETStandard,Version=v1.0">
+      <DisplayName>.NET Standard 1.0</DisplayName>
+      <Alias>netstandard1.0</Alias>
+    </SupportedNETStandardTargetFramework>
+    <SupportedNETStandardTargetFramework Include=".NETStandard,Version=v1.1">
+      <DisplayName>.NET Standard 1.1</DisplayName>
+      <Alias>netstandard1.1</Alias>
+    </SupportedNETStandardTargetFramework>
+    <SupportedNETStandardTargetFramework Include=".NETStandard,Version=v1.2">
+      <DisplayName>.NET Standard 1.2</DisplayName>
+      <Alias>netstandard1.2</Alias>
+    </SupportedNETStandardTargetFramework>
+    <SupportedNETStandardTargetFramework Include=".NETStandard,Version=v1.3">
+      <DisplayName>.NET Standard 1.3</DisplayName>
+      <Alias>netstandard1.3</Alias>
+    </SupportedNETStandardTargetFramework>
+    <SupportedNETStandardTargetFramework Include=".NETStandard,Version=v1.4">
+      <DisplayName>.NET Standard 1.4</DisplayName>
+      <Alias>netstandard1.4</Alias>
+    </SupportedNETStandardTargetFramework>
+    <SupportedNETStandardTargetFramework Include=".NETStandard,Version=v1.5">
+      <DisplayName>.NET Standard 1.5</DisplayName>
+      <Alias>netstandard1.5</Alias>
+    </SupportedNETStandardTargetFramework>
+    <SupportedNETStandardTargetFramework Include=".NETStandard,Version=v1.6">
+      <DisplayName>.NET Standard 1.6</DisplayName>
+      <Alias>netstandard1.6</Alias>
+    </SupportedNETStandardTargetFramework>
+    <SupportedNETStandardTargetFramework Include=".NETStandard,Version=v2.0">
+      <DisplayName>.NET Standard 2.0</DisplayName>
+      <Alias>netstandard2.0</Alias>
+    </SupportedNETStandardTargetFramework>
+    <SupportedNETStandardTargetFramework Include=".NETStandard,Version=v2.1">
+      <DisplayName>.NET Standard 2.1</DisplayName>
+      <Alias>netstandard2.1</Alias>
+    </SupportedNETStandardTargetFramework>
+  </ItemGroup>
+  <ItemGroup>
+    <SupportedNETFrameworkTargetFramework Include=".NETFramework,Version=v2.0">
+      <DisplayName>.NET Framework 2.0</DisplayName>
+      <Alias>net20</Alias>
+    </SupportedNETFrameworkTargetFramework>
+    <SupportedNETFrameworkTargetFramework Include=".NETFramework,Version=v3.0">
+      <DisplayName>.NET Framework 3.0</DisplayName>
+      <Alias>net30</Alias>
+    </SupportedNETFrameworkTargetFramework>
+    <SupportedNETFrameworkTargetFramework Include=".NETFramework,Version=v3.5">
+      <DisplayName>.NET Framework 3.5</DisplayName>
+      <Alias>net35</Alias>
+    </SupportedNETFrameworkTargetFramework>
+    <SupportedNETFrameworkTargetFramework Include=".NETFramework,Version=v4.0">
+      <DisplayName>.NET Framework 4.0</DisplayName>
+      <Alias>net40</Alias>
+    </SupportedNETFrameworkTargetFramework>
+    <SupportedNETFrameworkTargetFramework Include=".NETFramework,Version=v4.5">
+      <DisplayName>.NET Framework 4.5</DisplayName>
+      <Alias>net45</Alias>
+    </SupportedNETFrameworkTargetFramework>
+    <SupportedNETFrameworkTargetFramework Include=".NETFramework,Version=v4.5.1">
+      <DisplayName>.NET Framework 4.5.1</DisplayName>
+      <Alias>net451</Alias>
+    </SupportedNETFrameworkTargetFramework>
+    <SupportedNETFrameworkTargetFramework Include=".NETFramework,Version=v4.5.2">
+      <DisplayName>.NET Framework 4.5.2</DisplayName>
+      <Alias>net452</Alias>
+    </SupportedNETFrameworkTargetFramework>
+    <SupportedNETFrameworkTargetFramework Include=".NETFramework,Version=v4.6">
+      <DisplayName>.NET Framework 4.6</DisplayName>
+      <Alias>net46</Alias>
+    </SupportedNETFrameworkTargetFramework>
+    <SupportedNETFrameworkTargetFramework Include=".NETFramework,Version=v4.6.1">
+      <DisplayName>.NET Framework 4.6.1</DisplayName>
+      <Alias>net461</Alias>
+    </SupportedNETFrameworkTargetFramework>
+    <SupportedNETFrameworkTargetFramework Include=".NETFramework,Version=v4.6.2">
+      <DisplayName>.NET Framework 4.6.2</DisplayName>
+      <Alias>net462</Alias>
+    </SupportedNETFrameworkTargetFramework>
+    <SupportedNETFrameworkTargetFramework Include=".NETFramework,Version=v4.7">
+      <DisplayName>.NET Framework 4.7</DisplayName>
+      <Alias>net47</Alias>
+    </SupportedNETFrameworkTargetFramework>
+    <SupportedNETFrameworkTargetFramework Include=".NETFramework,Version=v4.7.1">
+      <DisplayName>.NET Framework 4.7.1</DisplayName>
+      <Alias>net471</Alias>
+    </SupportedNETFrameworkTargetFramework>
+    <SupportedNETFrameworkTargetFramework Include=".NETFramework,Version=v4.7.2">
+      <DisplayName>.NET Framework 4.7.2</DisplayName>
+      <Alias>net472</Alias>
+    </SupportedNETFrameworkTargetFramework>
+    <SupportedNETFrameworkTargetFramework Include=".NETFramework,Version=v4.8">
+      <DisplayName>.NET Framework 4.8</DisplayName>
+      <Alias>net48</Alias>
+    </SupportedNETFrameworkTargetFramework>
+    <SupportedNETFrameworkTargetFramework Include=".NETFramework,Version=v4.8.1">
+      <DisplayName>.NET Framework 4.8.1</DisplayName>
+      <Alias>net481</Alias>
+    </SupportedNETFrameworkTargetFramework>
+  </ItemGroup>
+  <ItemGroup>
+    <SupportedTargetFramework Include=".NETCoreApp,Version=v1.0">
+      <DisplayName>.NET Core 1.0</DisplayName>
+      <Alias>netcoreapp1.0</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETCoreApp,Version=v1.1">
+      <DisplayName>.NET Core 1.1</DisplayName>
+      <Alias>netcoreapp1.1</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETCoreApp,Version=v2.0">
+      <DisplayName>.NET Core 2.0</DisplayName>
+      <Alias>netcoreapp2.0</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETCoreApp,Version=v2.1">
+      <DisplayName>.NET Core 2.1</DisplayName>
+      <Alias>netcoreapp2.1</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETCoreApp,Version=v2.2">
+      <DisplayName>.NET Core 2.2</DisplayName>
+      <Alias>netcoreapp2.2</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETCoreApp,Version=v3.0">
+      <DisplayName>.NET Core 3.0</DisplayName>
+      <Alias>netcoreapp3.0</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETCoreApp,Version=v3.1">
+      <DisplayName>.NET Core 3.1</DisplayName>
+      <Alias>netcoreapp3.1</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETCoreApp,Version=v5.0">
+      <DisplayName>.NET 5.0</DisplayName>
+      <Alias>net5.0</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETCoreApp,Version=v6.0">
+      <DisplayName>.NET 6.0</DisplayName>
+      <Alias>net6.0</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETCoreApp,Version=v7.0">
+      <DisplayName>.NET 7.0</DisplayName>
+      <Alias>net7.0</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETFramework,Version=v2.0">
+      <DisplayName>.NET Framework 2.0</DisplayName>
+      <Alias>net20</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETFramework,Version=v3.0">
+      <DisplayName>.NET Framework 3.0</DisplayName>
+      <Alias>net30</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETFramework,Version=v3.5">
+      <DisplayName>.NET Framework 3.5</DisplayName>
+      <Alias>net35</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETFramework,Version=v4.0">
+      <DisplayName>.NET Framework 4.0</DisplayName>
+      <Alias>net40</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETFramework,Version=v4.5">
+      <DisplayName>.NET Framework 4.5</DisplayName>
+      <Alias>net45</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETFramework,Version=v4.5.1">
+      <DisplayName>.NET Framework 4.5.1</DisplayName>
+      <Alias>net451</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETFramework,Version=v4.5.2">
+      <DisplayName>.NET Framework 4.5.2</DisplayName>
+      <Alias>net452</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETFramework,Version=v4.6">
+      <DisplayName>.NET Framework 4.6</DisplayName>
+      <Alias>net46</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETFramework,Version=v4.6.1">
+      <DisplayName>.NET Framework 4.6.1</DisplayName>
+      <Alias>net461</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETFramework,Version=v4.6.2">
+      <DisplayName>.NET Framework 4.6.2</DisplayName>
+      <Alias>net462</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETFramework,Version=v4.7">
+      <DisplayName>.NET Framework 4.7</DisplayName>
+      <Alias>net47</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETFramework,Version=v4.7.1">
+      <DisplayName>.NET Framework 4.7.1</DisplayName>
+      <Alias>net471</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETFramework,Version=v4.7.2">
+      <DisplayName>.NET Framework 4.7.2</DisplayName>
+      <Alias>net472</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETFramework,Version=v4.8">
+      <DisplayName>.NET Framework 4.8</DisplayName>
+      <Alias>net48</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETFramework,Version=v4.8.1">
+      <DisplayName>.NET Framework 4.8.1</DisplayName>
+      <Alias>net481</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETStandard,Version=v1.0">
+      <DisplayName>.NET Standard 1.0</DisplayName>
+      <Alias>netstandard1.0</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETStandard,Version=v1.1">
+      <DisplayName>.NET Standard 1.1</DisplayName>
+      <Alias>netstandard1.1</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETStandard,Version=v1.2">
+      <DisplayName>.NET Standard 1.2</DisplayName>
+      <Alias>netstandard1.2</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETStandard,Version=v1.3">
+      <DisplayName>.NET Standard 1.3</DisplayName>
+      <Alias>netstandard1.3</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETStandard,Version=v1.4">
+      <DisplayName>.NET Standard 1.4</DisplayName>
+      <Alias>netstandard1.4</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETStandard,Version=v1.5">
+      <DisplayName>.NET Standard 1.5</DisplayName>
+      <Alias>netstandard1.5</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETStandard,Version=v1.6">
+      <DisplayName>.NET Standard 1.6</DisplayName>
+      <Alias>netstandard1.6</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETStandard,Version=v2.0">
+      <DisplayName>.NET Standard 2.0</DisplayName>
+      <Alias>netstandard2.0</Alias>
+    </SupportedTargetFramework>
+    <SupportedTargetFramework Include=".NETStandard,Version=v2.1">
+      <DisplayName>.NET Standard 2.1</DisplayName>
+      <Alias>netstandard2.1</Alias>
+    </SupportedTargetFramework>
+  </ItemGroup>
+  <ItemGroup>
+    <SupportedPlatform Include="Linux" />
+    <SupportedPlatform Include="macOS" />
+    <SupportedPlatform Include="Windows" />
+  </ItemGroup>
+  <ItemGroup>
+    <Using Include="Microsoft.Build.Evaluation">
+      <Visible>false</Visible>
+      <Alias>MSBEval</Alias>
+    </Using>
+    <Using Include="Microsoft.Build.Exceptions">
+      <Visible>false</Visible>
+      <Alias>MSBExc</Alias>
+    </Using>
+    <Using Include="Microsoft.Build.Execution">
+      <Visible>false</Visible>
+      <Alias>MSBEx</Alias>
+    </Using>
+    <Using Include="Microsoft.Build.Framework">
+      <Visible>false</Visible>
+      <Alias>MSBF</Alias>
+    </Using>
+    <Using Include="Microsoft.Build.Logging">
+      <Visible>false</Visible>
+      <Alias>MSBLog</Alias>
+    </Using>
+    <Using Include="Microsoft.Build.Tasks">
+      <Visible>false</Visible>
+      <Alias>MSBTasks</Alias>
+    </Using>
+    <Using Include="Microsoft.Build.Tasks.Hosting">
+      <Visible>false</Visible>
+      <Alias>MSBTaskHost</Alias>
+    </Using>
+    <Using Include="Microsoft.Build.Utilities.Task">
+      <Visible>false</Visible>
+      <Alias>MSBTask</Alias>
+    </Using>
+    <Using Include="Microsoft.Build.Utilities.TaskLoggingHelper">
+      <Visible>false</Visible>
+      <Alias>TaskLog</Alias>
+    </Using>
+    <Using Include="System">
+      <Visible>false</Visible>
+    </Using>
+    <Using Include="System.Collections.Generic">
+      <Visible>false</Visible>
+    </Using>
+    <Using Include="System.IO">
+      <Visible>false</Visible>
+    </Using>
+    <Using Include="System.Linq">
+      <Visible>false</Visible>
+    </Using>
+    <Using Include="System.Net.Http">
+      <Visible>false</Visible>
+    </Using>
+    <Using Include="System.Threading">
+      <Visible>false</Visible>
+    </Using>
+    <Using Include="System.Threading.Tasks">
+      <Visible>false</Visible>
+    </Using>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="GitInfo">
+      <Version>[2.2.0,)</Version>
+      <ExcludeAssets>ContentFiles</ExcludeAssets>
+      <IncludeAssets>build; analyzers; compile;</IncludeAssets>
+      <PrivateAssets>All</PrivateAssets>
+      <Pack>
+      </Pack>
+      <GeneratePathProperty>true</GeneratePathProperty>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Build">
+      <Version>[17.3.2,)</Version>
+      <ExcludeAssets>Runtime</ExcludeAssets>
+      <IncludeAssets>Compile; Runime; Build; BuildMultitargeting; BuildTransitive; Analyzers; Native</IncludeAssets>
+      <PrivateAssets>None</PrivateAssets>
+      <Pack>
+      </Pack>
+      <GeneratePathProperty>true</GeneratePathProperty>
+      <VersionOverride>[17.3.2,)</VersionOverride>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Build.Framework">
+      <Version>[17.4.0,)</Version>
+      <ExcludeAssets>Runtime</ExcludeAssets>
+      <IncludeAssets>Compile; Runime; Build; BuildMultitargeting; BuildTransitive; Analyzers; Native</IncludeAssets>
+      <PrivateAssets>None</PrivateAssets>
+      <Pack>
+      </Pack>
+      <GeneratePathProperty>true</GeneratePathProperty>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Build.Tasks.Core">
+      <Version>[17.4.0,)</Version>
+      <ExcludeAssets>ContentFiles</ExcludeAssets>
+      <IncludeAssets>Compile; Runime; Build; BuildMultitargeting; BuildTransitive; Analyzers; Native</IncludeAssets>
+      <PrivateAssets>None</PrivateAssets>
+      <Pack>
+      </Pack>
+      <GeneratePathProperty>true</GeneratePathProperty>
+      <VersionOverride>[17.4.0,)</VersionOverride>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Build.Tasks.Git">
+      <Version>[1.1.1,)</Version>
+      <ExcludeAssets>ContentFiles</ExcludeAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive; compile;</IncludeAssets>
+      <PrivateAssets>All</PrivateAssets>
+      <Pack>
+      </Pack>
+      <GeneratePathProperty>true</GeneratePathProperty>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Build.Utilities.Core">
+      <Version>[17.4.0,)</Version>
+      <ExcludeAssets>Runtime</ExcludeAssets>
+      <IncludeAssets>Compile; Runime; Build; BuildMultitargeting; BuildTransitive; Analyzers; Native</IncludeAssets>
+      <PrivateAssets>None</PrivateAssets>
+      <Pack>
+      </Pack>
+      <GeneratePathProperty>true</GeneratePathProperty>
+    </PackageReference>
+    <PackageReference Include="Microsoft.SourceLink.GitHub">
+      <Version>[1.1.1,)</Version>
+      <ExcludeAssets>ContentFiles</ExcludeAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive; compile;</IncludeAssets>
+      <PrivateAssets>All</PrivateAssets>
+      <Pack>
+      </Pack>
+      <GeneratePathProperty>true</GeneratePathProperty>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.SlnGen">
+      <Version>[8.5.17,)</Version>
+      <ExcludeAssets>ContentFiles</ExcludeAssets>
+      <IncludeAssets>Analyzers;Build;BuildMultitargeting;BuildTransitive</IncludeAssets>
+      <PrivateAssets>All</PrivateAssets>
+      <Pack>
+      </Pack>
+      <GeneratePathProperty>true</GeneratePathProperty>
+    </PackageReference>
+    <PackageReference Include="MinVer">
+      <Version>[4.1.0,)</Version>
+      <ExcludeAssets>ContentFiles</ExcludeAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; compile;</IncludeAssets>
+      <PrivateAssets>All</PrivateAssets>
+      <Pack>
+      </Pack>
+      <GeneratePathProperty>true</GeneratePathProperty>
+    </PackageReference>
+    <PackageReference Include="NuGetizer">
+      <Version>[0.9.0,)</Version>
+      <ExcludeAssets>ContentFiles</ExcludeAssets>
+      <IncludeAssets>build; compile;</IncludeAssets>
+      <PrivateAssets>All</PrivateAssets>
+      <Pack>
+      </Pack>
+      <GeneratePathProperty>true</GeneratePathProperty>
+    </PackageReference>
+    <PackageReference Include="Stef.Validation">
+      <Version>0.1.0</Version>
+      <ExcludeAssets>ContentFiles</ExcludeAssets>
+      <IncludeAssets>Analyzers;Build;BuildMultitargeting;BuildTransitive</IncludeAssets>
+      <PrivateAssets>All</PrivateAssets>
+      <Pack>
+      </Pack>
+      <GeneratePathProperty>true</GeneratePathProperty>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <SdkSupportedTargetPlatformIdentifier Include="android">
+      <DisplayName>Android</DisplayName>
+    </SdkSupportedTargetPlatformIdentifier>
+    <SdkSupportedTargetPlatformIdentifier Include="ios">
+      <DisplayName>iOS</DisplayName>
+    </SdkSupportedTargetPlatformIdentifier>
+    <SdkSupportedTargetPlatformIdentifier Include="maccatalyst">
+      <DisplayName>Mac Catalyst</DisplayName>
+    </SdkSupportedTargetPlatformIdentifier>
+    <SdkSupportedTargetPlatformIdentifier Include="macos">
+      <DisplayName>macOS</DisplayName>
+    </SdkSupportedTargetPlatformIdentifier>
+    <SdkSupportedTargetPlatformIdentifier Include="tvos">
+      <DisplayName>tvOS</DisplayName>
+    </SdkSupportedTargetPlatformIdentifier>
+    <SdkSupportedTargetPlatformIdentifier Include="windows">
+      <DisplayName>Windows</DisplayName>
+    </SdkSupportedTargetPlatformIdentifier>
+  </ItemGroup>
+  <ItemGroup>
+    <_EolNetCoreTargetFrameworkVersions Include="1.0" />
+    <_EolNetCoreTargetFrameworkVersions Include="1.1" />
+    <_EolNetCoreTargetFrameworkVersions Include="2.0" />
+    <_EolNetCoreTargetFrameworkVersions Include="2.1" />
+    <_EolNetCoreTargetFrameworkVersions Include="2.2" />
+    <_EolNetCoreTargetFrameworkVersions Include="3.0" />
+    <_EolNetCoreTargetFrameworkVersions Include="5.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectCapability Include="AllTargetOutputGroups" />
+    <ProjectCapability Include="AssemblyReferences" />
+    <ProjectCapability Include="COMReferences" />
+    <ProjectCapability Include="CSharp" />
+    <ProjectCapability Include="DeclaredSourceItems" />
+    <ProjectCapability Include="GenerateDocumentationFile" />
+    <ProjectCapability Include="LanguageService" />
+    <ProjectCapability Include="Managed" />
+    <ProjectCapability Include="OutputGroups" />
+    <ProjectCapability Include="Pack" />
+    <ProjectCapability Include="ProjectReferences" />
+    <ProjectCapability Include="ReferencesFolder" />
+    <ProjectCapability Include="RelativePathDerivedDefaultNamespace" />
+    <ProjectCapability Include="SharedProjectReferences" />
+    <ProjectCapability Include="SingleFileGenerators" />
+    <ProjectCapability Include="SupportsHotReload" />
+    <ProjectCapability Include="UserSourceItems" />
+    <ProjectCapability Include="VisualStudioWellKnownOutputGroups" />
+  </ItemGroup>
+  <ItemGroup>
+    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//assemblyreference.xaml">
+      <Context>;BrowseObject</Context>
+    </PropertyPageSchema>
+    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//COMReference.xaml">
+      <Context>;BrowseObject</Context>
+    </PropertyPageSchema>
+    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//Content.xaml">
+      <Context>File;BrowseObject</Context>
+    </PropertyPageSchema>
+    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//CSharp.BrowseObject.xaml">
+      <Context>BrowseObject</Context>
+    </PropertyPageSchema>
+    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//CSharp.ProjectItemsSchema.xaml" />
+    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//CSharp.xaml">
+      <Context>File</Context>
+    </PropertyPageSchema>
+    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//Debugger_General.xaml">
+      <Context>Project</Context>
+    </PropertyPageSchema>
+    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//EmbeddedResource.xaml">
+      <Context>File;BrowseObject</Context>
+    </PropertyPageSchema>
+    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//Folder.xaml">
+      <Context>File;BrowseObject</Context>
+    </PropertyPageSchema>
+    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//General.BrowseObject.xaml">
+      <Context>BrowseObject</Context>
+    </PropertyPageSchema>
+    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//General.xaml">
+      <Context>Project</Context>
+    </PropertyPageSchema>
+    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//General_File.xaml">
+      <Context>File</Context>
+    </PropertyPageSchema>
+    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//None.xaml">
+      <Context>File;BrowseObject</Context>
+    </PropertyPageSchema>
+    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//ProjectItemsSchema.xaml" />
+    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//ProjectReference.xaml">
+      <Context>;BrowseObject</Context>
+    </PropertyPageSchema>
+    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//ResolvedAssemblyReference.xaml">
+      <Context>ProjectSubscriptionService;BrowseObject</Context>
+    </PropertyPageSchema>
+    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//ResolvedCOMReference.xaml">
+      <Context>ProjectSubscriptionService;BrowseObject</Context>
+    </PropertyPageSchema>
+    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//ResolvedProjectReference.xaml">
+      <Context>ProjectSubscriptionService;BrowseObject</Context>
+    </PropertyPageSchema>
+    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//SCC.xaml">
+      <Context>Invisible</Context>
+    </PropertyPageSchema>
+    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//SpecialFolder.xaml">
+      <Context>File;ProjectSubscriptionService</Context>
+    </PropertyPageSchema>
+  </ItemGroup>
+  <ItemGroup>
+    <DocFileItem Include="CsprojPackager.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <_AllDirectoriesAbove Include="/" />
+    <_AllDirectoriesAbove Include="/Users" />
+    <_AllDirectoriesAbove Include="/Users/david" />
+    <_AllDirectoriesAbove Include="/Users/david/GitHub" />
+    <_AllDirectoriesAbove Include="/Users/david/GitHub/justinwritescode" />
+    <_AllDirectoriesAbove Include="/Users/david/GitHub/justinwritescode/libs" />
+    <_AllDirectoriesAbove Include="/Users/david/GitHub/justinwritescode/libs/src" />
+    <_AllDirectoriesAbove Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks" />
+    <_AllDirectoriesAbove Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src" />
+    <_AllDirectoriesAbove Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/CsprojPackager" />
+  </ItemGroup>
+  <ItemGroup>
+    <PotentialEditorConfigFiles Include="/.editorconfig" />
+    <PotentialEditorConfigFiles Include="/Users/.editorconfig" />
+    <PotentialEditorConfigFiles Include="/Users/david/.editorconfig" />
+    <PotentialEditorConfigFiles Include="/Users/david/GitHub/.editorconfig" />
+    <PotentialEditorConfigFiles Include="/Users/david/GitHub/justinwritescode/.editorconfig" />
+    <PotentialEditorConfigFiles Include="/Users/david/GitHub/justinwritescode/libs/.editorconfig" />
+    <PotentialEditorConfigFiles Include="/Users/david/GitHub/justinwritescode/libs/src/.editorconfig" />
+    <PotentialEditorConfigFiles Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/.editorconfig" />
+    <PotentialEditorConfigFiles Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/.editorconfig" />
+    <PotentialEditorConfigFiles Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/CsprojPackager/.editorconfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <EditorConfigFiles Include="/Users/david/GitHub/justinwritescode/.editorconfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <GlobalAnalyzerConfigFiles Include="/.globalconfig" />
+    <GlobalAnalyzerConfigFiles Include="/Users/.globalconfig" />
+    <GlobalAnalyzerConfigFiles Include="/Users/david/.globalconfig" />
+    <GlobalAnalyzerConfigFiles Include="/Users/david/GitHub/.globalconfig" />
+    <GlobalAnalyzerConfigFiles Include="/Users/david/GitHub/justinwritescode/.globalconfig" />
+    <GlobalAnalyzerConfigFiles Include="/Users/david/GitHub/justinwritescode/libs/.globalconfig" />
+    <GlobalAnalyzerConfigFiles Include="/Users/david/GitHub/justinwritescode/libs/src/.globalconfig" />
+    <GlobalAnalyzerConfigFiles Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/.globalconfig" />
+    <GlobalAnalyzerConfigFiles Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/.globalconfig" />
+    <GlobalAnalyzerConfigFiles Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/CsprojPackager/.globalconfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <_OutputPathItem Include="bin/Local/net7.0/" />
+  </ItemGroup>
+  <ItemGroup>
+    <_UnmanagedRegistrationCache Include="obj/CsprojPackager.csproj.UnmanagedRegistration.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <_ResolveComReferenceCache Include="obj/net7.0/CsprojPackager.csproj.ResolveComReference.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppConfigFileDestination Include="bin/Local/net7.0/CsprojPackager.dll.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <IntermediateAssembly Include="obj/net7.0/CsprojPackager.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <FinalDocFile Include="bin/Local/net7.0/CsprojPackager.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyUpToDateMarker Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/CsprojPackager/obj/net7.0/CsprojPackager.csproj.CopyComplete" />
+  </ItemGroup>
+  <ItemGroup>
+    <IntermediateRefAssembly Include="obj/net7.0/refint/CsprojPackager.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <CreateDirectory Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/CsprojPackager/obj/net7.0/refint/" />
+    <CreateDirectory Include="obj/net7.0/ref" />
+  </ItemGroup>
+  <ItemGroup>
+    <_DebugSymbolsIntermediatePath Include="obj/net7.0/CsprojPackager.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <_DebugSymbolsOutputPath Include="bin/Local/net7.0/CsprojPackager.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <_DeploymentManifestEntryPoint Include="obj/net7.0/CsprojPackager.dll">
+      <TargetPath>CsprojPackager.dll</TargetPath>
+    </_DeploymentManifestEntryPoint>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationManifest Include="obj/net7.0/Native.CsprojPackager.manifest">
+      <TargetPath>Native.CsprojPackager.manifest</TargetPath>
+    </ApplicationManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <_ApplicationManifestFinal Include="bin/Local/net7.0/Native.CsprojPackager.manifest">
+      <TargetPath>Native.CsprojPackager.manifest</TargetPath>
+    </_ApplicationManifestFinal>
+  </ItemGroup>
+  <ItemGroup>
+    <DeployManifest Include="obj/net7.0/CsprojPackager.application">
+      <TargetPath>CsprojPackager.application</TargetPath>
+    </DeployManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <BuiltProjectOutputGroupKeyOutput Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/CsprojPackager/obj/net7.0/CsprojPackager.dll">
+      <IsKeyOutput>true</IsKeyOutput>
+      <FinalOutputPath>/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/CsprojPackager/bin/Local/net7.0/CsprojPackager.dll</FinalOutputPath>
+      <TargetPath>CsprojPackager.dll</TargetPath>
+    </BuiltProjectOutputGroupKeyOutput>
+  </ItemGroup>
+  <ItemGroup>
+    <DebugSymbolsProjectOutputGroupOutput Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/CsprojPackager/obj/net7.0/CsprojPackager.pdb">
+      <FinalOutputPath>/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/CsprojPackager/bin/Local/net7.0/CsprojPackager.pdb</FinalOutputPath>
+      <TargetPath>CsprojPackager.pdb</TargetPath>
+    </DebugSymbolsProjectOutputGroupOutput>
+  </ItemGroup>
+  <ItemGroup>
+    <DocumentationProjectOutputGroupOutput Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/CsprojPackager/CsprojPackager.xml">
+      <IsKeyOutput>true</IsKeyOutput>
+      <FinalOutputPath>/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/CsprojPackager/bin/Local/net7.0/CsprojPackager.xml</FinalOutputPath>
+      <TargetPath>CsprojPackager.xml</TargetPath>
+    </DocumentationProjectOutputGroupOutput>
+  </ItemGroup>
+  <ItemGroup>
+    <AvailableItemName Include="PackageFile" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackFolderKind Include="Analyzer">
+      <FrameworkSpecific>false</FrameworkSpecific>
+      <PackageFolder>analyzers</PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="Analyzers">
+      <FrameworkSpecific>false</FrameworkSpecific>
+      <PackageFolder>analyzers</PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="Build">
+      <FrameworkSpecific>false</FrameworkSpecific>
+      <PackageFolder>build</PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="BuildTransitive">
+      <FrameworkSpecific>false</FrameworkSpecific>
+      <PackageFolder>buildTransitive</PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="Content">
+      <FrameworkSpecific>true</FrameworkSpecific>
+      <PackageFolder>contentFiles</PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="ContentFiles">
+      <FrameworkSpecific>true</FrameworkSpecific>
+      <PackageFolder>contentFiles</PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="Dependency">
+      <FrameworkSpecific>true</FrameworkSpecific>
+      <PackageFolder>
+      </PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="FrameworkReference">
+      <FrameworkSpecific>true</FrameworkSpecific>
+      <PackageFolder>
+      </PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="Ignore">
+      <FrameworkSpecific>false</FrameworkSpecific>
+      <PackageFolder>
+      </PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="Lib">
+      <FrameworkSpecific>true</FrameworkSpecific>
+      <PackageFolder>lib</PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="Metadata">
+      <FrameworkSpecific>false</FrameworkSpecific>
+      <PackageFolder>
+      </PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="Native">
+      <FrameworkSpecific>false</FrameworkSpecific>
+      <PackageFolder>native</PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="None">
+      <FrameworkSpecific>false</FrameworkSpecific>
+      <PackageFolder>
+      </PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="Ref">
+      <FrameworkSpecific>false</FrameworkSpecific>
+      <PackageFolder>ref</PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="Runtime">
+      <FrameworkSpecific>false</FrameworkSpecific>
+      <PackageFolder>runtimes</PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="Runtimes">
+      <FrameworkSpecific>false</FrameworkSpecific>
+      <PackageFolder>runtimes</PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="Source">
+      <FrameworkSpecific>false</FrameworkSpecific>
+      <PackageFolder>source</PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="Tool">
+      <FrameworkSpecific>true</FrameworkSpecific>
+      <PackageFolder>tools</PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="Tools">
+      <FrameworkSpecific>true</FrameworkSpecific>
+      <PackageFolder>tools</PackageFolder>
+    </PackFolderKind>
+  </ItemGroup>
+  <ItemGroup>
+    <PackInference Include="AndroidAsset">
+      <PackExclude>
+      </PackExclude>
+    </PackInference>
+    <PackInference Include="AndroidResource">
+      <PackExclude>
+      </PackExclude>
+    </PackInference>
+    <PackInference Include="ApplicationDefinition">
+      <PackExclude>
+      </PackExclude>
+    </PackInference>
+    <PackInference Include="BundleResource">
+      <PackExclude>
+      </PackExclude>
+    </PackInference>
+    <PackInference Include="CodeAnalysisDictionary">
+      <PackExclude>
+      </PackExclude>
+    </PackInference>
+    <PackInference Include="Compile">
+      <PackExclude>obj/net7.0//**/*.cs</PackExclude>
+    </PackInference>
+    <PackInference Include="Content">
+      <PackExclude>
+      </PackExclude>
+    </PackInference>
+    <PackInference Include="DesignData">
+      <PackExclude>
+      </PackExclude>
+    </PackInference>
+    <PackInference Include="DesignDataWithDesignTimeCreatableTypes">
+      <PackExclude>
+      </PackExclude>
+    </PackInference>
+    <PackInference Include="EmbeddedResource">
+      <PackExclude>
+      </PackExclude>
+    </PackInference>
+    <PackInference Include="None">
+      <PackExclude>
+      </PackExclude>
+    </PackInference>
+    <PackInference Include="Page">
+      <PackExclude>
+      </PackExclude>
+    </PackInference>
+    <PackInference Include="Resource">
+      <PackExclude>
+      </PackExclude>
+    </PackInference>
+    <PackInference Include="SplashScreen">
+      <PackExclude>
+      </PackExclude>
+    </PackInference>
+  </ItemGroup>
+  <ItemGroup>
+    <_OriginalPackageReference Include="Microsoft.Build" />
+    <_OriginalPackageReference Include="Microsoft.Build.Framework" />
+    <_OriginalPackageReference Include="Microsoft.Build.Tasks.Core" />
+    <_OriginalPackageReference Include="Microsoft.Build.Utilities.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <NetStandard20CompatibleFramework Include="net461" />
+    <NetStandard20CompatibleFramework Include="net462" />
+    <NetStandard20CompatibleFramework Include="net47" />
+    <NetStandard20CompatibleFramework Include="net471" />
+    <NetStandard20CompatibleFramework Include="net472" />
+    <NetStandard20CompatibleFramework Include="net48" />
+    <NetStandard20CompatibleFramework Include="netcoreapp2.0" />
+    <NetStandard20CompatibleFramework Include="netcoreapp2.1" />
+    <NetStandard20CompatibleFramework Include="netcoreapp2.2" />
+    <NetStandard20CompatibleFramework Include="netstandard2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <NetStandard21CompatibleFramework Include="net6.0" />
+    <NetStandard21CompatibleFramework Include="netcoreapp3.0" />
+    <NetStandard21CompatibleFramework Include="netcoreapp3.1" />
+    <NetStandard21CompatibleFramework Include="netcoreapp5.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Net60CompatibleFramework Include="net6.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Net70CompatibleFramework Include="net7.0" />
+    <Net70CompatibleFramework Include="net7.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <GlobalPackageReference Include="GitInfo">
+      <Version>[2.2.0,)</Version>
+      <IncludeAssets>build; analyzers; compile;</IncludeAssets>
+      <PrivateAssets>All</PrivateAssets>
+    </GlobalPackageReference>
+    <GlobalPackageReference Include="Microsoft.Build.Tasks.Git">
+      <Version>[1.1.1,)</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive; compile;</IncludeAssets>
+      <PrivateAssets>All</PrivateAssets>
+    </GlobalPackageReference>
+    <GlobalPackageReference Include="Microsoft.SourceLink.GitHub">
+      <Version>[1.1.1,)</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive; compile;</IncludeAssets>
+      <PrivateAssets>All</PrivateAssets>
+    </GlobalPackageReference>
+    <GlobalPackageReference Include="Microsoft.VisualStudio.SlnGen">
+      <Version>[8.5.17,)</Version>
+      <IncludeAssets>Analyzers;Build;BuildMultitargeting;BuildTransitive</IncludeAssets>
+      <PrivateAssets>All</PrivateAssets>
+    </GlobalPackageReference>
+    <GlobalPackageReference Include="MinVer">
+      <Version>[4.1.0,)</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; compile;</IncludeAssets>
+      <PrivateAssets>All</PrivateAssets>
+    </GlobalPackageReference>
+    <GlobalPackageReference Include="NuGetizer">
+      <Version>[0.9.0,)</Version>
+      <IncludeAssets>build; compile;</IncludeAssets>
+      <PrivateAssets>All</PrivateAssets>
+    </GlobalPackageReference>
+    <GlobalPackageReference Include="Stef.Validation">
+      <Version>0.1.0</Version>
+      <IncludeAssets>Analyzers;Build;BuildMultitargeting;BuildTransitive</IncludeAssets>
+      <PrivateAssets>All</PrivateAssets>
+    </GlobalPackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Configuration Include="Debug" />
+    <Configuration Include="Local" />
+    <Configuration Include="Release" />
+    <Configuration Include="Staging" />
+    <Configuration Include="Testing" />
+  </ItemGroup>
+  <ItemGroup>
+    <NuGetDeletePackageCommand Include="%(NuGetDeletePackageCommand.Command)">
+      <Command>dotnet nuget delete CsprojPackager  -s %(NuGetSource.Identity) --non-interactive</Command>
+    </NuGetDeletePackageCommand>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbedInBinlog Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/CsprojPackager/obj/project.assets.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <PreprocessorValue Include="assemblyname">
+      <Value>CsprojPackager</Value>
+    </PreprocessorValue>
+    <PreprocessorValue Include="filename">
+      <Value>CsprojPackager.csproj</Value>
+    </PreprocessorValue>
+    <PreprocessorValue Include="fullpath">
+      <Value>/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/CsprojPackager</Value>
+    </PreprocessorValue>
+    <PreprocessorValue Include="outputfilename">
+      <Value>CsprojPackager.dll</Value>
+    </PreprocessorValue>
+    <PreprocessorValue Include="rootnamespace">
+      <Value>CsprojPackager</Value>
+    </PreprocessorValue>
+  </ItemGroup>
+  <ItemGroup>
+    <GenerateRuntimeConfigurationFilesInputs Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/CsprojPackager/obj/net7.0/CsprojPackager.assets.cache" />
+    <GenerateRuntimeConfigurationFilesInputs Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/CsprojPackager/obj/project.assets.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectConfigurationDescription Include="TargetFramework=net7.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <RuntimeHostConfigurationOption Include="System.GC.Server">
+      <Value>true</Value>
+    </RuntimeHostConfigurationOption>
+    <RuntimeHostConfigurationOption Include="System.Reflection.Metadata.MetadataUpdater.IsSupported">
+      <Value>false</Value>
+      <Trim>true</Trim>
+    </RuntimeHostConfigurationOption>
+  </ItemGroup>
+  <ItemGroup>
+    <ClsidMap Include="obj/net7.0/CsprojPackager.clsidmap" />
+  </ItemGroup>
+  <ItemGroup>
+    <RegFreeComManifest Include="obj/net7.0/CsprojPackager.X.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalTargetFrameworkInfoProperty Include="IsRidAgnostic" />
+    <AdditionalTargetFrameworkInfoProperty Include="SelfContained" />
+    <AdditionalTargetFrameworkInfoProperty Include="ShouldBeValidatedAsExecutableReference" />
+    <AdditionalTargetFrameworkInfoProperty Include="_IsExecutable" />
+    <AdditionalTargetFrameworkInfoProperty Include="_SelfContainedWasSpecified" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageConflictOverrides Include="NETStandard.Library">
+      <OverriddenPackages>
+        Microsoft.Win32.Primitives|4.3.0;
+        System.AppContext|4.3.0;
+        System.Collections|4.3.0;
+        System.Collections.Concurrent|4.3.0;
+        System.Collections.Immutable|1.4.0;
+        System.Collections.NonGeneric|4.3.0;
+        System.Collections.Specialized|4.3.0;
+        System.ComponentModel|4.3.0;
+        System.ComponentModel.EventBasedAsync|4.3.0;
+        System.ComponentModel.Primitives|4.3.0;
+        System.ComponentModel.TypeConverter|4.3.0;
+        System.Console|4.3.0;
+        System.Data.Common|4.3.0;
+        System.Diagnostics.Contracts|4.3.0;
+        System.Diagnostics.Debug|4.3.0;
+        System.Diagnostics.FileVersionInfo|4.3.0;
+        System.Diagnostics.Process|4.3.0;
+        System.Diagnostics.StackTrace|4.3.0;
+        System.Diagnostics.TextWriterTraceListener|4.3.0;
+        System.Diagnostics.Tools|4.3.0;
+        System.Diagnostics.TraceSource|4.3.0;
+        System.Diagnostics.Tracing|4.3.0;
+        System.Dynamic.Runtime|4.3.0;
+        System.Globalization|4.3.0;
+        System.Globalization.Calendars|4.3.0;
+        System.Globalization.Extensions|4.3.0;
+        System.IO|4.3.0;
+        System.IO.Compression|4.3.0;
+        System.IO.Compression.ZipFile|4.3.0;
+        System.IO.FileSystem|4.3.0;
+        System.IO.FileSystem.DriveInfo|4.3.0;
+        System.IO.FileSystem.Primitives|4.3.0;
+        System.IO.FileSystem.Watcher|4.3.0;
+        System.IO.IsolatedStorage|4.3.0;
+        System.IO.MemoryMappedFiles|4.3.0;
+        System.IO.Pipes|4.3.0;
+        System.IO.UnmanagedMemoryStream|4.3.0;
+        System.Linq|4.3.0;
+        System.Linq.Expressions|4.3.0;
+        System.Linq.Queryable|4.3.0;
+        System.Net.Http|4.3.0;
+        System.Net.NameResolution|4.3.0;
+        System.Net.Primitives|4.3.0;
+        System.Net.Requests|4.3.0;
+        System.Net.Security|4.3.0;
+        System.Net.Sockets|4.3.0;
+        System.Net.WebHeaderCollection|4.3.0;
+        System.ObjectModel|4.3.0;
+        System.Private.DataContractSerialization|4.3.0;
+        System.Reflection|4.3.0;
+        System.Reflection.Emit|4.3.0;
+        System.Reflection.Emit.ILGeneration|4.3.0;
+        System.Reflection.Emit.Lightweight|4.3.0;
+        System.Reflection.Extensions|4.3.0;
+        System.Reflection.Primitives|4.3.0;
+        System.Reflection.TypeExtensions|4.3.0;
+        System.Resources.ResourceManager|4.3.0;
+        System.Runtime|4.3.0;
+        System.Runtime.Extensions|4.3.0;
+        System.Runtime.Handles|4.3.0;
+        System.Runtime.InteropServices|4.3.0;
+        System.Runtime.InteropServices.RuntimeInformation|4.3.0;
+        System.Runtime.Loader|4.3.0;
+        System.Runtime.Numerics|4.3.0;
+        System.Runtime.Serialization.Formatters|4.3.0;
+        System.Runtime.Serialization.Json|4.3.0;
+        System.Runtime.Serialization.Primitives|4.3.0;
+        System.Security.AccessControl|4.4.0;
+        System.Security.Claims|4.3.0;
+        System.Security.Cryptography.Algorithms|4.3.0;
+        System.Security.Cryptography.Csp|4.3.0;
+        System.Security.Cryptography.Encoding|4.3.0;
+        System.Security.Cryptography.Primitives|4.3.0;
+        System.Security.Cryptography.X509Certificates|4.3.0;
+        System.Security.Cryptography.Xml|4.4.0;
+        System.Security.Principal|4.3.0;
+        System.Security.Principal.Windows|4.4.0;
+        System.Text.Encoding|4.3.0;
+        System.Text.Encoding.Extensions|4.3.0;
+        System.Text.RegularExpressions|4.3.0;
+        System.Threading|4.3.0;
+        System.Threading.Overlapped|4.3.0;
+        System.Threading.Tasks|4.3.0;
+        System.Threading.Tasks.Extensions|4.3.0;
+        System.Threading.Tasks.Parallel|4.3.0;
+        System.Threading.Thread|4.3.0;
+        System.Threading.ThreadPool|4.3.0;
+        System.Threading.Timer|4.3.0;
+        System.ValueTuple|4.3.0;
+        System.Xml.ReaderWriter|4.3.0;
+        System.Xml.XDocument|4.3.0;
+        System.Xml.XmlDocument|4.3.0;
+        System.Xml.XmlSerializer|4.3.0;
+        System.Xml.XPath|4.3.0;
+        System.Xml.XPath.XDocument|4.3.0;
+      </OverriddenPackages>
+    </PackageConflictOverrides>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="/usr/local/share/dotnet/sdk/7.0.100/Sdks/Microsoft.NET.Sdk/targets/../analyzers/Microsoft.CodeAnalysis.CSharp.NetAnalyzers.dll">
+      <IsImplicitlyDefined>true</IsImplicitlyDefined>
+    </Analyzer>
+    <Analyzer Include="/usr/local/share/dotnet/sdk/7.0.100/Sdks/Microsoft.NET.Sdk/targets/../analyzers/Microsoft.CodeAnalysis.NetAnalyzers.dll">
+      <IsImplicitlyDefined>true</IsImplicitlyDefined>
+    </Analyzer>
+  </ItemGroup>
+  <UsingTask TaskName="CsprojPackager.Packager" AssemblyFile="$(OutputPath)$(AssemblyName).dll" />
+</Project>

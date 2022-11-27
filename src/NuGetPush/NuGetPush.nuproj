@@ -1,0 +1,37 @@
+<!--
+ * NuGetPush.nuproj
+ * 
+ *   Created: 2022-11-27-04:36:43
+ *   Modified: 2022-11-27-04:36:44
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="Microsoft.Build.NoTargets">
+	<PropertyGroup>
+			<TargetFramework>netstandard1.0</TargetFramework>
+			<TargetFrameworks>netstandard1.0</TargetFrameworks>
+	</PropertyGroup>
+	<ItemGroup>
+		<Content Include="./Sdk/*" PackagePath="Sdk/%(Filename)%(Extension)" />
+		<Content Include="./Scripts/**/*" PackagePath="Scripts/%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageTag Include="GitHub" />
+		<PackageTag Include="GitHub-Packages" />
+		<PackageTag Include="NuGet" />
+		<PackageTag Include="Azure" />
+		<PackageTag Include="Azure-Artifacts" />
+		<PackageTag Include="NuGet-Push" />
+		<PackageTag Include="Packaging" />
+	</ItemGroup>
+	<Target Name="BuildTypeScript" AfterTargets="Build">
+		<Exec Command="tsc $(MSBuildThisFileDirectory)Scripts/ts/*.ts --outDir $(MSBuildThisFileDirectory)Scripts/js --esModuleInterop" />
+	</Target>
+	<Target Name="CleamJSOutput" AfterTargets="Clean">
+		<Delete Files="$(MSBuildThisFileDirectory)Scripts/js/*" />
+	</Target>
+</Project>

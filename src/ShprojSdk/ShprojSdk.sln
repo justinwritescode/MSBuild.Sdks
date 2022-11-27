@@ -1,0 +1,23 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShprojSdk", "ShprojSdk.csproj", "{C2503D07-0F4F-4DEC-9369-6011CD84B7BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{36327D38-0DEE-43B7-B64E-341444E54FA9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		@(Configuration)|Any CPU = @(Configuration)|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2503D07-0F4F-4DEC-9369-6011CD84B7BA}.@(Configuration)|Any CPU.ActiveCfg = @(Configuration)|Any CPU
+		{C2503D07-0F4F-4DEC-9369-6011CD84B7BA}.@(Configuration)|Any CPU.Build.0 = @(Configuration)|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C2503D07-0F4F-4DEC-9369-6011CD84B7BA} = {36327D38-0DEE-43B7-B64E-341444E54FA9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1B3E2D17-BAB3-4F63-B8BC-9F9A2389DFEF}
+	EndGlobalSection
+EndGlobal

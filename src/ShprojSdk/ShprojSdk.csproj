@@ -1,0 +1,28 @@
+<!--
+ * ShprojSdk.nuproj
+ * 
+ *   Created: 2022-11-23-10:25:06
+ *   Modified: 2022-11-23-10:25:06
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<PackageId>ShprojSdk</PackageId>
+		<Authors>Justin Chase</Authors>
+		<Description>SDK for .shproj projects</Description>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageTag Include="msbuild" />
+		<PackageTag Include="sdk" />
+		<PackageTag Include="msbuild-sdk" />
+		<PackageTag Include="shproj" />
+		<PackageTag Include="shared" />
+		<PackageTag Include="shared-project" />
+	</ItemGroup>
+</Project>

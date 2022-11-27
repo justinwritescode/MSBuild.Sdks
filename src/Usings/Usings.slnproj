@@ -10,7 +10,7 @@
  *      License: MIT (https://opensource.org/licenses/MIT)
 -->
 
-<Project InitialTargets="BuildUsingsProjects">
+<Project Sdk="Microsoft.Build.Traversal">
   <PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
 		<IncludeInSolutionFile>true</IncludeInSolutionFile> 
@@ -22,22 +22,16 @@
 		<Title>All Usings Projects</Title>
   </PropertyGroup>
 	<ItemGroup>
-		<!-- <PackageReference Include="GetCommandLineArgs" /> -->
-		<ProjectReference Include="*.usings" SetConfiguration="Configuration=$(Configuration)" SetTargetFramework="TargetFramework=$(TargetFramework)" />
+		<PackageReference Include="GetCommandLineArgs" ExcludeAssets="None" IncludeAssets="ContentFiles" />
+		<UsingsProjectReference Include="*.usings" SetConfiguration="Configuration=$(Configuration)" SetTargetFramework="TargetFramework=$(TargetFramework)" />
 	</ItemGroup>
-	<Import Project="./src/GetCommandLineArgs/GetCommandLineArgs.targets" />
-	<Target Name="BuildUsingsProjects" BeforeTargets="Build">
-		<MSbuild Projects="./src/GetCommandLineArgs/GetCommandLineArgs.csproj" />
+	<UsingTask TaskName="GetCommandLineArgs" AssemblyFile="$(PkgGetCommandLineArgs)/lib/GetCommandLineArgs.dll" />
+	<Target Name="BuildUsingsProjects" AfterTargets="Build">
 		<GetCommandLineArgs>
 			<Output TaskParameter="CommandLineArgs" ItemName="CommandLineArgs" />
 		</GetCommandLineArgs>
-		<ItemGroup>
-			<CommandLineArgs Remove="$(MSBuildThisFileName)$(MSBuildThisFileExtension)" />
-			<CommandLineArgs Remove="build" />
-			<CommandLineArgs Remove="pack" />
-		</ItemGroup>
 		<Message Importance="High" Text="CommandLineArgs: @(CommandLineArgs, ' ')" />
-		<Exec Command="echo 'dotnet pack %(ProjectReference.Identity) @(CommandLineArgs, ' ')'" />
-		<Exec Command="dotnet pack %(ProjectReference.Identity) @(CommandLineArgs, ' ')" />
+		<Exec Command="echo 'dotnet pack %(UsingsProjectReference.Identity) @(CommandLineArgs, ' ')'" />
+		<Exec Command="dotnet pack %(UsingsProjectReference.Identity) @(CommandLineArgs, ' ')" />
 	</Target>
 </Project>

@@ -32,11 +32,7 @@
     <OutputFileExtension Condition="'$(OutputFileExtension)' == ''">.props</OutputFileExtension>
     <OutputFilePackagePath>build/$(PackageId)$(OutputFileExtension)</OutputFilePackagePath>
     <OutputFilePath>$(IntermediateOutputPath)$(PackageId)/$(PackageId)$(OutputFileExtension)</OutputFilePath>
-    <!-- <OutputFilePath>$(OutputFilePath.Replace("..", "."))</OutputFilePath> -->
     <IconFile>$(MSBuildThisFileDirectory)../Icon.png</IconFile>
     <UsingsSdkAssemblyFile>$(MSBuildThisFileDirectory)../lib/UsingsSdk.dll</UsingsSdkAssemblyFile>
   </PropertyGroup>
-	<ItemGroup>
-		<PackageReference Include="GetCommandLineArgs" />
-	</ItemGroup>
 </Project>

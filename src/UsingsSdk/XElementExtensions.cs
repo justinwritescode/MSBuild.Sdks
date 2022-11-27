@@ -49,4 +49,8 @@ public static class XElementExtensions
 	{
 		return properties.FirstOrDefault(x => x.Name?.Equals(name, StringComparison.OrdinalIgnoreCase) ?? false)?.EvaluatedValue ?? defaultValue ?? string.Empty;
 	}
+
+	public static string? GetIncludeValue(this MSBC.ProjectItemElement @element) => @element.GetMetadataValue("Include");
+	public static string? GetIncludeValue(this ProjectItemInstance @element) => @element.GetMetadataValue("Include");
+	public static string? GetIncludeValue(this XElement @element) => @element.GetAttributeValue("Include");
 }

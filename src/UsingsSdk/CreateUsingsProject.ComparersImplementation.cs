@@ -18,43 +18,22 @@ public partial class CreateUsingsProject
 {
     public class ComparersImplementation : IEqualityComparer<MSBEx.ProjectPropertyInstance>, IEqualityComparer<MSBEx.ProjectItemInstance>, IEqualityComparer<XElement>, IEqualityComparer<XAttribute>
 	{
-		public bool Equals(ProjectPropertyInstance? x, ProjectPropertyInstance? y)
-		{
-			return x.Name.Equals(y.Name, StringComparison.OrdinalIgnoreCase) && x.EvaluatedValue.Equals(y.EvaluatedValue, StringComparison.OrdinalIgnoreCase);
-		}
+		public bool Equals(ProjectPropertyInstance? x, ProjectPropertyInstance? y) => x.Name.Equals(y.Name, StringComparison.OrdinalIgnoreCase) && x.EvaluatedValue.Equals(y.EvaluatedValue, StringComparison.OrdinalIgnoreCase);
 
-		public int GetHashCode(ProjectPropertyInstance? obj)
-		{
-			return obj.Name.GetHashCode() ^ obj.EvaluatedValue.GetHashCode();
-		}
+		public int GetHashCode(ProjectPropertyInstance? obj) => obj.Name.GetHashCode() ^ obj.EvaluatedValue.GetHashCode();
 
 		public bool Equals(ProjectItemInstance? x, ProjectItemInstance? y)
-		{
-			return x.EvaluatedInclude.Equals(y.EvaluatedInclude, StringComparison.OrdinalIgnoreCase) && x.ItemType.Equals(y.ItemType, StringComparison.OrdinalIgnoreCase);
-		}
+			=> x.EvaluatedInclude.Equals(y.EvaluatedInclude, StringComparison.OrdinalIgnoreCase) &&
+				x.ItemType.Equals(y.ItemType, StringComparison.OrdinalIgnoreCase) &&
+				string.Join(",", x.MetadataNames).Equals(string.Join(",", y.MetadataNames), StringComparison.OrdinalIgnoreCase);
 
-		public int GetHashCode(ProjectItemInstance? obj)
-		{
-			return obj.EvaluatedInclude.GetHashCode() ^ obj.ItemType.GetHashCode();
-		}
+		public int GetHashCode(ProjectItemInstance? obj) => obj.EvaluatedInclude.GetHashCode() ^ obj.ItemType.GetHashCode() ^ string.Join(",", obj.MetadataNames).GetHashCode();
 
-		public bool Equals(XElement? x, XElement? y)
-		{
-			return x.Name.Equals(y.Name) && x.GetAttributeValue("Include").Equals(y.GetAttributeValue("Include"));
-		}
+		public bool Equals(XElement? x, XElement? y) => x.Name.Equals(y.Name) && x.GetAttributeValue("Include").Equals(y.GetAttributeValue("Include"));
 
-		public int GetHashCode(XElement? obj)
-		{
-			return obj.Name.GetHashCode() ^ obj.GetAttributeValue("Include").GetHashCode();
-		}
-		public bool Equals(XAttribute? x, XAttribute? y)
-		{
-			return x.Name.Equals(y.Name);
-		}
+		public int GetHashCode(XElement? obj) => obj.Name.GetHashCode() ^ obj.GetAttributeValue("Include").GetHashCode();
+		public bool Equals(XAttribute? x, XAttribute? y) => x.Name.Equals(y.Name);
 
-		public int GetHashCode(XAttribute? obj)
-		{
-			return obj.Name.GetHashCode() ^ obj.Value.GetHashCode();
-		}
+		public int GetHashCode(XAttribute? obj) => obj.Name.GetHashCode() ^ obj.Value.GetHashCode();
 	}
 }

@@ -1,0 +1,22 @@
+<!--
+ NuGetPush.props
+ 
+   Created: 2022-10-21-11:40:42
+   Modified: 2022-11-01-11:39:57
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <ItemDefinitionGroup>
+    <NuGetSource Value="Value" PushOnBuild="false" ApiKey="" /> 
+    <NuGetPushJob PackagePath="" PackageId="" Version="" ApiKey="" DeleteCommand="" PushCommand="" />
+  </ItemDefinitionGroup>
+  <PropertyGroup>
+    <NuGetConfigFile>$(MSBuildThisFileDirectory)../NuGet.config</NuGetConfigFile>  
+    <DeleteGitHubPackageVersionScriptName>$(MSBuildThisFileDirectory)../Scripts/delete-github-package-version</DeleteGitHubPackageVersionScriptName>
+  </PropertyGroup>
+</Project>

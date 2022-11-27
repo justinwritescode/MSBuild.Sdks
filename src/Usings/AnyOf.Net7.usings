@@ -11,9 +11,6 @@
 -->
 
 <Project Sdk="UsingsSdk">
-	<PropertyGroup>
-		<TargetFramework>net7.0</TargetFramework>
-	</PropertyGroup>
   <ItemGroup>
     <!-- <PackageReference Include="AnyOf" /> -->
     <PackageReference Include="AnyOf.SourceGenerator" />
