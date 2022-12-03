@@ -12,18 +12,46 @@
 
 <Project Sdk="UsingsSdk">
   <ItemGroup Label="System.Text.Json Usings">
-    <Using Include="System.Text.Json" />
-    <Using Include="System.Text.Json.Serialization" />
-    <Using Include="System.Text.RegularExpressions" />
+    <!-- <Using Include="System.Text.Json.JsonSerializer" Alias="JSer" /> -->
+    <Using Include="System.Text.Json.JsonCommentHandling" Alias="JCommentHandling" />
     <Using Include="System.Text.Json.JsonDocument" Alias="JDoc" />
-    <Using Include="System.Text.Json.JsonProperty" Alias="JProp" />
+    <Using Include="System.Text.Json.JsonDocumentOptions" Alias="JDocOpts" />
     <Using Include="System.Text.Json.JsonElement" Alias="JElem" />
-    <Using Include="System.Text.Json.Serialization.JsonPropertyNameAttribute" Alias="JPropAttribute" />
-    <Using Include="System.Text.Json.JsonSerializer" Alias="JSer" />
+    <Using Include="System.Text.Json.JsonEncodedText" Alias="JEncodedTxt" />
+    <Using Include="System.Text.Json.JsonProperty" Alias="JProp" />
     <Using Include="System.Text.Json.JsonSerializer" Static="true" />
+    <Using Include="System.Text.Json.JsonSerializer" Static="true" />
+    <Using Include="System.Text.Json.JsonSerializer" Alias="JSer" />
     <Using Include="System.Text.Json.JsonSerializerOptions" Alias="Jso" />
+    <Using Include="System.Text.Json.JsonTokenType" Alias="JTokenType" />
+    <Using Include="System.Text.Json.Nodes.JsonArray" Alias="JArray" />
+    <Using Include="System.Text.Json.Nodes.JsonNode" Alias="JNode" />
+    <Using Include="System.Text.Json.Nodes.JsonNodeOptions" Alias="JsonNodeOpts" />
+    <Using Include="System.Text.Json.Nodes.JsonObject" Alias="JObject" />
+    <Using Include="System.Text.Json.Nodes.JsonValue" Alias="JValue" />
+    <Using Include="System.Text.Json.Serialization.JsonConstructorAttribute" Alias="JConstructorAttribute" />
+    <Using Include="System.Text.Json.Serialization.JsonConverter" Alias="JConverter" />
+    <Using Include="System.Text.Json.Serialization.JsonConverterAttribute" Alias="JConverterAttribute" />
+    <Using Include="System.Text.Json.Serialization.JsonIgnoreAttribute" Alias="JIgnoreAttribute" />
+    <Using Include="System.Text.Json.Serialization.JsonIgnoreCondition" Alias="JIgnoreCond" />
+    <Using Include="System.Text.Json.Serialization.JsonIncludeAttribute" Alias="JInclude" />
+    <Using Include="System.Text.Json.Serialization.JsonKnownNamingPolicy" Alias="JKnownNamingPlcy" />
+    <Using Include="System.Text.Json.Serialization.JsonNumberHandling" Alias="JNumberHandling" />
+    <Using Include="System.Text.Json.Serialization.JsonNumberHandlingAttribute" Alias="JNumberHandlingAttribute" />
+    <Using Include="System.Text.Json.Serialization.JsonPolymorphicAttribute" Alias="JPolymorphicAttribute" />
+    <Using Include="System.Text.Json.Serialization.JsonPropertyNameAttribute" Alias="JPropAttribute" />
+    <Using Include="System.Text.Json.Serialization.JsonPropertyOrderAttribute" Alias="JOrder" />
+    <Using Include="System.Text.Json.Serialization.JsonRequiredAttribute" Alias="JRequire" />
+    <Using Include="System.Text.Json.Serialization.JsonSerializableAttribute" Alias="JSerializableAttribute" />
+    <Using Include="System.Text.Json.Serialization.JsonSerializerContext" Alias="JSerCtx" />
+    <Using Include="System.Text.Json.Serialization.JsonSourceGenerationMode" Alias="JSrcGenMode" />
+    <Using Include="System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute" Alias="JSrcGenOptsAttribute" />
+    <Using Include="System.Text.Json.Serialization.JsonStringEnumConverter" Alias="JStringEnumConverter" />
+    <Using Include="System.Text.Json.Serialization" />
+    <Using Include="System.Text.Json" />
+    <Using Include="System.Text.RegularExpressions" />
   </ItemGroup>
-	<ItemGroup>
-		<PackageReference Include="System.Text.Json" />
-	</ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="System.Text.Json" />
+    </ItemGroup>
 </Project>

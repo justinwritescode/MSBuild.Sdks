@@ -12,22 +12,22 @@
 
 <Project Sdk="Microsoft.Build.Traversal">
   <PropertyGroup>
-		<TargetFramework>net7.0</TargetFramework>
-		<IncludeInSolutionFile>true</IncludeInSolutionFile> 
+        <TargetFramework>net7.0</TargetFramework>
+        <IncludeInSolutionFile>true</IncludeInSolutionFile> 
     <AssemblyName>JustinWritesCode.Usings</AssemblyName>
     <SlnGenSolutionFolder>usings</SlnGenSolutionFolder>
     <MinVerTagPrefix>uv</MinVerTagPrefix>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-		<Title>All Usings Projects</Title>
-		<!-- <BuildProjectReferences>false</BuildProjectReferences> -->
+        <Title>All Usings Projects</Title>
+        <!-- <BuildProjectReferences>false</BuildProjectReferences> -->
   </PropertyGroup>
-	<ItemGroup>
-		<PackageReference Include="GetCommandLineArgs" />
-		<ProjectReference Include="*.usings" SetConfiguration="Configuration=$(Configuration)" SetTargetFramework="TargetFramework=$(TargetFramework)" />
-	</ItemGroup>
-	<!-- <Target Name="BuildUsingsProjects" BeforeTargets="Build">
-		<CallTarget Targets="GetCommandLineArgs" />
-		<Message Importance="High" Text="CommandLineArgs: $(CommandLineArgs)" />
-		<Exec Command="dotnet build %(ProjectReference.Identity) $(CommandLineArgs)" />
-	</Target> -->
+    <ItemGroup>
+        <PackageReference Include="GetCommandLineArgs" />
+        <ProjectReference Include="*.usings" SetConfiguration="Configuration=$(Configuration)" SetTargetFramework="TargetFramework=$(TargetFramework)" />
+    </ItemGroup>
+    <!-- <Target Name="BuildUsingsProjects" BeforeTargets="Build">
+        <CallTarget Targets="GetCommandLineArgs" />
+        <Message Importance="High" Text="CommandLineArgs: $(CommandLineArgs)" />
+        <Exec Command="dotnet build %(ProjectReference.Identity) $(CommandLineArgs)" />
+    </Target> -->
 </Project>

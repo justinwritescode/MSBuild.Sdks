@@ -15,7 +15,7 @@
 
 # A self-extracting archive that uses the Bourne shell (sh).
 *.shar
-# A system for storing multiple files. LBR archives typically contained files processed by SQ, or the archive itself was compressed with SQ. LBR archives that were compressed with SQ ended with the extension .LQR	
+# A system for storing multiple files. LBR archives typically contained files processed by SQ, or the archive itself was compressed with SQ. LBR archives that were compressed with SQ ended with the extension .LQR    
 *.LBR
 # An archive format originally used mainly for archiving and distribution of the exact, nearly-exact, or custom-modified contents of an optical storage medium such as a CD-ROM or DVD-ROM. However, it can be used to archive the contents of other storage media, selected partitions, folders, and/or files. The resulting archive is typically optimized for convenient rendering to (re-)writable CD or DVD media.
 *.iso
@@ -89,9 +89,9 @@ local.settings.json
 
 ## Archiving and compression
 # Open source file format. Used by 7-Zip.
-# Mac OS X, restoration on different platforms is possible although not immediate 	Yes 	Based on 7z. Preserves Spotlight metadata, resource forks, owner/group information, dates and other data which would be otherwise lost with compression.
+# Mac OS X, restoration on different platforms is possible although not immediate     Yes     Based on 7z. Preserves Spotlight metadata, resource forks, owner/group information, dates and other data which would be otherwise lost with compression.
 *.s7z
-# Old archive versions only 	Proprietary format
+# Old archive versions only     Proprietary format
 *.ace
 # A format that compresses and doubly encrypt the data (AES256 and CAS256) avoiding brute force attacks, also hide files in an AFA file. It has two ways to safeguard data integrity and subsequent repair of the file if has an error (repair with AstroA2P (online) or Astrotite (offline)).
 *.afa
@@ -110,7 +110,7 @@ local.settings.json
 # Proprietary format from the ZipTV Compression Components
 *.bh
 # The Microsoft Windows native archive format, which is also used by many commercial installers such as InstallShield and WISE.
-# Originally DOS, now DOS and Windows 	Created by Yaakov Gringeler; released last in 2003 (Compressia 1.0.0.1 beta), now apparently defunct. Free trial of 30 days lets user create and extract archives; after that it is possible to extract, but not to create.
+# Originally DOS, now DOS and Windows     Created by Yaakov Gringeler; released last in 2003 (Compressia 1.0.0.1 beta), now apparently defunct. Free trial of 30 days lets user create and extract archives; after that it is possible to extract, but not to create.
 *.car
 # Open source file format.
 *.cfs
@@ -118,7 +118,7 @@ local.settings.json
 *.cpt
 # Windows, Unix-like, Mac OS X Open source file format. Files are compressed individually with either gzip, bzip2 or lzo.
 *.dar
-# DiskDoubler 	Mac OS 			obsolete
+# DiskDoubler     Mac OS             obsolete
 *.dd
 # ??
 *.dgc
@@ -128,16 +128,16 @@ local.settings.json
 # ETSoft compressed archive
 # The predecessor of DGCA.
 *.gca
-# Originally DOS 	Yes, but may be covered by patents 	DOS era format; uses arithmetic/Markov coding
+# Originally DOS     Yes, but may be covered by patents     DOS era format; uses arithmetic/Markov coding
 *.ha
-# MS Windows 	HKI
+# MS Windows     HKI
 *.hki
 # Produced by ICEOWS program. Excels at text file compression.
 *.ice
 # Java archive, compatible with ZIP files
 # Open sourced archiver with compression using the PAQ family of algorithms and optional encryption.
 *.kgb
-# Originally DOS, now multiple 	Multiple 	Yes 	The standard format on Amiga.
+# Originally DOS, now multiple     Multiple     Yes     The standard format on Amiga.
 *.lzh
 *.lha
 # Archiver originally used on The Amiga. Now copied by Microsoft to use in their .cab and .chm files.
@@ -152,20 +152,20 @@ local.settings.json
 *.pea
 # The format from the PIM - a freeware compression tool by Ilia Muraviev. It uses an LZP-based compression algorithm with set of filters for executable, image and audio files.
 *.pim
-# PackIt 	Mac OS 			obsolete
+# PackIt     Mac OS             obsolete
 *.pit
 # Used for data in games written using the Quadruple D library for Delphi. Uses byte pair compression.
 *.qda
 # A proprietary archive format, second in popularity to .zip files.
 # The format from a commercial archiving package. Odd among commercial packages in that they focus on incorporating experimental algorithms with the highest possible compression (at the expense of speed and memory), such as PAQ, PPMD and PPMZ (PPMD with unlimited-length strings), as well as a proprietary algorithms.
 *.rk
-# Self Dissolving ARChive 	Commodore 64, Commodore 128 	Commodore 64, Commodore 128 	Yes 	SDAs refer to Self Dissolving ARC files, and are based on the Commodore 64 and Commodore 128 versions of ARC, originally written by Chris Smeets. While the files share the same extension, they are not compatible between platforms. That is, an SDA created on a Commodore 64 but run on a Commodore 128 in Commodore 128 mode will crash the machine, and vice versa. The intended successor to SDA is SFX.
+# Self Dissolving ARChive     Commodore 64, Commodore 128     Commodore 64, Commodore 128     Yes     SDAs refer to Self Dissolving ARC files, and are based on the Commodore 64 and Commodore 128 versions of ARC, originally written by Chris Smeets. While the files share the same extension, they are not compatible between platforms. That is, an SDA created on a Commodore 64 but run on a Commodore 128 in Commodore 128 mode will crash the machine, and vice versa. The intended successor to SDA is SFX.
 *.sda
 # A pre-Mac OS X Self-Extracting Archive format. StuffIt, Compact Pro, Disk Doubler and others could create .sea files, though the StuffIt versions were the most Shared.
 *.sea
 # Scifer Archive with internal header
 *.sen
-# Commodore 64, Commodore 128 	SFX is a Self Extracting Archive which uses the LHArc compression algorithm. It was originally developed by Chris Smeets on the Commodore platform, and runs primarily using the CS-DOS extension for the Commodore 128. Unlike its predecessor SDA, SFX files will run on both the Commodore 64 and Commodore 128 regardless of which machine they were created on.
+# Commodore 64, Commodore 128     SFX is a Self Extracting Archive which uses the LHArc compression algorithm. It was originally developed by Chris Smeets on the Commodore platform, and runs primarily using the CS-DOS extension for the Commodore 128. Unlike its predecessor SDA, SFX files will run on both the Commodore 64 and Commodore 128 regardless of which machine they were created on.
 *.sfx
 # An archive format designed for the Apple II series of computers. The canonical implementation is ShrinkIt, which can operate on disk images as well as files. Preferred compression algorithm is a combination of RLE and 12-bit LZW. Archives can be manipulated with the command-line NuLib tool, or the Windows-based CiderPress.
 *.shk
@@ -201,7 +201,7 @@ local.settings.json
 # Yamazaki zipper archive. Compression format used in DeepFreezer archiver utility created by Yamazaki Satoshi. Read and write support exists in TUGZip, IZArc and ZipZag
 *.yz1
 # The most widely used compression format on Microsoft Windows. Sharedly used on Macintosh and Unix systems as well.
-# application/x-zoo 	zoo 	Multiple 	Multiple 	Yes 	
+# application/x-zoo     zoo     Multiple     Multiple     Yes     
 *.zoo
 # Journaling (append-only) archive format with rollback capability. Supports deduplication and incremental update based on last-modified dates. Multi-threaded. Compresses in LZ77, BWT, and context mixing formats. Open source.
 *.zpaq

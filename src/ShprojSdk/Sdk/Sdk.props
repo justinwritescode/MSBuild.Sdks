@@ -11,13 +11,13 @@
 -->
 
 <Project>
-	<PropertyGroup>
-		<MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
-		<MinimumRequiredVersion>14.0</MinimumRequiredVersion>
-	</PropertyGroup>
-	<Import Project="$(MSBuildExtensionsPath)/$(MSBuildToolsVersion)/Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)/$(MSBuildToolsVersion)/Microsoft.Common.props')" />
-	<Import Project="$(MSBuildExtensionsPath)/$(MSBuildToolsVersion)/Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)/$(MSBuildToolsVersion)/Microsoft.Common.props')" />
-	<Import Project="$(MSBuildExtensionsPath)/Microsoft/VisualStudio/$(VisualStudioVersion)/CodeSharing/Microsoft.CodeSharing.Common.Default.props" Condition="Exists('$(MSBuildExtensionsPath)/Microsoft/VisualStudio/$(VisualStudioVersion)/CodeSharing/Microsoft.CodeSharing.Common.Default.props')" />
-	<Import Project="$(MSBuildExtensionsPath)/Microsoft/VisualStudio/$(VisualStudioVersion)/CodeSharing/Microsoft.CodeSharing.Common.props" Condition="Exists('$(MSBuildExtensionsPath)/Microsoft/VisualStudio/$(VisualStudioVersion)/CodeSharing/Microsoft.CodeSharing.Common.props')" />
-	<Import Project="$(MSBuildExtensionsPath)/Microsoft/VisualStudio/$(VisualStudioVersion)/CodeSharing/Microsoft.CodeSharing.Common.props" Condition="Exists('$(MSBuildExtensionsPath)/Microsoft/VisualStudio/$(VisualStudioVersion)/CodeSharing/Microsoft.CodeSharing.Common.props')" />
+    <PropertyGroup>
+        <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+        <MinimumRequiredVersion>14.0</MinimumRequiredVersion>
+    </PropertyGroup>
+    <Import Project="$(MSBuildExtensionsPath)/$(MSBuildToolsVersion)/Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)/$(MSBuildToolsVersion)/Microsoft.Common.props')" />
+    <Import Project="$(MSBuildExtensionsPath)/$(MSBuildToolsVersion)/Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)/$(MSBuildToolsVersion)/Microsoft.Common.props')" />
+    <Import Project="$(MSBuildExtensionsPath)/Microsoft/VisualStudio/$(VisualStudioVersion)/CodeSharing/Microsoft.CodeSharing.Common.Default.props" Condition="Exists('$(MSBuildExtensionsPath)/Microsoft/VisualStudio/$(VisualStudioVersion)/CodeSharing/Microsoft.CodeSharing.Common.Default.props')" />
+    <Import Project="$(MSBuildExtensionsPath)/Microsoft/VisualStudio/$(VisualStudioVersion)/CodeSharing/Microsoft.CodeSharing.Common.props" Condition="Exists('$(MSBuildExtensionsPath)/Microsoft/VisualStudio/$(VisualStudioVersion)/CodeSharing/Microsoft.CodeSharing.Common.props')" />
+    <Import Project="$(MSBuildExtensionsPath)/Microsoft/VisualStudio/$(VisualStudioVersion)/CodeSharing/Microsoft.CodeSharing.Common.props" Condition="Exists('$(MSBuildExtensionsPath)/Microsoft/VisualStudio/$(VisualStudioVersion)/CodeSharing/Microsoft.CodeSharing.Common.props')" />
 </Project>

@@ -11,10 +11,10 @@
 -->
 
 <Project Sdk="UsingsSdk">
-	<ItemGroup>
-		<Using Include="Microsoft.Net.Http.Headers" />
-	</ItemGroup>
-	<ItemGroup>
-		<PackageReference Include="Microsoft.Net.Http.Headers" />
-	</ItemGroup>
+    <ItemGroup>
+        <Using Include="Microsoft.Net.Http.Headers" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Net.Http.Headers" />
+    </ItemGroup>
 </Project>

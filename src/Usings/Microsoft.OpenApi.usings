@@ -11,11 +11,11 @@
 -->
 
 <Project Sdk="UsingsSdk">
-	<ItemGroup>
+    <ItemGroup>
     <Using Include="Microsoft.OpenApi" />
     <Using Include="Microsoft.OpenApi.Any" />
     <Using Include="Microsoft.OpenApi.Interfaces" />
     <Using Include="Microsoft.OpenApi.Models" />
     <Using Include="Microsoft.OpenApi.Writers" />
-	</ItemGroup>
+    </ItemGroup>
 </Project>

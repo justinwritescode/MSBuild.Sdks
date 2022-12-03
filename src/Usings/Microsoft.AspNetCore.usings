@@ -11,8 +11,8 @@
 -->
 
 <Project Sdk="UsingsSdk">
-	<ItemGroup>
-		<Using Include="Microsoft.AspNetCore.Mvc" />
+    <ItemGroup>
+        <Using Include="Microsoft.AspNetCore.Mvc" />
     <Using Include="Microsoft.AspNetCore.Authorization" />
     <Using Include="Microsoft.AspNetCore.Mvc.ApplicationModels" />
     <Using Include="Microsoft.AspNetCore.Mvc.ApplicationParts" />
@@ -30,5 +30,5 @@
     <Using Include="Microsoft.AspNetCore.Http.HttpMethods" Static="true" />
     <Using Include="Microsoft.AspNetCore.Http.HttpProtocol" Static="true" />
     <Using Include="Microsoft.AspNetCore.Http.StatusCodes" Static="true" />
-	</ItemGroup>
+    </ItemGroup>
 </Project>

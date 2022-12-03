@@ -21,9 +21,9 @@
     <AssemblyName>$(PackageIdOverride)</AssemblyName>
     <RootNamespace>$(PackageIdOverride)</RootNamespace>
     <UsingUsingsSdk>true</UsingUsingsSdk>
-		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<TargetFramework>netstandard2.0</TargetFramework>
-		<TargetFrameworks>netstandard2.0</TargetFrameworks>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <TargetFrameworks>netstandard2.0</TargetFrameworks>
   </PropertyGroup>
   <PropertyGroup>
     <IntermediateOutputPath Condition="'$(IntermediateOutputPath)' == ''">obj/</IntermediateOutputPath>

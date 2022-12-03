@@ -11,28 +11,28 @@
 -->
 
 <Project Sdk="Microsoft.Build.NoTargets">
-	<PropertyGroup>
-			<TargetFramework>netstandard1.0</TargetFramework>
-			<TargetFrameworks>netstandard1.0</TargetFrameworks>
-			<Description>This is a simple MSBuild task that allows you to push a NuGet package to a NuGet server.</Description>
-	</PropertyGroup>
-	<ItemGroup>
-		<Content Include="./Sdk/*" PackagePath="Sdk/%(Filename)%(Extension)" />
-		<Content Include="./Scripts/**/*" PackagePath="Scripts/%(RecursiveDir)%(Filename)%(Extension)" />
-	</ItemGroup>
-	<ItemGroup>
-		<PackageTag Include="GitHub" />
-		<PackageTag Include="GitHub-Packages" />
-		<PackageTag Include="NuGet" />
-		<PackageTag Include="Azure" />
-		<PackageTag Include="Azure-Artifacts" />
-		<PackageTag Include="NuGet-Push" />
-		<PackageTag Include="Packaging" />
-	</ItemGroup>
-	<Target Name="BuildTypeScript" AfterTargets="Build">
-		<Exec Command="tsc $(MSBuildThisFileDirectory)Scripts/ts/*.ts --outDir $(MSBuildThisFileDirectory)Scripts/js --esModuleInterop" />
-	</Target>
-	<Target Name="CleamJSOutput" AfterTargets="Clean">
-		<Delete Files="$(MSBuildThisFileDirectory)Scripts/js/*" />
-	</Target>
+    <PropertyGroup>
+            <TargetFramework>netstandard1.0</TargetFramework>
+            <TargetFrameworks>netstandard1.0</TargetFrameworks>
+            <Description>This is a simple MSBuild task that allows you to push a NuGet package to a NuGet server.</Description>
+    </PropertyGroup>
+    <ItemGroup>
+        <Content Include="./Sdk/*" PackagePath="Sdk/%(Filename)%(Extension)" />
+        <Content Include="./Scripts/**/*" PackagePath="Scripts/%(RecursiveDir)%(Filename)%(Extension)" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageTag Include="GitHub" />
+        <PackageTag Include="GitHub-Packages" />
+        <PackageTag Include="NuGet" />
+        <PackageTag Include="Azure" />
+        <PackageTag Include="Azure-Artifacts" />
+        <PackageTag Include="NuGet-Push" />
+        <PackageTag Include="Packaging" />
+    </ItemGroup>
+    <Target Name="BuildTypeScript" AfterTargets="Build">
+        <Exec Command="tsc $(MSBuildThisFileDirectory)Scripts/ts/*.ts --outDir $(MSBuildThisFileDirectory)Scripts/js --esModuleInterop" />
+    </Target>
+    <Target Name="CleamJSOutput" AfterTargets="Clean">
+        <Delete Files="$(MSBuildThisFileDirectory)Scripts/js/*" />
+    </Target>
 </Project>

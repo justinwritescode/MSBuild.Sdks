@@ -11,18 +11,18 @@
 -->
 
 <Project Sdk="Microsoft.NET.Sdk">
-	<PropertyGroup>
-		<TargetFramework>netstandard2.0</TargetFramework>
-		<PackageId>ShprojSdk</PackageId>
-		<Authors>Justin Chase</Authors>
-		<Description>SDK for .shproj projects</Description>
-	</PropertyGroup>
-	<ItemGroup>
-		<PackageTag Include="msbuild" />
-		<PackageTag Include="sdk" />
-		<PackageTag Include="msbuild-sdk" />
-		<PackageTag Include="shproj" />
-		<PackageTag Include="shared" />
-		<PackageTag Include="shared-project" />
-	</ItemGroup>
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <PackageId>ShprojSdk</PackageId>
+        <Authors>Justin Chase</Authors>
+        <Description>SDK for .shproj projects</Description>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageTag Include="msbuild" />
+        <PackageTag Include="sdk" />
+        <PackageTag Include="msbuild-sdk" />
+        <PackageTag Include="shproj" />
+        <PackageTag Include="shared" />
+        <PackageTag Include="shared-project" />
+    </ItemGroup>
 </Project>

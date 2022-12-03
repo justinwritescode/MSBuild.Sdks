@@ -11,9 +11,9 @@
 -->
 
 <Project Sdk="UsingsSdk">
-	<PropertyGroup>
+    <PropertyGroup>
 
-	</PropertyGroup>
+    </PropertyGroup>
   <ItemGroup Label="Microsoft Configuration Extensions">
     <Import Include="Microsoft.Extensions.Configuration.CommandLine.Usings" />
     <Import Include="Microsoft.Extensions.Configuration.EnvironmentVariables.Usings" />

@@ -11,23 +11,23 @@
 -->
 
 <Project Sdk="Microsoft.Build.NoTargets">
-   <UsingTask TaskName="JustinWritesCode.MSBuild.UsingsSdk.CreateUsingsProject" AssemblyFile="$(UsingsSdkAssemblyFile)" />
+   <UsingTask TaskName="JustinWritesCode.MSBuild.UsingsSdk.BuildUsingsPackage" AssemblyFile="$(UsingsSdkAssemblyFile)" />
    <UsingTask TaskName="JustinWritesCode.MSBuild.Utils.GetCommandLineArgs" AssemblyFile="$(UsingsSdkAssemblyFile)" />
    <Target Name="PrepareOutputFile" BeforeTargets="GetPackageContents;Build" DependsOnTargets="GetPackageVersion">
-      <JustinWritesCode.MSBuild.UsingsSdk.CreateUsingsProject
+      <JustinWritesCode.MSBuild.UsingsSdk.BuildUsingsPackage
             InputFile="$(MSBuildProjectFullPath)"
             OutputFile="$(OutputFilePath)"
-						PackageId="$(PackageId)"
+                        PackageId="$(PackageId)"
             Version="$(PackageVersion)">
-				<Output TaskParameter="UsingsProjectFile" PropertyName="UsingsProjectFile" />
-			</JustinWritesCode.MSBuild.UsingsSdk.CreateUsingsProject>
+                <Output TaskParameter="UsingsProjectFile" PropertyName="UsingsProjectFile" />
+            </JustinWritesCode.MSBuild.UsingsSdk.BuildUsingsPackage>
    </Target>
-	 <Target Name="PackUsingsProject" AfterTargets="Pack">
-	 		<!-- <JustinWritesCode.MSBuild.UsingsSdk.CreateUsingsProject>
-				<Output TaskParameter="CommandLineArgs" ItemName="CommandLineArgs" />
-			</JustinWritesCode.MSBuild.UsingsSdk.CreateUsingsProject> -->
-			<Exec Command="dotnet pack $(UsingsProjectFile) @(CommandLineArgs, ' ')" />
-	 </Target>
+     <Target Name="PackUsingsProject" AfterTargets="Pack">
+             <!-- <JustinWritesCode.MSBuild.UsingsSdk.CreateUsingsProject>
+                <Output TaskParameter="CommandLineArgs" ItemName="CommandLineArgs" />
+            </JustinWritesCode.MSBuild.UsingsSdk.CreateUsingsProject> -->
+            <Exec Command="dotnet pack $(UsingsProjectFile) @(CommandLineArgs, ' ')" />
+     </Target>
    <ItemGroup>
     <!-- <Content Include="$(OutputFilePath)" PackagePath="$(OutputFilePackagePath)" />
     <Content Include="$(IconFile)" PackagePath="" /> -->

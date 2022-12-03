@@ -13,8 +13,8 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <TargetFrameworks>net7.0</TargetFrameworks>
-		<Foo Condition="'$(TargetFramework)' == 'net7.0'">BAR!</Foo>
-		<Bar Label="Foo!" />
+        <Foo Condition="'$(TargetFramework)' == 'net7.0'">BAR!</Foo>
+        <Bar Label="Foo!" />
   </PropertyGroup>
   <ItemGroup>
     <!-- <PackageReference Include="MSBuild.Usings" /> -->

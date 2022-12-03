@@ -17,6 +17,7 @@
     <EnableGlobalCodeGenerators>false</EnableGlobalCodeGenerators>
     <IsPackable>true</IsPackable>
     <IsNuGetized>true</IsNuGetized>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
   </PropertyGroup>
   
   <Import Project="$(InheritDirectoryBuildProps)" />

@@ -12,17 +12,18 @@
 
 <Project Sdk="UsingsSdk">
   <ItemGroup>
-    <PackageReference Include="Microsoft.Build.Framework" PrivateAssets="None" VersionOverride="[17.3.2,)" />
-    <PackageReference Include="Microsoft.Build.Utilities.Core" PrivateAssets="None" VersionOverride="[17.3.2,)" />
-    <PackageReference Include="Microsoft.Build" PrivateAssets="None" VersionOverride="[15.9.20,)" Condition="$(TargetFramework) == 'netstandard2.0'" />
-    <PackageReference Include="Microsoft.Build" PrivateAssets="None" VersionOverride="[17.3.2,)" Condition="$(TargetFramework) == 'net6.0'" />
+    <PackageReference Include="Microsoft.Build.Framework" PrivateAssets="None" />
+    <PackageReference Include="Microsoft.Build.Utilities.Core" PrivateAssets="None" />
+    <PackageReference Include="Microsoft.Build.Tasks.Core" PrivateAssets="None" />
+    <PackageReference Include="Microsoft.Build" PrivateAssets="None" VersionOverride="[15.9.20,)" Condition="'$(TargetFramework)' == 'netstandard2.0'" />
+    <PackageReference Include="Microsoft.Build" PrivateAssets="None" VersionOverride="[17.3.2,)" Condition="'$(TargetFramework)' == 'net6.0' Or '$(TargetFramework)' == 'net7.0'" />
   </ItemGroup>
   <ItemGroup Label="Global Usings">
     <Using Include="Microsoft.Build.Definition" Alias="MSBDef" />
     <Using Include="Microsoft.Build.Evaluation" Alias="MSBEval" />
     <Using Include="Microsoft.Build.Exceptions" Alias="MSBExc" />
     <Using Include="Microsoft.Build.Execution" Alias="MSBEx" />
-    <Using Include="Microsoft.Build.FileSystem" Alias="MSBFS" />
+    <!-- <Using Include="Microsoft.Build.FileSystem" Alias="MSBFS" /> -->
     <Using Include="Microsoft.Build.Framework" Alias="MSBF" />
     <Using Include="Microsoft.Build.Globbing" Alias="MSBGlob" />
     <Using Include="Microsoft.Build.Logging" Alias="MSBLog" />

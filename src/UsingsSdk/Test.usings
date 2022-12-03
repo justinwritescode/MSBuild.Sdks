@@ -1,0 +1,48 @@
+<!--
+ * Test.usings
+ * 
+ *   Created: 2022-11-28-08:41:42
+ *   Modified: 2022-11-28-08:41:42
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="UsingsSdk">
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Functions.Extensions" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" />
+    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.OpenApi" />
+    <PackageReference Include="System.Net.Primitives" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" />
+    <Using Include="Microsoft.AspNetCore.Http.HttpRequest" Alias="Req" />
+    <Using Include="Microsoft.AspNetCore.Http" />
+    <Using Include="Microsoft.AspNetCore.Mvc" />
+    <Using Include="Microsoft.Azure.WebJobs.Extensions.Http.AuthorizationLevel" Static="true" />
+    <Using Include="Microsoft.Azure.WebJobs.Extensions.Http" />
+    <Using Include="Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Attributes.OpenApiOperationAttribute" Alias="OpAttribute" />
+    <Using Include="Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Attributes.OpenApiParameterAttribute" Alias="ParamAttribute" />
+    <Using Include="Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Attributes.OpenApiRequestBodyAttribute" Alias="RequestBodyAttribute" />
+    <Using Include="Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Attributes.OpenApiRequestBodyAttribute" Alias="RequestBodyAttribute" /> 
+    <Using Include="Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Attributes.OpenApiResponseWithBodyAttribute" Alias="ResponseBodyAttribute" />
+    <Using Include="Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Attributes.OpenApiSecurityAttribute" Alias="SecurityAttribute" />
+    <Using Include="Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Attributes" />
+    <Using Include="Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Enums.OpenApiSecurityLocationType" Alias="SLoc" />
+    <Using Include="Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Enums" />
+    <Using Include="Microsoft.Azure.WebJobs.FunctionNameAttribute" Alias="FunctionAttribute" />
+    <Using Include="Microsoft.Azure.WebJobs.HttpTriggerAttribute" Alias="HttpAttribute" />
+    <Using Include="Microsoft.Azure.WebJobs" />
+    <Using Include="Microsoft.OpenApi.Models.ParameterLocation" Alias="PLoc" />
+    <Using Include="Microsoft.OpenApi.Models.ParameterLocation" Alias="PLoc" />
+    <Using Include="Microsoft.OpenApi.Models.ParameterLocation" Static="true" />
+    <Using Include="Microsoft.OpenApi.Models.ParameterLocation" Static="true" />
+    <Using Include="Microsoft.OpenApi.Models.SecuritySchemeType" Static="true" />
+    <Using Include="System.Net.HttpStatusCode" Static="true" />
+    <Using Include="System.Text.Json.Serialization.JsonPropertyNameAttribute" Alias="JPropAttribute" />
+    <Using Include="System.Text.Json.JsonSerializer" Alias="JSer" />
+    <Using Include="System.Text.Json.JsonSerializer" Static="true" />
+  </ItemGroup>
+</Project>

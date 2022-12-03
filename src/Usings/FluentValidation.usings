@@ -16,7 +16,7 @@ FluentValidation.usings
     <Using Include="FluentValidation.Results.ValidationResult" Alias="FvResult" />
     <Using Include="FluentValidation.Validators" />
   </ItemGroup>
-	<ItemGroup>
-		<PackageReference Include="FluentValidation" />
-	</ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="FluentValidation" />
+    </ItemGroup>
 </Project>

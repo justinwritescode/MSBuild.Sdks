@@ -19,7 +19,7 @@
     <Using Include="System.Security.Claims.ClaimValueTypes" Alias="SysSecVt" />
     <Using Include="System.Security.Claims" />
   </ItemGroup>
-	<ItemGroup>
-		<PackageReference Include="System.Security.Claims" />
-	</ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="System.Security.Claims" />
+    </ItemGroup>
 </Project>

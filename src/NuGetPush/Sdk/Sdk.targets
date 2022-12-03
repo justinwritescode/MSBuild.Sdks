@@ -29,11 +29,11 @@
     </Target>
 
    <Target Name="EnsureGitHubToken" DependsOnTargets="Pack;GetPackageMetadata;MinVer" Condition="'$(GeneratePackageOnBuild)' == 'true'">
-				<Exec Command="gh auth token" ConsoleToMSBuild="true">
-					<Output TaskParameter="ConsoleOutput" PropertyName="GitHubAuthToken" />
-				</Exec>
-				<Error Condition="'$(GitHubAuthToken)' == ''" Text="You must first set the GitHub auth tokne by running 'gh auth login'" Code="GHPUSH001" HelpLink="https://cli.github.com/manual/gh_auth_login" />
-	 </Target>
+                <Exec Command="gh auth token" ConsoleToMSBuild="true">
+                    <Output TaskParameter="ConsoleOutput" PropertyName="GitHubAuthToken" />
+                </Exec>
+                <Error Condition="'$(GitHubAuthToken)' == ''" Text="You must first set the GitHub auth tokne by running 'gh auth login'" Code="GHPUSH001" HelpLink="https://cli.github.com/manual/gh_auth_login" />
+     </Target>
 
    <Target Name="PushGitHub" DependsOnTargets="Pack;GetPackageMetadata;MinVer;EnsureGitHubToken" Condition="'$(GeneratePackageOnBuild)' == 'true'">
         <PropertyGroup>

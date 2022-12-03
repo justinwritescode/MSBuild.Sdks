@@ -19,7 +19,9 @@
     <PackageReference Include="System.Net.Primitives" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" />
     <PackageReference Include="Microsoft.AspNetCore.Http" />
+        <!-- <PackageReference Include="System.Net.Mime.MediaTypeNames.netstandard2.0Patch" Condition="'$(TargetFramework)' == 'netstandard2.0'" /> -->
     <!-- <Using Include="Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Attributes.OpenApiRequestBodyAttribute" Alias="Req"/> -->
+    <Import Include="./System.Net.Mime.MediaTypeNames.usings" />
     <Using Include="Microsoft.AspNetCore.Http.HttpRequest" Alias="Req" />
     <Using Include="Microsoft.AspNetCore.Http" />
     <Using Include="Microsoft.AspNetCore.Mvc" />
@@ -27,13 +29,13 @@
     <Using Include="Microsoft.Azure.WebJobs.Extensions.Http" />
     <Using Include="Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Attributes.OpenApiOperationAttribute" Alias="OpAttribute" />
     <Using Include="Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Attributes.OpenApiParameterAttribute" Alias="ParamAttribute" />
-    <Using Include="Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Attributes.OpenApiRequestBodyAttribute" Alias="BodyAttribute" />
-    <Using Include="Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Attributes.OpenApiRequestBodyAttribute" Alias="ReqBodyAttribute" />
-    <Using Include="Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Attributes.OpenApiRequestBodyAttribute" Alias="RequestAttribute" />
+    <!-- <Using Include="Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Attributes.OpenApiRequestBodyAttribute" Alias="BodyAttribute" /> -->
     <Using Include="Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Attributes.OpenApiRequestBodyAttribute" Alias="RequestBodyAttribute" />
-    <Using Include="Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Attributes.OpenApiResponseWithBodyAttribute" Alias="RespAttribute" />
-    <Using Include="Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Attributes.OpenApiResponseWithBodyAttribute" Alias="ResponseAttribute" />
-    <Using Include="Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Attributes.OpenApiSecurityAttribute" Alias="SecAttribute" />
+    <!-- <Using Include="Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Attributes.OpenApiRequestBodyAttribute" Alias="RequestAttribute" />
+    <Using Include="Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Attributes.OpenApiRequestBodyAttribute" Alias="RequestBodyAttribute" /> -->
+    <Using Include="Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Attributes.OpenApiResponseWithBodyAttribute" Alias="ResponseBodyAttribute" />
+    <!-- <Using Include="Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Attributes.OpenApiResponseWithBodyAttribute" Alias="ResponseAttribute" /> -->
+    <!-- <Using Include="Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Attributes.OpenApiSecurityAttribute" Alias="SecAttribute" /> -->
     <Using Include="Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Attributes.OpenApiSecurityAttribute" Alias="SecurityAttribute" />
     <Using Include="Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Attributes" />
     <Using Include="Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Enums.OpenApiSecurityLocationType" Alias="SLoc" />
@@ -42,10 +44,9 @@
     <Using Include="Microsoft.Azure.WebJobs.HttpTriggerAttribute" Alias="HttpAttribute" />
     <Using Include="Microsoft.Azure.WebJobs" />
     <Using Include="Microsoft.OpenApi.Models.ParameterLocation" Alias="PLoc" />
-    <Using Include="Microsoft.OpenApi.Models.ParameterLocation" Static="true" />
+    <!-- <Using Include="Microsoft.OpenApi.Models.ParameterLocation" Static="true" /> -->
     <Using Include="Microsoft.OpenApi.Models.SecuritySchemeType" Static="true" />
     <Using Include="System.Net.HttpStatusCode" Static="true" />
-    <Import Include="./System.Net.Mime.MediaTypeNames.usings" />
   </ItemGroup>
   <PropertyGroup>
     <Foo>Bar</Foo>

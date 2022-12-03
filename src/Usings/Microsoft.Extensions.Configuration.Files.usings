@@ -12,12 +12,12 @@
 
 <Project Sdk="UsingsSdk">
   <ItemGroup Label="Microsoft Configuration Extensions">
-		<Import Include="./Microsoft.Extensions.Configuration.Ini.usings" />
-		<Import Include="./Microsoft.Extensions.Configuration.Json.usings" />
-		<Import Include="./Microsoft.Extensions.Configuration.Xml.usings" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.KeyPerFile" />
-		<Using Include="Microsoft.Extensions.Configuration.KeyPerFile" />
-		<Using Include="Microsoft.Extensions.Configuration" />
+        <Import Include="./Microsoft.Extensions.Configuration.Ini.usings" />
+        <Import Include="./Microsoft.Extensions.Configuration.Json.usings" />
+        <Import Include="./Microsoft.Extensions.Configuration.Xml.usings" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.KeyPerFile" />
+        <Using Include="Microsoft.Extensions.Configuration.KeyPerFile" />
+        <Using Include="Microsoft.Extensions.Configuration" />
   </ItemGroup>
 </Project>

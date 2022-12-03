@@ -11,10 +11,10 @@
 -->
 
 <Project Sdk="UsingsSdk">
-	<ItemGroup>
-		<Import Include="Microsoft.Extensions.Configuration.All.usings" />
-		<Import Include="Microsoft.Extensions.DependencyInjection.usings" />
-		<Import Include="Microsoft.Extensions.Logging.usings" />
-		<Import Include="Microsoft.Extensions.Options.usings" />
-	</ItemGroup>
+    <ItemGroup>
+        <Import Include="Microsoft.Extensions.Configuration.All.usings" />
+        <Import Include="Microsoft.Extensions.DependencyInjection.usings" />
+        <Import Include="Microsoft.Extensions.Logging.usings" />
+        <Import Include="Microsoft.Extensions.Options.usings" />
+    </ItemGroup>
 </Project>
