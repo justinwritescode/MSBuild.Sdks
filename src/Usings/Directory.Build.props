@@ -13,11 +13,15 @@
 <Project>
   <PropertyGroup>
     <InheritDirectoryBuildProps>$([MSBuild]::GetPathOfFileAbove("Directory.Build.props", "$(MSBUildThisFileDirectory)../"))</InheritDirectoryBuildProps>
-    <TargetFramework Condition="'$(TargetFramework)' == ''">netstandard2.0</TargetFramework>
+    <!-- <TargetFrameworks Condition="'$(TargetFramework)' == '' And '$(TargetFrameworks)' == ''">netstandard2.0</TargetFrameworks> -->
+    <!-- <TargetFramework Condition="'$(TargetFramework)' == '' And '$(TargetFrameworks)' == ''">netstandard2.0</TargetFramework> -->
+    <TargetFrameworks>netstandard1.3;netstandard1.5;netstandard2.0;netstandard2.1;netcoreapp3.1;net6.0;net7.0</TargetFrameworks>
     <EnableGlobalCodeGenerators>false</EnableGlobalCodeGenerators>
     <IsPackable>true</IsPackable>
     <IsNuGetized>true</IsNuGetized>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <Language>MSBuild</Language>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
   
   <Import Project="$(InheritDirectoryBuildProps)" />
@@ -25,4 +29,8 @@
   <PropertyGroup>
     <MinVerTagPrefix>uv</MinVerTagPrefix>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Remove="System.All.Usings" />
+  </ItemGroup>
 </Project>

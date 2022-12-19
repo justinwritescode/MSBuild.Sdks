@@ -41,7 +41,7 @@ public partial class BuildUsingsPackage
             var @string = x.GetAttributeValue("Include") + (x.GetAttributeValue("Static")?.Equals("true", StringComparison.InvariantCultureIgnoreCase) ?? false ? " ( Static)" : "") +
                 (!string.IsNullOrEmpty(x.GetAttributeValue("Alias")) ? $" (Alias: {x.GetAttributeValue("Alias")})" : "");
 
-            Logger?.LogMessage($"GetComparisonString ({(x.IsFirst ? "XElement" : "ProjectItemInstance")} {x}): {@string}");
+            //Logger?.LogMessage($"GetComparisonString ({(x.IsFirst ? "XElement" : "ProjectItemInstance")} {x}): {@string}");
             return @string;
         }
 

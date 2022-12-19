@@ -11,14 +11,20 @@
 -->
 
 <Project Sdk="UsingsSdk">
- <ItemGroup>
-    <Import Include="System.ComponentModel.usings" />
-    <Import Include="System.Security.usings" />
-    <Import Include="System.Text.Json.usings" />
-    <Import Include="System.Text.RegularExpressions.usings" />
-    <Import Include="System.Text.usings" />
-    <Import Include="System.usings" />
-    <Import Include="System.Collections.usings" />
-    <Import Include="System.Linq.usings" />
- </ItemGroup>
+  <PropertyGroup>
+      <TargetFrameworks>netstandard2.0;netstandard2.1;netcoreapp3.1;net6.0;net7.0</TargetFrameworks>
+  </PropertyGroup>
+   <ItemGroup>
+      <Import Include="System.Collections.ObjectModel.usings" />
+      <Import Include="System.Collections.usings" />
+      <Import Include="System.ComponentModel.usings" />
+      <Import Include="System.Linq.usings" />
+      <Import Include="System.Reflection.usings" />
+      <Import Include="System.Security.usings" />
+      <Import Include="System.Text.Json.usings" />
+      <Import Include="System.Text.RegularExpressions.usings" />
+      <Import Include="System.Text.usings" />
+      <Import Include="System.Threading.Tasks.usings" />
+      <Import Include="System.usings" />
+   </ItemGroup>
 </Project>

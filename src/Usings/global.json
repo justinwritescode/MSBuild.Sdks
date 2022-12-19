@@ -1,0 +1,17 @@
+{
+  "msbuild-sdks": {
+    "Microsoft.Build.Traversal": "2.0.12",
+    "Microsoft.Build.CentralPackageVersions": "2.1.3",
+    "Microsoft.Build.NoTargets": "3.5.6",
+    "Microsoft.Build.Artifacts": "4.0.4",
+    "Microsoft.VisualStudio.SlnGen": "8.5.17",
+    "MSBuild.SolutionSdk": "0.1.0",
+    "MSBuild.SolutionSdk.SlnGen": "0.1.0",
+    "MSBuild.IncludeSdk": "0.0.1-Local",
+    "UsingsSdk": "0.0.3",
+    "RestoreProjSdk": "0.0.3",
+    "JustInTimeVersioningSdk": "0.0.3",
+    "MSBuild.Usings": "0.0.1-Local",
+    "NuGetPush": "0.0.1"
+  }
+}

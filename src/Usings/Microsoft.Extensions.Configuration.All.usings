@@ -15,13 +15,13 @@
 
     </PropertyGroup>
   <ItemGroup Label="Microsoft Configuration Extensions">
-    <Import Include="Microsoft.Extensions.Configuration.CommandLine.Usings" />
-    <Import Include="Microsoft.Extensions.Configuration.EnvironmentVariables.Usings" />
-    <Import Include="Microsoft.Extensions.Configuration.Files.Usings" />
-    <Import Include="Microsoft.Extensions.Configuration.Ini.Usings" />
-    <Import Include="Microsoft.Extensions.Configuration.Json.Usings" />
-    <Import Include="Microsoft.Extensions.Configuration.UserSecrets.Usings" />
-    <Import Include="Microsoft.Extensions.Configuration.Xml.Usings" />
-    <Import Include="Microsoft.Extensions.Options.Usings" />
+    <Import Include="Microsoft.Extensions.Configuration.CommandLine.usings"  />
+    <Import Include="Microsoft.Extensions.Configuration.EnvironmentVariables.usings"  />
+    <Import Include="Microsoft.Extensions.Configuration.Files.usings"  />
+    <Import Include="Microsoft.Extensions.Configuration.Ini.usings"  />
+    <Import Include="Microsoft.Extensions.Configuration.Json.usings"  />
+    <Import Include="Microsoft.Extensions.Configuration.UserSecrets.usings"  />
+    <Import Include="Microsoft.Extensions.Configuration.Xml.usings"  />
+    <Import Include="Microsoft.Extensions.Options.usings"  />
   </ItemGroup>
 </Project>

@@ -17,55 +17,62 @@
     <PackageId>UsingsSdk</PackageId>
     <RootNamespace>UsingsSdk</RootNamespace>
     <AssemblyName>UsingsSdk</AssemblyName>
-        <!-- <TargetFramework>netstandard2.0</TargetFramework> -->
-        <TargetFrameworks>netstandard2.0;net6.0;net7.0</TargetFrameworks>
+    <TargetFrameworks>net7.0</TargetFrameworks>
     <IncludeInSolutionFile>true</IncludeInSolutionFile>
     <EnableGlobalCodeGenerators>false</EnableGlobalCodeGenerators>
     <OutputPath>lib/</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-        <Summary>This SDK provides a way to add reusable `using` statements to your project files, packaged as a NuGet package.  This is useful if you want to declare a set of `using` statements that are used in multiple projects, but you don't want to have to add them to every project file.</Summary>
-        <Description>This SDK provides a way to add reusable `using` statements to your project files, packaged as a NuGet package.  This is useful if you want to declare a set of `using` statements that are used in multiple projects, but you don't want to have to add them to every project file.</Description>
-        <GenerateNuspec>true</GenerateNuspec>
+    <Summary>This SDK provides a way to add reusable `using` statements to your project files, packaged as a NuGet package.  This is useful if you want to declare a set of `using` statements that are used in multiple projects, but you don't want to have to add them to every project file.</Summary>
+    <Description>This SDK provides a way to add reusable `using` statements to your project files, packaged as a NuGet package.  This is useful if you want to declare a set of `using` statements that are used in multiple projects, but you don't want to have to add them to every project file.</Description>
+    <GenerateNuspec>true</GenerateNuspec>
     <BuildInParallel>false</BuildInParallel>
     <ImplicitUsings>enable</ImplicitUsings>
-    </PropertyGroup>
+    <ImportGlobalPackages>false</ImportGlobalPackages>
+    <ProjectGuid>c58d05b3-5481-4c1f-bb37-966bc38c8d6f</ProjectGuid>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <IsNuGetized>true</IsNuGetized>
+    <IsPackable>true</IsPackable>
+    <EmitNuspec>true</EmitNuspec>
+    <EmitPackage>true</EmitPackage>
+  </PropertyGroup>
   <ItemGroup> 
-      <PackageReference Include="AnyOf.SourceGenerator" PrivateAssets="All" />
-            <PackageReference Include="Microsoft.Extensions.DependencyModel"     />
-      <PackageReference Include="Microsoft.Build.Utilities.Core" />
-      <PackageReference Include="Microsoft.Build" />
-      <PackageReference Include="Microsoft.Maui.Graphics" />
-      <PackageReference Include="MSBuild.Extensions" />
-      <!-- <PackageReference Include="MSBuild.Usings" /> -->
-            <PackageReference Include="NuGet.Protocol" />
-      <PackageReference Include="System.Drawing.Common" />
-      <PackageReference Include="System.Text.Json" />
-      <PackageReference Include="System.Xml.XDocument" />
-            <!-- We're going to compile the contents of the following package into this package -->
-            <PackageReference Include="GetCommandLineArgs" ExcludeAssets="None" IncludeAssets="ContentFiles" />
+    <PackageReference Include="AnyOf.SourceGenerator" PrivateAssets="None" />
+    <PackageReference Include="Microsoft.Extensions.DependencyModel"     />
+    <PackageReference Include="Microsoft.Build.Utilities.Core" IncludeAssets="Lib;Runtime;Compile;Build" PrivateAssets="None" VersionOverride="[17.4.0,)" />
+    <PackageReference Include="Microsoft.Build" IncludeAssets="Lib;Runtime;Compile;Build" PrivateAssets="None" VersionOverride="[17.4.0,)" />
+    <!-- <PackageReference Include="Microsoft.Maui.Graphics" /> -->
+    <PackageReference Include="MSBuild.Extensions" IncludeAssets="Lib;Runtime;Compile;Build" PrivateAssets="None" />
+    <!-- <PackageReference Include="MSBuild.Usings" /> -->
+    <PackageReference Include="NuGet.Protocol" />
+    <PackageReference Include="System.Drawing.Common" />
+    <PackageReference Include="System.Text.Json" />
+    <!-- <PackageReference Include="System.Xml.XDocument" Condition="" /> -->
+    <PackageReference Include="ThisAssembly" VersionOverride="[1.0.10,)"  />
+    <!-- We're going to compile the contents of the following package into this package -->
+    <PackageReference Include="GetCommandLineArgs" IncludeAssets="Lib;Runtime;Compile;Build" ExcludeAssets="ContentFiles" PrivateAssets="None" />
   </ItemGroup>
   <ItemGroup Label="Global Usings">
-      <Using Include="AnyOfTypes" />
-      <Using Include="Microsoft.Build.Construction" Alias="MSBC" />
-      <Using Include="Microsoft.Build.Execution" />
-      <Using Include="Microsoft.Build.Execution" Alias="MSBEx" />
-      <Using Include="Microsoft.Build.Framework" />
-      <Using Include="Microsoft.Build.Utilities.Task" Alias="MSBTask" />
-      <Using Include="Microsoft.Build.Utilities.TaskLoggingHelper" Alias="TaskLog" />
-      <Using Include="NuGet.Protocol.Core.Types" />
-      <Using Include="NuGet.Protocol" />
-      <Using Include="System.ComponentModel" />
-      <Using Include="System.IO" />
-      <Using Include="System.IO" />
-      <Using Include="System.Text" />
-      <Using Include="System.Text.Json" />
-      <Using Include="System.Text.RegularExpressions" />
-      <Using Include="System.Xml.Linq" />
+    <Using Include="AnyOfTypes" />
+    <Using Include="Microsoft.Build.Construction" Alias="MSBC" />
+    <Using Include="Microsoft.Build.Execution" />
+    <Using Include="Microsoft.Build.Execution" Alias="MSBEx" />
+    <Using Include="Microsoft.Build.Framework" />
+    <Using Include="Microsoft.Build.Utilities.Task" Alias="MSBTask" />
+    <Using Include="Microsoft.Build.Utilities.TaskLoggingHelper" Alias="TaskLog" />
+    <Using Include="NuGet.Protocol.Core.Types" />
+    <Using Include="NuGet.Protocol" />
+    <Using Include="System.ComponentModel" />
+    <Using Include="System.IO" />
+    <Using Include="System.IO" />
+    <Using Include="System.Text" />
+    <Using Include="System.Text.Json" />
+    <Using Include="System.Text.RegularExpressions" />
+    <Using Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-        <PackageTag Include="implicit-usings" />
-        <PackageTag Include="using" />
-        <PackageTag Include="usings" />
+    <PackageTag Include="implicit-usings" />
+    <PackageTag Include="using" />
+    <PackageTag Include="usings" />
     <PackageTag Include="msbuild-sdk" />
     <PackageTag Include="msbuild" />
   </ItemGroup>
@@ -77,11 +84,24 @@
     <PackageFile Include="./ContentFiles/*.*" PackagePath="ContentFiles/%(Filename)%(Extension)" />
     <PackageFile Include="./lib/**/AnyOf.dll" PackagePath="lib/%(Filename)%(Extension)" />
     <EmbeddedResource Include="./IconWithSpace.png" />
+    <Reference Include="GetCommandLineArgs" />
   </ItemGroup>
-    <ItemGroup>
-        <NoWarn Include="CAX3003" />
-    </ItemGroup>
-    <!-- <Target Name="TestUsingsSdk" AfterTargets="Pack" DependsOnTargets="PushLocal">
-        <MSBuild Targets="Pack" Projects="./Test.usings" />
-    </Target> -->
+  <ItemGroup>
+    <NoWarn Include="CAX3003" />
+  </ItemGroup>
+  <PropertyGroup>
+    <GetCommandLineArgsAssemblyFile>$(MSBuildThisFileDirectory)lib/GetCommandLineArgs.dll</GetCommandLineArgsAssemblyFile>
+  </PropertyGroup>
+  <UsingTask TaskName="JustinWritesCode.MSBuild.Utils.GetCommandLineArgs" AssemblyFile="$(GetCommandLineArgsAssemblyFile)" />
+ <Target Name="TestUsingsSdk" AfterTargets="Pack" DependsOnTargets="PushLocal">
+    <GetCommandLineArgs>
+      <Output TaskParameter="CommandLineArgs" ItemName="CommandLineArg" />
+    </GetCommandLineArgs>
+    <Exec Command="dotnet build ./Test.usings @(CommandLineArg, ' ')" />
+    <Exec Command="dotnet pack ./Test.usings @(CommandLineArg, ' ')" />
+    <Exec Command="dotnet build ./Microsoft.EntityFrameworkCore.usings @(CommandLineArg, ' ')" />
+    <Exec Command="dotnet pack ./Microsoft.EntityFrameworkCore.usings @(CommandLineArg, ' ')" />
+    <Exec Command="dotnet build ./System.Text.Json.usings @(CommandLineArg, ' ')" />
+    <Exec Command="dotnet pack ./System.Text.Json.usings @(CommandLineArg, ' ')" />
+  </Target>
 </Project>

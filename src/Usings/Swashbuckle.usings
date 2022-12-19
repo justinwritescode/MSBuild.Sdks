@@ -10,4 +10,19 @@
       License: MIT (https://opensource.org/licenses/MIT)
 -->
 
- <Project Sdk="UsingsSdk"> <ItemGroup Label="Swashbuckle Usings"> <!-- <Using Include="Swashbuckle.AspNetCore.Annotations" /> <Using Include="Swashbuckle.AspNetCore.SwaggerGen" /> <Using Include="Swashbuckle.AspNetCore.Filters" /> --> </ItemGroup> </Project>
+ <Project Sdk="UsingsSdk"> 
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netcoreapp3.1;net6.0;net7.0</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup Condition="!$(TargetFramework.StartsWith('netstandard1'))">
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Filters" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" />
+    <PackageReference Include="Swashbuckle.AspNetCore.ReDoc" />
+  </ItemGroup>
+  <ItemGroup Label="Swashbuckle Usings" Condition="!$(TargetFramework.StartsWith('netstandard1'))">
+    <Using Include="Swashbuckle.AspNetCore.Annotations" />
+    <Using Include="Swashbuckle.AspNetCore.SwaggerGen" />
+    <Using Include="Swashbuckle.AspNetCore.Filters" />
+  </ItemGroup> 
+</Project>

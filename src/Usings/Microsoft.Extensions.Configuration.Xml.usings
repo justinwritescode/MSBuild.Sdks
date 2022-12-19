@@ -14,7 +14,7 @@
   <PropertyGroup>
     <PackageId>Microsoft.Extensions.Configuration.Xml.Usings</PackageId>
   </PropertyGroup>
-  <ItemGroup Label="Microsoft Configuration Extensions">
+  <ItemGroup Label="Microsoft Configuration Extensions" Condition="$(TargetFramework.CompareTo('netstandard2')) >= 0">
     <PackageReference Include="Microsoft.Extensions.Configuration.Xml" />
     <Using Include="Microsoft.Extensions.Configuration.Xml" />
   </ItemGroup>

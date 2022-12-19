@@ -11,7 +11,7 @@
 -->
 
 <Project Sdk="UsingsSdk">
-  <ItemGroup Label="Json Configuration Extensions">
+  <ItemGroup Label="Json Configuration Extensions" Condition="$(TargetFramework.CompareTo('netstandard2')) >= 0">
     <PackageReference Include="Microsoft.Extensions.Configuration.Ini" />
     <Using Include="Microsoft.Extensions.Ini" />
   </ItemGroup>

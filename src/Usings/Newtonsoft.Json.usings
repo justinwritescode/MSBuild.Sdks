@@ -10,4 +10,5 @@
       License: MIT (https://opensource.org/licenses/MIT)
 -->
 
-<Project Sdk="UsingsSdk"><ItemGroup> <Using Include="Newtonsoft.Json" /> <Using Include="Newtonsoft.Json.JsonConverter" Alias="NewtonsoftJsonConverter" /> <Using Include="Newtonsoft.Json.JsonConverterAttribute" Alias="NewtonsoftJsonConverterAttribute" /> </ItemGroup> </Project>
+<Project Sdk="UsingsSdk">
+  <ItemGroup> <Using Include="Newtonsoft.Json" /> <Using Include="Newtonsoft.Json.JsonConverter" Alias="NewtonsoftJsonConverter" /> <Using Include="Newtonsoft.Json.JsonConverterAttribute" Alias="NewtonsoftJsonConverterAttribute" /> </ItemGroup> </Project>

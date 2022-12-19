@@ -11,7 +11,7 @@
 -->
 
 <Project Sdk="UsingsSdk">
-  <ItemGroup Label="Microsoft Configuration Extensions">
+  <ItemGroup Label="Microsoft Configuration Extensions" Condition="$(TargetFramework.CompareTo('netstandard2')) >= 0">
         <Import Include="./Microsoft.Extensions.Configuration.Ini.usings" />
         <Import Include="./Microsoft.Extensions.Configuration.Json.usings" />
         <Import Include="./Microsoft.Extensions.Configuration.Xml.usings" />

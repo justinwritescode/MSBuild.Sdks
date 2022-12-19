@@ -55,12 +55,20 @@ public static class XElementExtensions
     public static string? GetIncludeValue(this ProjectItemInstance @element) => @element.GetMetadataValue("Include");
     public static string? GetIncludeValue(this XElement @element) => @element.GetAttributeValue("Include");
 
+    public static BuildUsingsPackage.ComparersImplementation ComparersImplementation = new BuildUsingsPackage.ComparersImplementation();
+
     public static ProjectItemTuple[] Join(this IEnumerable<XElement> xElements, IEnumerable<ProjectItemInstance> projectItems)
-        => xElements.Join(
-            projectItems,
-            x => (XElementOrProjectItemInstance) x,
-            x => (XElementOrProjectItemInstance) x,
-            (xPackageReference, packageReference) => new ProjectItemTuple(xPackageReference, packageReference),
-            new BuildUsingsPackage.ComparersImplementation())
-            .ToArray();
+        => (from xElement in xElements from projectItem in projectItems
+           select
+            ComparersImplementation.Equals(xElement, projectItem) ?
+            new ProjectItemTuple(xElement, projectItem) :
+            new ProjectItemTuple(xElement, null)).ToArray();
+
+        //xElements.Join(
+        //    projectItems,
+        //    x => (XElementOrProjectItemInstance)x,
+        //    x => (XElementOrProjectItemInstance)x,
+        //    (xPackageReference, packageReference) => new ProjectItemTuple(xPackageReference, packageReference),
+        //    new BuildUsingsPackage.ComparersImplementation())
+        //    .ToArray();
 }

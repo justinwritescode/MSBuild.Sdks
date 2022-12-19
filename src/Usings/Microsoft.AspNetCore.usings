@@ -13,22 +13,22 @@
 <Project Sdk="UsingsSdk">
     <ItemGroup>
         <Using Include="Microsoft.AspNetCore.Mvc" />
-    <Using Include="Microsoft.AspNetCore.Authorization" />
-    <Using Include="Microsoft.AspNetCore.Mvc.ApplicationModels" />
-    <Using Include="Microsoft.AspNetCore.Mvc.ApplicationParts" />
-    <Using Include="Microsoft.AspNetCore.Mvc.Authorization" />
-    <Using Include="Microsoft.AspNetCore.Mvc.Controllers" />
-    <Using Include="Microsoft.AspNetCore.Mvc.Formatters" />
-    <Using Include="Microsoft.AspNetCore.Mvc.Infrastructure" />
-    <Using Include="Microsoft.AspNetCore.Mvc.ModelBinding" />
-    <Using Include="Microsoft.AspNetCore.Mvc.Routing" />
-    <Using Include="Microsoft.AspNetCore.Builder" />
-    <Using Include="Microsoft.AspNetCore.Diagnostics" />
-    <Using Include="Microsoft.AspNetCore.Hosting" />
-    <Using Include="Microsoft.AspNetCore.Http" />
-    <Using Include="Microsoft.AspNetCore.Http.CookieSecurePolicy" Static="true" />
-    <Using Include="Microsoft.AspNetCore.Http.HttpMethods" Static="true" />
-    <Using Include="Microsoft.AspNetCore.Http.HttpProtocol" Static="true" />
-    <Using Include="Microsoft.AspNetCore.Http.StatusCodes" Static="true" />
+        <Using Include="Microsoft.AspNetCore.Authorization" />
+        <Using Include="Microsoft.AspNetCore.Mvc.ApplicationModels" />
+        <Using Include="Microsoft.AspNetCore.Mvc.ApplicationParts" />
+        <Using Include="Microsoft.AspNetCore.Mvc.Authorization" />
+        <Using Include="Microsoft.AspNetCore.Mvc.Controllers" />
+        <Using Include="Microsoft.AspNetCore.Mvc.Formatters" />
+        <Using Include="Microsoft.AspNetCore.Mvc.Infrastructure" />
+        <Using Include="Microsoft.AspNetCore.Mvc.ModelBinding" />
+        <Using Include="Microsoft.AspNetCore.Mvc.Routing" />
+        <Using Include="Microsoft.AspNetCore.Builder" />
+        <Using Include="Microsoft.AspNetCore.Diagnostics" />
+        <Using Include="Microsoft.AspNetCore.Hosting" />
+        <Using Include="Microsoft.AspNetCore.Http" />
+        <Using Include="Microsoft.AspNetCore.Http.CookieSecurePolicy" Static="true" />
+        <Using Include="Microsoft.AspNetCore.Http.HttpMethods" Static="true" />
+        <Using Include="Microsoft.AspNetCore.Http.HttpProtocol" Static="true" />
+        <Using Include="Microsoft.AspNetCore.Http.StatusCodes" Static="true" />
     </ItemGroup>
 </Project>

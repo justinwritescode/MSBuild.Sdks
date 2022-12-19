@@ -11,7 +11,7 @@
 -->
 
 <Project Sdk="UsingsSdk">
-  <ItemGroup Label="MXL Usings">
+  <ItemGroup Label="MXL Usings" Condition="$(TargetFramework.CompareTo('netstandard2')) >= 0">
     <Using Include="Microsoft.Extensions.DependencyInjection" />
     <Using Include="Microsoft.Extensions.DependencyInjection.Extensions" />
   </ItemGroup>

@@ -21,9 +21,10 @@
     <AssemblyName>$(PackageIdOverride)</AssemblyName>
     <RootNamespace>$(PackageIdOverride)</RootNamespace>
     <UsingUsingsSdk>true</UsingUsingsSdk>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <TargetFramework>netstandard2.0</TargetFramework>
-        <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <TargetFramework>net7.0</TargetFramework>
+    <TargetFrameworks>net7.0</TargetFrameworks>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
   </PropertyGroup>
   <PropertyGroup>
     <IntermediateOutputPath Condition="'$(IntermediateOutputPath)' == ''">obj/</IntermediateOutputPath>
@@ -34,5 +35,6 @@
     <OutputFilePath>$(IntermediateOutputPath)$(PackageId)/$(PackageId)$(OutputFileExtension)</OutputFilePath>
     <IconFile>$(MSBuildThisFileDirectory)../Icon.png</IconFile>
     <UsingsSdkAssemblyFile>$(MSBuildThisFileDirectory)../lib/UsingsSdk.dll</UsingsSdkAssemblyFile>
+    <GetCommandLineArgsAssemblyFile>$(MSBuildThisFileDirectory)../lib/GetCommandLineArgs.dll</GetCommandLineArgsAssemblyFile>
   </PropertyGroup>
 </Project>

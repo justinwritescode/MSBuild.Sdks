@@ -10,14 +10,24 @@
  *      License: MIT (https://opensource.org/licenses/MIT)
 -->
 
-<Project Sdk="UsingsSdk">
-  <ItemGroup>
+<Project Sdk="UsingsSdk/0.0.3">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;netcoreapp3.1;net6.0;net7.0</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup Condition="!$(TargetFramework.StartsWith('netstandard1'))">
     <PackageReference Include="Microsoft.Azure.Functions.Extensions" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" />
     <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.OpenApi" />
-    <PackageReference Include="System.Net.Primitives" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" />
     <PackageReference Include="Microsoft.AspNetCore.Http" />
+  </ItemGroup>
+  <ItemGroup Condition="$(TargetFramework.CompareTo('netstandard2')) > 0 And '$(TargetFramework)' != 'net6.0' And  '$(TargetFramework)' != 'net7.0'">
+    <PackageReference Include="System.Text.Json" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Net.Primitives" />
+  </ItemGroup>
+ <ItemGroup Condition="!$(TargetFramework.StartsWith('netstandard1'))">
     <Using Include="Microsoft.AspNetCore.Http.HttpRequest" Alias="Req" />
     <Using Include="Microsoft.AspNetCore.Http" />
     <Using Include="Microsoft.AspNetCore.Mvc" />

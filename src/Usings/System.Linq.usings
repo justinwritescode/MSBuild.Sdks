@@ -10,4 +10,13 @@
       License: MIT (https://opensource.org/licenses/MIT)
 -->
 
-<Project Sdk="UsingsSdk"> <ItemGroup> <Using Include="System.Linq" /> <Using Include="System.Linq.Expressions" /> <Using Include="System.Linq.Expressions.Expression" Static="true" /> </ItemGroup> </Project>
+<Project Sdk="UsingsSdk"> 
+  <ItemGroup> 
+    <Using Include="System.Linq" /> 
+    <Using Include="System.Linq.Expressions" /> 
+    <Using Include="System.Linq.Expressions.Expression" Static="true" /> 
+  </ItemGroup> 
+  <ItemGroup>
+    <PackageReference Include="System.Linq" />
+  </ItemGroup>
+</Project>

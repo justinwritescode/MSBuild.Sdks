@@ -1,6 +1,9 @@
-<Project Sdk="UsingsSdk">
+<Project Sdk="UsingsSdk/0.0.3">
+    <PropertyGroup>
+        <TargetFrameworks>netstandard2.0;netstandard2.1;netcoreapp3.1;net6.0;net7.0</TargetFrameworks>
+    </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="FluentAssertions" />
+        <PackageReference Include="FluentAssertions"/>
         <Using Include="FluentAssertions" />
     </ItemGroup>
 </Project>

@@ -12,7 +12,7 @@
 
 
 <Project Sdk="UsingsSdk">
-  <ItemGroup Label="Microsoft Configuration Extensions">
+  <ItemGroup Label="Microsoft Configuration Extensions" Condition="$(TargetFramework.CompareTo('netstandard2')) >= 0">
     <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" />
     <Using Include="Microsoft.Extensions.Configuration.EnvironmentVariables" />
   </ItemGroup>

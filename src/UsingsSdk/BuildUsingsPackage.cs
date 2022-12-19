@@ -11,6 +11,7 @@
  */
 #pragma warning disable
 namespace MSBuild.UsingsSdk;
+using static MSBuild.Constants.PropertyNames;
 
 using XElementOrProjectItemInstance = AnyOf<System.Xml.Linq.XElement, Microsoft.Build.Execution.ProjectItemInstance>;
 public partial class BuildUsingsPackage : MSBTask
@@ -27,41 +28,47 @@ public partial class BuildUsingsPackage : MSBTask
 
     private XElement[] MakeProperties()
     {
-        var properties = AllProperties;
+        var AllProperties = this.AllProperties;
         var copiedProperties = new List<XElement>
         {
-            new XElement("Description", Description),
-            new XElement("PackageId", properties.GetPropertyValue("PackageId", PackageId)),
-            new XElement("TargetFramework", TargetFramework),
-            new XElement("TargetFrameworks", TargetFramework),
-            new XElement("PackageIdOverride", properties.GetPropertyValue("PackageIdOverride", PackageId)),
-            new XElement("Version", properties.GetPropertyValue("Version", Version)),
-            new XElement("PackageVersion", properties.GetPropertyValue("PackageVersion", Version)),
-            new XElement("MinVerVersionOverride", properties.GetPropertyValue("MinVerVersionOverride", Version)),
-            new XElement("FileVersion", properties.GetPropertyValue("FileVersion", Version)),
-            new XElement("AssemblyVersion", properties.GetPropertyValue("AssemblyVersion", Regex.Replace(Version, "-.*", ""))),
-            new XElement("PackageLicenseExpression", properties.GetPropertyValue("PackageLicenseExpression", "MIT")),
-            new XElement("PackageOutputPath", PackageOutputPath),
-            new XElement("PackageIcon", Path.GetFileName(IconFile)),
-            new XElement("GeneratePackageOnBuild", "true"),
-            new XElement("IsPackable", "true"),
-            new XElement("IsNuGetized", "true"),
-            new XElement("Title", PackageId),
-            new XElement("Summary", Description),
-            new XElement("Authors", Authors),
-            new XElement("Copyright", Copyright),
-            new XElement("PublishRepositoryUrl", "true"),
-            new XElement("PackageTags", "using usings namespace nuget package " + PackageId)
+            new XElement(nameof(Description), Description),
+            new XElement(nameof(PackageId), AllProperties.GetPropertyValue(nameof(PackageId), PackageId)),
+            // TargetFramework is not null ? new XElement("TargetFramework", TargetFramework) : null,
+            new XElement(nameof(TargetFrameworks), TargetFrameworks),
+            new XElement(nameof(PackageIdOverride), PackageIdOverride),
+            new XElement(nameof(Version), Version),
+            new XElement(nameof(PackageVersion), PackageVersion),
+            new XElement(nameof(MinVerVersionOverride), MinVerVersionOverride),
+            new XElement(nameof(FileVersion), FileVersion),
+            new XElement(nameof(AssemblyVersion), AssemblyVersion),
+            new XElement(nameof(PackageLicenseExpression), PackageLicenseExpression),
+            new XElement(nameof(PackageOutputPath), PackageOutputPath),
+            new XElement(nameof(PackageIcon), PackageIcon),
+            new XElement(nameof(GeneratePackageOnBuild), GeneratePackageOnBuild),
+            new XElement(nameof(IsPackable), IsPackable),
+            new XElement(nameof(IsNuGetized), IsNuGetized),
+            new XElement(nameof(Title), Title),
+            new XElement(nameof(Summary), Summary),
+            new XElement(nameof(Authors), Authors),
+            new XElement(nameof(Copyright), Copyright),
+            new XElement(nameof(PublishRepositoryUrl), PublishRepositoryUrl),
+            new XElement(nameof(PackageTags), PackageTags),
+            new XElement(nameof(IncludeBuiltProjectOutputGroup), IncludeBuiltProjectOutputGroup),
+            new XElement(nameof(IncludeSourceFilesProjectOutputGroup), IncludeSourceFilesProjectOutputGroup),
+            new XElement(nameof(IncludeContentFilesProjectOutputGroup), IncludeContentFilesProjectOutputGroup),
+            new XElement(nameof(NoBuild), NoBuild),
+            new XElement(nameof(IncludeSource), IncludeSource)
         };
         return copiedProperties.OrderBy(p => p.Name.ToString()).ToArray();
     }
 
     private static XAttribute[] GetReferenceAttributes(AnyOf<ProjectItemInstance, XElement> @ref, bool includeVersion = true) =>
-        @ref.IsFirst? new[] { new XAttribute("Include", @ref.First.EvaluatedInclude) }.Concat(@ref.First.Metadata.Select(x => new XAttribute(x.Name, x.EvaluatedValue)).Where(x => includeVersion || x.Name.LocalName != "Version")).Distinct(Comparers).ToArray() :
-            new[] { new XAttribute("Include", @ref.Second.GetAttributeValue("Include")) }.Concat(@ref.Second.Attributes().Select(x => new XAttribute(x.Name, x.Value)).Where(x => includeVersion || x.Name.LocalName != "Version")).Distinct(Comparers).ToArray();
+        @ref.IsFirst && @ref.First?.EvaluatedInclude != null ? new[] { new XAttribute("Include", @ref.First?.EvaluatedInclude) }.Concat(@ref.First?.Metadata.Where(x => x != null && x.EvaluatedValue != null).Select(x => new XAttribute(x.Name, x.EvaluatedValue)).Where(x => includeVersion || x.Name.LocalName != "Version")).Distinct(Comparers).ToArray() :
+        @ref.IsSecond && @ref.Second?.GetAttributeValue("Include") != null ? new[] { new XAttribute("Include", @ref.Second?.GetAttributeValue("Include")) }.Concat(@ref.Second?.Attributes().Where(x => x != null && x.Value != null).Select(x => new XAttribute(x.Name, x.Value)).Where(x => includeVersion || x.Name.LocalName != "Version")).Distinct(Comparers).ToArray() :
+        null;
 
     private static XElement FormatReference(ProjectItemTuple @ref, string type = "ProjectReference", bool includeVersion = true) =>
-        new(type, GetReferenceAttributes(@ref.XItem, includeVersion).Concat(GetReferenceAttributes(@ref.Item, includeVersion)).Distinct(Comparers).ToArray());
+        new(type, GetReferenceAttributes(@ref.XItem, includeVersion).Concat(GetReferenceAttributes(@ref.Item, includeVersion) ?? Array.Empty<XAttribute>()).Distinct(Comparers).ToArray());
 
     private static XElement FormatReference(XElement @ref, string type = "ProjectReference", bool includeVersion = true) =>
         new(type, GetReferenceAttributes(@ref).Distinct(Comparers).ToArray());
