@@ -1,13 +1,13 @@
 <!--
- NuGetPush.props
- 
-   Created: 2022-10-21-11:40:42
-   Modified: 2022-11-01-11:39:57
- 
-   Author: Justin Chase <justin@justinwritescode.com>
-   
-   Copyright © 2022 Justin Chase, All Rights Reserved
-      License: MIT (https://opensource.org/licenses/MIT)
+ * Sdk.props
+ * 
+ *   Created: 2022-11-27-05:39:27
+ *   Modified: 2022-12-05-04:12:36
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
 -->
 
 <Project>

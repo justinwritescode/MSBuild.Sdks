@@ -52,8 +52,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 exports.__esModule = true;
 var process_1 = __importDefault(require("process"));
 var github_cli_1 = require("./github-cli");
-// import {Octokit} from "@octokit/rest";
-// import {RequestError} from "@octokit/types";
+if (process_1["default"].argv.length != 2) {
+    console.log("Usage: delete-github-package-version.ts <packageId> <version>");
+    process_1["default"].exit();
+}
 var packageId = process_1["default"].argv.slice(2)[0];
 var version = process_1["default"].argv.slice(2)[1];
 (function () { return __awaiter(void 0, void 0, void 0, function () {

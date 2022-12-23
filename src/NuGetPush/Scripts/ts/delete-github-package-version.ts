@@ -12,8 +12,11 @@
 
 import process from 'process';
 import {deletePackageVersionAsync} from "./github-cli";
-// import {Octokit} from "@octokit/rest";
-// import {RequestError} from "@octokit/types";
+if(process.argv.length != 4)
+{
+    console.error("Usage: delete-github-package-version <packageId> <version>");
+    process.exit();
+}
 
 var packageId = process.argv.slice(2)[0];
 var version = process.argv.slice(2)[1];
