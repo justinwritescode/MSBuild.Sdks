@@ -1,15 +1,15 @@
 "use strict";
-// 
-// github-cli.ts
-// 
-//   Created: 2022-10-29-08:02:03
-//   Modified: 2022-11-01-06:05:02
-// 
-//   Author: Justin Chase <justin@justinwritescode.com>
-//   
-//   Copyright © 2022 Justin Chase, All Rights Reserved
-//      License: MIT (https://opensource.org/licenses/MIT)
-// 
+/*
+ * github-cli.ts
+ *
+ *   Created: 2022-11-27-05:39:27
+ *   Modified: 2022-12-05-04:14:53
+ *
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+ */
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -79,13 +79,16 @@ function deletePackageVersionAsync(packageId, version) {
         var _this = this;
         return __generator(this, function (_a) {
             return [2 /*return*/, new Promise(function (resolve, reject) { return __awaiter(_this, void 0, void 0, function () {
-                    var versionsResult, versionId, deleteVersionResult, ex_1, ex_2;
+                    var deleteResult, versionsResult, versionId, jsonOutput, deleteVersionResult, ex_1, ex_2;
                     var _a;
                     return __generator(this, function (_b) {
                         switch (_b.label) {
                             case 0:
+                                deleteResult = undefined;
                                 try {
-                                    (0, child_process_1.execSync)("curl -H \"Authorization: Bearer ".concat(process.env.GIT_TOKEN, "\" -H \"Accept: application/vnd.github+json\" \"https://api.github.com/user/packages/nuget/").concat(packageId, "/versions\" 1> ").concat(packageId, ".versions.json 2> /dev/null"), { encoding: 'utf8' });
+                                    (0, child_process_1.execSync)("curl -H \"Authorization: Bearer ".concat(process.env.GIT_TOKEN, "\" -H \"Accept: application/vnd.github+json\" \"https://api.github.com/user/packages/nuget/").concat(packageId, "/versions\" 1> ").concat(packageId, ".versions.json 2> /dev/null"), { encoding: 'utf8', stdio: 'pipe' });
+                                    deleteResult = fs.readFileSync(" ".concat(packageId, ".versions.json"), 'utf8');
+                                    deleteResult = JSON.parse(deleteResult);
                                 }
                                 catch (ex) {
                                     // console.log(ex);
@@ -99,11 +102,11 @@ function deletePackageVersionAsync(packageId, version) {
                                 _b.label = 1;
                             case 1:
                                 _b.trys.push([1, 7, , 8]);
-                                (0, child_process_1.execSync)("curl -X DELETE -H \"Authorization: Bearer ".concat(process.env.GIT_TOKEN, "\" -H \"Accept: application/vnd.github+json\" \"https://api.github.com/user/packages/nuget/").concat(packageId, "/versions/").concat(versionId, "\" 1> ").concat(packageId, ".delete-result.json 2> /dev/null"), { encoding: 'utf8' });
+                                jsonOutput = (0, child_process_1.execSync)("curl -X DELETE -H \"Authorization: Bearer ".concat(process.env.GIT_TOKEN, "\" -H \"Accept: application/vnd.github+json\" \"https://api.github.com/user/packages/nuget/").concat(packageId, "/versions/").concat(versionId, "\" 1> ").concat(packageId, ".delete-result.json 2> /dev/null"), { encoding: 'utf8', stdio: 'pipe' });
                                 _b.label = 2;
                             case 2:
                                 _b.trys.push([2, 5, , 6]);
-                                deleteVersionResult = JSON.parse(fs.readFileSync("".concat(packageId, ".delete-result.json"), 'utf8'));
+                                deleteVersionResult = JSON.parse(jsonOutput);
                                 if (!((deleteVersionResult === null || deleteVersionResult === void 0 ? void 0 : deleteVersionResult.message) == "You cannot delete the last version of a package. You must delete the package instead.")) return [3 /*break*/, 4];
                                 return [4 /*yield*/, deletePackageAsync(packageId)];
                             case 3:
@@ -148,14 +151,15 @@ function deletePackageVersionAsync(packageId, version) {
 exports.deletePackageVersionAsync = deletePackageVersionAsync;
 function deletePackageAsync(packageId) {
     return new Promise(function (resolve, reject) {
+        var deletePackageResultJsonString = "";
         console.log("Deleting package ".concat(packageId, "..."));
         try {
-            (0, child_process_1.execSync)("curl -X DELETE -H \"Authorization: Bearer ".concat(process.env.GIT_TOKEN, "\" -H \"Accept: application/vnd.github+json\" \"https://api.github.com/user/packages/nuget/").concat(packageId, "\" &> ").concat(packageId, ".delete-package.result.json"), { encoding: 'utf8' });
+            deletePackageResultJsonString = (0, child_process_1.execSync)("curl -X DELETE -H \"Authorization: Bearer ".concat(process.env.GIT_TOKEN, "\" -H \"Accept: application/vnd.github+json\" \"https://api.github.com/user/packages/nuget/").concat(packageId, "\" &> ").concat(packageId, ".delete-package.result.json"), { encoding: 'utf8' });
         }
         catch (ex) {
             resolve();
         }
-        var deletePackageResult = JSON.parse(fs.readFileSync("".concat(packageId, ".delete-package.result.json"), 'utf8'));
+        var deletePackageResult = JSON.parse(deletePackageResultJsonString);
         if (deletePackageResult.message == "Not Found" || deletePackageResult.message == "Package not found.") {
             console.log("Package ".concat(packageId, " not found.  Skipping..."));
         }

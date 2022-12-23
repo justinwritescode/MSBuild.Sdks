@@ -1,15 +1,15 @@
 "use strict";
-// 
-// delete-github-package-version.ts
-// 
-//   Created: 2022-10-29-11:35:39
-//   Modified: 2022-11-11-12:11:01
-// 
-//   Author: Justin Chase <justin@justinwritescode.com>
-//   
-//   Copyright © 2022 Justin Chase, All Rights Reserved
-//      License: MIT (https://opensource.org/licenses/MIT)
-// 
+/*
+ * delete-github-package-version.ts
+ *
+ *   Created: 2022-11-27-05:39:27
+ *   Modified: 2022-12-05-04:15:02
+ *
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+ */
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -50,20 +50,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 exports.__esModule = true;
-//
-// delete-github-package-version.ts
-// 
-// This script deletes a package version from GitHub Packages.
-// It's needed because the ```dotnet nuget delete``` command doesn't work with GitHub Packages.
-// It calls the GitHub API to delete the package version.
-//
 var process_1 = __importDefault(require("process"));
 var github_cli_1 = require("./github-cli");
 // import {Octokit} from "@octokit/rest";
 // import {RequestError} from "@octokit/types";
 var packageId = process_1["default"].argv.slice(2)[0];
 var version = process_1["default"].argv.slice(2)[1];
-console.log("Deleting package version ".concat(version, " for package ").concat(packageId, "..."));
 (function () { return __awaiter(void 0, void 0, void 0, function () {
     return __generator(this, function (_a) {
         switch (_a.label) {

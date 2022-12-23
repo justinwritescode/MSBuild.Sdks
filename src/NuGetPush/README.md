@@ -21,10 +21,10 @@ First, you need to insert a reference to the SDK into your project like this:
 
 Then, you can use the task like this:
 
-```shellscript "Pushing to Azure Artifacts"
+```shellscript title="Pushing to Azure Artifacts"
 dotnet pack MyProject.csproj --target:PushAzure
 ```
 
-```shellscript "Pushing to GitHub Packages"
+```shellscript title="Pushing to GitHub Packages"
 dotnet pack MyProject.csproj --target:PushGitHub
 ```
