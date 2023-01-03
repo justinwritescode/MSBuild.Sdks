@@ -34,5 +34,7 @@
     <Using Include="System.UriKind" Static="true" />
     <Using Include="System.Runtime.CompilerServices" />
     <Using Include="System.StringComparison" Static="true" />
+    <Using Include="System.Int128" Alias="vlong" Condition="$(TargetFramework.Contains('net7'))" />
+    <Using Include="System.UInt128" Alias="uvlong" Condition="$(TargetFramework.Contains('net7'))" />
   </ItemGroup>
 </Project>

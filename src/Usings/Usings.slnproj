@@ -10,9 +10,10 @@
  *      License: MIT (https://opensource.org/licenses/MIT)
 -->
 
-<Project Sdk="Microsoft.NET.Sdk">
+<Project>
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.5;netstandard2.0;netstandard2.1;netcoreapp3.1;net6.0;net7.0</TargetFrameworks>
+    <!-- <TargetFrameworks>netstandard1.0;netstandard1.3;netstandard1.5;netstandard2.0;netstandard2.1;netcoreapp3.1;net6.0;net7.0</TargetFrameworks> -->
+    <!-- <TargetFramework>netstandard1.0</TargetFramework> -->
     <IncludeInSolutionFile>true</IncludeInSolutionFile> 
     <AssemblyName>JustinWritesCode.Usings</AssemblyName>
     <PackageId>$(AssemblyName)</PackageId>
@@ -22,13 +23,13 @@
     <Title>All Usings Projects</Title>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="../../../MSBuild.Utils/src/GetCommandLineArgs/GetCommandLineArgs.csproj" />
+    <PackageReference Include="GetCommandLineArgs" GeneratePathProperty="true" />
     <PackageReference Include="Microsoft.Build" />
     <PackageReference Include="MSBuild.Extensions" IncludeAssets="ContentFiles" ExcludeAssets="None" />
     <Using Include="Microsoft.Build.Utilities.Task" Alias="MSBTask" />
-    <UsingsProjectReference Include="*.usings" SetConfiguration="Configuration=$(Configuration)" SetTargetFramework="TargetFramework=$(TargetFramework)" />
+    <ProjectReference Include="*.usings" SetConfiguration="Configuration=$(Configuration)" SetTargetFramework="TargetFramework=$(TargetFramework)" />
   </ItemGroup>
-  <UsingTask TaskName="MSBuild.Utils.GetCommandLineArgs" AssemblyFile="$(OutputPath)GetCommandLineArgs.dll" />
+  <UsingTask TaskName="MSBuild.Utils.GetCommandLineArgs" AssemblyFile="$(PkgGetCommandLineArgs)/lib/GetCommandLineArgs.dll" />
   <Target Name="BuildUsingsProjects" AfterTargets="Build">
     <MSBuild.Utils.GetCommandLineArgs>
       <Output TaskParameter="CommandLineArgs" ItemName="CommandLineArgs" />

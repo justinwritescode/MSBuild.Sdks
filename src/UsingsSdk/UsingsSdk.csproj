@@ -63,11 +63,16 @@
     <Using Include="NuGet.Protocol" />
     <Using Include="System.ComponentModel" />
     <Using Include="System.IO" />
-    <Using Include="System.IO" />
     <Using Include="System.Text" />
     <Using Include="System.Text.Json" />
     <Using Include="System.Text.RegularExpressions" />
     <Using Include="System.Xml.Linq" />
+    <Using Include="System.IO.Path" Static="true" />
+    <Using Include="System.IO.Directory" Static="true" />
+    <Using Include="System.IO.File" Static="true" />
+    <Using Include="System.Environment" Static="true" />
+    <Using Include="System.DateTimeOffset" Static="true" />
+    <Using Include="System.String" Static="true" />
   </ItemGroup>
   <ItemGroup>
     <PackageTag Include="implicit-usings" />

@@ -12,7 +12,16 @@
       "DEBUG",
       "LOCAL",
       "TRACE",
-      "ISNET70COMPATIBLE",
+      "NET7_0",
+      "NET7_0_OR_GREATER",
+      "NETSTANDARD2_1",
+      "NETSTANDARD2_1_OR_GREATER",
+      "NETSTANDARD2_0",
+      "NETSTANDARD2_0_OR_GREATER",
+      "NETSTANDARD1_5",
+      "NETSTANDARD1_5_OR_GREATER",
+      "NETSTANDARD1_3",
+      "NETSTANDARD1_3_OR_GREATER",
       "LOCAL",
       "NET",
       "NET7_0",
@@ -28,7 +37,7 @@
       "NETCOREAPP3_0_OR_GREATER",
       "NETCOREAPP3_1_OR_GREATER"
     ],
-    "languageVersion": "preview",
+    "languageVersion": "Preview",
     "platform": "",
     "allowUnsafe": false,
     "warningsAsErrors": false,
@@ -40,7 +49,7 @@
   },
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "UsingsSdk/0.0.3": {
+      "UsingsSdk/0.0.1.0": {
         "dependencies": {
           "AnyOf.SourceGenerator": "0.3.0",
           "GetCommandLineArgs": "0.0.1-Local",
@@ -57,7 +66,6 @@
           "NuGetizer": "0.9.1",
           "Stef.Validation": "0.1.0",
           "System.Drawing.Common": "6.0.0",
-          "System.Text.Json": "7.0.0",
           "ThisAssembly": "1.0.10",
           "Microsoft.CSharp.Reference": "7.0.0.0",
           "Microsoft.VisualBasic.Core": "12.0.0.0",
@@ -247,11 +255,11 @@
         },
         "runtime": {
           "lib/netstandard1.5/GetCommandLineArgs.dll": {
-            "assemblyVersion": "0.0.0.0",
+            "assemblyVersion": "0.0.1.0",
             "fileVersion": "0.0.1.0"
           },
           "lib/netstandard1.5/MSBuild.Extensions.dll": {
-            "assemblyVersion": "0.0.0.0",
+            "assemblyVersion": "0.0.1.0",
             "fileVersion": "0.0.1.0"
           }
         },
@@ -379,9 +387,6 @@
           "Microsoft.Build": "17.4.0",
           "Microsoft.Build.Framework": "17.4.0",
           "Microsoft.Build.Utilities.Core": "17.4.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/MSBuild.Extensions.dll": {}
         }
       },
       "Newtonsoft.Json/13.0.1": {
@@ -1600,7 +1605,7 @@
     }
   },
   "libraries": {
-    "UsingsSdk/0.0.3": {
+    "UsingsSdk/0.0.1.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -1615,7 +1620,7 @@
     "GetCommandLineArgs/0.0.1-Local": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-J+mAb0f2PUuEe/oMpG3543Po6L5KB15QGXHSuJd8yCE08EDfvrMGknq52VwnMLNyp6dS3mHEm5HEA6B4CF88EQ==",
+      "sha512": "sha512-9RtHwGRWOKapu24KoYom8y1BNx6W8qbH+zsf1OnVLzOWW2Zjaai6nSuVL2QOoWea3YVDHpYiZ+0T7eL3dGMiGQ==",
       "path": "getcommandlineargs/0.0.1-local",
       "hashPath": "getcommandlineargs.0.0.1-local.nupkg.sha512"
     },

@@ -11,7 +11,7 @@
  */
 #pragma warning disable
 namespace MSBuild.UsingsSdk;
-using static MSBuild.Constants.PropertyNames;
+using static MSBuild.Constants.MSBuildPropertyNames;
 
 using XElementOrProjectItemInstance = AnyOf<System.Xml.Linq.XElement, Microsoft.Build.Execution.ProjectItemInstance>;
 public partial class BuildUsingsPackage : MSBTask
