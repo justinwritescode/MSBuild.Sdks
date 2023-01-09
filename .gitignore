@@ -1152,3 +1152,5 @@ $RECYCLE.BIN/
 *.dll
 */site/*
 *site/*
+*/obj/*
+**/obj/*
