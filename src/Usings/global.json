@@ -8,7 +8,7 @@
     "MSBuild.SolutionSdk": "0.1.0",
     "MSBuild.SolutionSdk.SlnGen": "0.1.0",
     "MSBuild.IncludeSdk": "0.0.1-Local",
-    "UsingsSdk": "0.0.3",
+    "UsingsSdk": "0.0.5",
     "RestoreProjSdk": "0.0.3",
     "JustInTimeVersioningSdk": "0.0.3",
     "MSBuild.Usings": "0.0.1-Local",

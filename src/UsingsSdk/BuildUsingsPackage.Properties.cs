@@ -6,7 +6,7 @@
  *
  *   Author: Justin Chase <justin@justinwritescode.com>
  *
- *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
  *      License: MIT (https://opensource.org/licenses/MIT)
  */
 
@@ -76,6 +76,7 @@ public partial class BuildUsingsPackage
     private XElement[] XUsings => AllProjects.GetXItems("Using").ToArray();
     private ProjectItemInstance[] Usings => AllProjects.GetItems("Using").ToArray();
     private XElement[] XProjectReferences => AllProjects.GetXItems("ProjectReference").Distinct(Comparers).ToArray();
+    private XElement[]  XFrameworkReferences => AllProjects.GetXItems("FrameworkReference").Distinct(Comparers).ToArray();
     private XElement[]  XPackageReferences => AllProjects.GetXItems("PackageReference").Distinct(Comparers).ToArray();
     private ProjectItemInstance[] ProjectReferences => AllProjects.GetItems("ProjectReference").Distinct(Comparers).ToArray();
     private ProjectItemInstance[] PackageReferences => AllProjects.GetItems("PackageReference").Distinct(Comparers).ToArray();
@@ -100,6 +101,8 @@ public partial class BuildUsingsPackage
     private const string IncludeBuiltProjectOutputGroup = "false";
     private const string IncludeSourceFilesProjectOutputGroup = "false";
     private const string IncludeContentFilesProjectOutputGroup = "false";
+    private const string IncludeBuildOutput = "false";
+    private const string IncludeSymbols = "false";
     private string PackageTags => "using usings namespace nuget package " + PackageId;
     private string Title => PackageId;
     private string Summary => Description;

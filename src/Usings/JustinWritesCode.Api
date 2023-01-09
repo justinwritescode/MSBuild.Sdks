@@ -1,0 +1,55 @@
+<!--
+ * JustinWritesCode.Api.Usings
+ * 
+ *   Created: 2022-12-30-08:36:03
+ *   Modified: 2022-12-30-08:36:03
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="UsingsSdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <TargetFrameworks>net7.0</TargetFrameworks>
+    <PackageId>JustinWritesCode.Api</PackageId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="AnyOf.System.Text.Json" />
+    <PackageReference Include="AnyOf" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <PackageReference Include="AutoMapper" />
+    <PackageReference Include="Azure.Identity" />
+    <PackageReference Include="Ben.Demystifier" />
+    <PackageReference Include="Humanizer.Core" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Filters" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" />
+    <PackageReference Include="Microsoft.AspNetCore.JsonPatch" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Condition="'$(TargetFramework)' == 'net7.0'" />
+    <PackageReference Include="Microsoft.Azure.AppConfiguration.AspNetCore" ExcludeAssets="ContentFiles" VersionOverride="[5.2.0,)" />
+    <PackageReference Include="Microsoft.Extensions.Logging" />
+    <PackageReference Include="Microsoft.OpenApi" />
+    <PackageReference Include="MSBuild.Usings" ExcludeAssets="ContentFiles" />
+    <PackageReference Include="Newtonsoft.Json" />
+    <PackageReference Include="RestSharp" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" />
+    <PackageReference Include="Swashbuckle.AspNetCore.ReDoc" />
+    <PackageReference Include="Swashbuckle.AspNetCore" />
+    <PackageReference Include="Telegram.Bot" VersionOverride="$(TelegramBotVersion)" />
+    <PackageReference Include="ThisAssembly.Project" />
+    <PackageReference Include="Unchase.Swashbuckle.AspNetCore.Extensions" />
+    <PackageReference Include="Vogen" />
+    <PackageReference Include="libphonenumber-csharp" ExcludeAssets="ContentFiles" />
+    <PackageReference Include="AspNetCore.Hashids" />
+    <PackageReference Include="System.Usings" ExcludeAssets="ContentFiles" />
+    <PackageReference Include="JustinWritesCode.AspNetCore.Startup" ExcludeAssets="ContentFiles" />
+    <PackageReference Include="JustinWritesCode.Identity.AspNetCore" ExcludeAssets="ContentFiles" />
+    <PackageReference Include="JustinWritesCode.Primitives" ExcludeAssets="ContentFiles" />
+    <PackageReference Include="JustinWritesCode.System.Extensions" ExcludeAssets="ContentFiles" />
+  </ItemGroup>
+</Project>

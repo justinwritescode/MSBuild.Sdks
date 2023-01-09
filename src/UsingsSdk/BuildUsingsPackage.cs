@@ -6,7 +6,7 @@
  *
  *   Author: Justin Chase <justin@justinwritescode.com>
  *
- *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
  *      License: MIT (https://opensource.org/licenses/MIT)
  */
 #pragma warning disable
@@ -57,7 +57,9 @@ public partial class BuildUsingsPackage : MSBTask
             new XElement(nameof(IncludeSourceFilesProjectOutputGroup), IncludeSourceFilesProjectOutputGroup),
             new XElement(nameof(IncludeContentFilesProjectOutputGroup), IncludeContentFilesProjectOutputGroup),
             new XElement(nameof(NoBuild), NoBuild),
-            new XElement(nameof(IncludeSource), IncludeSource)
+            new XElement(nameof(IncludeSource), IncludeSource),
+            new XElement(nameof(IncludeSymbols), IncludeSymbols),
+            new XElement(nameof(IncludeBuildOutput), IncludeBuildOutput)
         };
         return copiedProperties.OrderBy(p => p.Name.ToString()).ToArray();
     }

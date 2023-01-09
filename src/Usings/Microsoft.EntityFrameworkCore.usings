@@ -6,20 +6,20 @@
  
    Author: Justin Chase <justin@justinwritescode.com>
    
-   Copyright © 2022 Justin Chase, All Rights Reserved
+   Copyright © 2022-2023 Justin Chase, All Rights Reserved
       License: MIT (https://opensource.org/licenses/MIT)
 -->
 
 <Project Sdk="UsingsSdk">
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.0;netstandard1.3;netstandard2.0;netstandard2.1;netcoreapp3.1;net6.0;net7.0</TargetFrameworks>
+    <TargetFrameworks>netstandard1.5;netstandard2.0;netstandard2.1;netcoreapp3.1;net6.0;net7.0</TargetFrameworks>
   </PropertyGroup>
   <ItemGroup Condition="'$(TargetFramework)' != 'netstandard1.0'">
     <Using Include="Microsoft.EntityFrameworkCore" />
     <Using Include="Microsoft.EntityFrameworkCore.ChangeTracking" />
     <Using Include="Microsoft.EntityFrameworkCore.Infrastructure" />
     <Using Include="Microsoft.EntityFrameworkCore.Metadata" />
-    <Using Include="Microsoft.EntityFrameworkCore.Storage.ValueConversion" />
+    <Using Include="Microsoft.EntityFrameworkCore.Storage.ValueConversion" Condition="!$(TargetFramework.Contains('netstandard1'))" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' != 'netstandard1.0'">
     <PackageReference Include="Microsoft.EntityFrameworkCore" />

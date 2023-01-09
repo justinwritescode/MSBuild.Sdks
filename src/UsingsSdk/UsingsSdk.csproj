@@ -6,7 +6,7 @@
  * 
  *   Author: Justin Chase <justin@justinwritescode.com>
  *   
- *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
  *      License: MIT (https://opensource.org/licenses/MIT)
 -->
 
@@ -38,8 +38,8 @@
   <ItemGroup> 
     <PackageReference Include="AnyOf.SourceGenerator" PrivateAssets="None" />
     <PackageReference Include="Microsoft.Extensions.DependencyModel"     />
-    <PackageReference Include="Microsoft.Build.Utilities.Core" IncludeAssets="Lib;Runtime;Compile;Build" PrivateAssets="None" VersionOverride="[17.4.0,)" />
-    <PackageReference Include="Microsoft.Build" IncludeAssets="Lib;Runtime;Compile;Build" PrivateAssets="None" VersionOverride="[17.4.0,)" />
+    <PackageReference Include="Microsoft.Build.Utilities.Core" IncludeAssets="Lib;Runtime;Compile;Build" PrivateAssets="None"  />
+    <PackageReference Include="Microsoft.Build" IncludeAssets="Lib;Runtime;Compile;Build" PrivateAssets="None" />
     <!-- <PackageReference Include="Microsoft.Maui.Graphics" /> -->
     <PackageReference Include="MSBuild.Extensions" IncludeAssets="Lib;Runtime;Compile;Build" PrivateAssets="None" />
     <!-- <PackageReference Include="MSBuild.Usings" /> -->
@@ -48,8 +48,9 @@
     <PackageReference Include="System.Text.Json" />
     <!-- <PackageReference Include="System.Xml.XDocument" Condition="" /> -->
     <PackageReference Include="ThisAssembly" VersionOverride="[1.0.10,)"  />
+    <!-- <PackageReference Include="MSBuild.Extensions" /> -->
     <!-- We're going to compile the contents of the following package into this package -->
-    <PackageReference Include="GetCommandLineArgs" IncludeAssets="Lib;Runtime;Compile;Build" ExcludeAssets="ContentFiles" PrivateAssets="None" />
+    <PackageReference Include="GetCommandLineArgs" ExcludeAssets="Lib;Runtime;Compile;Build" IncludeAssets="ContentFiles;Build" PrivateAssets="None" />
   </ItemGroup>
   <ItemGroup Label="Global Usings">
     <Using Include="AnyOfTypes" />
@@ -89,24 +90,25 @@
     <PackageFile Include="./ContentFiles/*.*" PackagePath="ContentFiles/%(Filename)%(Extension)" />
     <PackageFile Include="./lib/**/AnyOf.dll" PackagePath="lib/%(Filename)%(Extension)" />
     <EmbeddedResource Include="./IconWithSpace.png" />
-    <Reference Include="GetCommandLineArgs" />
+    <!-- <Reference Include="GetCommandLineArgs" /> -->
   </ItemGroup>
   <ItemGroup>
     <NoWarn Include="CAX3003" />
   </ItemGroup>
   <PropertyGroup>
-    <GetCommandLineArgsAssemblyFile>$(MSBuildThisFileDirectory)lib/GetCommandLineArgs.dll</GetCommandLineArgsAssemblyFile>
+    <!-- <GetCommandLineArgsAssemblyFile>$(MSBuildThisFileDirectory)lib/GetCommandLineArgs.dll</GetCommandLineArgsAssemblyFile> -->
+    <GetCommandLineArgsAssemblyFile>$(MSBuildThisFileDirectory)lib/$(AssemblyName).dll</GetCommandLineArgsAssemblyFile>
   </PropertyGroup>
   <UsingTask TaskName="JustinWritesCode.MSBuild.Utils.GetCommandLineArgs" AssemblyFile="$(GetCommandLineArgsAssemblyFile)" />
- <Target Name="TestUsingsSdk" AfterTargets="Pack" DependsOnTargets="PushLocal">
+ <Target Name="TestUsingsSdk" AfterTargets="Pack" DependsOnTargets="PushLocal" Condition="'$(Configuration)' == 'Local'">
     <GetCommandLineArgs>
       <Output TaskParameter="CommandLineArgs" ItemName="CommandLineArg" />
     </GetCommandLineArgs>
     <Exec Command="dotnet build ./Test.usings @(CommandLineArg, ' ')" />
     <Exec Command="dotnet pack ./Test.usings @(CommandLineArg, ' ')" />
-    <Exec Command="dotnet build ./Microsoft.EntityFrameworkCore.usings @(CommandLineArg, ' ')" />
-    <Exec Command="dotnet pack ./Microsoft.EntityFrameworkCore.usings @(CommandLineArg, ' ')" />
-    <Exec Command="dotnet build ./System.Text.Json.usings @(CommandLineArg, ' ')" />
-    <Exec Command="dotnet pack ./System.Text.Json.usings @(CommandLineArg, ' ')" />
+    <Exec Command="dotnet build ./EFC.usings @(CommandLineArg, ' ')" />
+    <Exec Command="dotnet pack ./EFC.usings @(CommandLineArg, ' ')" />
+    <Exec Command="dotnet build ./STJ.usings @(CommandLineArg, ' ')" />
+    <Exec Command="dotnet pack ./STJ.usings @(CommandLineArg, ' ')" />
   </Target>
 </Project>

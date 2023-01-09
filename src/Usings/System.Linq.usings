@@ -6,7 +6,7 @@
  
    Author: Justin Chase <justin@justinwritescode.com>
    
-   Copyright © 2022 Justin Chase, All Rights Reserved
+   Copyright © 2022-2023 Justin Chase, All Rights Reserved
       License: MIT (https://opensource.org/licenses/MIT)
 -->
 
@@ -14,7 +14,6 @@
   <ItemGroup> 
     <Using Include="System.Linq" /> 
     <Using Include="System.Linq.Expressions" /> 
-    <Using Include="System.Linq.Expressions.Expression" Static="true" /> 
   </ItemGroup> 
   <ItemGroup>
     <PackageReference Include="System.Linq" />
