@@ -14,6 +14,7 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <PackageType>MSBuildSdk</PackageType>
+    <MinVerTagPrefix>mp-v</MinVerTagPrefix>
   </PropertyGroup>
   <ItemGroup>
     <PackageFile Include="Sdk/*" PackagePath="Sdk/%(Filename)%(Extension)" />
