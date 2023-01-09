@@ -6,17 +6,19 @@
  
    Author: Justin Chase <justin@justinwritescode.com>
    
-   Copyright © 2022 Justin Chase, All Rights Reserved
+   Copyright © 2022-2023 Justin Chase, All Rights Reserved
       License: MIT (https://opensource.org/licenses/MIT)
 -->
 
-<Project Sdk="MSBuild.SolutionSdk.SlnGen">
+<Project Sdk="Microsoft.Build.Traversal">
   <PropertyGroup>
     <IncludeInSolutionFile>false</IncludeInSolutionFile>
+    <DocsDir>$(MSBuildThisFileDirectory)/docs/</DocsDir>
   </PropertyGroup>
   <ItemGroup>
-     <ProjectReference Include="./src/MSBuild.IncludeSdk/MSBuild.IncludeSdk.csproj" />
-     <ProjectReference Include="./src/MSBuild.UsingsSdk/MSBuild.UsingsSdk.csproj" />
-     <ProjectReference Include="./src/JustinWritesCode.Usings/JustinWritesCode.Usings.slnproj" />
+     <!-- <ProjectReference Include="./src/MSBuild.IncludeSdk/MSBuild.IncludeSdk.csproj" /> -->
+     <ProjectReference Include="./src/UsingsSdk/UsingsSdk.csproj" />
+     <ProjectReference Include="./src/Usings/Usings.csproj" />
   </ItemGroup>
+  <Sdk Name="GenerateMarkdownDocsSdk" />
 </Project>
