@@ -9,7 +9,7 @@
  *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
  *      License: MIT (https://opensource.org/licenses/MIT)
  */
-#pragma warning disable
+
 namespace MSBuild.UsingsSdk;
 using static MSBuild.Constants.MSBuildPropertyNames;
 
