@@ -1,0 +1,18 @@
+<!--
+ * Sdk.props
+ * 
+ *   Created: 2022-12-31-02:54:10
+ *   Modified: 2022-12-31-02:54:10
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <PropertyGroup>
+    <DocsDir Condiion="'$(DocsDir)' == ''">$(MSBuildProjectDirectory)../docs</DocsDir>
+    <FileLog>$([System.IO.Path]::Combine($(DocsDir), "logs", $([System.DateTime]::Now.ToString("yyyy-MM-dd")) + ".log"))</FileLog>
+  </PropertyGroup>
+</Project>

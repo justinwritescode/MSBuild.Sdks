@@ -1,0 +1,35 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectPackageReferencesSdk", "ProjectPackageReferencesSdk.csproj", "{7540D187-D4A7-43B2-AE46-6F536C3B0441}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4391E69F-71B7-4629-BC00-687DA08AB8A2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Local|Any CPU = Local|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Staging|Any CPU = Staging|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Testing|Any CPU = Testing|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7540D187-D4A7-43B2-AE46-6F536C3B0441}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{7540D187-D4A7-43B2-AE46-6F536C3B0441}.Local|Any CPU.Build.0 = Local|Any CPU
+		{7540D187-D4A7-43B2-AE46-6F536C3B0441}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7540D187-D4A7-43B2-AE46-6F536C3B0441}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7540D187-D4A7-43B2-AE46-6F536C3B0441}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{7540D187-D4A7-43B2-AE46-6F536C3B0441}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{7540D187-D4A7-43B2-AE46-6F536C3B0441}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7540D187-D4A7-43B2-AE46-6F536C3B0441}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7540D187-D4A7-43B2-AE46-6F536C3B0441}.Testing|Any CPU.ActiveCfg = Testing|Any CPU
+		{7540D187-D4A7-43B2-AE46-6F536C3B0441}.Testing|Any CPU.Build.0 = Testing|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7540D187-D4A7-43B2-AE46-6F536C3B0441} = {4391E69F-71B7-4629-BC00-687DA08AB8A2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7026B30D-C9E3-47AB-BB2C-30234459D327}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,28 @@
+<!--
+ * ProjectFilePackager.csproj
+ * 
+ *   Created: 2022-12-03-04:20:36
+ *   Modified: 2022-12-03-04:20:37
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageType>MSBuildSdk</PackageType>
+    <Title>Project File Embedded Resource Maker</Title>
+    <Description>Embeds the resolved project file into the assembly as an embedded resource</Description>
+    <OutputPath>lib/</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MSBuild.Usings" />
+    <PackageReference Include="MSBuild.Extensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="./Sdk/*" PackagePath="Sdk/%(Filename)%(Extension)" />
+  </ItemGroup>
+</Project>

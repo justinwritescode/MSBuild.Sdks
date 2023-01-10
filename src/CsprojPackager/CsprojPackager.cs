@@ -6,19 +6,19 @@
  *
  *   Author: Justin Chase <justin@justinwritescode.com>
  *
- *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
  *      License: MIT (https://opensource.org/licenses/MIT)
  */
 
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.Build.Construction;
+using Microsoft.Build.Tasks;
 
 namespace CsprojPackager;
 
 public class Packager : MSBTask, IEqualityComparer<ProjectUsingTaskElement>
 {
-    [MSBF.Required]
-    public string ProjectFile { get; set; } = string.Empty;
+    public string ProjectFile => this.BuildEngine.ProjectFileOfTaskNode;
 
     public string? OutputDirectory { get; set; } = null;
 
@@ -59,5 +59,9 @@ public class Packager : MSBTask, IEqualityComparer<ProjectUsingTaskElement>
         return true;
     }
 
-    public int GetHashCode([DisallowNull] ProjectUsingTaskElement obj) => $"{obj.TaskName}{obj.AssemblyFile}{obj.AssemblyName}".GetHashCode();
+    public int GetHashCode(
+        #if NET6_0_OR_GREATER
+        [DisallowNull]
+        #endif
+        ProjectUsingTaskElement obj) => $"{obj.TaskName}{obj.AssemblyFile}{obj.AssemblyName}".GetHashCode();
 }

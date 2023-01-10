@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\UsingsSdk\UsingsSdk.csproj">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+      <CopyToPublishDirectory></CopyToPublishDirectory>
+      <SetConfiguration></SetConfiguration>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Test.usings" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Test.usings">
+      <DefaultPackFolder>none</DefaultPackFolder>
+      <BuildAction>None</BuildAction>
+    </None>
+    <None Update="TestUsingsSdk.xml">
+      <DefaultPackFolder></DefaultPackFolder>
+      <BuildAction></BuildAction>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Test.usings">
+      <DefaultPackFolder>none</DefaultPackFolder>
+      <BuildAction>None</BuildAction>
+      <Pack></Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

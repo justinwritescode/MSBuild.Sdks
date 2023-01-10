@@ -1,0 +1,19 @@
+<!--
+ * Sdk.targets
+ * 
+ *   Created: 2022-12-31-02:54:15
+ *   Modified: 2022-12-31-02:54:15
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <PropertyGroup>
+  </PropertyGroup>
+  <Target Name="GenDocs">
+    <Exec Command="dotnet roslynator '$(MSBuildProjectFileFullPath)' --file-log '$(FileLog)' --file-log-verobsity diag --group-by-common-namespace --heading '$(Title)' --host github --include-all-derived-types --include-containing-namespace --include-ienumerable --include-inherited-interface-members --include-system-namespace --max-derived-types 20 --projects @(ProjectReference, ',') --output '$(DocsDir)'" />
+  </Target>
+</Project>

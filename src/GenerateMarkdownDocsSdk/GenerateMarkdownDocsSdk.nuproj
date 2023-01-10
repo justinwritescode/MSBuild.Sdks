@@ -1,0 +1,20 @@
+<!--
+ * GenerateMarkdownDocsSdk.nuproj
+ * 
+ *   Created: 2022-12-31-02:52:27
+ *   Modified: 2022-12-31-02:52:28
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="Microsoft.Build.NoTargets">
+  <PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageFile Include="./Sdk/*" PackagePath="Sdk/%(Filename)%(Extension)" />
+  </ItemGroup>
+</Project>

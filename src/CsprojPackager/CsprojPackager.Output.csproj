@@ -1,27 +1,62 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
-    <TargetFrameworks>net7.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net7.0</TargetFrameworks>
     <Foo Condition="'$(TargetFramework)' == 'net7.0'">BAR!</Foo>
     <Bar Label="Foo!" />
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <ProjectGuid>f5f4f701-837b-4ba0-82c2-d37003a61adb</ProjectGuid>
+    <EnablePreviewFeatures>false</EnablePreviewFeatures>
   </PropertyGroup>
   <ItemGroup>
+    <Author Include="Justin Chase">
+      <Email>justin@justinwritescode.com</Email>
+    </Author>
+  </ItemGroup>
+  <ItemGroup>
+    <Owner Include="Justin Chase">
+      <Email>justin@justinwritescode.com</Email>
+    </Owner>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectProperty Include="AssemblyVersion" />
+    <ProjectProperty Include="Authors" />
+    <ProjectProperty Include="Company" />
+    <ProjectProperty Include="ContactEmail" />
+    <ProjectProperty Include="Description" />
+    <ProjectProperty Include="FileVersion" />
+    <ProjectProperty Include="LicenseExpression" />
+    <ProjectProperty Include="Owners" />
+    <ProjectProperty Include="PackageLicenseExpression" />
+    <ProjectProperty Include="PackageProjectUrl" />
+    <ProjectProperty Include="PackageTags" />
+    <ProjectProperty Include="PackageVersion" />
+    <ProjectProperty Include="RepositoryUrl" />
+    <ProjectProperty Include="SwaggerTheme" />
+    <ProjectProperty Include="TermsOfServiceUrl" />
+    <ProjectProperty Include="Title" />
+    <ProjectProperty Include="Version" />
+    <ProjectProperty Include="Version" />
+  </ItemGroup>
+  <ItemGroup>
+    <CompilerVisibleProperty Include="AssemblyVersion" />
     <CompilerVisibleProperty Include="Authors" />
-    <CompilerVisibleProperty Include="Copyright" />
-    <CompilerVisibleProperty Include="EnforceExtendedAnalyzerRules" />
-    <CompilerVisibleProperty Include="InvariantGlobalization" />
+    <CompilerVisibleProperty Include="Company" />
+    <CompilerVisibleProperty Include="ContactEmail" />
+    <CompilerVisibleProperty Include="Description" />
+    <CompilerVisibleProperty Include="FileVersion" />
+    <CompilerVisibleProperty Include="LicenseExpression" />
     <CompilerVisibleProperty Include="Owners" />
     <CompilerVisibleProperty Include="PackageLicenseExpression" />
     <CompilerVisibleProperty Include="PackageProjectUrl" />
-    <CompilerVisibleProperty Include="PlatformNeutralAssembly" />
-    <CompilerVisibleProperty Include="ProjectDir" />
-    <CompilerVisibleProperty Include="ProjectTypeGuids" />
-    <CompilerVisibleProperty Include="RootNamespace" />
-    <CompilerVisibleProperty Include="TargetFramework" />
-    <CompilerVisibleProperty Include="TargetPlatformMinVersion" />
-    <CompilerVisibleProperty Include="UsingMicrosoftNETSdkWeb" />
-    <CompilerVisibleProperty Include="_SupportedPlatformList" />
+    <CompilerVisibleProperty Include="PackageTags" />
+    <CompilerVisibleProperty Include="PackageVersion" />
+    <CompilerVisibleProperty Include="RepositoryUrl" />
+    <CompilerVisibleProperty Include="SwaggerTheme" />
+    <CompilerVisibleProperty Include="TermsOfServiceUrl" />
+    <CompilerVisibleProperty Include="Title" />
+    <CompilerVisibleProperty Include="Version" />
+    <CompilerVisibleProperty Include="Version" />
   </ItemGroup>
   <ItemGroup>
     <CompilerVisibleItemMetadata Include="Author">
@@ -127,6 +162,9 @@
     </NoWarn>
   </ItemGroup>
   <ItemGroup>
+    <PackageTag Include="justinwritescode" />
+  </ItemGroup>
+  <ItemGroup>
     <SlnGenCustomProjectTypeGuid Include=".aproj">
       <ProjectTypeGuid>4cd4fd5b-0f23-4623-ba3f-b31cc4ab93ef</ProjectTypeGuid>
     </SlnGenCustomProjectTypeGuid>
@@ -198,39 +236,116 @@
     </SlnGenCustomProjectTypeGuid>
   </ItemGroup>
   <ItemGroup>
-    <Author Include="Justin Chase">
-      <Email>justin@justinwritescode.com</Email>
-    </Author>
-  </ItemGroup>
-  <ItemGroup>
-    <Owner Include="Justin Chase">
-      <Email>justin@justinwritescode.com</Email>
-    </Owner>
-  </ItemGroup>
-  <ItemGroup>
-    <NuGetSource Include="Azure">
-      <ApiKey>az</ApiKey>
-      <Value>Value</Value>
-      <PushOnBuild>false</PushOnBuild>
-    </NuGetSource>
-    <NuGetSource Include="GitHub">
-      <ApiKey>
-      </ApiKey>
-      <Value>Value</Value>
-      <PushOnBuild>false</PushOnBuild>
-    </NuGetSource>
-    <NuGetSource Include="Local">
-      <ApiKey>
-      </ApiKey>
-      <Value>Value</Value>
-      <PushOnBuild>true</PushOnBuild>
-    </NuGetSource>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageTag Include="justinwritescode" />
-  </ItemGroup>
-  <ItemGroup>
     <SourceRoot Include="/Users/david/.nuget/packages/" />
+  </ItemGroup>
+  <ItemGroup>
+    <AvailableItemName Include="PackageFile" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackFolderKind Include="Analyzer">
+      <FrameworkSpecific>false</FrameworkSpecific>
+      <PackageFolder>analyzers</PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="Analyzers">
+      <FrameworkSpecific>false</FrameworkSpecific>
+      <PackageFolder>analyzers</PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="Build">
+      <FrameworkSpecific>false</FrameworkSpecific>
+      <PackageFolder>build</PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="BuildTransitive">
+      <FrameworkSpecific>false</FrameworkSpecific>
+      <PackageFolder>buildTransitive</PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="Content">
+      <FrameworkSpecific>true</FrameworkSpecific>
+      <PackageFolder>contentFiles</PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="ContentFiles">
+      <FrameworkSpecific>true</FrameworkSpecific>
+      <PackageFolder>contentFiles</PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="Dependency">
+      <FrameworkSpecific>true</FrameworkSpecific>
+      <PackageFolder>
+      </PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="FrameworkReference">
+      <FrameworkSpecific>true</FrameworkSpecific>
+      <PackageFolder>
+      </PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="Ignore">
+      <FrameworkSpecific>false</FrameworkSpecific>
+      <PackageFolder>
+      </PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="Lib">
+      <FrameworkSpecific>true</FrameworkSpecific>
+      <PackageFolder>lib</PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="Metadata">
+      <FrameworkSpecific>false</FrameworkSpecific>
+      <PackageFolder>
+      </PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="Native">
+      <FrameworkSpecific>false</FrameworkSpecific>
+      <PackageFolder>native</PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="None">
+      <FrameworkSpecific>false</FrameworkSpecific>
+      <PackageFolder>
+      </PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="Ref">
+      <FrameworkSpecific>false</FrameworkSpecific>
+      <PackageFolder>ref</PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="Runtime">
+      <FrameworkSpecific>false</FrameworkSpecific>
+      <PackageFolder>runtimes</PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="Runtimes">
+      <FrameworkSpecific>false</FrameworkSpecific>
+      <PackageFolder>runtimes</PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="Source">
+      <FrameworkSpecific>false</FrameworkSpecific>
+      <PackageFolder>source</PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="Tool">
+      <FrameworkSpecific>true</FrameworkSpecific>
+      <PackageFolder>tools</PackageFolder>
+    </PackFolderKind>
+    <PackFolderKind Include="Tools">
+      <FrameworkSpecific>true</FrameworkSpecific>
+      <PackageFolder>tools</PackageFolder>
+    </PackFolderKind>
+  </ItemGroup>
+  <ItemGroup>
+    <PackInference Include="AndroidAsset" />
+    <PackInference Include="AndroidResource" />
+    <PackInference Include="ApplicationDefinition" />
+    <PackInference Include="BundleResource" />
+    <PackInference Include="CodeAnalysisDictionary" />
+    <PackInference Include="Compile">
+      <PackExclude>obj//**/*</PackExclude>
+    </PackInference>
+    <PackInference Include="Content" />
+    <PackInference Include="DesignData" />
+    <PackInference Include="DesignDataWithDesignTimeCreatableTypes" />
+    <PackInference Include="EmbeddedResource" />
+    <PackInference Include="None" />
+    <PackInference Include="Page" />
+    <PackInference Include="Resource" />
+    <PackInference Include="SplashScreen" />
+  </ItemGroup>
+  <ItemGroup>
+    <SourceLinkGitHubHost Include="github.com">
+      <ContentUrl>https://raw.githubusercontent.com</ContentUrl>
+    </SourceLinkGitHubHost>
   </ItemGroup>
   <ItemGroup>
     <ImplicitPackageReferenceVersion Include="Microsoft.AspNetCore.All">
@@ -802,27 +917,6 @@
     <WindowsSdkSupportedTargetPlatformVersion Include="8.0" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CsprojPackager.cs">
-      <BuildAction>Compile</BuildAction>
-      <DefaultPackFolder>content</DefaultPackFolder>
-      <Pack>true</Pack>
-      <CodeLanguage>cs</CodeLanguage>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="CsprojPackager.xml">
-      <BuildAction>None</BuildAction>
-      <DefaultPackFolder>none</DefaultPackFolder>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <FrameworkReference Include="Microsoft.NETCore.App">
-      <IsImplicitlyDefined>true</IsImplicitlyDefined>
-      <PrivateAssets>All</PrivateAssets>
-      <Pack>false</Pack>
-    </FrameworkReference>
-  </ItemGroup>
-  <ItemGroup>
     <SupportedNETCoreAppTargetFramework Include=".NETCoreApp,Version=v1.0">
       <DisplayName>.NET Core 1.0</DisplayName>
       <Alias>netcoreapp1.0</Alias>
@@ -1172,27 +1266,20 @@
       <ExcludeAssets>ContentFiles</ExcludeAssets>
       <IncludeAssets>build; analyzers; compile;</IncludeAssets>
       <PrivateAssets>All</PrivateAssets>
-      <Pack>
-      </Pack>
       <GeneratePathProperty>true</GeneratePathProperty>
     </PackageReference>
     <PackageReference Include="Microsoft.Build">
       <Version>[17.3.2,)</Version>
-      <ExcludeAssets>Runtime</ExcludeAssets>
+      <ExcludeAssets>ContentFiles</ExcludeAssets>
       <IncludeAssets>Compile; Runime; Build; BuildMultitargeting; BuildTransitive; Analyzers; Native</IncludeAssets>
       <PrivateAssets>None</PrivateAssets>
-      <Pack>
-      </Pack>
       <GeneratePathProperty>true</GeneratePathProperty>
-      <VersionOverride>[17.3.2,)</VersionOverride>
     </PackageReference>
     <PackageReference Include="Microsoft.Build.Framework">
       <Version>[17.4.0,)</Version>
-      <ExcludeAssets>Runtime</ExcludeAssets>
+      <ExcludeAssets>ContentFiles</ExcludeAssets>
       <IncludeAssets>Compile; Runime; Build; BuildMultitargeting; BuildTransitive; Analyzers; Native</IncludeAssets>
       <PrivateAssets>None</PrivateAssets>
-      <Pack>
-      </Pack>
       <GeneratePathProperty>true</GeneratePathProperty>
     </PackageReference>
     <PackageReference Include="Microsoft.Build.Tasks.Core">
@@ -1200,27 +1287,20 @@
       <ExcludeAssets>ContentFiles</ExcludeAssets>
       <IncludeAssets>Compile; Runime; Build; BuildMultitargeting; BuildTransitive; Analyzers; Native</IncludeAssets>
       <PrivateAssets>None</PrivateAssets>
-      <Pack>
-      </Pack>
       <GeneratePathProperty>true</GeneratePathProperty>
-      <VersionOverride>[17.4.0,)</VersionOverride>
     </PackageReference>
     <PackageReference Include="Microsoft.Build.Tasks.Git">
       <Version>[1.1.1,)</Version>
       <ExcludeAssets>ContentFiles</ExcludeAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive; compile;</IncludeAssets>
       <PrivateAssets>All</PrivateAssets>
-      <Pack>
-      </Pack>
       <GeneratePathProperty>true</GeneratePathProperty>
     </PackageReference>
     <PackageReference Include="Microsoft.Build.Utilities.Core">
       <Version>[17.4.0,)</Version>
-      <ExcludeAssets>Runtime</ExcludeAssets>
+      <ExcludeAssets>ContentFiles</ExcludeAssets>
       <IncludeAssets>Compile; Runime; Build; BuildMultitargeting; BuildTransitive; Analyzers; Native</IncludeAssets>
       <PrivateAssets>None</PrivateAssets>
-      <Pack>
-      </Pack>
       <GeneratePathProperty>true</GeneratePathProperty>
     </PackageReference>
     <PackageReference Include="Microsoft.SourceLink.GitHub">
@@ -1228,8 +1308,6 @@
       <ExcludeAssets>ContentFiles</ExcludeAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive; compile;</IncludeAssets>
       <PrivateAssets>All</PrivateAssets>
-      <Pack>
-      </Pack>
       <GeneratePathProperty>true</GeneratePathProperty>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.SlnGen">
@@ -1237,8 +1315,6 @@
       <ExcludeAssets>ContentFiles</ExcludeAssets>
       <IncludeAssets>Analyzers;Build;BuildMultitargeting;BuildTransitive</IncludeAssets>
       <PrivateAssets>All</PrivateAssets>
-      <Pack>
-      </Pack>
       <GeneratePathProperty>true</GeneratePathProperty>
     </PackageReference>
     <PackageReference Include="MinVer">
@@ -1246,17 +1322,13 @@
       <ExcludeAssets>ContentFiles</ExcludeAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; compile;</IncludeAssets>
       <PrivateAssets>All</PrivateAssets>
-      <Pack>
-      </Pack>
       <GeneratePathProperty>true</GeneratePathProperty>
     </PackageReference>
     <PackageReference Include="NuGetizer">
-      <Version>[0.9.0,)</Version>
+      <Version>[0.9.1,)</Version>
       <ExcludeAssets>ContentFiles</ExcludeAssets>
       <IncludeAssets>build; compile;</IncludeAssets>
       <PrivateAssets>All</PrivateAssets>
-      <Pack>
-      </Pack>
       <GeneratePathProperty>true</GeneratePathProperty>
     </PackageReference>
     <PackageReference Include="Stef.Validation">
@@ -1264,407 +1336,38 @@
       <ExcludeAssets>ContentFiles</ExcludeAssets>
       <IncludeAssets>Analyzers;Build;BuildMultitargeting;BuildTransitive</IncludeAssets>
       <PrivateAssets>All</PrivateAssets>
-      <Pack>
-      </Pack>
       <GeneratePathProperty>true</GeneratePathProperty>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <SdkSupportedTargetPlatformIdentifier Include="android">
-      <DisplayName>Android</DisplayName>
-    </SdkSupportedTargetPlatformIdentifier>
-    <SdkSupportedTargetPlatformIdentifier Include="ios">
-      <DisplayName>iOS</DisplayName>
-    </SdkSupportedTargetPlatformIdentifier>
-    <SdkSupportedTargetPlatformIdentifier Include="maccatalyst">
-      <DisplayName>Mac Catalyst</DisplayName>
-    </SdkSupportedTargetPlatformIdentifier>
-    <SdkSupportedTargetPlatformIdentifier Include="macos">
-      <DisplayName>macOS</DisplayName>
-    </SdkSupportedTargetPlatformIdentifier>
-    <SdkSupportedTargetPlatformIdentifier Include="tvos">
-      <DisplayName>tvOS</DisplayName>
-    </SdkSupportedTargetPlatformIdentifier>
-    <SdkSupportedTargetPlatformIdentifier Include="windows">
-      <DisplayName>Windows</DisplayName>
-    </SdkSupportedTargetPlatformIdentifier>
-  </ItemGroup>
-  <ItemGroup>
-    <_EolNetCoreTargetFrameworkVersions Include="1.0" />
-    <_EolNetCoreTargetFrameworkVersions Include="1.1" />
-    <_EolNetCoreTargetFrameworkVersions Include="2.0" />
-    <_EolNetCoreTargetFrameworkVersions Include="2.1" />
-    <_EolNetCoreTargetFrameworkVersions Include="2.2" />
-    <_EolNetCoreTargetFrameworkVersions Include="3.0" />
-    <_EolNetCoreTargetFrameworkVersions Include="5.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectCapability Include="AllTargetOutputGroups" />
-    <ProjectCapability Include="AssemblyReferences" />
-    <ProjectCapability Include="COMReferences" />
-    <ProjectCapability Include="CSharp" />
-    <ProjectCapability Include="DeclaredSourceItems" />
-    <ProjectCapability Include="GenerateDocumentationFile" />
-    <ProjectCapability Include="LanguageService" />
-    <ProjectCapability Include="Managed" />
-    <ProjectCapability Include="OutputGroups" />
     <ProjectCapability Include="Pack" />
-    <ProjectCapability Include="ProjectReferences" />
-    <ProjectCapability Include="ReferencesFolder" />
-    <ProjectCapability Include="RelativePathDerivedDefaultNamespace" />
-    <ProjectCapability Include="SharedProjectReferences" />
-    <ProjectCapability Include="SingleFileGenerators" />
-    <ProjectCapability Include="SupportsHotReload" />
-    <ProjectCapability Include="UserSourceItems" />
-    <ProjectCapability Include="VisualStudioWellKnownOutputGroups" />
   </ItemGroup>
   <ItemGroup>
-    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//assemblyreference.xaml">
-      <Context>;BrowseObject</Context>
-    </PropertyPageSchema>
-    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//COMReference.xaml">
-      <Context>;BrowseObject</Context>
-    </PropertyPageSchema>
-    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//Content.xaml">
-      <Context>File;BrowseObject</Context>
-    </PropertyPageSchema>
-    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//CSharp.BrowseObject.xaml">
-      <Context>BrowseObject</Context>
-    </PropertyPageSchema>
-    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//CSharp.ProjectItemsSchema.xaml" />
-    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//CSharp.xaml">
-      <Context>File</Context>
-    </PropertyPageSchema>
-    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//Debugger_General.xaml">
-      <Context>Project</Context>
-    </PropertyPageSchema>
-    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//EmbeddedResource.xaml">
-      <Context>File;BrowseObject</Context>
-    </PropertyPageSchema>
-    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//Folder.xaml">
-      <Context>File;BrowseObject</Context>
-    </PropertyPageSchema>
-    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//General.BrowseObject.xaml">
-      <Context>BrowseObject</Context>
-    </PropertyPageSchema>
-    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//General.xaml">
-      <Context>Project</Context>
-    </PropertyPageSchema>
-    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//General_File.xaml">
-      <Context>File</Context>
-    </PropertyPageSchema>
-    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//None.xaml">
-      <Context>File;BrowseObject</Context>
-    </PropertyPageSchema>
-    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//ProjectItemsSchema.xaml" />
-    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//ProjectReference.xaml">
-      <Context>;BrowseObject</Context>
-    </PropertyPageSchema>
-    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//ResolvedAssemblyReference.xaml">
-      <Context>ProjectSubscriptionService;BrowseObject</Context>
-    </PropertyPageSchema>
-    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//ResolvedCOMReference.xaml">
-      <Context>ProjectSubscriptionService;BrowseObject</Context>
-    </PropertyPageSchema>
-    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//ResolvedProjectReference.xaml">
-      <Context>ProjectSubscriptionService;BrowseObject</Context>
-    </PropertyPageSchema>
-    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//SCC.xaml">
-      <Context>Invisible</Context>
-    </PropertyPageSchema>
-    <PropertyPageSchema Include="/usr/local/share/dotnet/sdk/7.0.100//SpecialFolder.xaml">
-      <Context>File;ProjectSubscriptionService</Context>
-    </PropertyPageSchema>
-  </ItemGroup>
-  <ItemGroup>
-    <DocFileItem Include="CsprojPackager.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <_AllDirectoriesAbove Include="/" />
-    <_AllDirectoriesAbove Include="/Users" />
-    <_AllDirectoriesAbove Include="/Users/david" />
-    <_AllDirectoriesAbove Include="/Users/david/GitHub" />
-    <_AllDirectoriesAbove Include="/Users/david/GitHub/justinwritescode" />
-    <_AllDirectoriesAbove Include="/Users/david/GitHub/justinwritescode/libs" />
-    <_AllDirectoriesAbove Include="/Users/david/GitHub/justinwritescode/libs/src" />
-    <_AllDirectoriesAbove Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks" />
-    <_AllDirectoriesAbove Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src" />
-    <_AllDirectoriesAbove Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/CsprojPackager" />
-  </ItemGroup>
-  <ItemGroup>
-    <PotentialEditorConfigFiles Include="/.editorconfig" />
-    <PotentialEditorConfigFiles Include="/Users/.editorconfig" />
-    <PotentialEditorConfigFiles Include="/Users/david/.editorconfig" />
-    <PotentialEditorConfigFiles Include="/Users/david/GitHub/.editorconfig" />
-    <PotentialEditorConfigFiles Include="/Users/david/GitHub/justinwritescode/.editorconfig" />
-    <PotentialEditorConfigFiles Include="/Users/david/GitHub/justinwritescode/libs/.editorconfig" />
-    <PotentialEditorConfigFiles Include="/Users/david/GitHub/justinwritescode/libs/src/.editorconfig" />
-    <PotentialEditorConfigFiles Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/.editorconfig" />
-    <PotentialEditorConfigFiles Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/.editorconfig" />
-    <PotentialEditorConfigFiles Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/CsprojPackager/.editorconfig" />
-  </ItemGroup>
-  <ItemGroup>
-    <EditorConfigFiles Include="/Users/david/GitHub/justinwritescode/.editorconfig" />
-  </ItemGroup>
-  <ItemGroup>
-    <GlobalAnalyzerConfigFiles Include="/.globalconfig" />
-    <GlobalAnalyzerConfigFiles Include="/Users/.globalconfig" />
-    <GlobalAnalyzerConfigFiles Include="/Users/david/.globalconfig" />
-    <GlobalAnalyzerConfigFiles Include="/Users/david/GitHub/.globalconfig" />
-    <GlobalAnalyzerConfigFiles Include="/Users/david/GitHub/justinwritescode/.globalconfig" />
-    <GlobalAnalyzerConfigFiles Include="/Users/david/GitHub/justinwritescode/libs/.globalconfig" />
-    <GlobalAnalyzerConfigFiles Include="/Users/david/GitHub/justinwritescode/libs/src/.globalconfig" />
-    <GlobalAnalyzerConfigFiles Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/.globalconfig" />
-    <GlobalAnalyzerConfigFiles Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/.globalconfig" />
-    <GlobalAnalyzerConfigFiles Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/CsprojPackager/.globalconfig" />
-  </ItemGroup>
-  <ItemGroup>
-    <_OutputPathItem Include="bin/Local/net7.0/" />
-  </ItemGroup>
-  <ItemGroup>
-    <_UnmanagedRegistrationCache Include="obj/CsprojPackager.csproj.UnmanagedRegistration.cache" />
-  </ItemGroup>
-  <ItemGroup>
-    <_ResolveComReferenceCache Include="obj/net7.0/CsprojPackager.csproj.ResolveComReference.cache" />
-  </ItemGroup>
-  <ItemGroup>
-    <AppConfigFileDestination Include="bin/Local/net7.0/CsprojPackager.dll.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <IntermediateAssembly Include="obj/net7.0/CsprojPackager.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <FinalDocFile Include="bin/Local/net7.0/CsprojPackager.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <CopyUpToDateMarker Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/CsprojPackager/obj/net7.0/CsprojPackager.csproj.CopyComplete" />
-  </ItemGroup>
-  <ItemGroup>
-    <IntermediateRefAssembly Include="obj/net7.0/refint/CsprojPackager.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <CreateDirectory Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/CsprojPackager/obj/net7.0/refint/" />
-    <CreateDirectory Include="obj/net7.0/ref" />
-  </ItemGroup>
-  <ItemGroup>
-    <_DebugSymbolsIntermediatePath Include="obj/net7.0/CsprojPackager.pdb" />
-  </ItemGroup>
-  <ItemGroup>
-    <_DebugSymbolsOutputPath Include="bin/Local/net7.0/CsprojPackager.pdb" />
-  </ItemGroup>
-  <ItemGroup>
-    <_DeploymentManifestEntryPoint Include="obj/net7.0/CsprojPackager.dll">
-      <TargetPath>CsprojPackager.dll</TargetPath>
-    </_DeploymentManifestEntryPoint>
-  </ItemGroup>
-  <ItemGroup>
-    <ApplicationManifest Include="obj/net7.0/Native.CsprojPackager.manifest">
-      <TargetPath>Native.CsprojPackager.manifest</TargetPath>
-    </ApplicationManifest>
-  </ItemGroup>
-  <ItemGroup>
-    <_ApplicationManifestFinal Include="bin/Local/net7.0/Native.CsprojPackager.manifest">
-      <TargetPath>Native.CsprojPackager.manifest</TargetPath>
-    </_ApplicationManifestFinal>
-  </ItemGroup>
-  <ItemGroup>
-    <DeployManifest Include="obj/net7.0/CsprojPackager.application">
-      <TargetPath>CsprojPackager.application</TargetPath>
-    </DeployManifest>
-  </ItemGroup>
-  <ItemGroup>
-    <BuiltProjectOutputGroupKeyOutput Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/CsprojPackager/obj/net7.0/CsprojPackager.dll">
-      <IsKeyOutput>true</IsKeyOutput>
-      <FinalOutputPath>/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/CsprojPackager/bin/Local/net7.0/CsprojPackager.dll</FinalOutputPath>
-      <TargetPath>CsprojPackager.dll</TargetPath>
-    </BuiltProjectOutputGroupKeyOutput>
-  </ItemGroup>
-  <ItemGroup>
-    <DebugSymbolsProjectOutputGroupOutput Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/CsprojPackager/obj/net7.0/CsprojPackager.pdb">
-      <FinalOutputPath>/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/CsprojPackager/bin/Local/net7.0/CsprojPackager.pdb</FinalOutputPath>
-      <TargetPath>CsprojPackager.pdb</TargetPath>
-    </DebugSymbolsProjectOutputGroupOutput>
-  </ItemGroup>
-  <ItemGroup>
-    <DocumentationProjectOutputGroupOutput Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/CsprojPackager/CsprojPackager.xml">
-      <IsKeyOutput>true</IsKeyOutput>
-      <FinalOutputPath>/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/CsprojPackager/bin/Local/net7.0/CsprojPackager.xml</FinalOutputPath>
-      <TargetPath>CsprojPackager.xml</TargetPath>
-    </DocumentationProjectOutputGroupOutput>
-  </ItemGroup>
-  <ItemGroup>
-    <AvailableItemName Include="PackageFile" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackFolderKind Include="Analyzer">
-      <FrameworkSpecific>false</FrameworkSpecific>
-      <PackageFolder>analyzers</PackageFolder>
-    </PackFolderKind>
-    <PackFolderKind Include="Analyzers">
-      <FrameworkSpecific>false</FrameworkSpecific>
-      <PackageFolder>analyzers</PackageFolder>
-    </PackFolderKind>
-    <PackFolderKind Include="Build">
-      <FrameworkSpecific>false</FrameworkSpecific>
-      <PackageFolder>build</PackageFolder>
-    </PackFolderKind>
-    <PackFolderKind Include="BuildTransitive">
-      <FrameworkSpecific>false</FrameworkSpecific>
-      <PackageFolder>buildTransitive</PackageFolder>
-    </PackFolderKind>
-    <PackFolderKind Include="Content">
-      <FrameworkSpecific>true</FrameworkSpecific>
-      <PackageFolder>contentFiles</PackageFolder>
-    </PackFolderKind>
-    <PackFolderKind Include="ContentFiles">
-      <FrameworkSpecific>true</FrameworkSpecific>
-      <PackageFolder>contentFiles</PackageFolder>
-    </PackFolderKind>
-    <PackFolderKind Include="Dependency">
-      <FrameworkSpecific>true</FrameworkSpecific>
-      <PackageFolder>
-      </PackageFolder>
-    </PackFolderKind>
-    <PackFolderKind Include="FrameworkReference">
-      <FrameworkSpecific>true</FrameworkSpecific>
-      <PackageFolder>
-      </PackageFolder>
-    </PackFolderKind>
-    <PackFolderKind Include="Ignore">
-      <FrameworkSpecific>false</FrameworkSpecific>
-      <PackageFolder>
-      </PackageFolder>
-    </PackFolderKind>
-    <PackFolderKind Include="Lib">
-      <FrameworkSpecific>true</FrameworkSpecific>
-      <PackageFolder>lib</PackageFolder>
-    </PackFolderKind>
-    <PackFolderKind Include="Metadata">
-      <FrameworkSpecific>false</FrameworkSpecific>
-      <PackageFolder>
-      </PackageFolder>
-    </PackFolderKind>
-    <PackFolderKind Include="Native">
-      <FrameworkSpecific>false</FrameworkSpecific>
-      <PackageFolder>native</PackageFolder>
-    </PackFolderKind>
-    <PackFolderKind Include="None">
-      <FrameworkSpecific>false</FrameworkSpecific>
-      <PackageFolder>
-      </PackageFolder>
-    </PackFolderKind>
-    <PackFolderKind Include="Ref">
-      <FrameworkSpecific>false</FrameworkSpecific>
-      <PackageFolder>ref</PackageFolder>
-    </PackFolderKind>
-    <PackFolderKind Include="Runtime">
-      <FrameworkSpecific>false</FrameworkSpecific>
-      <PackageFolder>runtimes</PackageFolder>
-    </PackFolderKind>
-    <PackFolderKind Include="Runtimes">
-      <FrameworkSpecific>false</FrameworkSpecific>
-      <PackageFolder>runtimes</PackageFolder>
-    </PackFolderKind>
-    <PackFolderKind Include="Source">
-      <FrameworkSpecific>false</FrameworkSpecific>
-      <PackageFolder>source</PackageFolder>
-    </PackFolderKind>
-    <PackFolderKind Include="Tool">
-      <FrameworkSpecific>true</FrameworkSpecific>
-      <PackageFolder>tools</PackageFolder>
-    </PackFolderKind>
-    <PackFolderKind Include="Tools">
-      <FrameworkSpecific>true</FrameworkSpecific>
-      <PackageFolder>tools</PackageFolder>
-    </PackFolderKind>
-  </ItemGroup>
-  <ItemGroup>
-    <PackInference Include="AndroidAsset">
-      <PackExclude>
-      </PackExclude>
-    </PackInference>
-    <PackInference Include="AndroidResource">
-      <PackExclude>
-      </PackExclude>
-    </PackInference>
-    <PackInference Include="ApplicationDefinition">
-      <PackExclude>
-      </PackExclude>
-    </PackInference>
-    <PackInference Include="BundleResource">
-      <PackExclude>
-      </PackExclude>
-    </PackInference>
-    <PackInference Include="CodeAnalysisDictionary">
-      <PackExclude>
-      </PackExclude>
-    </PackInference>
-    <PackInference Include="Compile">
-      <PackExclude>obj/net7.0//**/*.cs</PackExclude>
-    </PackInference>
-    <PackInference Include="Content">
-      <PackExclude>
-      </PackExclude>
-    </PackInference>
-    <PackInference Include="DesignData">
-      <PackExclude>
-      </PackExclude>
-    </PackInference>
-    <PackInference Include="DesignDataWithDesignTimeCreatableTypes">
-      <PackExclude>
-      </PackExclude>
-    </PackInference>
-    <PackInference Include="EmbeddedResource">
-      <PackExclude>
-      </PackExclude>
-    </PackInference>
-    <PackInference Include="None">
-      <PackExclude>
-      </PackExclude>
-    </PackInference>
-    <PackInference Include="Page">
-      <PackExclude>
-      </PackExclude>
-    </PackInference>
-    <PackInference Include="Resource">
-      <PackExclude>
-      </PackExclude>
-    </PackInference>
-    <PackInference Include="SplashScreen">
-      <PackExclude>
-      </PackExclude>
-    </PackInference>
+    <DefineConstants Include="DEBUG" />
+    <DefineConstants Include="DEBUG" />
+    <DefineConstants Include="LOCAL" />
+    <DefineConstants Include="LOCAL" />
+    <DefineConstants Include="NET6_0" />
+    <DefineConstants Include="NET6_0_OR_GREATER" />
+    <DefineConstants Include="NET7_0" />
+    <DefineConstants Include="NET7_0_OR_GREATER" />
+    <DefineConstants Include="NETSTANDARD1_3" />
+    <DefineConstants Include="NETSTANDARD1_3_OR_GREATER" />
+    <DefineConstants Include="NETSTANDARD1_5" />
+    <DefineConstants Include="NETSTANDARD1_5_OR_GREATER" />
+    <DefineConstants Include="NETSTANDARD2_0" />
+    <DefineConstants Include="NETSTANDARD2_0_OR_GREATER" />
+    <DefineConstants Include="NETSTANDARD2_1" />
+    <DefineConstants Include="NETSTANDARD2_1_OR_GREATER" />
+    <DefineConstants Include="TRACE" />
+    <DefineConstants Include="TRACE" />
+    <DefineConstants Include="TRACE" />
   </ItemGroup>
   <ItemGroup>
     <_OriginalPackageReference Include="Microsoft.Build" />
     <_OriginalPackageReference Include="Microsoft.Build.Framework" />
     <_OriginalPackageReference Include="Microsoft.Build.Tasks.Core" />
     <_OriginalPackageReference Include="Microsoft.Build.Utilities.Core" />
-  </ItemGroup>
-  <ItemGroup>
-    <NetStandard20CompatibleFramework Include="net461" />
-    <NetStandard20CompatibleFramework Include="net462" />
-    <NetStandard20CompatibleFramework Include="net47" />
-    <NetStandard20CompatibleFramework Include="net471" />
-    <NetStandard20CompatibleFramework Include="net472" />
-    <NetStandard20CompatibleFramework Include="net48" />
-    <NetStandard20CompatibleFramework Include="netcoreapp2.0" />
-    <NetStandard20CompatibleFramework Include="netcoreapp2.1" />
-    <NetStandard20CompatibleFramework Include="netcoreapp2.2" />
-    <NetStandard20CompatibleFramework Include="netstandard2.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <NetStandard21CompatibleFramework Include="net6.0" />
-    <NetStandard21CompatibleFramework Include="netcoreapp3.0" />
-    <NetStandard21CompatibleFramework Include="netcoreapp3.1" />
-    <NetStandard21CompatibleFramework Include="netcoreapp5.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <Net60CompatibleFramework Include="net6.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <Net70CompatibleFramework Include="net7.0" />
-    <Net70CompatibleFramework Include="net7.0" />
   </ItemGroup>
   <ItemGroup>
     <GlobalPackageReference Include="GitInfo">
@@ -1693,7 +1396,7 @@
       <PrivateAssets>All</PrivateAssets>
     </GlobalPackageReference>
     <GlobalPackageReference Include="NuGetizer">
-      <Version>[0.9.0,)</Version>
+      <Version>[0.9.1,)</Version>
       <IncludeAssets>build; compile;</IncludeAssets>
       <PrivateAssets>All</PrivateAssets>
     </GlobalPackageReference>
@@ -1714,164 +1417,6 @@
     <NuGetDeletePackageCommand Include="%(NuGetDeletePackageCommand.Command)">
       <Command>dotnet nuget delete CsprojPackager  -s %(NuGetSource.Identity) --non-interactive</Command>
     </NuGetDeletePackageCommand>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbedInBinlog Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/CsprojPackager/obj/project.assets.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <PreprocessorValue Include="assemblyname">
-      <Value>CsprojPackager</Value>
-    </PreprocessorValue>
-    <PreprocessorValue Include="filename">
-      <Value>CsprojPackager.csproj</Value>
-    </PreprocessorValue>
-    <PreprocessorValue Include="fullpath">
-      <Value>/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/CsprojPackager</Value>
-    </PreprocessorValue>
-    <PreprocessorValue Include="outputfilename">
-      <Value>CsprojPackager.dll</Value>
-    </PreprocessorValue>
-    <PreprocessorValue Include="rootnamespace">
-      <Value>CsprojPackager</Value>
-    </PreprocessorValue>
-  </ItemGroup>
-  <ItemGroup>
-    <GenerateRuntimeConfigurationFilesInputs Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/CsprojPackager/obj/net7.0/CsprojPackager.assets.cache" />
-    <GenerateRuntimeConfigurationFilesInputs Include="/Users/david/GitHub/justinwritescode/libs/src/MSBuild.Sdks/src/CsprojPackager/obj/project.assets.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectConfigurationDescription Include="TargetFramework=net7.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <RuntimeHostConfigurationOption Include="System.GC.Server">
-      <Value>true</Value>
-    </RuntimeHostConfigurationOption>
-    <RuntimeHostConfigurationOption Include="System.Reflection.Metadata.MetadataUpdater.IsSupported">
-      <Value>false</Value>
-      <Trim>true</Trim>
-    </RuntimeHostConfigurationOption>
-  </ItemGroup>
-  <ItemGroup>
-    <ClsidMap Include="obj/net7.0/CsprojPackager.clsidmap" />
-  </ItemGroup>
-  <ItemGroup>
-    <RegFreeComManifest Include="obj/net7.0/CsprojPackager.X.manifest" />
-  </ItemGroup>
-  <ItemGroup>
-    <AdditionalTargetFrameworkInfoProperty Include="IsRidAgnostic" />
-    <AdditionalTargetFrameworkInfoProperty Include="SelfContained" />
-    <AdditionalTargetFrameworkInfoProperty Include="ShouldBeValidatedAsExecutableReference" />
-    <AdditionalTargetFrameworkInfoProperty Include="_IsExecutable" />
-    <AdditionalTargetFrameworkInfoProperty Include="_SelfContainedWasSpecified" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageConflictOverrides Include="NETStandard.Library">
-      <OverriddenPackages>
-        Microsoft.Win32.Primitives|4.3.0;
-        System.AppContext|4.3.0;
-        System.Collections|4.3.0;
-        System.Collections.Concurrent|4.3.0;
-        System.Collections.Immutable|1.4.0;
-        System.Collections.NonGeneric|4.3.0;
-        System.Collections.Specialized|4.3.0;
-        System.ComponentModel|4.3.0;
-        System.ComponentModel.EventBasedAsync|4.3.0;
-        System.ComponentModel.Primitives|4.3.0;
-        System.ComponentModel.TypeConverter|4.3.0;
-        System.Console|4.3.0;
-        System.Data.Common|4.3.0;
-        System.Diagnostics.Contracts|4.3.0;
-        System.Diagnostics.Debug|4.3.0;
-        System.Diagnostics.FileVersionInfo|4.3.0;
-        System.Diagnostics.Process|4.3.0;
-        System.Diagnostics.StackTrace|4.3.0;
-        System.Diagnostics.TextWriterTraceListener|4.3.0;
-        System.Diagnostics.Tools|4.3.0;
-        System.Diagnostics.TraceSource|4.3.0;
-        System.Diagnostics.Tracing|4.3.0;
-        System.Dynamic.Runtime|4.3.0;
-        System.Globalization|4.3.0;
-        System.Globalization.Calendars|4.3.0;
-        System.Globalization.Extensions|4.3.0;
-        System.IO|4.3.0;
-        System.IO.Compression|4.3.0;
-        System.IO.Compression.ZipFile|4.3.0;
-        System.IO.FileSystem|4.3.0;
-        System.IO.FileSystem.DriveInfo|4.3.0;
-        System.IO.FileSystem.Primitives|4.3.0;
-        System.IO.FileSystem.Watcher|4.3.0;
-        System.IO.IsolatedStorage|4.3.0;
-        System.IO.MemoryMappedFiles|4.3.0;
-        System.IO.Pipes|4.3.0;
-        System.IO.UnmanagedMemoryStream|4.3.0;
-        System.Linq|4.3.0;
-        System.Linq.Expressions|4.3.0;
-        System.Linq.Queryable|4.3.0;
-        System.Net.Http|4.3.0;
-        System.Net.NameResolution|4.3.0;
-        System.Net.Primitives|4.3.0;
-        System.Net.Requests|4.3.0;
-        System.Net.Security|4.3.0;
-        System.Net.Sockets|4.3.0;
-        System.Net.WebHeaderCollection|4.3.0;
-        System.ObjectModel|4.3.0;
-        System.Private.DataContractSerialization|4.3.0;
-        System.Reflection|4.3.0;
-        System.Reflection.Emit|4.3.0;
-        System.Reflection.Emit.ILGeneration|4.3.0;
-        System.Reflection.Emit.Lightweight|4.3.0;
-        System.Reflection.Extensions|4.3.0;
-        System.Reflection.Primitives|4.3.0;
-        System.Reflection.TypeExtensions|4.3.0;
-        System.Resources.ResourceManager|4.3.0;
-        System.Runtime|4.3.0;
-        System.Runtime.Extensions|4.3.0;
-        System.Runtime.Handles|4.3.0;
-        System.Runtime.InteropServices|4.3.0;
-        System.Runtime.InteropServices.RuntimeInformation|4.3.0;
-        System.Runtime.Loader|4.3.0;
-        System.Runtime.Numerics|4.3.0;
-        System.Runtime.Serialization.Formatters|4.3.0;
-        System.Runtime.Serialization.Json|4.3.0;
-        System.Runtime.Serialization.Primitives|4.3.0;
-        System.Security.AccessControl|4.4.0;
-        System.Security.Claims|4.3.0;
-        System.Security.Cryptography.Algorithms|4.3.0;
-        System.Security.Cryptography.Csp|4.3.0;
-        System.Security.Cryptography.Encoding|4.3.0;
-        System.Security.Cryptography.Primitives|4.3.0;
-        System.Security.Cryptography.X509Certificates|4.3.0;
-        System.Security.Cryptography.Xml|4.4.0;
-        System.Security.Principal|4.3.0;
-        System.Security.Principal.Windows|4.4.0;
-        System.Text.Encoding|4.3.0;
-        System.Text.Encoding.Extensions|4.3.0;
-        System.Text.RegularExpressions|4.3.0;
-        System.Threading|4.3.0;
-        System.Threading.Overlapped|4.3.0;
-        System.Threading.Tasks|4.3.0;
-        System.Threading.Tasks.Extensions|4.3.0;
-        System.Threading.Tasks.Parallel|4.3.0;
-        System.Threading.Thread|4.3.0;
-        System.Threading.ThreadPool|4.3.0;
-        System.Threading.Timer|4.3.0;
-        System.ValueTuple|4.3.0;
-        System.Xml.ReaderWriter|4.3.0;
-        System.Xml.XDocument|4.3.0;
-        System.Xml.XmlDocument|4.3.0;
-        System.Xml.XmlSerializer|4.3.0;
-        System.Xml.XPath|4.3.0;
-        System.Xml.XPath.XDocument|4.3.0;
-      </OverriddenPackages>
-    </PackageConflictOverrides>
-  </ItemGroup>
-  <ItemGroup>
-    <Analyzer Include="/usr/local/share/dotnet/sdk/7.0.100/Sdks/Microsoft.NET.Sdk/targets/../analyzers/Microsoft.CodeAnalysis.CSharp.NetAnalyzers.dll">
-      <IsImplicitlyDefined>true</IsImplicitlyDefined>
-    </Analyzer>
-    <Analyzer Include="/usr/local/share/dotnet/sdk/7.0.100/Sdks/Microsoft.NET.Sdk/targets/../analyzers/Microsoft.CodeAnalysis.NetAnalyzers.dll">
-      <IsImplicitlyDefined>true</IsImplicitlyDefined>
-    </Analyzer>
   </ItemGroup>
   <UsingTask TaskName="CsprojPackager.Packager" AssemblyFile="$(OutputPath)$(AssemblyName).dll" />
 </Project>
