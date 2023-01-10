@@ -156,7 +156,7 @@ public partial class BuildUsingsPackage
         //     outFile.WriteLine(EmptyProjectFile);
         // }
 
-        Copy(Combine(PackageLibDirectory, "../ContentFiles/global.json"), Combine(OutputDirectory, "global.json"), true);
+        // Copy(Combine(PackageLibDirectory, "../ContentFiles/global.json"), Combine(OutputDirectory, "global.json"), true);
         Log.LogMessage(usingsFile.ToString());
         Log.LogMessage("Wrote file: " + OutputFile);
 

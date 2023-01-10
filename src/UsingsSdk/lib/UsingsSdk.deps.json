@@ -7,7 +7,6 @@
     "defines": [
       "RELEASE",
       "PRODUCTION",
-      "TRACE",
       "NET7_0",
       "NET7_0_OR_GREATER",
       "NETSTANDARD2_1",
@@ -18,6 +17,7 @@
       "NETSTANDARD1_5_OR_GREATER",
       "NETSTANDARD1_3",
       "NETSTANDARD1_3_OR_GREATER",
+      "TRACE",
       "RELEASE",
       "NET",
       "NET7_0",
@@ -38,7 +38,7 @@
     "allowUnsafe": false,
     "warningsAsErrors": false,
     "optimize": true,
-    "keyFile": "/Users/justin/GitHub/justinwritescode/assets/JustinWritesCode.snk",
+    "keyFile": "/Users/david/.nuget/packages/justinwritescodesdk/0.0.2/Build//../ContentFiles/JustinWritesCode.snk",
     "emitEntryPoint": false,
     "xmlDoc": true,
     "debugType": "portable"

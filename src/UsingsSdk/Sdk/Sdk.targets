@@ -11,7 +11,7 @@
 -->
 
 <Project Sdk="Microsoft.Build.NoTargets">
-   <Import Project="$(MSBuildBinPath)/Microsoft.Common.CrossTargeting.targets" />
+   <!-- <Import Project="$(MSBuildBinPath)/Microsoft.Common.CrossTargeting.targets" /> -->
    <UsingTask TaskName="JustinWritesCode.MSBuild.UsingsSdk.BuildUsingsPackage" AssemblyFile="$(UsingsSdkAssemblyFile)" />
    <UsingTask TaskName="JustinWritesCode.MSBuild.Utils.GetCommandLineArgs" AssemblyFile="$(UsingsSdkAssemblyFile)" />
    <Target Name="PrepareOutputFile" BeforeTargets="GetPackageContents;Build" DependsOnTargets="GetPackageVersion">
