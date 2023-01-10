@@ -11,25 +11,19 @@
 -->
 
 <Project>
-  <ItemDefinitionGroup>
-    <NuGetDeletePackageCommand Command="dotnet nuget delete $(PackageId) $(PackageVersion) -s %(NuGetSource.Identity) --non-interactive -k '%(NuGetSource.ApiKey)'" Condition="'%(NuGetSource.ApiKey)' != ''" />
-    <NuGetDeletePackageCommand Command="dotnet nuget delete $(PackageId) $(PackageVersion) -s %(NuGetSource.Identity) --non-interactive" Condition="'%(NuGetSource.ApiKey)' == ''" />
-
-    <NuGetPushPackageCommand Command="dotnet nuget push $(PackageTargetPath) -s %(NuGetSource.Identity) --non-interactive -k '%(NuGetSource.ApiKey)'" Condition="'%(NuGetSource.ApiKey)' != ''" />
-    <NuGetPushPackageCommand Command="dotnet nuget push $(PackageTargetPath) -s %(NuGetSource.Identity) --non-interactive" Condition="'%(NuGetSource.ApiKey)' == ''" />
-  </ItemDefinitionGroup>
-
-  <ItemGroup>
-    <NuGetDeletePackageCommand Include="%(NuGetDeletePackageCommand.Command)" />
-  </ItemGroup>
-
   <Target Name="PushAzure" DependsOnTargets="Pack;GetPackageMetadata;MinVer" Condition="'$(GeneratePackageOnBuild)' == 'true'">
-    <Exec Command="dotnet nuget delete $(PackageId) $(PackageVersion) -s Azure --non-interactive -k 'az'" ContinueOnError="true" />
+    <Exec Command="nuget search $(PackageId) -s Azure -noninteractive | grep $(PackageVersion)" IgnoreExitCode="true">
+      <Output TaskParameter="ConsoleOutput" PropertyName="PackageExists" />
+    </Exec>
+    <Exec Command="echo 'Deleting package $(PackageId) $(PackageVersion) from Azure...';" IgnoreExitCode="true"
+      Condition="'$(PackageExists)' != ''" />
+    <Exec Command="dotnet nuget delete $(PackageId) $(PackageVersion) -s Azure --non-interactive -k 'az'" IgnoreExitCode="true"
+      Condition="'$(PackageExists)' != ''" />
     <Exec Command="dotnet nuget push $(PackageTargetPath) -s Azure -k 'az' --skip-duplicate" Condition="Exists('$(PackageTargetPath)')" />
   </Target>
 
   <Target Name="EnsureGitHubToken" DependsOnTargets="Pack;GetPackageMetadata;MinVer" Condition="'$(GeneratePackageOnBuild)' == 'true'">
-    <Exec Command="gh auth token" ConsoleToMSBuild="true">
+    <Exec Command="gh auth token" ConsoleToMSBuild="true" IgnoreExitCode="true">
       <Output TaskParameter="ConsoleOutput" PropertyName="GitHubAuthToken" />
     </Exec>
     <Error Condition="'$(GitHubAuthToken)' == ''" Text="You must first set the GitHub auth tokne by running 'gh auth login'" Code="GHPUSH001" HelpLink="https://cli.github.com/manual/gh_auth_login" />
@@ -39,13 +33,13 @@
     <PropertyGroup>
       <DeleteGitHubPackageVersionScript>$(DeleteGitHubPackageVersionScriptName) $(PackageId) $(PackageVersion)</DeleteGitHubPackageVersionScript>
     </PropertyGroup>
-    <Exec Command="echo '$(DeleteGitHubPackageVersionScript)' " />
-    <Exec Command="$(DeleteGitHubPackageVersionScript)"  ContinueOnError="true" />
-    <Exec Command="dotnet nuget push $(PackageTargetPath) -s GitHub -k $(GitHubAuthToken) --skip-duplicate" Condition="Exists('$(PackageTargetPath)')" />
+    <Exec Command="echo 'DeleteGitHubPackageVersionScript: $(DeleteGitHubPackageVersionScript)' "  IgnoreExitCode="true"/>
+    <Exec Command="$(DeleteGitHubPackageVersionScript)"  ContinueOnError="true" IgnoreExitCode="true" />
+    <Exec Command="dotnet nuget push $(PackageTargetPath) -s GitHub -k $(GitHubAuthToken) --skip-duplicate" Condition="Exists('$(PackageTargetPath)')" IgnoreExitCode="true" />
   </Target>
 
   <Target Name="PushLocal" AfterTargets="Pack" Condition="'$(GeneratePackageOnBuild)' == 'true' And '$(DesignTimeBuild)' != 'true'">
-    <Exec Command="dotnet nuget delete $(PackageId) $(PackageVersion) -s Local --non-interactive" ContinueOnError="true" />
-    <Exec Command="dotnet nuget push $(PackageTargetPath) -s Local --skip-duplicate" Condition="Exists('$(PackageTargetPath)')" />
+    <Exec Command="dotnet nuget delete $(PackageId) $(PackageVersion) -s Local --non-interactive" ContinueOnError="true" IgnoreExitCode="true" />
+    <Exec Command="dotnet nuget push $(PackageTargetPath) -s Local --skip-duplicate" Condition="Exists('$(PackageTargetPath)')" IgnoreExitCode="true" />
   </Target>
 </Project>
