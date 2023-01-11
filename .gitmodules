@@ -1,0 +1,3 @@
+[submodule "src/MetapackageSdk"]
+	path = src/MetapackageSdk
+	url = https://github.com/justinwritescode/MetapackageSdk.git
