@@ -45,7 +45,7 @@
   },
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "UsingsSdk/0.0.0.0": {
+      "UsingsSdk/0.0.2.0": {
         "dependencies": {
           "AnyOf.SourceGenerator": "0.3.0",
           "GetCommandLineArgs": "0.0.0-preview.0.17",
@@ -1842,7 +1842,7 @@
     }
   },
   "libraries": {
-    "UsingsSdk/0.0.0.0": {
+    "UsingsSdk/0.0.2.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
