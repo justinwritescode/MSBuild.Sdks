@@ -1,15 +1,27 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Usings", "Usings.slnproj", "{99E5B430-0C60-457D-8C5E-8579B1377444}"
+Project("{34EAC930-E0CA-420B-BD8C-86042DD9E676}") = "Usings", "Usings.slnproj", "{99E5B430-0C60-457D-8C5E-8579B1377444}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "usings", "usings", "{7F1278A4-896D-49DC-B63A-E2FA5E20CB52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Local|Any CPU = Local|Any CPU
 		Debug|Any CPU = Debug|Any CPU
+		Staging|Any CPU = Staging|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Testing|Any CPU = Testing|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99E5B430-0C60-457D-8C5E-8579B1377444}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{99E5B430-0C60-457D-8C5E-8579B1377444}.Local|Any CPU.Build.0 = Local|Any CPU
 		{99E5B430-0C60-457D-8C5E-8579B1377444}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{99E5B430-0C60-457D-8C5E-8579B1377444}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99E5B430-0C60-457D-8C5E-8579B1377444}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{99E5B430-0C60-457D-8C5E-8579B1377444}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{99E5B430-0C60-457D-8C5E-8579B1377444}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99E5B430-0C60-457D-8C5E-8579B1377444}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99E5B430-0C60-457D-8C5E-8579B1377444}.Testing|Any CPU.ActiveCfg = Testing|Any CPU
+		{99E5B430-0C60-457D-8C5E-8579B1377444}.Testing|Any CPU.Build.0 = Testing|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
