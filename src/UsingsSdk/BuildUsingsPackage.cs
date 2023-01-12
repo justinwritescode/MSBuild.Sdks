@@ -1,4 +1,4 @@
-/*
+﻿/*
  * CreateUsingsProject.cs
  *
  *   Created: 2022-11-22-03:14:00
@@ -11,28 +11,37 @@
  */
 
 namespace MSBuild.UsingsSdk;
-using static MSBuild.Constants.MSBuildPropertyNames;
 
-using XElementOrProjectItemInstance = AnyOf<System.Xml.Linq.XElement, Microsoft.Build.Execution.ProjectItemInstance>;
 public partial class BuildUsingsPackage : MSBTask
 {
-
     public virtual IEnumerable<ProjectTuple?>? Load(string? path)
     {
-        if(path is null) return new[] { null as ProjectTuple? };
+        if (path is null)
+        {
+            return new[] { null as ProjectTuple? };
+        }
+
         var project = new ProjectInstance(path);
         var xDocumentProject = XDocument.Load(path);
-        return new [] { new ProjectTuple(project, xDocumentProject) as ProjectTuple? }.Concat(xDocumentProject.Descendants("Import").SelectMany(x => Load(x.GetIncludeValue()).Where(p => p is not null)))
-        .Where(x => x is not null);
+        return new[] { new ProjectTuple(project, xDocumentProject) as ProjectTuple? }
+            .Concat(
+                xDocumentProject
+                    .Descendants("Import")
+                    .SelectMany(x => Load(x.GetIncludeValue()).Where(p => p is not null))
+            )
+            .Where(x => x is not null);
     }
 
     private XElement[] MakeProperties()
     {
-        var AllProperties = this.AllProperties;
+        var allProperties = AllProperties;
         var copiedProperties = new List<XElement>
         {
             new XElement(nameof(Description), Description),
-            new XElement(nameof(PackageId), AllProperties.GetPropertyValue(nameof(PackageId), PackageId)),
+            new XElement(
+                nameof(PackageId),
+                allProperties.GetPropertyValue(nameof(PackageId), PackageId)
+            ),
             // TargetFramework is not null ? new XElement("TargetFramework", TargetFramework) : null,
             new XElement(nameof(TargetFrameworks), TargetFrameworks),
             new XElement(nameof(PackageIdOverride), PackageIdOverride),
@@ -54,8 +63,14 @@ public partial class BuildUsingsPackage : MSBTask
             new XElement(nameof(PublishRepositoryUrl), PublishRepositoryUrl),
             new XElement(nameof(PackageTags), PackageTags),
             new XElement(nameof(IncludeBuiltProjectOutputGroup), IncludeBuiltProjectOutputGroup),
-            new XElement(nameof(IncludeSourceFilesProjectOutputGroup), IncludeSourceFilesProjectOutputGroup),
-            new XElement(nameof(IncludeContentFilesProjectOutputGroup), IncludeContentFilesProjectOutputGroup),
+            new XElement(
+                nameof(IncludeSourceFilesProjectOutputGroup),
+                IncludeSourceFilesProjectOutputGroup
+            ),
+            new XElement(
+                nameof(IncludeContentFilesProjectOutputGroup),
+                IncludeContentFilesProjectOutputGroup
+            ),
             new XElement(nameof(NoBuild), NoBuild),
             new XElement(nameof(IncludeSource), IncludeSource),
             new XElement(nameof(IncludeSymbols), IncludeSymbols),
@@ -64,41 +79,82 @@ public partial class BuildUsingsPackage : MSBTask
         return copiedProperties.OrderBy(p => p.Name.ToString()).ToArray();
     }
 
-    private static XAttribute[] GetReferenceAttributes(AnyOf<ProjectItemInstance, XElement> @ref, bool includeVersion = true) =>
-        @ref.IsFirst && @ref.First?.EvaluatedInclude != null ? new[] { new XAttribute("Include", @ref.First?.EvaluatedInclude) }.Concat(@ref.First?.Metadata.Where(x => x != null && x.EvaluatedValue != null).Select(x => new XAttribute(x.Name, x.EvaluatedValue)).Where(x => includeVersion || x.Name.LocalName != "Version")).Distinct(Comparers).ToArray() :
-        @ref.IsSecond && @ref.Second?.GetAttributeValue("Include") != null ? new[] { new XAttribute("Include", @ref.Second?.GetAttributeValue("Include")) }.Concat(@ref.Second?.Attributes().Where(x => x != null && x.Value != null).Select(x => new XAttribute(x.Name, x.Value)).Where(x => includeVersion || x.Name.LocalName != "Version")).Distinct(Comparers).ToArray() :
-        null;
+    private static XAttribute[]? GetReferenceAttributes(
+        AnyOf<ProjectItemInstance, XElement> @ref,
+        bool includeVersion = true
+    ) =>
+        @ref.IsFirst && @ref.First?.EvaluatedInclude != null
+            ? new[] { new XAttribute("Include", @ref.First?.EvaluatedInclude) }
+                .Concat(
+                    @ref.First?.Metadata
+                        .Where(x => x != null && x.EvaluatedValue != null)
+                        .Select(x => new XAttribute(x.Name, x.EvaluatedValue))
+                        .Where(x => includeVersion || x.Name.LocalName != "Version")
+                )
+                .Distinct(Comparers)
+                .ToArray()
+            : @ref.IsSecond && @ref.Second?.GetAttributeValue("Include") != null
+                ? new[] { new XAttribute("Include", @ref.Second?.GetAttributeValue("Include")) }
+                    .Concat(
+                        @ref.Second
+                            ?.Attributes()
+                            .Where(x => x != null && x.Value != null)
+                            .Select(x => new XAttribute(x.Name, x.Value))
+                            .Where(x => includeVersion || x.Name.LocalName != "Version")
+                    )
+                    .Distinct(Comparers)
+                    .ToArray()
+                : null;
 
-    private static XElement FormatReference(ProjectItemTuple @ref, string type = "ProjectReference", bool includeVersion = true) =>
-        new(type, GetReferenceAttributes(@ref.XItem, includeVersion).Concat(GetReferenceAttributes(@ref.Item, includeVersion) ?? Array.Empty<XAttribute>()).Distinct(Comparers).ToArray());
+    private static XElement FormatReference(
+        ProjectItemTuple @ref,
+        string type = "ProjectReference",
+        bool includeVersion = true
+    ) =>
+        new(
+            type,
+            GetReferenceAttributes(@ref.XItem, includeVersion)
+                .Concat(
+                    GetReferenceAttributes(@ref.Item, includeVersion) ?? Array.Empty<XAttribute>()
+                )
+                .Distinct(Comparers)
+                .ToArray()
+        );
 
-    private static XElement FormatReference(XElement @ref, string type = "ProjectReference", bool includeVersion = true) =>
-        new(type, GetReferenceAttributes(@ref).Distinct(Comparers).ToArray());
+    private static XElement FormatReference(
+        XElement @ref,
+        string type = "ProjectReference",
+        bool includeVersion = true
+    ) => new(type, GetReferenceAttributes(@ref).Distinct(Comparers).ToArray());
 
-    private string FormatIsStatic(AnyOf<MSBC.ProjectItemElement, XElement> x)
+    private static string FormatIsStatic(AnyOf<MSBC.ProjectItemElement, XElement> x)
     {
         var metadataValue = x.GetAttributeValue("Static");
         if (metadataValue?.Equals("true", StringComparison.InvariantCultureIgnoreCase) ?? false)
         {
             return " *(static)*";
         }
-        return string.Empty;
+        return Empty;
     }
 
-    private string GetNuGetUri(XElement @element) => $"https://www.nuget.org/packages/{@element.GetIncludeValue()}";
-
+    private static string GetNuGetUri(XElement @element) =>
+        $"https://www.nuget.org/packages/{@element.GetIncludeValue()}";
 
     private bool GetNuGetPackageExists(XElement @element) =>
-         NuGetPackagesExistCache[@element.GetIncludeValue()] =
-             NuGetPackagesExistCache.TryGetValue(@element.GetIncludeValue(), out var exists) ? exists : false;
+        NuGetPackagesExistCache[@element.GetIncludeValue()] =
+            NuGetPackagesExistCache.TryGetValue(@element.GetIncludeValue(), out var exists)
+            && exists;
 
     private string? FormatPackageReferenceMarkdown(XElement @element) =>
-        GetNuGetPackageExists(@element) ? $"- [{@element.GetIncludeValue()}]({GetNuGetUri(@element)})" : $"- {@element.GetIncludeValue()}";
-    private string FormatAlias(AnyOf<MSBC.ProjectItemElement, XElement> x)
+        GetNuGetPackageExists(@element)
+            ? $"- [{@element.GetIncludeValue()}]({GetNuGetUri(@element)})"
+            : $"- {@element.GetIncludeValue()}";
+
+    private static string FormatAlias(AnyOf<MSBC.ProjectItemElement, XElement> x)
     {
-        var alias = x.IsFirst ? x.First.GetMetadataValue("Alias") : x.Second.GetAttributeValue("Alias");
-        if (string.IsNullOrWhiteSpace(alias))
-            return string.Empty;
-        return $" (Alias: *{alias}*)";
+        var alias = x.IsFirst
+            ? x.First.GetMetadataValue("Alias")
+            : x.Second.GetAttributeValue("Alias");
+        return IsNullOrWhiteSpace(alias) ? Empty : $" (Alias: *{alias}*)";
     }
 }

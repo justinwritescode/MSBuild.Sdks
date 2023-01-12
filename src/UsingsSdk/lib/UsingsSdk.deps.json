@@ -5,8 +5,12 @@
   },
   "compilationOptions": {
     "defines": [
-      "RELEASE",
-      "PRODUCTION",
+      "TRACE",
+      "DEBUG",
+      "LOCAL",
+      "TRACE",
+      "DEBUG",
+      "LOCAL",
       "TRACE",
       "NET7_0",
       "NET7_0_OR_GREATER",
@@ -18,7 +22,7 @@
       "NETSTANDARD1_5_OR_GREATER",
       "NETSTANDARD1_3",
       "NETSTANDARD1_3_OR_GREATER",
-      "RELEASE",
+      "LOCAL",
       "NET",
       "NET7_0",
       "NETCOREAPP",
@@ -37,20 +41,20 @@
     "platform": "",
     "allowUnsafe": false,
     "warningsAsErrors": false,
-    "optimize": true,
-    "keyFile": "/Users/david/.nuget/packages/justinwritescodesdk/0.0.5/Build//../ContentFiles/JustinWritesCode.snk",
+    "optimize": false,
+    "keyFile": "/Users/david/.nuget/packages/justinwritescodesdk/0.0.8/Build//../ContentFiles/JustinWritesCode.snk",
     "emitEntryPoint": false,
     "xmlDoc": true,
     "debugType": "portable"
   },
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "UsingsSdk/0.0.2.0": {
+      "UsingsSdk/0.0.5.0": {
         "dependencies": {
           "AnyOf.SourceGenerator": "0.3.0",
-          "GetCommandLineArgs": "0.0.0-preview.0.17",
+          "GetCommandLineArgs": "0.0.1-Local",
           "GitInfo": "2.2.0",
-          "MSBuild.Extensions": "0.0.1",
+          "MSBuild.Extensions": "0.0.1-Local",
           "Microsoft.Build": "17.3.2",
           "Microsoft.Build.Tasks.Git": "1.1.1",
           "Microsoft.Build.Utilities.Core": "17.4.0",
@@ -242,9 +246,9 @@
           "lib/netstandard2.0/AnyOf.SourceGenerator.dll": {}
         }
       },
-      "GetCommandLineArgs/0.0.0-preview.0.17": {
+      "GetCommandLineArgs/0.0.1-Local": {
         "dependencies": {
-          "MSBuild.Extensions": "0.0.1",
+          "MSBuild.Extensions": "0.0.1-Local",
           "Microsoft.Build": "17.3.2",
           "Microsoft.Build.Framework": "17.4.0",
           "Microsoft.Build.Utilities.Core": "17.4.0"
@@ -366,7 +370,7 @@
         }
       },
       "MinVer/4.1.0": {},
-      "MSBuild.Extensions/0.0.1": {
+      "MSBuild.Extensions/0.0.1-Local": {
         "dependencies": {
           "Microsoft.Build": "17.3.2",
           "Microsoft.Build.Framework": "17.4.0",
@@ -1842,7 +1846,7 @@
     }
   },
   "libraries": {
-    "UsingsSdk/0.0.2.0": {
+    "UsingsSdk/0.0.5.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -1854,12 +1858,12 @@
       "path": "anyof.sourcegenerator/0.3.0",
       "hashPath": "anyof.sourcegenerator.0.3.0.nupkg.sha512"
     },
-    "GetCommandLineArgs/0.0.0-preview.0.17": {
+    "GetCommandLineArgs/0.0.1-Local": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-nsKBQZf8YrwsFoqMqiTaWivk/dHBmWaJSyZVuklzff9wrg9Q1IR2ZG3e3gDTMD4Jju/DrL5Z7agWnQFLQSS/3g==",
-      "path": "getcommandlineargs/0.0.0-preview.0.17",
-      "hashPath": "getcommandlineargs.0.0.0-preview.0.17.nupkg.sha512"
+      "sha512": "sha512-pKNJQazDYA3qzjFip3bAP9xnRMAC5Ldmq3YvlgmTj+WSoL1aQL3U/b0eqQdO9hkVj/afj3kukgGyF05TftpBHQ==",
+      "path": "getcommandlineargs/0.0.1-local",
+      "hashPath": "getcommandlineargs.0.0.1-local.nupkg.sha512"
     },
     "GitInfo/2.2.0": {
       "type": "package",
@@ -1973,12 +1977,12 @@
       "path": "minver/4.1.0",
       "hashPath": "minver.4.1.0.nupkg.sha512"
     },
-    "MSBuild.Extensions/0.0.1": {
+    "MSBuild.Extensions/0.0.1-Local": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-GY9bo14HMM2Pqg/44KYgjZA+KPkq4KmDLF4AmeZzTG3tkkykMZGV/zNv41VLewdicosCzRk6Xpqqve/GSyklqQ==",
-      "path": "msbuild.extensions/0.0.1",
-      "hashPath": "msbuild.extensions.0.0.1.nupkg.sha512"
+      "sha512": "sha512-xCR6uYNovpSz7/AcGQZlZbACaiZL2hgxXVcliFNycXYocJIrV3qzl3Oy/v2FMIAdff7mandUDNM+ylQaz8L8yw==",
+      "path": "msbuild.extensions/0.0.1-local",
+      "hashPath": "msbuild.extensions.0.0.1-local.nupkg.sha512"
     },
     "Newtonsoft.Json/13.0.1": {
       "type": "package",

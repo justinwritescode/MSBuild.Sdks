@@ -1,4 +1,3 @@
-using System.Linq;
 /*
  * BuildUsingsPackage.Execute.cs
  *
@@ -13,12 +12,19 @@ using System.Linq;
 #pragma warning disable
 
 namespace MSBuild.UsingsSdk;
-using XElementOrProjectItemInstance = AnyOf<System.Xml.Linq.XElement, Microsoft.Build.Execution.ProjectItemInstance>;
+using XElementOrProjectItemInstance = AnyOf<
+    System.Xml.Linq.XElement,
+    Microsoft.Build.Execution.ProjectItemInstance
+>;
+
 public partial class BuildUsingsPackage
 {
     public override bool Execute()
     {
-        Log.LogMessage(MessageImportance.High, $"Executing {ThisAssembly.Project.AssemblyName} version {ThisAssembly.Info.FileVersion} on file {InputFile}...");
+        Log.LogMessage(
+            MessageImportance.High,
+            $"Executing {ThisAssembly.Project.AssemblyName} version {ThisAssembly.Info.FileVersion} on file {InputFile}..."
+        );
 
         System.Diagnostics.Debugger.Launch();
 
@@ -56,20 +62,28 @@ public partial class BuildUsingsPackage
                     "ItemGroup",
                     new XAttribute("Label", "Usings"),
                     new XComment("⬇️ Global Usings ⬇️"),
-                    xUsings.Select(x => FormatReference(x, "Using")).Append<XNode>(
-                        new XComment("⬆️  🫴🏻 💪🏻  ⬆️"))),
+                    xUsings
+                        .Select(x => FormatReference(x, "Using"))
+                        .Append<XNode>(new XComment("⬆️  🫴🏻 💪🏻  ⬆️"))
+                ),
                 new XElement(
                     "ItemGroup",
                     new XAttribute("Label", "Package References"),
                     new XComment("📦 ⬇️ Package References ⬇️  📦"),
-                    XPackageReferences.Select(x => FormatReference(x, "PackageReference", false)).Append<XNode>(
-                        new XComment("📦  ⬆️  ⬆️  📦"))),
+                    XPackageReferences
+                        .Select(x => FormatReference(x, "PackageReference", false))
+                        .Append<XNode>(new XComment("📦  ⬆️  ⬆️  📦"))
+                ),
                 new XElement(
                     "ItemGroup",
                     new XAttribute("Label", "Project References"),
                     new XComment("⬇️ Project References ⬇️"),
-                    projectReferenceTuples.Select(x => FormatReference(x, "ProjectReference")).Append<XNode>(
-                        new XComment("⬆️    💻    ⬆️")))));
+                    projectReferenceTuples
+                        .Select(x => FormatReference(x, "ProjectReference"))
+                        .Append<XNode>(new XComment("⬆️    💻    ⬆️"))
+                )
+            )
+        );
 
         var usingsProjectFile = new XDocument(
             new XComment(
@@ -89,35 +103,39 @@ public partial class BuildUsingsPackage
                 // new XAttribute("DefaultTargets", "Pack"),
                 new XComment("properties: " + properties.Length),
                 new XComment("⬇️ Properties ⬇️"),
-                new XElement(
-                    "PropertyGroup",
-                    properties),
+                new XElement("PropertyGroup", properties),
                 new XElement(
                     "ItemGroup",
-                    XPackageReferences.Select(x => FormatReference(x, "PackageReference", true)).Concat(DefaultPackageReferences).Distinct()),
+                    XPackageReferences
+                        .Select(x => FormatReference(x, "PackageReference", true))
+                        .Concat(DefaultPackageReferences)
+                        .Distinct()
+                ),
                 new XElement(
                     "ItemGroup",
                     new XElement(
                         "PackageFile",
                         new XAttribute("Include", "$(MSBuildThilsFileDirectory)README.md"),
                         new XAttribute("Pack", "true"),
-                        new XAttribute("PackagePath", "")),
+                        new XAttribute("PackagePath", "")
+                    ),
                     new XElement(
                         "PackageFile",
                         new XAttribute("Include", Combine(GetDirectoryName(InputFile), OutputFile)),
                         new XAttribute("Pack", "true"),
-                        new XAttribute("PackagePath", "build/%(Filename)%(Extension)")),
+                        new XAttribute("PackagePath", "build/%(Filename)%(Extension)")
+                    ),
                     new XElement(
                         "PackageFile",
                         new XAttribute("Include", IconFile),
                         new XAttribute("Pack", "true"),
-                        new XAttribute("PackagePath", GetFileName(IconFile))),
-                    new XElement(
-                        "None",
-                        new XAttribute("Remove", "**/$(AssemblyName).*")),
-                    new XElement(
-                        "None",
-                        new XAttribute("Remove", "**/*.cs")))));
+                        new XAttribute("PackagePath", GetFileName(IconFile))
+                    ),
+                    new XElement("None", new XAttribute("Remove", "**/$(AssemblyName).*")),
+                    new XElement("None", new XAttribute("Remove", "**/*.cs"))
+                )
+            )
+        );
 
         Log.LogMessage("Properties: " + properties.Length);
         Log.LogMessage("Usings: " + xUsings.Length);
@@ -162,7 +180,10 @@ public partial class BuildUsingsPackage
 
         Copy(IconFile, Combine(OutputDirectory, "Icon.png"), true);
 
-        WriteAllText(NuGetPackagesExistCachePath, JsonSerializer.Serialize(NuGetPackagesExistCache));
+        WriteAllText(
+            NuGetPackagesExistCachePath,
+            JsonSerializer.Serialize(NuGetPackagesExistCache)
+        );
 
         return true;
     }

@@ -18,7 +18,6 @@
   <ItemGroup>
      <!-- <ProjectReference Include="./src/MSBuild.IncludeSdk/MSBuild.IncludeSdk.csproj" /> -->
      <ProjectReference Include="./src/UsingsSdk/UsingsSdk.csproj" />
-     <ProjectReference Include="./src/Usings/Usings.csproj" />
+     <ProjectReference Include="./src/Usings/Usings.slnproj" />
   </ItemGroup>
-  <Sdk Name="GenerateMarkdownDocsSdk" />
 </Project>

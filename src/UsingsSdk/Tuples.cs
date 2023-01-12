@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Tuples.cs
  *
  *   Created: 2022-12-01-03:26:05
@@ -11,4 +11,5 @@
  */
 
 public record struct ProjectItemTuple(XElement XItem, ProjectItemInstance Item);
+
 public record struct ProjectTuple(ProjectInstance? ProjectInstance, XDocument? XDocument);
